@@ -1,0 +1,3 @@
+Product count: 50
+Minimum Price: 153
+Product Name Of Min Price: Here&Now X Game Begins

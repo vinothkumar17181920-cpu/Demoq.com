@@ -1,0 +1,14 @@
+{
+  "empName": "Vinoth",
+  "id": 298789,
+  "phone": {
+    "mobile1": "1234567890",
+    "mobile2": "0987654321"
+  },
+  "skills": [
+    "manual",
+    "automation",
+    "api_testing",
+    "mobile_testing"
+  ]
+}

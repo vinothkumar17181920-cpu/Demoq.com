@@ -1,0 +1,1 @@
+Minimum Price of all Products: 201

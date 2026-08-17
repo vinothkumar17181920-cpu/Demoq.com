@@ -1,0 +1,4794 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Amazon.spec.js >> amazon
+- Location: tests\Amazon.spec.js:3:5
+
+# Error details
+
+```
+TypeError: page.waitfortimeout is not a function
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f2e2]:
+  - navigation "Shortcuts menu" [ref=f2e3]:
+    - heading "Skip to" [level=2] [ref=f2e4]
+    - list "Skip to" [ref=f2e5]:
+      - listitem [ref=f2e6]:
+        - link "main content" [ref=f2e7] [cursor=pointer]:
+          - /url: "#skippedLink"
+          - text: Main content
+    - separator [ref=f2e8]
+  - banner [ref=f2e9]:
+    - navigation "Primary" [ref=f2e10]:
+      - generic [ref=f2e11]:
+        - generic [ref=f2e12]:
+          - link "Amazon.in" [ref=f2e14] [cursor=pointer]:
+            - /url: /ref=nav_logo
+            - generic: .in
+          - button "Delivering to Chennai 600001 Update location" [ref=f2e17] [cursor=pointer]:
+            - generic [ref=f2e19]:
+              - generic [ref=f2e20]: Delivering to Chennai 600001
+              - generic [ref=f2e21]: Update location
+        - search [ref=f2e24]:
+          - generic [ref=f2e27]:
+            - generic [ref=f2e28]: All
+            - combobox "Select the department you want to search in" [ref=f2e31] [cursor=pointer]:
+              - option "All Categories" [selected]
+              - option "Alexa Skills"
+              - option "Amazon Devices"
+              - option "Amazon Fashion"
+              - option "Amazon Fresh"
+              - option "Amazon Fresh Meat"
+              - option "Amazon Pharmacy"
+              - option "Appliances"
+              - option "Apps & Games"
+              - option "Audible Audiobooks"
+              - option "Baby"
+              - option "Beauty"
+              - option "Books"
+              - option "Car & Motorbike"
+              - option "Clothing & Accessories"
+              - option "Collectibles"
+              - option "Computers & Accessories"
+              - option "Deals"
+              - option "Electronics"
+              - option "Furniture"
+              - option "Garden & Outdoors"
+              - option "Gift Cards"
+              - option "Grocery & Gourmet Foods"
+              - option "Health & Personal Care"
+              - option "Home & Kitchen"
+              - option "Industrial & Scientific"
+              - option "Jewellery"
+              - option "Kindle Store"
+              - option "Luggage & Bags"
+              - option "Luxury Beauty"
+              - option "Movies & TV Shows"
+              - option "MP3 Music"
+              - option "Music"
+              - option "Musical Instruments"
+              - option "Office Products"
+              - option "Pet Supplies"
+              - option "Prime Video"
+              - option "Shoes & Handbags"
+              - option "Software"
+              - option "Sports, Fitness & Outdoors"
+              - option "Subscribe & Save"
+              - option "Tools & Home Improvement"
+              - option "Toys & Games"
+              - option "Under ₹500"
+              - option "Video Games"
+              - option "Watches"
+          - searchbox "Search Amazon.in" [ref=f2e34]: shoes
+          - generic "Go" [ref=f2e37] [cursor=pointer]:
+            - button "Go" [ref=f2e38]
+        - generic [ref=f2e40]:
+          - link "Choose a language for shopping in Amazon India. The current selection is English (EN)." [ref=f2e42] [cursor=pointer]:
+            - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang
+            - generic [ref=f2e45]:
+              - img "India" [ref=f2e46]
+              - generic [ref=f2e47]: EN
+          - link "Hello, sign in Account & Lists" [ref=f2e49] [cursor=pointer]:
+            - /url: https://www.amazon.in/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.in%2Fs%2Fref%3Dnb_sb_noss%2F%3F_encoding%3DUTF8%26field-keywords%3Dshoes%26url%3Dsearch-alias%253Daps%26ref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=inflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+            - generic [ref=f2e50]: Hello, sign in
+            - generic [ref=f2e52]: Account & Lists
+          - link "Returns & Orders" [ref=f2e53] [cursor=pointer]:
+            - /url: /gp/css/order-history?ref_=nav_orders_first
+            - generic [ref=f2e54]: Returns
+            - generic [ref=f2e55]: "& Orders"
+          - link "0 items in cart" [ref=f2e56] [cursor=pointer]:
+            - /url: /gp/cart/view.html?ref_=nav_cart
+            - generic [ref=f2e57]: "0"
+            - generic [ref=f2e60]: Cart
+      - generic [ref=f2e62]:
+        - button "Open All Categories Menu" [ref=f2e64] [cursor=pointer]:
+          - generic [ref=f2e66]: All
+        - list [ref=f2e70]:
+          - listitem [ref=f2e71]:
+            - link "Fresh" [ref=f2e73] [cursor=pointer]:
+              - /url: /fresh?ref_=nav_cs_grocery
+          - listitem [ref=f2e74]:
+            - link "Prime Video" [ref=f2e76] [cursor=pointer]:
+              - /url: https://www.primevideo.com/offers/nonprimehomepage/ref_=nav_dvm_crs_in_s_gw_bt_dk_p_hamburgr?ref_=avod_desktop_topnav
+          - listitem [ref=f2e77]:
+            - link "Sell" [ref=f2e79] [cursor=pointer]:
+              - /url: /b/32702023031?node=32702023031&ld=AZINSOANavDesktop_T3&ref_=nav_cs_sell_T3
+          - listitem [ref=f2e80]:
+            - link "Bestsellers" [ref=f2e82] [cursor=pointer]:
+              - /url: /gp/bestsellers/?ref_=nav_cs_bestsellers
+          - listitem [ref=f2e83]:
+            - link "Today's Deals" [ref=f2e85] [cursor=pointer]:
+              - /url: /deals?ref_=nav_cs_gb
+          - listitem [ref=f2e86]:
+            - link "Customer Service" [ref=f2e88] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=200507590&ref_=nav_cs_help
+          - listitem [ref=f2e89]:
+            - link "Mobiles" [ref=f2e91] [cursor=pointer]:
+              - /url: /mobile-phones/b/?ie=UTF8&node=1389401031&ref_=nav_cs_mobiles
+          - listitem [ref=f2e92]:
+            - link "New Releases" [ref=f2e94] [cursor=pointer]:
+              - /url: /gp/new-releases/?ref_=nav_cs_newreleases
+          - listitem [ref=f2e95]:
+            - link "Prime" [ref=f2e97] [cursor=pointer]:
+              - /url: /prime?ref_=nav_cs_primelink_nonmember
+          - listitem [ref=f2e98]:
+            - link "Amazon Pay" [ref=f2e100] [cursor=pointer]:
+              - /url: /gp/sva/dashboard?ref_=nav_cs_apay
+          - listitem [ref=f2e101]:
+            - link "Electronics" [ref=f2e103] [cursor=pointer]:
+              - /url: /electronics/b/?ie=UTF8&node=976419031&ref_=nav_cs_electronics
+          - listitem [ref=f2e104]:
+            - link "Home & Kitchen" [ref=f2e106] [cursor=pointer]:
+              - /url: /Home-Kitchen/b/?ie=UTF8&node=976442031&ref_=nav_cs_home
+          - listitem [ref=f2e107]:
+            - link "Fashion" [ref=f2e109] [cursor=pointer]:
+              - /url: /gp/browse.html?node=6648217031&ref_=nav_cs_fashion
+          - listitem [ref=f2e110]:
+            - link "Computers" [ref=f2e112] [cursor=pointer]:
+              - /url: /computers-and-accessories/b/?ie=UTF8&node=976392031&ref_=nav_cs_pc
+          - listitem [ref=f2e113]:
+            - link "Toys & Games" [ref=f2e115] [cursor=pointer]:
+              - /url: /Toys-Games/b/?ie=UTF8&node=1350380031&ref_=nav_cs_toys
+          - listitem [ref=f2e116]:
+            - link "Beauty & Personal Care" [ref=f2e118] [cursor=pointer]:
+              - /url: /beauty/b/?ie=UTF8&node=1355016031&ref_=nav_cs_beauty
+          - listitem [ref=f2e119]:
+            - link "Car & Motorbike" [ref=f2e121] [cursor=pointer]:
+              - /url: /Car-Motorbike-Store/b/?ie=UTF8&node=4772060031&ref_=nav_cs_automotive
+          - listitem [ref=f2e122]:
+            - link "Sports, Fitness & Outdoors" [ref=f2e124] [cursor=pointer]:
+              - /url: /Sports/b/?ie=UTF8&node=1984443031&ref_=nav_cs_sports
+          - listitem [ref=f2e125]:
+            - link "Gift Cards" [ref=f2e127] [cursor=pointer]:
+              - /url: /gift-card-store/b/?ie=UTF8&node=3704982031&ref_=nav_cs_gc
+          - listitem [ref=f2e128]:
+            - link "Home Improvement" [ref=f2e130] [cursor=pointer]:
+              - /url: /Home-Improvement/b/?ie=UTF8&node=4286640031&ref_=nav_cs_hi
+          - listitem [ref=f2e131]:
+            - link "Video Games" [ref=f2e133] [cursor=pointer]:
+              - /url: /video-games/b/?ie=UTF8&node=976460031&ref_=nav_cs_video_games
+          - listitem [ref=f2e134]:
+            - link "Grocery & Gourmet Foods" [ref=f2e136] [cursor=pointer]:
+              - /url: /Gourmet-Specialty-Foods/b/?ie=UTF8&node=2454178031&ref_=nav_cs_grocery
+          - listitem [ref=f2e137]:
+            - link "Custom Products" [ref=f2e139] [cursor=pointer]:
+              - /url: /Amazon-Custom/b/?ie=UTF8&node=32615889031&ref_=nav_cs_custom
+          - listitem [ref=f2e140]:
+            - link "Pet Supplies" [ref=f2e142] [cursor=pointer]:
+              - /url: /Pet-Supplies/b/?ie=UTF8&node=2454181031&ref_=nav_cs_pets
+          - listitem [ref=f2e143]:
+            - link "Health, Household & Personal Care" [ref=f2e145] [cursor=pointer]:
+              - /url: /health-and-personal-care/b/?ie=UTF8&node=1350384031&ref_=nav_cs_hpc
+          - listitem [ref=f2e146]:
+            - link "Baby" [ref=f2e148] [cursor=pointer]:
+              - /url: /Baby/b/?ie=UTF8&node=1571274031&ref_=nav_cs_baby
+          - listitem [ref=f2e149]:
+            - link "Audible" [ref=f2e151] [cursor=pointer]:
+              - /url: /Audible-Books-and-Originals/b/?ie=UTF8&node=17941593031&ref_=nav_cs_audible
+          - listitem [ref=f2e152]:
+            - link "AmazonBasics" [ref=f2e154] [cursor=pointer]:
+              - /url: /b/?node=6637738031&ref_=nav_cs_amazonbasics
+          - listitem [ref=f2e155]:
+            - link "Subscribe & Save" [ref=f2e157] [cursor=pointer]:
+              - /url: /auto-deliveries/landing?ref_=nav_cs_sns
+          - listitem [ref=f2e158]:
+            - link "Kindle eBooks" [ref=f2e160] [cursor=pointer]:
+              - /url: /Kindle-eBooks/b/?ie=UTF8&node=1634753031&ref_=nav_cs_kindle_books
+          - listitem [ref=f2e161]:
+            - link "Books" [ref=f2e163] [cursor=pointer]:
+              - /url: /Books/b/?ie=UTF8&node=976389031&ref_=nav_cs_books
+          - listitem [ref=f2e164]:
+            - link "Flights" [ref=f2e166] [cursor=pointer]:
+              - /url: /flights?ref_=nav_cs_apay_desktop_topnav_flights
+  - generic [ref=f2e171]:
+    - heading [level=1] [ref=f2e174]:
+      - generic [ref=f2e175]:
+        - heading "1-48 of over 100,000 results for \"shoes\"" [level=2] [ref=f2e180]
+        - generic [ref=f2e185]:
+          - generic [ref=f2e186]: "Sort by:"
+          - combobox "Sort by:" [ref=f2e187]:
+            - option "Featured" [selected]
+            - 'option "Price: Low to High"'
+            - 'option "Price: High to Low"'
+            - option "Avg. Customer Review"
+            - option "Newest Arrivals"
+            - option "Best Sellers"
+          - generic [ref=f2e188] [cursor=pointer]: Sort by:Featured
+    - generic [ref=f2e196]:
+      - generic [ref=f2e200]:
+        - link "Sponsored ad from Boldfit. \"Explore the Best Walking Shoes.\" Shop Boldfit." [ref=f2e201] [cursor=pointer]:
+          - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/stores/page/945118A9-DCAB-4F93-B2B3-E42458D804C4/?_encoding=UTF8&store_ref=SB_A09301131RF5ALJU1RLNB-A00215997ZJKRD3WDJLG&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&lp_asins=B0FBGPYJJC%2CB0D1KMKL3Y%2CB0FBGRDFM9%2CB0FVSQNH93%2CB0F949KFQ7%2CB0F94CYSL1%2CB0FVSNDJW8%2CB0F94CZFX3&lp_query=shoes&lp_slot=auto-sparkle-hsa-tetris&sdp_ad_group=300192033028934&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_bkgd&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+        - generic [ref=f2e202]:
+          - generic [ref=f2e204]:
+            - link "Boldfit" [ref=f2e206] [cursor=pointer]:
+              - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/stores/page/945118A9-DCAB-4F93-B2B3-E42458D804C4/?_encoding=UTF8&store_ref=SB_A09301131RF5ALJU1RLNB-A00215997ZJKRD3WDJLG&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&lp_asins=B0FBGPYJJC%2CB0D1KMKL3Y%2CB0FBGRDFM9%2CB0FVSQNH93%2CB0F949KFQ7%2CB0F94CYSL1%2CB0FVSNDJW8%2CB0F94CZFX3&lp_query=shoes&lp_slot=auto-sparkle-hsa-tetris&sdp_ad_group=300192033028934&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_logo&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+              - img "Boldfit" [ref=f2e208]
+            - generic [ref=f2e210]:
+              - link "Explore the Best Walking Shoes" [ref=f2e211] [cursor=pointer]:
+                - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/stores/page/945118A9-DCAB-4F93-B2B3-E42458D804C4/?_encoding=UTF8&store_ref=SB_A09301131RF5ALJU1RLNB-A00215997ZJKRD3WDJLG&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&lp_asins=B0FBGPYJJC%2CB0D1KMKL3Y%2CB0FBGRDFM9%2CB0FVSQNH93%2CB0F949KFQ7%2CB0F94CYSL1%2CB0FVSNDJW8%2CB0F94CZFX3&lp_query=shoes&lp_slot=auto-sparkle-hsa-tetris&sdp_ad_group=300192033028934&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_hl&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+              - generic [ref=f2e214]:
+                - button "Leave feedback on Sponsored ad" [ref=f2e218] [cursor=pointer]: Sponsored
+                - generic [ref=f2e220]: "|"
+                - link "Shop now" [ref=f2e222] [cursor=pointer]:
+                  - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/stores/page/945118A9-DCAB-4F93-B2B3-E42458D804C4/?_encoding=UTF8&store_ref=SB_A09301131RF5ALJU1RLNB-A00215997ZJKRD3WDJLG&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&lp_asins=B0FBGPYJJC%2CB0D1KMKL3Y%2CB0FBGRDFM9%2CB0FVSQNH93%2CB0F949KFQ7%2CB0F94CYSL1%2CB0FVSNDJW8%2CB0F94CZFX3&lp_query=shoes&lp_slot=auto-sparkle-hsa-tetris&sdp_ad_group=300192033028934&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_cta&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                  - generic [ref=f2e223]: Shop Boldfit
+          - group [ref=f2e226]:
+            - group [ref=f2e230]:
+              - list [ref=f2e231]:
+                - listitem [ref=f2e232]:
+                  - generic [ref=f2e234]:
+                    - link [ref=f2e235] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FBGPYJJC/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_0_bkgd&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                    - link [ref=f2e237] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FBGPYJJC/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_0_img&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - img "Boldfit Walking Shoes for man Lightweight Shoes for Mens Training, Gym & Walking" [ref=f2e240]
+                    - generic [ref=f2e242]:
+                      - link [ref=f2e243] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FBGPYJJC/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_0_bkgd&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - link "Boldfit Walking Shoes for man Lightweight Shoes for Mens Training, Gym & Walking" [ref=f2e245] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FBGPYJJC/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_0_title&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - link "Rated 3.9 out of 5 stars by 365 reviews. Go to review section." [ref=f2e248] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FBGPYJJC/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_0_rating&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844#customerReviews
+                        - generic [ref=f2e249]:
+                          - generic [ref=f2e250]: "3.9"
+                          - generic [ref=f2e251]: 3.9 out of 5 stars.
+                          - generic [ref=f2e253]: (365)
+                      - link "Limited time deal" [ref=f2e255] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FBGPYJJC/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_0_badge&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - link "-65% ₹879.00" [ref=f2e260] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FBGPYJJC/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-1-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_0_price&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                        - generic [ref=f2e261]:
+                          - generic [ref=f2e262]: "-65%"
+                          - generic [ref=f2e263]:
+                            - generic [ref=f2e264]: ₹879.00
+                            - generic [ref=f2e265]:
+                              - text: ₹
+                              - generic [ref=f2e266]:
+                                - text: "879"
+                                - generic [ref=f2e267]: .
+                              - text: "00"
+                      - generic [ref=f2e268]: "M.R.P: ₹2,499.00"
+                - listitem [ref=f2e271]:
+                  - generic [ref=f2e273]:
+                    - link [ref=f2e274] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0D1KMKL3Y/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-2-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_1_bkgd&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                    - link [ref=f2e276] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0D1KMKL3Y/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-2-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_1_img&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - img "Boldfit Casual Shoes for Man & Woman Walking Shoes for Men Soft Cushion Casual Shoes for Men for Regular Wear Mens Shoes Without Lace Shoes for Men & Women for Walking, Jogging Men Shoes" [ref=f2e279]
+                    - generic [ref=f2e281]:
+                      - link [ref=f2e282] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0D1KMKL3Y/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-2-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_1_bkgd&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - link "Boldfit Casual Shoes for Man & Woman Walking Shoes for Men Soft Cushion Casual Shoes for Men for Regular Wear Mens Shoes Without Lace Shoes for Men & Women for Walking, Jogging Men Shoes" [ref=f2e284] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0D1KMKL3Y/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-2-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_1_title&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - link "Rated 4 out of 5 stars by 1481 reviews. Go to review section." [ref=f2e287] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0D1KMKL3Y/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-2-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_1_rating&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844#customerReviews
+                        - generic [ref=f2e288]:
+                          - generic [ref=f2e289]: "4"
+                          - generic [ref=f2e290]: 4 out of 5 stars.
+                          - generic [ref=f2e292]: (1.4k)
+                      - link "₹699.00" [ref=f2e294] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0D1KMKL3Y/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-2-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_1_price&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                        - generic [ref=f2e296]:
+                          - generic [ref=f2e297]: ₹699.00
+                          - generic [ref=f2e298]:
+                            - text: ₹
+                            - generic [ref=f2e299]:
+                              - text: "699"
+                              - generic [ref=f2e300]: .
+                            - text: "00"
+                      - generic [ref=f2e301]: "M.R.P: ₹1,999.00"
+                - listitem [ref=f2e304]:
+                  - generic [ref=f2e306]:
+                    - link [ref=f2e307] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FBGRDFM9/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-3-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_2_bkgd&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                    - link [ref=f2e309] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FBGRDFM9/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-3-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_2_img&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - img "Boldfit Walking Shoes for man Lightweight Shoes for Mens Training, Gym & Walking" [ref=f2e312]
+                    - generic [ref=f2e314]:
+                      - link [ref=f2e315] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FBGRDFM9/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-3-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_2_bkgd&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - link "Boldfit Walking Shoes for man Lightweight Shoes for Mens Training, Gym & Walking" [ref=f2e317] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FBGRDFM9/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-3-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_2_title&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - link "Rated 3.9 out of 5 stars by 365 reviews. Go to review section." [ref=f2e320] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FBGRDFM9/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-3-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_2_rating&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844#customerReviews
+                        - generic [ref=f2e321]:
+                          - generic [ref=f2e322]: "3.9"
+                          - generic [ref=f2e323]: 3.9 out of 5 stars.
+                          - generic [ref=f2e325]: (365)
+                      - link "Limited time deal" [ref=f2e327] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FBGRDFM9/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-3-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_2_badge&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - link "-65% ₹879.00" [ref=f2e332] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FBGRDFM9/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-3-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_2_price&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                        - generic [ref=f2e333]:
+                          - generic [ref=f2e334]: "-65%"
+                          - generic [ref=f2e335]:
+                            - generic [ref=f2e336]: ₹879.00
+                            - generic [ref=f2e337]:
+                              - text: ₹
+                              - generic [ref=f2e338]:
+                                - text: "879"
+                                - generic [ref=f2e339]: .
+                              - text: "00"
+                      - generic [ref=f2e340]: "M.R.P: ₹2,499.00"
+                - listitem [ref=f2e343]:
+                  - generic [ref=f2e345]:
+                    - link [ref=f2e346] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FVSQNH93/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-4-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_3_bkgd&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                    - link [ref=f2e348] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FVSQNH93/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-4-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_3_img&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - img "Boldfit Walking Shoes for Man Daywalk Max Soft Cushioned Shoe for Men Lightweight Slip on Shoe for Men Without Lace Shoes for Man Stylish Regular Wear" [ref=f2e351]
+                    - generic [ref=f2e353]:
+                      - link [ref=f2e354] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FVSQNH93/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-4-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_3_bkgd&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - link "Boldfit Walking Shoes for Man Daywalk Max Soft Cushioned Shoe for Men Lightweight Slip on Shoe for Men Without Lace Shoes for Man Stylish Regular Wear" [ref=f2e356] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FVSQNH93/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-4-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_3_title&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - link "Rated 3.9 out of 5 stars by 616 reviews. Go to review section." [ref=f2e359] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FVSQNH93/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-4-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_3_rating&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844#customerReviews
+                        - generic [ref=f2e360]:
+                          - generic [ref=f2e361]: "3.9"
+                          - generic [ref=f2e362]: 3.9 out of 5 stars.
+                          - generic [ref=f2e364]: (616)
+                      - link "₹1,299.00" [ref=f2e366] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FVSQNH93/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-4-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_3_price&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                        - generic [ref=f2e368]:
+                          - generic [ref=f2e369]: ₹1,299.00
+                          - generic [ref=f2e370]:
+                            - text: ₹
+                            - generic [ref=f2e371]:
+                              - text: 1,299
+                              - generic [ref=f2e372]: .
+                            - text: "00"
+                      - generic [ref=f2e373]: "M.R.P: ₹2,999.00"
+                - listitem [ref=f2e376]:
+                  - generic [ref=f2e378]:
+                    - link [ref=f2e379] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0F949KFQ7/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-5-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_4_bkgd&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                    - link [ref=f2e381] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0F949KFQ7/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-5-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_4_img&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - img "Boldfit Walking Shoes for Man, Breathable Knit Slip-On Casual Shoes s for Man with Memory Foam Insole, Thick Eva Outsole, and Padded Heel Support, Lightweight, Sock-Like Fit for All-Day Comfort" [ref=f2e384]
+                    - generic [ref=f2e386]:
+                      - link [ref=f2e387] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0F949KFQ7/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-5-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_4_bkgd&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - link "Boldfit Walking Shoes for Man, Breathable Knit Slip-On Casual Shoes s for Man with Memory Foam Insole, Thick Eva Outsole, and Padded Heel Support, Lightweight, Sock-Like Fit for All-Day Comfort" [ref=f2e389] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0F949KFQ7/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-5-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_4_title&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - link "Rated 3.8 out of 5 stars by 1230 reviews. Go to review section." [ref=f2e392] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0F949KFQ7/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-5-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_4_rating&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844#customerReviews
+                        - generic [ref=f2e393]:
+                          - generic [ref=f2e394]: "3.8"
+                          - generic [ref=f2e395]: 3.8 out of 5 stars.
+                          - generic [ref=f2e397]: (1.2k)
+                      - link "₹899.00" [ref=f2e399] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0F949KFQ7/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-5-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_4_price&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                        - generic [ref=f2e401]:
+                          - generic [ref=f2e402]: ₹899.00
+                          - generic [ref=f2e403]:
+                            - text: ₹
+                            - generic [ref=f2e404]:
+                              - text: "899"
+                              - generic [ref=f2e405]: .
+                            - text: "00"
+                      - generic [ref=f2e406]: "M.R.P: ₹2,499.00"
+                - listitem [ref=f2e409]:
+                  - generic [ref=f2e411]:
+                    - link [ref=f2e412] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0F94CYSL1/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-6-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_5_bkgd&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                    - link [ref=f2e414] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0F94CYSL1/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-6-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_5_img&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - img "Boldfit Running Shoes for Man Comfortable Sports Shoes for Men Running Lightweight Gym Shoe for Men Workout Soft Cushioned Walking Shoe for Man Anti Slip Gym Footwear" [ref=f2e417]
+                    - generic [ref=f2e419]:
+                      - link [ref=f2e420] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0F94CYSL1/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-6-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_5_bkgd&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - link "Boldfit Running Shoes for Man Comfortable Sports Shoes for Men Running Lightweight Gym Shoe for Men Workout Soft Cushioned Walking Shoe for Man Anti Slip Gym Footwear" [ref=f2e422] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0F94CYSL1/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-6-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_5_title&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - link "Rated 3.9 out of 5 stars by 862 reviews. Go to review section." [ref=f2e425] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0F94CYSL1/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-6-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_5_rating&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844#customerReviews
+                        - generic [ref=f2e426]:
+                          - generic [ref=f2e427]: "3.9"
+                          - generic [ref=f2e428]: 3.9 out of 5 stars.
+                          - generic [ref=f2e430]: (862)
+                      - link "₹1,099.00" [ref=f2e432] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0F94CYSL1/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-6-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_5_price&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                        - generic [ref=f2e434]:
+                          - generic [ref=f2e435]: ₹1,099.00
+                          - generic [ref=f2e436]:
+                            - text: ₹
+                            - generic [ref=f2e437]:
+                              - text: 1,099
+                              - generic [ref=f2e438]: .
+                            - text: "00"
+                      - generic [ref=f2e439]: "M.R.P: ₹2,499.00"
+                - listitem [ref=f2e442]:
+                  - generic [ref=f2e444]:
+                    - link [ref=f2e445] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FVSNDJW8/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-7-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_6_bkgd&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                    - link [ref=f2e447] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FVSNDJW8/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-7-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_6_img&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - img "Boldfit Walking Shoes for Man Daywalk Max Soft Cushioned Shoe for Men Lightweight Slip on Shoe for Men Without Lace Shoes for Man Stylish Regular Wear" [ref=f2e450]
+                    - generic [ref=f2e452]:
+                      - link [ref=f2e453] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FVSNDJW8/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-7-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_6_bkgd&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - link "Boldfit Walking Shoes for Man Daywalk Max Soft Cushioned Shoe for Men Lightweight Slip on Shoe for Men Without Lace Shoes for Man Stylish Regular Wear" [ref=f2e455] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FVSNDJW8/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-7-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_6_title&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - link "Rated 3.9 out of 5 stars by 616 reviews. Go to review section." [ref=f2e458] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FVSNDJW8/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-7-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_6_rating&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844#customerReviews
+                        - generic [ref=f2e459]:
+                          - generic [ref=f2e460]: "3.9"
+                          - generic [ref=f2e461]: 3.9 out of 5 stars.
+                          - generic [ref=f2e463]: (616)
+                      - link "Mega Deal Days" [ref=f2e465] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FVSNDJW8/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-7-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_6_badge&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - link "-57% ₹1,299.00" [ref=f2e470] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0FVSNDJW8/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-7-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_6_price&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                        - generic [ref=f2e471]:
+                          - generic [ref=f2e472]: "-57%"
+                          - generic [ref=f2e473]:
+                            - generic [ref=f2e474]: ₹1,299.00
+                            - generic [ref=f2e475]:
+                              - text: ₹
+                              - generic [ref=f2e476]:
+                                - text: 1,299
+                                - generic [ref=f2e477]: .
+                              - text: "00"
+                      - generic [ref=f2e478]: "M.R.P: ₹2,999.00"
+                - listitem [ref=f2e481]:
+                  - generic [ref=f2e483]:
+                    - link [ref=f2e484] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0F94CZFX3/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-8-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_7_bkgd&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                    - link [ref=f2e486] [cursor=pointer]:
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0F94CZFX3/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-8-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_7_img&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - img "Boldfit Running Shoes for Man Comfortable Sports Shoes for Men Running Lightweight Gym Shoe for Men Workout Soft Cushioned Walking Shoe for Man Anti Slip Gym Footwear" [ref=f2e489]
+                    - generic [ref=f2e491]:
+                      - link [ref=f2e492] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0F94CZFX3/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-8-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_7_bkgd&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - link "Boldfit Running Shoes for Man Comfortable Sports Shoes for Men Running Lightweight Gym Shoe for Men Workout Soft Cushioned Walking Shoe for Man Anti Slip Gym Footwear" [ref=f2e494] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0F94CZFX3/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-8-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_7_title&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                      - link "Rated 3.9 out of 5 stars by 862 reviews. Go to review section." [ref=f2e497] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0F94CZFX3/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-8-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_7_rating&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844#customerReviews
+                        - generic [ref=f2e498]:
+                          - generic [ref=f2e499]: "3.9"
+                          - generic [ref=f2e500]: 3.9 out of 5 stars.
+                          - generic [ref=f2e502]: (862)
+                      - link "₹959.00" [ref=f2e504] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JH4QPmzA81ijkeUmIXAhVHYAAAGf-237DgoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICAuxT95/clv1c_ek-wBPHXUsbWHn2mJrbUyS9ZrU-CL7c8VebPGuXZzZ9o40iFBTcGoZpcnmUEHLiNqiPSquKKY0ho9QDmuqRBiyu5rx7d5Y6JqvTGSnCNdyFuGnNnGu7bYaDB8hN9t2RRt9ubthluMFs72ax4SeKj6-zBBB8Qf_Xqm_ygjzdoSIQRV1uF3kKj1ezhAr8wNEilpsGhL9VylBgQnVQ9dsnBZWSGTW9zTRzShF-XvX0dzrmzBcfqb56hzE8-eO0pMRTazt1eAKcqMxIyIjsSDnaAQJak2Gc4mbbiPUMAOYSrJ3zWaPwdYry9YwPB0n36cW7OEiz6bhxVJJyUgr60gb1rz8GQ4Cs8KodELJevV53QlhG-N1ZAFZsuIzk059He8CRV78iqZ6PXKijopDm-oz5alozmavwE5V_q50eePeDuRqVIViFcbx10TebwE380Ro2Ngu72XLMgv9z06xaugzJX-cGO_H5mrc2NuqpvYd9RSn_9ekeNPgOiAfI4ZOC683QeOVTpXMufd2UrWBVcwaZ4o759lRZKEwcPUNTm2KUo9ofgkLPCuzVxj8nNo1M8RlkATWXXtoKTFmz79bgOlGzFaYjc3g6ykuksIJf4VzTu0UfrUMPrvEjPWVUiEXtfXzRnZkM_kTtMdXlhUe0CsFBy-ZUo4mwmBi2WBDjF8ddk-7zklyBnaEn51uiogXQ6sUbgPlUJKy96pXx192anPEzjiIt2eH-Vhj7D16_5WNvVGNrpc4HfVq0lNALLiKPJ2Zo0cos_5jP1gxPlS3pMAdsK26c4wKKBU3KFlhicumDjChuZt1YXALWzHfPq5QJYCEhXaK4yejkMNjc2FL1TlT31HNT3jRU12DS8eZWnBlTpLleag3RgoeQqHVOffsVp22y2xowl_znz05HI-X6ELJv3DzVI_d96FO2v_uhXHXv2p1g_r4JHELMsokhvE2FlQJZjsEQZ7E1M-AczVzgQtvEw-AloNdTbAN92aJB62lcGnnBWTZ_bv5xXp04_i-oid8d0pQw9Psr0t_3gA_EEf1aN6MdpeXt61G38N5NLYsQ7ICu8ZWDi5nORk3XU0osZDvXVkgT8sPWo7gIr7Ghz-9KnuPmw5en2i95bgWvKPsbVsG7JT1wZUHbErA-scPOjVhjYSdIIKarwN6q1WDLDAPsUi1KtqhE8cuC6Q-pXvtbnBRpwkmo01WbR4y79HTpjOD6EhskzMCEsa87JksigX8oRrSh0gE64DaJOpI-7VdpkAwH8Zlp-s6hdMQF5P9rWAU9mNtBWCouUP4s2nYB2aL0HuptAhT1-Yi2AhJbbeyJg8gZB3K4ryap8r02lwJ6r79QB7evmHKO3op4nm8VEpxWLRB-6sBxPMJXT6TiM44pmp9UAkeiiUM8nJFjWxyUnrG1DLADE6aCly2-PejxxRPXOUA75dp5RiCwAlLUcH2hYEJia3vHBR1IABl8RlUGEDrDs6fU6ofItUKTMtc5Wlj5SRU1JgaEX027PzcHU7VTHP_dDrgED3LTIloWXSDCLNPy1W9rzZ9AE7j40xbBe4IqJJpPgJMM8fhcGprqnij_alUBWFZoGr0YdLVeyLlLOhSiUTWUu81BXhbxv0EQMJTzsbzRj2Cy-YrXsSjjzavjifJwZ6GPvJJI3lumGLweEVcYbCclEGxKIdioMyfxjTI2_mT9hcTHc8YRPvlf0stu422pzt0TijRs/https://www.amazon.in/gp/aw/d/B0F94CZFX3/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=ee50e9b700d7382aa518bcf4dd090ed2&hsa_cr_id=0&qid=1786629716&sr=1-8-e0fa1fdd-d857-4087-adda-5bd576b25987&i=aps&aref=Bl4fOxDQiO&ref_=sbx_s_sparkle_sbtcd_asin_7_price&pd_rd_w=s0OJ3&content-id=amzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244%3Aamzn1.sym.c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_p=c0c4f4ed-4ecc-4626-b0b0-d428311a6244&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=6DF6t&pd_rd_r=8a066fd4-4a35-4016-9f96-357a4f43e844
+                        - generic [ref=f2e506]:
+                          - generic [ref=f2e507]: ₹959.00
+                          - generic [ref=f2e508]:
+                            - text: ₹
+                            - generic [ref=f2e509]:
+                              - text: "959"
+                              - generic [ref=f2e510]: .
+                            - text: "00"
+                      - generic [ref=f2e511]: "M.R.P: ₹2,499.00"
+      - generic [ref=f2e515]:
+        - generic [ref=f2e518]:
+          - heading "Results" [level=2] [ref=f2e519]
+          - generic [ref=f2e520]: Check each product page for other buying options. Price and other details may vary based on product size and colour.
+        - generic:
+          - list
+      - listitem [ref=f2e521]:
+        - generic [ref=f2e528]:
+          - link [ref=f2e532] [cursor=pointer]:
+            - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMTE4MTk5NTg3MzMzMjo6MDo6&url=%2FBacca-Blocked-Fashion-Shopping-Fun-Multi%2Fdp%2FB07YSW23CV%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-1-spons%26aref%3DA4gOBvUma4%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=A4gOBvUma4&sp_cr=ZAZ
+          - generic [ref=f2e535]:
+            - group "colours available" [ref=f2e537]:
+              - list
+              - link "+3 other colors/patterns" [ref=f2e539] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMTE4MTk5NTg3MzMzMjo6MDo6&url=%2FBacca-Blocked-Fashion-Shopping-Fun-Multi%2Fdp%2FB07YSW23CV%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-1-spons%26aref%3DA4gOBvUma4%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=A4gOBvUma4&sp_cr=ZAZ
+            - generic [ref=f2e540]:
+              - button "View Sponsored information or leave ad feedback" [ref=f2e543] [cursor=pointer]:
+                - generic [ref=f2e544]: Sponsored
+              - heading "Bacca Bucci" [level=2] [ref=f2e547]
+              - link [ref=f2e548] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMTE4MTk5NTg3MzMzMjo6MDo6&url=%2FBacca-Blocked-Fashion-Shopping-Fun-Multi%2Fdp%2FB07YSW23CV%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-1-spons%26aref%3DA4gOBvUma4%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=A4gOBvUma4&sp_cr=ZAZ
+                - heading "Sponsored Ad - Men Lace Up Running Shoes" [level=2] [ref=f2e549]: Men Lace Up Running Shoes
+            - generic [ref=f2e551]:
+              - text: "3.8"
+              - button "3.8 out of 5 stars, rating details" [ref=f2e553] [cursor=pointer]:
+                - generic [ref=f2e554]: 3.8 out of 5 stars
+              - link "3,086 ratings" [ref=f2e557] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMTE4MTk5NTg3MzMzMjo6MDo6&url=%2FBacca-Blocked-Fashion-Shopping-Fun-Multi%2Fdp%2FB07YSW23CV%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-1-spons%26aref%3DA4gOBvUma4%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=A4gOBvUma4&sp_cr=ZAZ#customerReviews
+                - text: (3K)
+            - generic [ref=f2e558]:
+              - generic [ref=f2e560]:
+                - generic [ref=f2e561]: Price, product page
+                - 'link "₹1,328 M.R.P: ₹2,499 M.R.P: ₹2,499" [ref=f2e562] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMTE4MTk5NTg3MzMzMjo6MDo6&url=%2FBacca-Blocked-Fashion-Shopping-Fun-Multi%2Fdp%2FB07YSW23CV%2Fref%3Dsr_1_1_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-1-spons%26aref%3DA4gOBvUma4%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=A4gOBvUma4&sp_cr=ZAZ
+                  - generic [ref=f2e563]:
+                    - generic [ref=f2e564]: ₹1,328
+                    - generic [ref=f2e565]: ₹1,328
+                  - generic [ref=f2e566]: "M.R.P: ₹2,499"
+                  - generic [ref=f2e567]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e568]:
+                      - generic [ref=f2e569]: ₹2,499
+                      - text: ₹2,499
+                - text: (47% off)
+              - generic [ref=f2e572]:
+                - generic [ref=f2e573]: You pay ₹1,261.60
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e574]: FREE delivery Sat, 22 Aug
+            - button "Add to cart" [ref=f2e589] [cursor=pointer]
+      - listitem [ref=f2e590]:
+        - generic [ref=f2e597]:
+          - link [ref=f2e601] [cursor=pointer]:
+            - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMDg2MDcxNzc2NDMzMjo6MDo6&url=%2FBacca-Ultraforce-Athletic-Inspired-Sneakers-Men-Black%2Fdp%2FB07QCZ4D6K%2Fref%3Dsr_1_2_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-2-spons%26aref%3Do3XTKiniDC%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=o3XTKiniDC&sp_cr=ZAZ
+          - generic [ref=f2e604]:
+            - group "colours available" [ref=f2e606]:
+              - list
+              - link "+6 other colors/patterns" [ref=f2e608] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMDg2MDcxNzc2NDMzMjo6MDo6&url=%2FBacca-Ultraforce-Athletic-Inspired-Sneakers-Men-Black%2Fdp%2FB07QCZ4D6K%2Fref%3Dsr_1_2_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-2-spons%26aref%3Do3XTKiniDC%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=o3XTKiniDC&sp_cr=ZAZ
+            - generic [ref=f2e609]:
+              - button "View Sponsored information or leave ad feedback" [ref=f2e612] [cursor=pointer]:
+                - generic [ref=f2e613]: Sponsored
+              - heading "Bacca Bucci" [level=2] [ref=f2e616]
+              - link [ref=f2e617] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMDg2MDcxNzc2NDMzMjo6MDo6&url=%2FBacca-Ultraforce-Athletic-Inspired-Sneakers-Men-Black%2Fdp%2FB07QCZ4D6K%2Fref%3Dsr_1_2_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-2-spons%26aref%3Do3XTKiniDC%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=o3XTKiniDC&sp_cr=ZAZ
+                - heading "Sponsored Ad - Men Suede Lace Up Sneaker Shoes" [level=2] [ref=f2e618]: Men Suede Lace Up Sneaker Shoes
+            - generic [ref=f2e620]:
+              - text: "3.6"
+              - button "3.6 out of 5 stars, rating details" [ref=f2e622] [cursor=pointer]:
+                - generic [ref=f2e623]: 3.6 out of 5 stars
+              - link "7,414 ratings" [ref=f2e626] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMDg2MDcxNzc2NDMzMjo6MDo6&url=%2FBacca-Ultraforce-Athletic-Inspired-Sneakers-Men-Black%2Fdp%2FB07QCZ4D6K%2Fref%3Dsr_1_2_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-2-spons%26aref%3Do3XTKiniDC%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=o3XTKiniDC&sp_cr=ZAZ#customerReviews
+                - text: (7.4K)
+            - generic [ref=f2e627]:
+              - link "Mega Deal Days" [ref=f2e629] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e634]:
+                - generic [ref=f2e635]: Price, product page
+                - 'link "₹948 M.R.P: ₹2,499 M.R.P: ₹2,499" [ref=f2e636] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMDg2MDcxNzc2NDMzMjo6MDo6&url=%2FBacca-Ultraforce-Athletic-Inspired-Sneakers-Men-Black%2Fdp%2FB07QCZ4D6K%2Fref%3Dsr_1_2_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-2-spons%26aref%3Do3XTKiniDC%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=o3XTKiniDC&sp_cr=ZAZ
+                  - generic [ref=f2e637]:
+                    - generic [ref=f2e638]: ₹948
+                    - generic [ref=f2e639]: ₹948
+                  - generic [ref=f2e640]: "M.R.P: ₹2,499"
+                  - generic [ref=f2e641]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e642]:
+                      - generic [ref=f2e643]: ₹2,499
+                      - text: ₹2,499
+                - text: (62% off)
+              - generic [ref=f2e646]:
+                - generic [ref=f2e647]: You pay ₹900.60
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e648]: FREE delivery Sat, 22 Aug
+            - button "Add to cart" [ref=f2e663] [cursor=pointer]
+      - listitem [ref=f2e664]:
+        - generic [ref=f2e671]:
+          - link [ref=f2e675] [cursor=pointer]:
+            - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMTE4MTE1ODkyNDczMjo6MDo6&url=%2FBacca-Bucci-Zephyr-All-Day-Training%2Fdp%2FB0FNCYZR6K%2Fref%3Dsr_1_3_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-3-spons%26aref%3DLCZD3yXvrA%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=LCZD3yXvrA&sp_cr=ZAZ
+          - generic [ref=f2e677]:
+            - group "colours available" [ref=f2e679]:
+              - list
+              - link "+3 other colors/patterns" [ref=f2e681] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMTE4MTE1ODkyNDczMjo6MDo6&url=%2FBacca-Bucci-Zephyr-All-Day-Training%2Fdp%2FB0FNCYZR6K%2Fref%3Dsr_1_3_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-3-spons%26aref%3DLCZD3yXvrA%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=LCZD3yXvrA&sp_cr=ZAZ
+            - generic [ref=f2e682]:
+              - button "View Sponsored information or leave ad feedback" [ref=f2e685] [cursor=pointer]:
+                - generic [ref=f2e686]: Sponsored
+              - heading "Bacca Bucci" [level=2] [ref=f2e689]
+              - link [ref=f2e690] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMTE4MTE1ODkyNDczMjo6MDo6&url=%2FBacca-Bucci-Zephyr-All-Day-Training%2Fdp%2FB0FNCYZR6K%2Fref%3Dsr_1_3_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-3-spons%26aref%3DLCZD3yXvrA%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=LCZD3yXvrA&sp_cr=ZAZ
+                - heading "Sponsored Ad - Zephyr – All-Day Comfort Running & Training Shoes" [level=2] [ref=f2e691]: Zephyr – All-Day Comfort Running & Training Shoes
+            - generic [ref=f2e693]:
+              - text: "4.0"
+              - button "4.0 out of 5 stars, rating details" [ref=f2e695] [cursor=pointer]:
+                - generic [ref=f2e696]: 4.0 out of 5 stars
+              - link "310 ratings" [ref=f2e699] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMTE4MTE1ODkyNDczMjo6MDo6&url=%2FBacca-Bucci-Zephyr-All-Day-Training%2Fdp%2FB0FNCYZR6K%2Fref%3Dsr_1_3_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-3-spons%26aref%3DLCZD3yXvrA%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=LCZD3yXvrA&sp_cr=ZAZ#customerReviews
+                - text: (310)
+            - generic [ref=f2e700]:
+              - link "Mega Deal Days" [ref=f2e702] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e707]:
+                - generic [ref=f2e708]: Price, product page
+                - 'link "₹1,898 M.R.P: ₹3,999 M.R.P: ₹3,999" [ref=f2e709] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMTE4MTE1ODkyNDczMjo6MDo6&url=%2FBacca-Bucci-Zephyr-All-Day-Training%2Fdp%2FB0FNCYZR6K%2Fref%3Dsr_1_3_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-3-spons%26aref%3DLCZD3yXvrA%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=LCZD3yXvrA&sp_cr=ZAZ
+                  - generic [ref=f2e710]:
+                    - generic [ref=f2e711]: ₹1,898
+                    - generic [ref=f2e712]: ₹1,898
+                  - generic [ref=f2e713]: "M.R.P: ₹3,999"
+                  - generic [ref=f2e714]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e715]:
+                      - generic [ref=f2e716]: ₹3,999
+                      - text: ₹3,999
+                - text: (53% off)
+              - generic [ref=f2e719]:
+                - generic [ref=f2e720]: You pay ₹1,803.10
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e721]:
+              - generic [ref=f2e722]: FREE delivery Tue, 25 Aug
+              - generic "Only 2 left in stock." [ref=f2e727]
+            - button "Add to cart" [ref=f2e738] [cursor=pointer]
+      - listitem [ref=f2e739]:
+        - generic [ref=f2e746]:
+          - link [ref=f2e750] [cursor=pointer]:
+            - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMDg0NjQ4NzgzNjgzMjo6MDo6&url=%2FBacca-Bucci-Black-Orange-Running%2Fdp%2FB08HNGK3B7%2Fref%3Dsr_1_4_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-4-spons%26aref%3Dj8Xr4P8j1X%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=j8Xr4P8j1X&sp_cr=ZAZ
+          - generic [ref=f2e753]:
+            - group "colours available" [ref=f2e755]:
+              - list
+              - link "+3 other colors/patterns" [ref=f2e757] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMDg0NjQ4NzgzNjgzMjo6MDo6&url=%2FBacca-Bucci-Black-Orange-Running%2Fdp%2FB08HNGK3B7%2Fref%3Dsr_1_4_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-4-spons%26aref%3Dj8Xr4P8j1X%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=j8Xr4P8j1X&sp_cr=ZAZ
+            - generic [ref=f2e758]:
+              - button "View Sponsored information or leave ad feedback" [ref=f2e761] [cursor=pointer]:
+                - generic [ref=f2e762]: Sponsored
+              - heading "Bacca Bucci" [level=2] [ref=f2e765]
+              - link [ref=f2e766] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMDg0NjQ4NzgzNjgzMjo6MDo6&url=%2FBacca-Bucci-Black-Orange-Running%2Fdp%2FB08HNGK3B7%2Fref%3Dsr_1_4_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-4-spons%26aref%3Dj8Xr4P8j1X%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=j8Xr4P8j1X&sp_cr=ZAZ
+                - heading "Sponsored Ad - Men Lace Up Running Shoes" [level=2] [ref=f2e767]: Men Lace Up Running Shoes
+            - generic [ref=f2e768]:
+              - generic [ref=f2e769]:
+                - text: "4.0"
+                - button "4.0 out of 5 stars, rating details" [ref=f2e771] [cursor=pointer]:
+                  - generic [ref=f2e772]: 4.0 out of 5 stars
+                - link "3,971 ratings" [ref=f2e775] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMDg0NjQ4NzgzNjgzMjo6MDo6&url=%2FBacca-Bucci-Black-Orange-Running%2Fdp%2FB08HNGK3B7%2Fref%3Dsr_1_4_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-4-spons%26aref%3Dj8Xr4P8j1X%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=j8Xr4P8j1X&sp_cr=ZAZ#customerReviews
+                  - text: (3.9K)
+              - generic [ref=f2e776]: 50+ bought in past month
+            - generic [ref=f2e777]:
+              - link "Mega Deal Days" [ref=f2e779] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e784]:
+                - generic [ref=f2e785]: Price, product page
+                - 'link "₹1,520 M.R.P: ₹2,999 M.R.P: ₹2,999" [ref=f2e786] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMDg0NjQ4NzgzNjgzMjo6MDo6&url=%2FBacca-Bucci-Black-Orange-Running%2Fdp%2FB08HNGK3B7%2Fref%3Dsr_1_4_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-4-spons%26aref%3Dj8Xr4P8j1X%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=j8Xr4P8j1X&sp_cr=ZAZ
+                  - generic [ref=f2e787]:
+                    - generic [ref=f2e788]: ₹1,520
+                    - generic [ref=f2e789]: ₹1,520
+                  - generic [ref=f2e790]: "M.R.P: ₹2,999"
+                  - generic [ref=f2e791]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e792]:
+                      - generic [ref=f2e793]: ₹2,999
+                      - text: ₹2,999
+                - text: (49% off)
+              - generic [ref=f2e796]:
+                - generic [ref=f2e797]: You pay ₹1,444
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e798]: FREE delivery Sat, 22 Aug
+            - button "Add to cart" [ref=f2e813] [cursor=pointer]
+      - listitem [ref=f2e814]:
+        - generic [ref=f2e821]:
+          - link [ref=f2e825] [cursor=pointer]:
+            - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMDg0NjQ4NzgzNjczMjo6MDo6&url=%2FBacca-Bucci-Essential-Everyday-Purpose%2Fdp%2FB0C3XXCJ49%2Fref%3Dsr_1_5_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-5-spons%26aref%3Dc1YgVGQAZa%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=c1YgVGQAZa&sp_cr=ZAZ
+          - generic [ref=f2e827]:
+            - group "colours available" [ref=f2e829]:
+              - list
+              - link "+2 other colors/patterns" [ref=f2e831] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMDg0NjQ4NzgzNjczMjo6MDo6&url=%2FBacca-Bucci-Essential-Everyday-Purpose%2Fdp%2FB0C3XXCJ49%2Fref%3Dsr_1_5_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-5-spons%26aref%3Dc1YgVGQAZa%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=c1YgVGQAZa&sp_cr=ZAZ
+            - generic [ref=f2e832]:
+              - button "View Sponsored information or leave ad feedback" [ref=f2e835] [cursor=pointer]:
+                - generic [ref=f2e836]: Sponsored
+              - heading "Bacca Bucci" [level=2] [ref=f2e839]
+              - link [ref=f2e840] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMDg0NjQ4NzgzNjczMjo6MDo6&url=%2FBacca-Bucci-Essential-Everyday-Purpose%2Fdp%2FB0C3XXCJ49%2Fref%3Dsr_1_5_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-5-spons%26aref%3Dc1YgVGQAZa%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=c1YgVGQAZa&sp_cr=ZAZ
+                - heading "Sponsored Ad - Men Lace Up Running Shoes" [level=2] [ref=f2e841]: Men Lace Up Running Shoes
+            - generic [ref=f2e842]:
+              - generic [ref=f2e843]:
+                - text: "4.0"
+                - button "4.0 out of 5 stars, rating details" [ref=f2e845] [cursor=pointer]:
+                  - generic [ref=f2e846]: 4.0 out of 5 stars
+                - link "1,614 ratings" [ref=f2e849] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMDg0NjQ4NzgzNjczMjo6MDo6&url=%2FBacca-Bucci-Essential-Everyday-Purpose%2Fdp%2FB0C3XXCJ49%2Fref%3Dsr_1_5_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-5-spons%26aref%3Dc1YgVGQAZa%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=c1YgVGQAZa&sp_cr=ZAZ#customerReviews
+                  - text: (1.6K)
+              - generic [ref=f2e850]: 200+ bought in past month
+            - generic [ref=f2e851]:
+              - link "Mega Deal Days" [ref=f2e853] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e858]:
+                - generic [ref=f2e859]: Price, product page
+                - 'link "₹948 M.R.P: ₹2,499 M.R.P: ₹2,499" [ref=f2e860] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfYXRmOjMwMDg0NjQ4NzgzNjczMjo6MDo6&url=%2FBacca-Bucci-Essential-Everyday-Purpose%2Fdp%2FB0C3XXCJ49%2Fref%3Dsr_1_5_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-5-spons%26aref%3Dc1YgVGQAZa%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1&aref=c1YgVGQAZa&sp_cr=ZAZ
+                  - generic [ref=f2e861]:
+                    - generic [ref=f2e862]: ₹948
+                    - generic [ref=f2e863]: ₹948
+                  - generic [ref=f2e864]: "M.R.P: ₹2,499"
+                  - generic [ref=f2e865]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e866]:
+                      - generic [ref=f2e867]: ₹2,499
+                      - text: ₹2,499
+                - text: (62% off)
+              - generic [ref=f2e870]:
+                - generic [ref=f2e871]: You pay ₹900.60
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e872]: FREE delivery Sat, 22 Aug
+            - button "Add to cart" [ref=f2e887] [cursor=pointer]
+      - listitem [ref=f2e888]:
+        - generic [ref=f2e893]:
+          - link [ref=f2e897] [cursor=pointer]:
+            - /url: /Campus-First-B-ORG-Running-Shoes/dp/B0915DCZDJ/ref=sr_1_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-6
+          - generic [ref=f2e899]:
+            - group "colours available" [ref=f2e901]:
+              - list [ref=f2e902]:
+                - generic [ref=f2e903]:
+                  - listitem:
+                    - link "Wht/Sil/B.Org":
+                      - /url: /Campus-First-B-ORG-Running-Shoes/dp/B0915DCZDJ/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-6
+                - generic [ref=f2e906]:
+                  - listitem:
+                    - link "BLK/MATTLIC.GRN":
+                      - /url: /Campus-First-B-ORG-Running-Shoes/dp/B09MLVZSZ6/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-6
+                - generic [ref=f2e909]:
+                  - listitem:
+                    - link "BLK/RED":
+                      - /url: /Campus-First-B-ORG-Running-Shoes/dp/B08WQ4WKSW/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-6
+                - generic [ref=f2e912]:
+                  - listitem:
+                    - link "WHT/BLK/RED":
+                      - /url: /Campus-First-B-ORG-Running-Shoes/dp/B08WPLB93Y/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-6
+                - generic [ref=f2e915]:
+                  - listitem:
+                    - link "L.GRY/BLK":
+                      - /url: /Campus-First-B-ORG-Running-Shoes/dp/B08WPN4TY5/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-6
+                - generic [ref=f2e918]:
+                  - listitem:
+                    - link "NAVY/MSTD":
+                      - /url: /Campus-First-B-ORG-Running-Shoes/dp/B08X6BXXQG/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-6
+              - link "+2 other colors/patterns" [ref=f2e922] [cursor=pointer]:
+                - /url: /Campus-First-B-ORG-Running-Shoes/dp/B0915DCZDJ/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-6
+                - text: "+2"
+            - generic [ref=f2e923]:
+              - heading "Campus" [level=2] [ref=f2e925]
+              - link [ref=f2e926] [cursor=pointer]:
+                - /url: /Campus-First-B-ORG-Running-Shoes/dp/B0915DCZDJ/ref=sr_1_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-6
+                - heading "Men First Running Shoes" [level=2] [ref=f2e927]
+            - generic [ref=f2e928]:
+              - generic [ref=f2e929]:
+                - text: "4.1"
+                - button "4.1 out of 5 stars, rating details" [ref=f2e931] [cursor=pointer]:
+                  - generic [ref=f2e932]: 4.1 out of 5 stars
+                - link "18,119 ratings" [ref=f2e935] [cursor=pointer]:
+                  - /url: /Campus-First-B-ORG-Running-Shoes/dp/B0915DCZDJ/ref=sr_1_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-6#customerReviews
+                  - text: (18.1K)
+              - generic [ref=f2e936]: 400+ bought in past month
+            - generic [ref=f2e937]:
+              - link "Mega Deal Days" [ref=f2e939] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e944]:
+                - generic [ref=f2e945]: Price, product page
+                - 'link "₹1,099 M.R.P: ₹1,899 M.R.P: ₹1,899" [ref=f2e946] [cursor=pointer]':
+                  - /url: /Campus-First-B-ORG-Running-Shoes/dp/B0915DCZDJ/ref=sr_1_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-6
+                  - generic [ref=f2e947]:
+                    - generic [ref=f2e948]: ₹1,099
+                    - generic [ref=f2e949]: ₹1,099
+                  - generic [ref=f2e950]: "M.R.P: ₹1,899"
+                  - generic [ref=f2e951]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e952]:
+                      - generic [ref=f2e953]: ₹1,899
+                      - text: ₹1,899
+                - text: (42% off)
+              - generic [ref=f2e956]:
+                - generic [ref=f2e957]: You pay ₹1,044.05
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e960]:
+              - generic [ref=f2e961]: FREE delivery Sat, 22 Aug
+              - generic [ref=f2e963]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e975] [cursor=pointer]
+      - listitem [ref=f2e976]:
+        - generic [ref=f2e981]:
+          - generic "Amazon's Choice" [ref=f2e983]:
+            - group "Amazon's Choice for \"shoes\"" [ref=f2e986]:
+              - generic [ref=f2e987]: Amazon's Choice
+          - link [ref=f2e992] [cursor=pointer]:
+            - /url: /ASIAN-Wonder-13-Sports-Running-Shoes/dp/B01MSOPR4M/ref=sr_1_7?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-7
+          - generic [ref=f2e994]:
+            - group "colours available" [ref=f2e996]:
+              - list [ref=f2e997]:
+                - generic [ref=f2e998]:
+                  - listitem:
+                    - link "GREEN GREY":
+                      - /url: /ASIAN-Wonder-13-Sports-Running-Shoes/dp/B01MSOPR4M/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-7
+                - generic [ref=f2e1001]:
+                  - listitem:
+                    - link "BLACK RED":
+                      - /url: /ASIAN-Wonder-13-Sports-Running-Shoes/dp/B07BMXV5SQ/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-7
+                - generic [ref=f2e1004]:
+                  - listitem:
+                    - link "BLACK SILVER":
+                      - /url: /ASIAN-Wonder-13-Sports-Running-Shoes/dp/B07H2YMVQH/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-7
+                - generic [ref=f2e1007]:
+                  - listitem:
+                    - link "GREY":
+                      - /url: /ASIAN-Wonder-13-Sports-Running-Shoes/dp/B07DL9S9QH/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-7
+                - generic [ref=f2e1010]:
+                  - listitem:
+                    - link "WHITE BLACK":
+                      - /url: /ASIAN-Wonder-13-Sports-Running-Shoes/dp/B07C8FB7ZM/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-7
+                - generic [ref=f2e1013]:
+                  - listitem:
+                    - link "Turquoise":
+                      - /url: /ASIAN-Wonder-13-Sports-Running-Shoes/dp/B07N4RHX3R/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-7
+              - link "+5 other colors/patterns" [ref=f2e1017] [cursor=pointer]:
+                - /url: /ASIAN-Wonder-13-Sports-Running-Shoes/dp/B01MSOPR4M/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-7
+                - text: "+5"
+            - generic [ref=f2e1018]:
+              - heading "ASIAN" [level=2] [ref=f2e1020]
+              - link [ref=f2e1021] [cursor=pointer]:
+                - /url: /ASIAN-Wonder-13-Sports-Running-Shoes/dp/B01MSOPR4M/ref=sr_1_7?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-7
+                - heading "Wonder-13 Men's Running Shoe | Lightweight Sports Design, Soft Cushioning, Reliable Grip for Casual, Travel & Gym" [level=2] [ref=f2e1022]
+            - generic [ref=f2e1023]:
+              - generic [ref=f2e1024]:
+                - text: "4.0"
+                - button "4.0 out of 5 stars, rating details" [ref=f2e1026] [cursor=pointer]:
+                  - generic [ref=f2e1027]: 4.0 out of 5 stars
+                - link "112,129 ratings" [ref=f2e1030] [cursor=pointer]:
+                  - /url: /ASIAN-Wonder-13-Sports-Running-Shoes/dp/B01MSOPR4M/ref=sr_1_7?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-7#customerReviews
+                  - text: (1.1L)
+              - generic [ref=f2e1031]: 200+ bought in past month
+            - generic [ref=f2e1032]:
+              - generic [ref=f2e1034]:
+                - generic [ref=f2e1035]: Price, product page
+                - 'link "₹599 M.R.P: ₹999 M.R.P: ₹999" [ref=f2e1036] [cursor=pointer]':
+                  - /url: /ASIAN-Wonder-13-Sports-Running-Shoes/dp/B01MSOPR4M/ref=sr_1_7?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-7
+                  - generic [ref=f2e1037]:
+                    - generic [ref=f2e1038]: ₹599
+                    - generic [ref=f2e1039]: ₹599
+                  - generic [ref=f2e1040]: "M.R.P: ₹999"
+                  - generic [ref=f2e1041]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e1042]:
+                      - generic [ref=f2e1043]: ₹999
+                      - text: ₹999
+                - text: (40% off)
+              - generic [ref=f2e1044]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e1051]:
+              - generic [ref=f2e1052]: FREE delivery Sat, 22 Aug
+              - generic [ref=f2e1054]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e1066] [cursor=pointer]
+      - listitem [ref=f2e1067]:
+        - generic [ref=f2e1072]:
+          - group "Best sellerin Men's Walking Shoes" [ref=f2e1077]:
+            - generic "Best seller" [ref=f2e1079]
+          - link [ref=f2e1083] [cursor=pointer]:
+            - /url: /Campus-OXYFIT-Walking-Shoes-India/dp/B09RPCVBKY/ref=sr_1_8?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-8
+          - generic [ref=f2e1085]:
+            - group "colours available" [ref=f2e1087]:
+              - list [ref=f2e1088]:
+                - generic [ref=f2e1089]:
+                  - listitem:
+                    - link "BLK":
+                      - /url: /Campus-OXYFIT-Walking-Shoes-India/dp/B09RPCVBKY/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-8
+                - generic [ref=f2e1092]:
+                  - listitem:
+                    - link "BLK/D.GRY":
+                      - /url: /Campus-OXYFIT-Walking-Shoes-India/dp/B09RPC5TVZ/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-8
+                - generic [ref=f2e1095]:
+                  - listitem:
+                    - link "BLK/GOLD":
+                      - /url: /Campus-OXYFIT-Walking-Shoes-India/dp/B09RPGDDVL/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-8
+                - generic [ref=f2e1098]:
+                  - listitem:
+                    - link "BLU/GRY":
+                      - /url: /Campus-OXYFIT-Walking-Shoes-India/dp/B09RPVZK5S/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-8
+                - generic [ref=f2e1101]:
+                  - listitem:
+                    - link "BLU/MSTD":
+                      - /url: /Campus-OXYFIT-Walking-Shoes-India/dp/B0B94BX8XX/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-8
+                - generic [ref=f2e1104]:
+                  - listitem:
+                    - link "BT.GRN/GRY":
+                      - /url: /Campus-OXYFIT-Walking-Shoes-India/dp/B09RPJT5YS/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-8
+              - link "+3 other colors/patterns" [ref=f2e1108] [cursor=pointer]:
+                - /url: /Campus-OXYFIT-Walking-Shoes-India/dp/B09RPCVBKY/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-8
+                - text: "+3"
+            - generic [ref=f2e1109]:
+              - heading "Campus" [level=2] [ref=f2e1111]
+              - link [ref=f2e1112] [cursor=pointer]:
+                - /url: /Campus-OXYFIT-Walking-Shoes-India/dp/B09RPCVBKY/ref=sr_1_8?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-8
+                - heading "Men Oxyfit (N) Walking Shoes" [level=2] [ref=f2e1113]
+            - generic [ref=f2e1114]:
+              - generic [ref=f2e1115]:
+                - text: "4.2"
+                - button "4.2 out of 5 stars, rating details" [ref=f2e1117] [cursor=pointer]:
+                  - generic [ref=f2e1118]: 4.2 out of 5 stars
+                - link "27,667 ratings" [ref=f2e1121] [cursor=pointer]:
+                  - /url: /Campus-OXYFIT-Walking-Shoes-India/dp/B09RPCVBKY/ref=sr_1_8?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-8#customerReviews
+                  - text: (27.6K)
+              - generic [ref=f2e1122]: 600+ bought in past month
+            - generic [ref=f2e1123]:
+              - link "Mega Deal Days" [ref=f2e1125] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e1130]:
+                - generic [ref=f2e1131]: Price, product page
+                - 'link "₹659 M.R.P: ₹999 M.R.P: ₹999" [ref=f2e1132] [cursor=pointer]':
+                  - /url: /Campus-OXYFIT-Walking-Shoes-India/dp/B09RPCVBKY/ref=sr_1_8?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-8
+                  - generic [ref=f2e1133]:
+                    - generic [ref=f2e1134]: ₹659
+                    - generic [ref=f2e1135]: ₹659
+                  - generic [ref=f2e1136]: "M.R.P: ₹999"
+                  - generic [ref=f2e1137]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e1138]:
+                      - generic [ref=f2e1139]: ₹999
+                      - text: ₹999
+                - text: (34% off)
+              - generic [ref=f2e1142]:
+                - generic [ref=f2e1143]: You pay ₹626.05
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e1146]:
+              - generic [ref=f2e1147]: FREE delivery Sat, 15 Aug
+              - generic [ref=f2e1149]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e1161] [cursor=pointer]
+      - generic [ref=f2e1164]:
+        - link "Sponsored ad from Boldfit. \"Explore the Best Walking Shoes.\" Shop Boldfit." [ref=f2e1165] [cursor=pointer]:
+          - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVUctu00AUVVsBJeJRZVGksAtSFlUnmbGdNFNkIY8du3YSp3Ya2mYzcuyJ4-Larsd9hEV-gF9gAT-C2LPjseQ72KI0Balnde6559yrq1uabP78-OfHw_JTRUBHljsa2VLXeFtdQzvbU5ZEN9RAeN53p4f9no0usanub585tn2W6K36HM-xPVLwyXHXcNySILXqUqsO63C8PiSTTaVzdNBxzWH5RelRwPi7Is3KT0a221EHhm2OO1rlw1rp1V2Hcubl_oxmLPfT2CsYjZI4ShidFNPyY-_ce58m9SipvOQT4Mce55EPVhGwMoIMVR-whJr2TpNPQDFj5ywAfhrHzC-iNAFXArjbBXwvDzjIvCgpWA78NClYUlRbpTW49enb789fv2iVZ_-8q-nV5wKEsI0QhEILQwkJG6bt7m-oh-rOoPxaI4qa6SbYUxbkYoVQWRAnbYXYVO5jQcIFcRZEuSVhZUsNOzeGdeUrkcoyV5KFX-ul7-uzosj4fqNxfX1d_39-gxdpzngj80LWwFITobaCgaYqBEg6FgERiAg6kiA121obSqr05jZAczaVh4QqEIsQIRG5elPpWSPk9mwCFAgF1MR4b2x1XU081qyeUcsCmgc0i2dBLhe1Gfeon9MokGEtzqjHo4TLBOrEODy1LHWXQA11-92eeLp7q7qa3sdL-nbo2AdYXFIs4a7u7K2oejrsoZXB1qzj9p061k_E5YKLS5bPZT5LGV-WPE4L-f5DajzIqBfQME8vM1mEEGEBiiIU2liUapHsZbzmLc8msTQd3GhONPgL1PXpew&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fstores%2Fpage%2F945118A9-DCAB-4F93-B2B3-E42458D804C4%3Fstore_ref%3DSB_A09301131RF5ALJU1RLNB-A00215997ZJKRD3WDJLG%26pd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26lp_asins%3DB0FBGPYJJC%2CB0D1KMKL3Y%2CB0FBGRDFM9%2CB0FVSQNH93%2CB0F949KFQ7%2CB0F94CYSL1%2CB0FVSNDJW8%2CB0F94CZFX3%26lp_query%3Dshoes%26lp_slot%3Ddesktop-inline%26sdp_ad_group%3D300192033028934%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_bkgd&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+        - generic [ref=f2e1166]:
+          - generic [ref=f2e1168]:
+            - link "Boldfit" [ref=f2e1170] [cursor=pointer]:
+              - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVUctu00AUVVsBJeJRZVGksAtSFlUnmbGdNFNkIY8du3YSp3Ya2mYzcuyJ4-Larsd9hEV-gF9gAT-C2LPjseQ72KI0Balnde6559yrq1uabP78-OfHw_JTRUBHljsa2VLXeFtdQzvbU5ZEN9RAeN53p4f9no0usanub585tn2W6K36HM-xPVLwyXHXcNySILXqUqsO63C8PiSTTaVzdNBxzWH5RelRwPi7Is3KT0a221EHhm2OO1rlw1rp1V2Hcubl_oxmLPfT2CsYjZI4ShidFNPyY-_ce58m9SipvOQT4Mce55EPVhGwMoIMVR-whJr2TpNPQDFj5ywAfhrHzC-iNAFXArjbBXwvDzjIvCgpWA78NClYUlRbpTW49enb789fv2iVZ_-8q-nV5wKEsI0QhEILQwkJG6bt7m-oh-rOoPxaI4qa6SbYUxbkYoVQWRAnbYXYVO5jQcIFcRZEuSVhZUsNOzeGdeUrkcoyV5KFX-ul7-uzosj4fqNxfX1d_39-gxdpzngj80LWwFITobaCgaYqBEg6FgERiAg6kiA121obSqr05jZAczaVh4QqEIsQIRG5elPpWSPk9mwCFAgF1MR4b2x1XU081qyeUcsCmgc0i2dBLhe1Gfeon9MokGEtzqjHo4TLBOrEODy1LHWXQA11-92eeLp7q7qa3sdL-nbo2AdYXFIs4a7u7K2oejrsoZXB1qzj9p061k_E5YKLS5bPZT5LGV-WPE4L-f5DajzIqBfQME8vM1mEEGEBiiIU2liUapHsZbzmLc8msTQd3GhONPgL1PXpew&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fstores%2Fpage%2F945118A9-DCAB-4F93-B2B3-E42458D804C4%3Fstore_ref%3DSB_A09301131RF5ALJU1RLNB-A00215997ZJKRD3WDJLG%26pd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26lp_asins%3DB0FBGPYJJC%2CB0D1KMKL3Y%2CB0FBGRDFM9%2CB0FVSQNH93%2CB0F949KFQ7%2CB0F94CYSL1%2CB0FVSNDJW8%2CB0F94CZFX3%26lp_query%3Dshoes%26lp_slot%3Ddesktop-inline%26sdp_ad_group%3D300192033028934%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_logo&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+              - img "Boldfit" [ref=f2e1172]
+            - generic [ref=f2e1174]:
+              - link "Explore the Best Walking Shoes" [ref=f2e1175] [cursor=pointer]:
+                - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVUctu00AUVVsBJeJRZVGksAtSFlUnmbGdNFNkIY8du3YSp3Ya2mYzcuyJ4-Larsd9hEV-gF9gAT-C2LPjseQ72KI0Balnde6559yrq1uabP78-OfHw_JTRUBHljsa2VLXeFtdQzvbU5ZEN9RAeN53p4f9no0usanub585tn2W6K36HM-xPVLwyXHXcNySILXqUqsO63C8PiSTTaVzdNBxzWH5RelRwPi7Is3KT0a221EHhm2OO1rlw1rp1V2Hcubl_oxmLPfT2CsYjZI4ShidFNPyY-_ce58m9SipvOQT4Mce55EPVhGwMoIMVR-whJr2TpNPQDFj5ywAfhrHzC-iNAFXArjbBXwvDzjIvCgpWA78NClYUlRbpTW49enb789fv2iVZ_-8q-nV5wKEsI0QhEILQwkJG6bt7m-oh-rOoPxaI4qa6SbYUxbkYoVQWRAnbYXYVO5jQcIFcRZEuSVhZUsNOzeGdeUrkcoyV5KFX-ul7-uzosj4fqNxfX1d_39-gxdpzngj80LWwFITobaCgaYqBEg6FgERiAg6kiA121obSqr05jZAczaVh4QqEIsQIRG5elPpWSPk9mwCFAgF1MR4b2x1XU081qyeUcsCmgc0i2dBLhe1Gfeon9MokGEtzqjHo4TLBOrEODy1LHWXQA11-92eeLp7q7qa3sdL-nbo2AdYXFIs4a7u7K2oejrsoZXB1qzj9p061k_E5YKLS5bPZT5LGV-WPE4L-f5DajzIqBfQME8vM1mEEGEBiiIU2liUapHsZbzmLc8msTQd3GhONPgL1PXpew&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fstores%2Fpage%2F945118A9-DCAB-4F93-B2B3-E42458D804C4%3Fstore_ref%3DSB_A09301131RF5ALJU1RLNB-A00215997ZJKRD3WDJLG%26pd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26lp_asins%3DB0FBGPYJJC%2CB0D1KMKL3Y%2CB0FBGRDFM9%2CB0FVSQNH93%2CB0F949KFQ7%2CB0F94CYSL1%2CB0FVSNDJW8%2CB0F94CZFX3%26lp_query%3Dshoes%26lp_slot%3Ddesktop-inline%26sdp_ad_group%3D300192033028934%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_hl&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+              - generic [ref=f2e1178]:
+                - button "Leave feedback on Sponsored ad" [ref=f2e1182] [cursor=pointer]: Sponsored
+                - generic [ref=f2e1184]: "|"
+                - link "Shop now" [ref=f2e1186] [cursor=pointer]:
+                  - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVUctu00AUVVsBJeJRZVGksAtSFlUnmbGdNFNkIY8du3YSp3Ya2mYzcuyJ4-Larsd9hEV-gF9gAT-C2LPjseQ72KI0Balnde6559yrq1uabP78-OfHw_JTRUBHljsa2VLXeFtdQzvbU5ZEN9RAeN53p4f9no0usanub585tn2W6K36HM-xPVLwyXHXcNySILXqUqsO63C8PiSTTaVzdNBxzWH5RelRwPi7Is3KT0a221EHhm2OO1rlw1rp1V2Hcubl_oxmLPfT2CsYjZI4ShidFNPyY-_ce58m9SipvOQT4Mce55EPVhGwMoIMVR-whJr2TpNPQDFj5ywAfhrHzC-iNAFXArjbBXwvDzjIvCgpWA78NClYUlRbpTW49enb789fv2iVZ_-8q-nV5wKEsI0QhEILQwkJG6bt7m-oh-rOoPxaI4qa6SbYUxbkYoVQWRAnbYXYVO5jQcIFcRZEuSVhZUsNOzeGdeUrkcoyV5KFX-ul7-uzosj4fqNxfX1d_39-gxdpzngj80LWwFITobaCgaYqBEg6FgERiAg6kiA121obSqr05jZAczaVh4QqEIsQIRG5elPpWSPk9mwCFAgF1MR4b2x1XU081qyeUcsCmgc0i2dBLhe1Gfeon9MokGEtzqjHo4TLBOrEODy1LHWXQA11-92eeLp7q7qa3sdL-nbo2AdYXFIs4a7u7K2oejrsoZXB1qzj9p061k_E5YKLS5bPZT5LGV-WPE4L-f5DajzIqBfQME8vM1mEEGEBiiIU2liUapHsZbzmLc8msTQd3GhONPgL1PXpew&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fstores%2Fpage%2F945118A9-DCAB-4F93-B2B3-E42458D804C4%3Fstore_ref%3DSB_A09301131RF5ALJU1RLNB-A00215997ZJKRD3WDJLG%26pd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26lp_asins%3DB0FBGPYJJC%2CB0D1KMKL3Y%2CB0FBGRDFM9%2CB0FVSQNH93%2CB0F949KFQ7%2CB0F94CYSL1%2CB0FVSNDJW8%2CB0F94CZFX3%26lp_query%3Dshoes%26lp_slot%3Ddesktop-inline%26sdp_ad_group%3D300192033028934%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_cta&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                  - generic [ref=f2e1187]: Shop Boldfit
+          - group [ref=f2e1191]:
+            - group [ref=f2e1195]:
+              - list [ref=f2e1196]:
+                - listitem [ref=f2e1197]:
+                  - generic [ref=f2e1199]:
+                    - link [ref=f2e1200] [cursor=pointer]:
+                      - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd8Zc6iAL2U5inFKncRsoXazz3dm54tpX2zQJQ_4AIxITA_wRxM4IK7-DFYkUJN70pPelp8TbPz7--n6jecfW0fE4nM0CY9970W6g7m7Cc7GMPGSuDsLk8OB5gN6YvtvfPZsGwVk-wurKXJnBzDZPXu5701DRDawaWIUqPL125MTb9vD42TD0j5r3lZuMV6_rQjZvz4Jw6E68wD8dDlrvGsrDKyWqOCnpPJK8pEVGah6JPBM5j-I6ad4i5-Rtkasibz2oYkAzUlWCgk0EbIxAovZ1nkd-0H1cxaCe83POAC2yjNNaFDm41MHVFqCkZBWQROQ1LwEt8prndRsrDbjz6dvPz1-_DFp3_3o37e17OoRwDyEIdWxCA-lbfhD2t9xDtztpPhk4titHPujZa-dig9ReO9MCp6Zv_4-1k66d6dqx_5C0teOmw6U3vqS2cLkMDUv_0FDeN-Z1Lau-pi0WC_XffS2VGlloTHPgyPEOX43H7lPJopJFMpuz0qo784pEtIwEs2DnQjAL9fYw1s0ewp2qtBBAwEyYwTHFACaPdGAgFAOTxBSwhJk9xiAljHWERWTVISVPLCczkslyMBWT37m4sTg&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FBGPYJJC%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-1-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_0_bkgd&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                    - link [ref=f2e1202] [cursor=pointer]:
+                      - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd8Zc6iAL2U5inFKncRsoXazz3dm54tpX2zQJQ_4AIxITA_wRxM4IK7-DFYkUJN70pPelp8TbPz7--n6jecfW0fE4nM0CY9970W6g7m7Cc7GMPGSuDsLk8OB5gN6YvtvfPZsGwVk-wurKXJnBzDZPXu5701DRDawaWIUqPL125MTb9vD42TD0j5r3lZuMV6_rQjZvz4Jw6E68wD8dDlrvGsrDKyWqOCnpPJK8pEVGah6JPBM5j-I6ad4i5-Rtkasibz2oYkAzUlWCgk0EbIxAovZ1nkd-0H1cxaCe83POAC2yjNNaFDm41MHVFqCkZBWQROQ1LwEt8prndRsrDbjz6dvPz1-_DFp3_3o37e17OoRwDyEIdWxCA-lbfhD2t9xDtztpPhk4titHPujZa-dig9ReO9MCp6Zv_4-1k66d6dqx_5C0teOmw6U3vqS2cLkMDUv_0FDeN-Z1Lau-pi0WC_XffS2VGlloTHPgyPEOX43H7lPJopJFMpuz0qo784pEtIwEs2DnQjAL9fYw1s0ewp2qtBBAwEyYwTHFACaPdGAgFAOTxBSwhJk9xiAljHWERWTVISVPLCczkslyMBWT37m4sTg&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FBGPYJJC%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-1-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_0_img&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - generic [ref=f2e1204]:
+                        - img "Boldfit Walking Shoes for man Lightweight Shoes for Mens Training, Gym & Walking"
+                    - generic [ref=f2e1205]:
+                      - link [ref=f2e1206] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd8Zc6iAL2U5inFKncRsoXazz3dm54tpX2zQJQ_4AIxITA_wRxM4IK7-DFYkUJN70pPelp8TbPz7--n6jecfW0fE4nM0CY9970W6g7m7Cc7GMPGSuDsLk8OB5gN6YvtvfPZsGwVk-wurKXJnBzDZPXu5701DRDawaWIUqPL125MTb9vD42TD0j5r3lZuMV6_rQjZvz4Jw6E68wD8dDlrvGsrDKyWqOCnpPJK8pEVGah6JPBM5j-I6ad4i5-Rtkasibz2oYkAzUlWCgk0EbIxAovZ1nkd-0H1cxaCe83POAC2yjNNaFDm41MHVFqCkZBWQROQ1LwEt8prndRsrDbjz6dvPz1-_DFp3_3o37e17OoRwDyEIdWxCA-lbfhD2t9xDtztpPhk4titHPujZa-dig9ReO9MCp6Zv_4-1k66d6dqx_5C0teOmw6U3vqS2cLkMDUv_0FDeN-Z1Lau-pi0WC_XffS2VGlloTHPgyPEOX43H7lPJopJFMpuz0qo784pEtIwEs2DnQjAL9fYw1s0ewp2qtBBAwEyYwTHFACaPdGAgFAOTxBSwhJk9xiAljHWERWTVISVPLCczkslyMBWT37m4sTg&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FBGPYJJC%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-1-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_0_bkgd&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - link "Boldfit Walking Shoes for man Lightweight Shoes for Mens Training, Gym & Walking" [ref=f2e1208] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd8Zc6iAL2U5inFKncRsoXazz3dm54tpX2zQJQ_4AIxITA_wRxM4IK7-DFYkUJN70pPelp8TbPz7--n6jecfW0fE4nM0CY9970W6g7m7Cc7GMPGSuDsLk8OB5gN6YvtvfPZsGwVk-wurKXJnBzDZPXu5701DRDawaWIUqPL125MTb9vD42TD0j5r3lZuMV6_rQjZvz4Jw6E68wD8dDlrvGsrDKyWqOCnpPJK8pEVGah6JPBM5j-I6ad4i5-Rtkasibz2oYkAzUlWCgk0EbIxAovZ1nkd-0H1cxaCe83POAC2yjNNaFDm41MHVFqCkZBWQROQ1LwEt8prndRsrDbjz6dvPz1-_DFp3_3o37e17OoRwDyEIdWxCA-lbfhD2t9xDtztpPhk4titHPujZa-dig9ReO9MCp6Zv_4-1k66d6dqx_5C0teOmw6U3vqS2cLkMDUv_0FDeN-Z1Lau-pi0WC_XffS2VGlloTHPgyPEOX43H7lPJopJFMpuz0qo784pEtIwEs2DnQjAL9fYw1s0ewp2qtBBAwEyYwTHFACaPdGAgFAOTxBSwhJk9xiAljHWERWTVISVPLCczkslyMBWT37m4sTg&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FBGPYJJC%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-1-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_0_title&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - link "Rated 3.9 out of 5 stars by 365 reviews. Go to review section." [ref=f2e1211] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd8Zc6iAL2U5inFKncRsoXazz3dm54tpX2zQJQ_4AIxITA_wRxM4IK7-DFYkUJN70pPelp8TbPz7--n6jecfW0fE4nM0CY9970W6g7m7Cc7GMPGSuDsLk8OB5gN6YvtvfPZsGwVk-wurKXJnBzDZPXu5701DRDawaWIUqPL125MTb9vD42TD0j5r3lZuMV6_rQjZvz4Jw6E68wD8dDlrvGsrDKyWqOCnpPJK8pEVGah6JPBM5j-I6ad4i5-Rtkasibz2oYkAzUlWCgk0EbIxAovZ1nkd-0H1cxaCe83POAC2yjNNaFDm41MHVFqCkZBWQROQ1LwEt8prndRsrDbjz6dvPz1-_DFp3_3o37e17OoRwDyEIdWxCA-lbfhD2t9xDtztpPhk4titHPujZa-dig9ReO9MCp6Zv_4-1k66d6dqx_5C0teOmw6U3vqS2cLkMDUv_0FDeN-Z1Lau-pi0WC_XffS2VGlloTHPgyPEOX43H7lPJopJFMpuz0qo784pEtIwEs2DnQjAL9fYw1s0ewp2qtBBAwEyYwTHFACaPdGAgFAOTxBSwhJk9xiAljHWERWTVISVPLCczkslyMBWT37m4sTg&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FBGPYJJC%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-1-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_0_rating&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c#customerReviews
+                        - generic [ref=f2e1212]:
+                          - generic [ref=f2e1213]: "3.9"
+                          - generic [ref=f2e1214]: 3.9 out of 5 stars.
+                          - generic [ref=f2e1216]: "365"
+                      - link "Limited time deal" [ref=f2e1218] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd8Zc6iAL2U5inFKncRsoXazz3dm54tpX2zQJQ_4AIxITA_wRxM4IK7-DFYkUJN70pPelp8TbPz7--n6jecfW0fE4nM0CY9970W6g7m7Cc7GMPGSuDsLk8OB5gN6YvtvfPZsGwVk-wurKXJnBzDZPXu5701DRDawaWIUqPL125MTb9vD42TD0j5r3lZuMV6_rQjZvz4Jw6E68wD8dDlrvGsrDKyWqOCnpPJK8pEVGah6JPBM5j-I6ad4i5-Rtkasibz2oYkAzUlWCgk0EbIxAovZ1nkd-0H1cxaCe83POAC2yjNNaFDm41MHVFqCkZBWQROQ1LwEt8prndRsrDbjz6dvPz1-_DFp3_3o37e17OoRwDyEIdWxCA-lbfhD2t9xDtztpPhk4titHPujZa-dig9ReO9MCp6Zv_4-1k66d6dqx_5C0teOmw6U3vqS2cLkMDUv_0FDeN-Z1Lau-pi0WC_XffS2VGlloTHPgyPEOX43H7lPJopJFMpuz0qo784pEtIwEs2DnQjAL9fYw1s0ewp2qtBBAwEyYwTHFACaPdGAgFAOTxBSwhJk9xiAljHWERWTVISVPLCczkslyMBWT37m4sTg&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FBGPYJJC%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-1-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_0_badge&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - link "-65% ₹879.00" [ref=f2e1223] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd8Zc6iAL2U5inFKncRsoXazz3dm54tpX2zQJQ_4AIxITA_wRxM4IK7-DFYkUJN70pPelp8TbPz7--n6jecfW0fE4nM0CY9970W6g7m7Cc7GMPGSuDsLk8OB5gN6YvtvfPZsGwVk-wurKXJnBzDZPXu5701DRDawaWIUqPL125MTb9vD42TD0j5r3lZuMV6_rQjZvz4Jw6E68wD8dDlrvGsrDKyWqOCnpPJK8pEVGah6JPBM5j-I6ad4i5-Rtkasibz2oYkAzUlWCgk0EbIxAovZ1nkd-0H1cxaCe83POAC2yjNNaFDm41MHVFqCkZBWQROQ1LwEt8prndRsrDbjz6dvPz1-_DFp3_3o37e17OoRwDyEIdWxCA-lbfhD2t9xDtztpPhk4titHPujZa-dig9ReO9MCp6Zv_4-1k66d6dqx_5C0teOmw6U3vqS2cLkMDUv_0FDeN-Z1Lau-pi0WC_XffS2VGlloTHPgyPEOX43H7lPJopJFMpuz0qo784pEtIwEs2DnQjAL9fYw1s0ewp2qtBBAwEyYwTHFACaPdGAgFAOTxBSwhJk9xiAljHWERWTVISVPLCczkslyMBWT37m4sTg&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FBGPYJJC%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-1-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_0_price&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                        - generic [ref=f2e1224]:
+                          - generic [ref=f2e1225]: "-65%"
+                          - generic [ref=f2e1226]:
+                            - generic [ref=f2e1227]: ₹879.00
+                            - generic [ref=f2e1228]:
+                              - text: ₹
+                              - generic [ref=f2e1229]:
+                                - text: "879"
+                                - generic [ref=f2e1230]: .
+                              - text: "00"
+                      - generic [ref=f2e1231]: "M.R.P: ₹2,499.00"
+                - listitem [ref=f2e1234]:
+                  - generic [ref=f2e1236]:
+                    - link [ref=f2e1237] [cursor=pointer]:
+                      - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd65xeqksZDtpcNM4jdtA6WKd787Ote7ZtU2TMOQPMCIxMcAfQeyMsPI7WJFIQeJNT3pfekq0-ePjr-936g9sHZ0cBNOpbwwHL5s11N6OuRSLcIDwchTER6NDH73BntvdPp_4_rncN9UlXmJ_auPTV8PBJFB0w1QNU4UqPLt17ESbdv_kRT_wjuuPlbuMlxdVltfvT_2g744HvnfW7zXe1ZSnN0pYclLQWZjzgmYpqXgoZCokD6Mqrt8jl-RtJlUhG0_KCNCUlKWgYB0BayPIUfM2l6Hnt5-VEahm_JIzQLM05bQSmQTXOrjZApQUrAQ5EbLiBaCZrLismqZSg1ufvv38_PVLr_Hwr3fd3nykQwh3EYJQNzE0kL7h-UF3wz1y2-P6Xs-x3XzfAx175VytkdgrZ5KZCfbs_7FykpUzWTn2H5I0ttykvxgcXFNbuDwPDEv_UFPe12ZVlZddTZvP5-q_-1qSa2SuMc2BPTQcDQ93Xj_PWViwME9nrLCq1qwkIS1CwSzYuhLMQp1d09RxB5mtsrAQ0AGOmcFNagIY7-jAQCgCmEQUsJjhDmOQEsZawiJ52SIFjy0nNeLxojcR49-sN7Ea&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0D1KMKL3Y%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-2-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_1_bkgd&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                    - link [ref=f2e1239] [cursor=pointer]:
+                      - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd65xeqksZDtpcNM4jdtA6WKd787Ote7ZtU2TMOQPMCIxMcAfQeyMsPI7WJFIQeJNT3pfekq0-ePjr-936g9sHZ0cBNOpbwwHL5s11N6OuRSLcIDwchTER6NDH73BntvdPp_4_rncN9UlXmJ_auPTV8PBJFB0w1QNU4UqPLt17ESbdv_kRT_wjuuPlbuMlxdVltfvT_2g744HvnfW7zXe1ZSnN0pYclLQWZjzgmYpqXgoZCokD6Mqrt8jl-RtJlUhG0_KCNCUlKWgYB0BayPIUfM2l6Hnt5-VEahm_JIzQLM05bQSmQTXOrjZApQUrAQ5EbLiBaCZrLismqZSg1ufvv38_PVLr_Hwr3fd3nykQwh3EYJQNzE0kL7h-UF3wz1y2-P6Xs-x3XzfAx175VytkdgrZ5KZCfbs_7FykpUzWTn2H5I0ttykvxgcXFNbuDwPDEv_UFPe12ZVlZddTZvP5-q_-1qSa2SuMc2BPTQcDQ93Xj_PWViwME9nrLCq1qwkIS1CwSzYuhLMQp1d09RxB5mtsrAQ0AGOmcFNagIY7-jAQCgCmEQUsJjhDmOQEsZawiJ52SIFjy0nNeLxojcR49-sN7Ea&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0D1KMKL3Y%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-2-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_1_img&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - generic [ref=f2e1241]:
+                        - img "Boldfit Casual Shoes for Man & Woman Walking Shoes for Men Soft Cushion Casual Shoes for Men for Regular Wear Mens Shoes Without Lace Shoes for Men & Women for Walking, Jogging Men Shoes"
+                    - generic [ref=f2e1242]:
+                      - link [ref=f2e1243] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd65xeqksZDtpcNM4jdtA6WKd787Ote7ZtU2TMOQPMCIxMcAfQeyMsPI7WJFIQeJNT3pfekq0-ePjr-936g9sHZ0cBNOpbwwHL5s11N6OuRSLcIDwchTER6NDH73BntvdPp_4_rncN9UlXmJ_auPTV8PBJFB0w1QNU4UqPLt17ESbdv_kRT_wjuuPlbuMlxdVltfvT_2g744HvnfW7zXe1ZSnN0pYclLQWZjzgmYpqXgoZCokD6Mqrt8jl-RtJlUhG0_KCNCUlKWgYB0BayPIUfM2l6Hnt5-VEahm_JIzQLM05bQSmQTXOrjZApQUrAQ5EbLiBaCZrLismqZSg1ufvv38_PVLr_Hwr3fd3nykQwh3EYJQNzE0kL7h-UF3wz1y2-P6Xs-x3XzfAx175VytkdgrZ5KZCfbs_7FykpUzWTn2H5I0ttykvxgcXFNbuDwPDEv_UFPe12ZVlZddTZvP5-q_-1qSa2SuMc2BPTQcDQ93Xj_PWViwME9nrLCq1qwkIS1CwSzYuhLMQp1d09RxB5mtsrAQ0AGOmcFNagIY7-jAQCgCmEQUsJjhDmOQEsZawiJ52SIFjy0nNeLxojcR49-sN7Ea&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0D1KMKL3Y%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-2-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_1_bkgd&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - link "Boldfit Casual Shoes for Man & Woman Walking Shoes for Men Soft Cushion Casual Shoes for Men for Regular Wear Mens Shoes Without Lace Shoes for Men & Women for Walking, Jogging Men Shoes" [ref=f2e1245] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd65xeqksZDtpcNM4jdtA6WKd787Ote7ZtU2TMOQPMCIxMcAfQeyMsPI7WJFIQeJNT3pfekq0-ePjr-936g9sHZ0cBNOpbwwHL5s11N6OuRSLcIDwchTER6NDH73BntvdPp_4_rncN9UlXmJ_auPTV8PBJFB0w1QNU4UqPLt17ESbdv_kRT_wjuuPlbuMlxdVltfvT_2g744HvnfW7zXe1ZSnN0pYclLQWZjzgmYpqXgoZCokD6Mqrt8jl-RtJlUhG0_KCNCUlKWgYB0BayPIUfM2l6Hnt5-VEahm_JIzQLM05bQSmQTXOrjZApQUrAQ5EbLiBaCZrLismqZSg1ufvv38_PVLr_Hwr3fd3nykQwh3EYJQNzE0kL7h-UF3wz1y2-P6Xs-x3XzfAx175VytkdgrZ5KZCfbs_7FykpUzWTn2H5I0ttykvxgcXFNbuDwPDEv_UFPe12ZVlZddTZvP5-q_-1qSa2SuMc2BPTQcDQ93Xj_PWViwME9nrLCq1qwkIS1CwSzYuhLMQp1d09RxB5mtsrAQ0AGOmcFNagIY7-jAQCgCmEQUsJjhDmOQEsZawiJ52SIFjy0nNeLxojcR49-sN7Ea&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0D1KMKL3Y%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-2-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_1_title&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - link "Rated 4 out of 5 stars by 1481 reviews. Go to review section." [ref=f2e1248] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd65xeqksZDtpcNM4jdtA6WKd787Ote7ZtU2TMOQPMCIxMcAfQeyMsPI7WJFIQeJNT3pfekq0-ePjr-936g9sHZ0cBNOpbwwHL5s11N6OuRSLcIDwchTER6NDH73BntvdPp_4_rncN9UlXmJ_auPTV8PBJFB0w1QNU4UqPLt17ESbdv_kRT_wjuuPlbuMlxdVltfvT_2g744HvnfW7zXe1ZSnN0pYclLQWZjzgmYpqXgoZCokD6Mqrt8jl-RtJlUhG0_KCNCUlKWgYB0BayPIUfM2l6Hnt5-VEahm_JIzQLM05bQSmQTXOrjZApQUrAQ5EbLiBaCZrLismqZSg1ufvv38_PVLr_Hwr3fd3nykQwh3EYJQNzE0kL7h-UF3wz1y2-P6Xs-x3XzfAx175VytkdgrZ5KZCfbs_7FykpUzWTn2H5I0ttykvxgcXFNbuDwPDEv_UFPe12ZVlZddTZvP5-q_-1qSa2SuMc2BPTQcDQ93Xj_PWViwME9nrLCq1qwkIS1CwSzYuhLMQp1d09RxB5mtsrAQ0AGOmcFNagIY7-jAQCgCmEQUsJjhDmOQEsZawiJ52SIFjy0nNeLxojcR49-sN7Ea&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0D1KMKL3Y%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-2-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_1_rating&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c#customerReviews
+                        - generic [ref=f2e1249]:
+                          - generic [ref=f2e1250]: "4"
+                          - generic [ref=f2e1251]: 4 out of 5 stars.
+                          - generic [ref=f2e1253]: 1,481
+                      - link "₹699.00" [ref=f2e1255] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd65xeqksZDtpcNM4jdtA6WKd787Ote7ZtU2TMOQPMCIxMcAfQeyMsPI7WJFIQeJNT3pfekq0-ePjr-936g9sHZ0cBNOpbwwHL5s11N6OuRSLcIDwchTER6NDH73BntvdPp_4_rncN9UlXmJ_auPTV8PBJFB0w1QNU4UqPLt17ESbdv_kRT_wjuuPlbuMlxdVltfvT_2g744HvnfW7zXe1ZSnN0pYclLQWZjzgmYpqXgoZCokD6Mqrt8jl-RtJlUhG0_KCNCUlKWgYB0BayPIUfM2l6Hnt5-VEahm_JIzQLM05bQSmQTXOrjZApQUrAQ5EbLiBaCZrLismqZSg1ufvv38_PVLr_Hwr3fd3nykQwh3EYJQNzE0kL7h-UF3wz1y2-P6Xs-x3XzfAx175VytkdgrZ5KZCfbs_7FykpUzWTn2H5I0ttykvxgcXFNbuDwPDEv_UFPe12ZVlZddTZvP5-q_-1qSa2SuMc2BPTQcDQ93Xj_PWViwME9nrLCq1qwkIS1CwSzYuhLMQp1d09RxB5mtsrAQ0AGOmcFNagIY7-jAQCgCmEQUsJjhDmOQEsZawiJ52SIFjy0nNeLxojcR49-sN7Ea&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0D1KMKL3Y%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-2-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_1_price&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                        - generic [ref=f2e1257]:
+                          - generic [ref=f2e1258]: ₹699.00
+                          - generic [ref=f2e1259]:
+                            - text: ₹
+                            - generic [ref=f2e1260]:
+                              - text: "699"
+                              - generic [ref=f2e1261]: .
+                            - text: "00"
+                      - generic [ref=f2e1262]: "M.R.P: ₹1,999.00"
+                - listitem [ref=f2e1265]:
+                  - generic [ref=f2e1267]:
+                    - link [ref=f2e1268] [cursor=pointer]:
+                      - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd65xekEWsp3EuCVO4zZQdbHOd2fnint2bdMkDPkDjEhMDPBHEDsjrPwOViRSkHjTk96XnhJv__j46_ut5j1bRycH4WwWGIfey3YDdXcTLsUy8hBejcPkaPwiQG-w7_Z3z6dBcC5HprrCKxzMbHz66tCbhopumKphqlCFZzeOnXjbHp48H4b-cfOhcpvx6nWdF827syAcuhMv8M-Gg9a7hvL4WokqTko6jwpe0jwjNY-EzITkUVwnzTvkgrzNpSpk61EVA5qRqhIUbCJgYwQFat_kMvKD7pMqBvWcX3AGaJ5lnNYil-BKB9dbgJKSVaAgQta8BDSXNZd121QacOfTt5-fv34ZtO7_9W7a2w90COE-QhDqJoYG0rf8IOxvuUdud9J8OnBstxj5oGevncsNUnvtTHMzxb79P9ZOunama8f-Q9LWjpsOl97BFbWFy4vQsPQPDeV9Y17XRdXXtMViof67r6WFRhYa0xw4crxwMBrjZwWLShYV2ZyVVt2ZVySiZSSYBTuXglmot2-aOu4hs1OVFgJ7ACfM4CY1AUz2dGAgFANMYgpYwnCPMUgJYx1hkaLqkJInlpMZyWQ5mIrJb61MsRw&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FBGRDFM9%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-3-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_2_bkgd&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                    - link [ref=f2e1270] [cursor=pointer]:
+                      - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd65xekEWsp3EuCVO4zZQdbHOd2fnint2bdMkDPkDjEhMDPBHEDsjrPwOViRSkHjTk96XnhJv__j46_ut5j1bRycH4WwWGIfey3YDdXcTLsUy8hBejcPkaPwiQG-w7_Z3z6dBcC5HprrCKxzMbHz66tCbhopumKphqlCFZzeOnXjbHp48H4b-cfOhcpvx6nWdF827syAcuhMv8M-Gg9a7hvL4WokqTko6jwpe0jwjNY-EzITkUVwnzTvkgrzNpSpk61EVA5qRqhIUbCJgYwQFat_kMvKD7pMqBvWcX3AGaJ5lnNYil-BKB9dbgJKSVaAgQta8BDSXNZd121QacOfTt5-fv34ZtO7_9W7a2w90COE-QhDqJoYG0rf8IOxvuUdud9J8OnBstxj5oGevncsNUnvtTHMzxb79P9ZOunama8f-Q9LWjpsOl97BFbWFy4vQsPQPDeV9Y17XRdXXtMViof67r6WFRhYa0xw4crxwMBrjZwWLShYV2ZyVVt2ZVySiZSSYBTuXglmot2-aOu4hs1OVFgJ7ACfM4CY1AUz2dGAgFANMYgpYwnCPMUgJYx1hkaLqkJInlpMZyWQ5mIrJb61MsRw&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FBGRDFM9%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-3-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_2_img&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - generic [ref=f2e1272]:
+                        - img "Boldfit Walking Shoes for man Lightweight Shoes for Mens Training, Gym & Walking"
+                    - generic [ref=f2e1273]:
+                      - link [ref=f2e1274] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd65xekEWsp3EuCVO4zZQdbHOd2fnint2bdMkDPkDjEhMDPBHEDsjrPwOViRSkHjTk96XnhJv__j46_ut5j1bRycH4WwWGIfey3YDdXcTLsUy8hBejcPkaPwiQG-w7_Z3z6dBcC5HprrCKxzMbHz66tCbhopumKphqlCFZzeOnXjbHp48H4b-cfOhcpvx6nWdF827syAcuhMv8M-Gg9a7hvL4WokqTko6jwpe0jwjNY-EzITkUVwnzTvkgrzNpSpk61EVA5qRqhIUbCJgYwQFat_kMvKD7pMqBvWcX3AGaJ5lnNYil-BKB9dbgJKSVaAgQta8BDSXNZd121QacOfTt5-fv34ZtO7_9W7a2w90COE-QhDqJoYG0rf8IOxvuUdud9J8OnBstxj5oGevncsNUnvtTHMzxb79P9ZOunama8f-Q9LWjpsOl97BFbWFy4vQsPQPDeV9Y17XRdXXtMViof67r6WFRhYa0xw4crxwMBrjZwWLShYV2ZyVVt2ZVySiZSSYBTuXglmot2-aOu4hs1OVFgJ7ACfM4CY1AUz2dGAgFANMYgpYwnCPMUgJYx1hkaLqkJInlpMZyWQ5mIrJb61MsRw&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FBGRDFM9%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-3-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_2_bkgd&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - link "Boldfit Walking Shoes for man Lightweight Shoes for Mens Training, Gym & Walking" [ref=f2e1276] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd65xekEWsp3EuCVO4zZQdbHOd2fnint2bdMkDPkDjEhMDPBHEDsjrPwOViRSkHjTk96XnhJv__j46_ut5j1bRycH4WwWGIfey3YDdXcTLsUy8hBejcPkaPwiQG-w7_Z3z6dBcC5HprrCKxzMbHz66tCbhopumKphqlCFZzeOnXjbHp48H4b-cfOhcpvx6nWdF827syAcuhMv8M-Gg9a7hvL4WokqTko6jwpe0jwjNY-EzITkUVwnzTvkgrzNpSpk61EVA5qRqhIUbCJgYwQFat_kMvKD7pMqBvWcX3AGaJ5lnNYil-BKB9dbgJKSVaAgQta8BDSXNZd121QacOfTt5-fv34ZtO7_9W7a2w90COE-QhDqJoYG0rf8IOxvuUdud9J8OnBstxj5oGevncsNUnvtTHMzxb79P9ZOunama8f-Q9LWjpsOl97BFbWFy4vQsPQPDeV9Y17XRdXXtMViof67r6WFRhYa0xw4crxwMBrjZwWLShYV2ZyVVt2ZVySiZSSYBTuXglmot2-aOu4hs1OVFgJ7ACfM4CY1AUz2dGAgFANMYgpYwnCPMUgJYx1hkaLqkJInlpMZyWQ5mIrJb61MsRw&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FBGRDFM9%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-3-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_2_title&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - link "Rated 3.9 out of 5 stars by 365 reviews. Go to review section." [ref=f2e1279] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd65xekEWsp3EuCVO4zZQdbHOd2fnint2bdMkDPkDjEhMDPBHEDsjrPwOViRSkHjTk96XnhJv__j46_ut5j1bRycH4WwWGIfey3YDdXcTLsUy8hBejcPkaPwiQG-w7_Z3z6dBcC5HprrCKxzMbHz66tCbhopumKphqlCFZzeOnXjbHp48H4b-cfOhcpvx6nWdF827syAcuhMv8M-Gg9a7hvL4WokqTko6jwpe0jwjNY-EzITkUVwnzTvkgrzNpSpk61EVA5qRqhIUbCJgYwQFat_kMvKD7pMqBvWcX3AGaJ5lnNYil-BKB9dbgJKSVaAgQta8BDSXNZd121QacOfTt5-fv34ZtO7_9W7a2w90COE-QhDqJoYG0rf8IOxvuUdud9J8OnBstxj5oGevncsNUnvtTHMzxb79P9ZOunama8f-Q9LWjpsOl97BFbWFy4vQsPQPDeV9Y17XRdXXtMViof67r6WFRhYa0xw4crxwMBrjZwWLShYV2ZyVVt2ZVySiZSSYBTuXglmot2-aOu4hs1OVFgJ7ACfM4CY1AUz2dGAgFANMYgpYwnCPMUgJYx1hkaLqkJInlpMZyWQ5mIrJb61MsRw&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FBGRDFM9%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-3-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_2_rating&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c#customerReviews
+                        - generic [ref=f2e1280]:
+                          - generic [ref=f2e1281]: "3.9"
+                          - generic [ref=f2e1282]: 3.9 out of 5 stars.
+                          - generic [ref=f2e1284]: "365"
+                      - link "Limited time deal" [ref=f2e1286] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd65xekEWsp3EuCVO4zZQdbHOd2fnint2bdMkDPkDjEhMDPBHEDsjrPwOViRSkHjTk96XnhJv__j46_ut5j1bRycH4WwWGIfey3YDdXcTLsUy8hBejcPkaPwiQG-w7_Z3z6dBcC5HprrCKxzMbHz66tCbhopumKphqlCFZzeOnXjbHp48H4b-cfOhcpvx6nWdF827syAcuhMv8M-Gg9a7hvL4WokqTko6jwpe0jwjNY-EzITkUVwnzTvkgrzNpSpk61EVA5qRqhIUbCJgYwQFat_kMvKD7pMqBvWcX3AGaJ5lnNYil-BKB9dbgJKSVaAgQta8BDSXNZd121QacOfTt5-fv34ZtO7_9W7a2w90COE-QhDqJoYG0rf8IOxvuUdud9J8OnBstxj5oGevncsNUnvtTHMzxb79P9ZOunama8f-Q9LWjpsOl97BFbWFy4vQsPQPDeV9Y17XRdXXtMViof67r6WFRhYa0xw4crxwMBrjZwWLShYV2ZyVVt2ZVySiZSSYBTuXglmot2-aOu4hs1OVFgJ7ACfM4CY1AUz2dGAgFANMYgpYwnCPMUgJYx1hkaLqkJInlpMZyWQ5mIrJb61MsRw&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FBGRDFM9%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-3-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_2_badge&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - link "-65% ₹879.00" [ref=f2e1291] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd65xekEWsp3EuCVO4zZQdbHOd2fnint2bdMkDPkDjEhMDPBHEDsjrPwOViRSkHjTk96XnhJv__j46_ut5j1bRycH4WwWGIfey3YDdXcTLsUy8hBejcPkaPwiQG-w7_Z3z6dBcC5HprrCKxzMbHz66tCbhopumKphqlCFZzeOnXjbHp48H4b-cfOhcpvx6nWdF827syAcuhMv8M-Gg9a7hvL4WokqTko6jwpe0jwjNY-EzITkUVwnzTvkgrzNpSpk61EVA5qRqhIUbCJgYwQFat_kMvKD7pMqBvWcX3AGaJ5lnNYil-BKB9dbgJKSVaAgQta8BDSXNZd121QacOfTt5-fv34ZtO7_9W7a2w90COE-QhDqJoYG0rf8IOxvuUdud9J8OnBstxj5oGevncsNUnvtTHMzxb79P9ZOunama8f-Q9LWjpsOl97BFbWFy4vQsPQPDeV9Y17XRdXXtMViof67r6WFRhYa0xw4crxwMBrjZwWLShYV2ZyVVt2ZVySiZSSYBTuXglmot2-aOu4hs1OVFgJ7ACfM4CY1AUz2dGAgFANMYgpYwnCPMUgJYx1hkaLqkJInlpMZyWQ5mIrJb61MsRw&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FBGRDFM9%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-3-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_2_price&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                        - generic [ref=f2e1292]:
+                          - generic [ref=f2e1293]: "-65%"
+                          - generic [ref=f2e1294]:
+                            - generic [ref=f2e1295]: ₹879.00
+                            - generic [ref=f2e1296]:
+                              - text: ₹
+                              - generic [ref=f2e1297]:
+                                - text: "879"
+                                - generic [ref=f2e1298]: .
+                              - text: "00"
+                      - generic [ref=f2e1299]: "M.R.P: ₹2,499.00"
+                - listitem [ref=f2e1302]:
+                  - generic [ref=f2e1304]:
+                    - link [ref=f2e1305] [cursor=pointer]:
+                      - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd65xekEWsp2PuqVO7Tal6mKd787OFdd27aNJGPIHGJGYGOCPIHZGWPkdrEikIPGmJ70vPSXe_PHx1_c7zQe2jk72w-nUNw7Gp-0G6m4nPBeLaIzw8jBMjg5f-ugN9tz-9kXg-xf5yFSXeIn9qY3PXh2Mg1DRDVM1TBWq8PzWsRNv2sOTvWHoHTcfK3cZr1_Lomzen_rh0J2Mfe98OGi9ayhPb5So5qSis6jkFS0yInkk8kzkPIpl0rxHLsnbIldF3npSx4BmpK4FBesIWBtBidq3eR55fvdZHQM545ecAVpkGadSFDm41sHNFqCkYjUoicglrwAtcslz2TaVBtz69O3n569fBq2Hf73r9vYjHUK4ixCEuomhgfQNzw_7G-6R2500nw8c2y1HHujZK-dqjdReOUFhptiz_8fKSVdOsHLsPyRtbbnpcDHev6a2cHkZGpb-oaG8b8ykLOu-ps3nc_XffS0tNTLXmObA0elx4O_hnRcliyoWldmMVZbszGoS0SoSzIKdK8Es1Ns1TR33kNmpKwsBA-CEGdykJoDJjg4MhGKASUwBSxjuMQYpYawjLFLWHVLxxHIyI5ksBoGY_Aa1crEu&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FVSQNH93%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-4-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_3_bkgd&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                    - link [ref=f2e1307] [cursor=pointer]:
+                      - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd65xekEWsp2PuqVO7Tal6mKd787OFdd27aNJGPIHGJGYGOCPIHZGWPkdrEikIPGmJ70vPSXe_PHx1_c7zQe2jk72w-nUNw7Gp-0G6m4nPBeLaIzw8jBMjg5f-ugN9tz-9kXg-xf5yFSXeIn9qY3PXh2Mg1DRDVM1TBWq8PzWsRNv2sOTvWHoHTcfK3cZr1_Lomzen_rh0J2Mfe98OGi9ayhPb5So5qSis6jkFS0yInkk8kzkPIpl0rxHLsnbIldF3npSx4BmpK4FBesIWBtBidq3eR55fvdZHQM545ecAVpkGadSFDm41sHNFqCkYjUoicglrwAtcslz2TaVBtz69O3n569fBq2Hf73r9vYjHUK4ixCEuomhgfQNzw_7G-6R2500nw8c2y1HHujZK-dqjdReOUFhptiz_8fKSVdOsHLsPyRtbbnpcDHev6a2cHkZGpb-oaG8b8ykLOu-ps3nc_XffS0tNTLXmObA0elx4O_hnRcliyoWldmMVZbszGoS0SoSzIKdK8Es1Ns1TR33kNmpKwsBA-CEGdykJoDJjg4MhGKASUwBSxjuMQYpYawjLFLWHVLxxHIyI5ksBoGY_Aa1crEu&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FVSQNH93%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-4-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_3_img&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - generic [ref=f2e1309]:
+                        - img "Boldfit Walking Shoes for Man Daywalk Max Soft Cushioned Shoe for Men Lightweight Slip on Shoe for Men Without Lace Shoes for Man Stylish Regular Wear"
+                    - generic [ref=f2e1310]:
+                      - link [ref=f2e1311] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd65xekEWsp2PuqVO7Tal6mKd787OFdd27aNJGPIHGJGYGOCPIHZGWPkdrEikIPGmJ70vPSXe_PHx1_c7zQe2jk72w-nUNw7Gp-0G6m4nPBeLaIzw8jBMjg5f-ugN9tz-9kXg-xf5yFSXeIn9qY3PXh2Mg1DRDVM1TBWq8PzWsRNv2sOTvWHoHTcfK3cZr1_Lomzen_rh0J2Mfe98OGi9ayhPb5So5qSis6jkFS0yInkk8kzkPIpl0rxHLsnbIldF3npSx4BmpK4FBesIWBtBidq3eR55fvdZHQM545ecAVpkGadSFDm41sHNFqCkYjUoicglrwAtcslz2TaVBtz69O3n569fBq2Hf73r9vYjHUK4ixCEuomhgfQNzw_7G-6R2500nw8c2y1HHujZK-dqjdReOUFhptiz_8fKSVdOsHLsPyRtbbnpcDHev6a2cHkZGpb-oaG8b8ykLOu-ps3nc_XffS0tNTLXmObA0elx4O_hnRcliyoWldmMVZbszGoS0SoSzIKdK8Es1Ns1TR33kNmpKwsBA-CEGdykJoDJjg4MhGKASUwBSxjuMQYpYawjLFLWHVLxxHIyI5ksBoGY_Aa1crEu&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FVSQNH93%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-4-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_3_bkgd&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - link "Boldfit Walking Shoes for Man Daywalk Max Soft Cushioned Shoe for Men Lightweight Slip on Shoe for Men Without Lace Shoes for Man Stylish Regular Wear" [ref=f2e1313] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd65xekEWsp2PuqVO7Tal6mKd787OFdd27aNJGPIHGJGYGOCPIHZGWPkdrEikIPGmJ70vPSXe_PHx1_c7zQe2jk72w-nUNw7Gp-0G6m4nPBeLaIzw8jBMjg5f-ugN9tz-9kXg-xf5yFSXeIn9qY3PXh2Mg1DRDVM1TBWq8PzWsRNv2sOTvWHoHTcfK3cZr1_Lomzen_rh0J2Mfe98OGi9ayhPb5So5qSis6jkFS0yInkk8kzkPIpl0rxHLsnbIldF3npSx4BmpK4FBesIWBtBidq3eR55fvdZHQM545ecAVpkGadSFDm41sHNFqCkYjUoicglrwAtcslz2TaVBtz69O3n569fBq2Hf73r9vYjHUK4ixCEuomhgfQNzw_7G-6R2500nw8c2y1HHujZK-dqjdReOUFhptiz_8fKSVdOsHLsPyRtbbnpcDHev6a2cHkZGpb-oaG8b8ykLOu-ps3nc_XffS0tNTLXmObA0elx4O_hnRcliyoWldmMVZbszGoS0SoSzIKdK8Es1Ns1TR33kNmpKwsBA-CEGdykJoDJjg4MhGKASUwBSxjuMQYpYawjLFLWHVLxxHIyI5ksBoGY_Aa1crEu&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FVSQNH93%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-4-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_3_title&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - link "Rated 3.9 out of 5 stars by 616 reviews. Go to review section." [ref=f2e1316] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd65xekEWsp2PuqVO7Tal6mKd787OFdd27aNJGPIHGJGYGOCPIHZGWPkdrEikIPGmJ70vPSXe_PHx1_c7zQe2jk72w-nUNw7Gp-0G6m4nPBeLaIzw8jBMjg5f-ugN9tz-9kXg-xf5yFSXeIn9qY3PXh2Mg1DRDVM1TBWq8PzWsRNv2sOTvWHoHTcfK3cZr1_Lomzen_rh0J2Mfe98OGi9ayhPb5So5qSis6jkFS0yInkk8kzkPIpl0rxHLsnbIldF3npSx4BmpK4FBesIWBtBidq3eR55fvdZHQM545ecAVpkGadSFDm41sHNFqCkYjUoicglrwAtcslz2TaVBtz69O3n569fBq2Hf73r9vYjHUK4ixCEuomhgfQNzw_7G-6R2500nw8c2y1HHujZK-dqjdReOUFhptiz_8fKSVdOsHLsPyRtbbnpcDHev6a2cHkZGpb-oaG8b8ykLOu-ps3nc_XffS0tNTLXmObA0elx4O_hnRcliyoWldmMVZbszGoS0SoSzIKdK8Es1Ns1TR33kNmpKwsBA-CEGdykJoDJjg4MhGKASUwBSxjuMQYpYawjLFLWHVLxxHIyI5ksBoGY_Aa1crEu&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FVSQNH93%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-4-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_3_rating&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c#customerReviews
+                        - generic [ref=f2e1317]:
+                          - generic [ref=f2e1318]: "3.9"
+                          - generic [ref=f2e1319]: 3.9 out of 5 stars.
+                          - generic [ref=f2e1321]: "616"
+                      - link "₹1,299.00" [ref=f2e1323] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd65xekEWsp2PuqVO7Tal6mKd787OFdd27aNJGPIHGJGYGOCPIHZGWPkdrEikIPGmJ70vPSXe_PHx1_c7zQe2jk72w-nUNw7Gp-0G6m4nPBeLaIzw8jBMjg5f-ugN9tz-9kXg-xf5yFSXeIn9qY3PXh2Mg1DRDVM1TBWq8PzWsRNv2sOTvWHoHTcfK3cZr1_Lomzen_rh0J2Mfe98OGi9ayhPb5So5qSis6jkFS0yInkk8kzkPIpl0rxHLsnbIldF3npSx4BmpK4FBesIWBtBidq3eR55fvdZHQM545ecAVpkGadSFDm41sHNFqCkYjUoicglrwAtcslz2TaVBtz69O3n569fBq2Hf73r9vYjHUK4ixCEuomhgfQNzw_7G-6R2500nw8c2y1HHujZK-dqjdReOUFhptiz_8fKSVdOsHLsPyRtbbnpcDHev6a2cHkZGpb-oaG8b8ykLOu-ps3nc_XffS0tNTLXmObA0elx4O_hnRcliyoWldmMVZbszGoS0SoSzIKdK8Es1Ns1TR33kNmpKwsBA-CEGdykJoDJjg4MhGKASUwBSxjuMQYpYawjLFLWHVLxxHIyI5ksBoGY_Aa1crEu&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FVSQNH93%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-4-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_3_price&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                        - generic [ref=f2e1325]:
+                          - generic [ref=f2e1326]: ₹1,299.00
+                          - generic [ref=f2e1327]:
+                            - text: ₹
+                            - generic [ref=f2e1328]:
+                              - text: 1,299
+                              - generic [ref=f2e1329]: .
+                            - text: "00"
+                      - generic [ref=f2e1330]: "M.R.P: ₹2,999.00"
+                - listitem [ref=f2e1333]:
+                  - generic [ref=f2e1335]:
+                    - link [ref=f2e1336] [cursor=pointer]:
+                      - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd8a99IIsZDsfuKFO7TZQdbHOd2fnimu7tmkShvwBRiQmBvgjiJ0RVn4HKxIpSLzpSe9LT4m2f3z89f1W856lo5ODYDbzjMn4ZbuBuruxyOQyHCOyOgzio8MXHnpDXKe_e-573nk2wuqKrIg3s8jpq8nYDxTdwKqBVajCsxvHdrRtDU-eDwP3uPlQuc1F9brOi-bdmRcMnenYc8-Gg9a7hvL4WgkrQUs2DwtRsjyltQhllspMhFEdN-_QC_o2z1SZtR5VEWAprSrJwCYCNkZQoPZNkYWu192rIlDPxYXggOVpKlgt8wxc6eB6CzBa8goUVGa1KAHLs1pkdRsrDbjz6dvPz1-_DFr3_3o37e0HOoRwHyEIdUyggfQt1wv6W86R0502nw5syylGLuhZa_tyg8Ra236OE-Ja_2NtJ2vbX9vWH5K0dpxkuBwfXDFLOqIIDFP_0FDeN-Z1XVR9TVssFuq_-1pSaHShcc2GI2KQycjvPSt4WPKwSOe8NOvOvKIhK0PJTdi5lNxEvX2MddJDuFOVJgJ7gMTcEJhhAOMnOjAQigChEQM85qTHOWSU8440aVF1aCli006NeLoc-HL6G5pUsPI&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0F949KFQ7%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-5-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_4_bkgd&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                    - link [ref=f2e1338] [cursor=pointer]:
+                      - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd8a99IIsZDsfuKFO7TZQdbHOd2fnimu7tmkShvwBRiQmBvgjiJ0RVn4HKxIpSLzpSe9LT4m2f3z89f1W856lo5ODYDbzjMn4ZbuBuruxyOQyHCOyOgzio8MXHnpDXKe_e-573nk2wuqKrIg3s8jpq8nYDxTdwKqBVajCsxvHdrRtDU-eDwP3uPlQuc1F9brOi-bdmRcMnenYc8-Gg9a7hvL4WgkrQUs2DwtRsjyltQhllspMhFEdN-_QC_o2z1SZtR5VEWAprSrJwCYCNkZQoPZNkYWu192rIlDPxYXggOVpKlgt8wxc6eB6CzBa8goUVGa1KAHLs1pkdRsrDbjz6dvPz1-_DFr3_3o37e0HOoRwHyEIdUyggfQt1wv6W86R0502nw5syylGLuhZa_tyg8Ra236OE-Ja_2NtJ2vbX9vWH5K0dpxkuBwfXDFLOqIIDFP_0FDeN-Z1XVR9TVssFuq_-1pSaHShcc2GI2KQycjvPSt4WPKwSOe8NOvOvKIhK0PJTdi5lNxEvX2MddJDuFOVJgJ7gMTcEJhhAOMnOjAQigChEQM85qTHOWSU8440aVF1aCli006NeLoc-HL6G5pUsPI&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0F949KFQ7%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-5-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_4_img&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - generic [ref=f2e1340]:
+                        - img "Boldfit Walking Shoes for Man, Breathable Knit Slip-On Casual Shoes s for Man with Memory Foam Insole, Thick Eva Outsole, and Padded Heel Support, Lightweight, Sock-Like Fit for All-Day Comfort"
+                    - generic [ref=f2e1341]:
+                      - link [ref=f2e1342] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd8a99IIsZDsfuKFO7TZQdbHOd2fnimu7tmkShvwBRiQmBvgjiJ0RVn4HKxIpSLzpSe9LT4m2f3z89f1W856lo5ODYDbzjMn4ZbuBuruxyOQyHCOyOgzio8MXHnpDXKe_e-573nk2wuqKrIg3s8jpq8nYDxTdwKqBVajCsxvHdrRtDU-eDwP3uPlQuc1F9brOi-bdmRcMnenYc8-Gg9a7hvL4WgkrQUs2DwtRsjyltQhllspMhFEdN-_QC_o2z1SZtR5VEWAprSrJwCYCNkZQoPZNkYWu192rIlDPxYXggOVpKlgt8wxc6eB6CzBa8goUVGa1KAHLs1pkdRsrDbjz6dvPz1-_DFr3_3o37e0HOoRwHyEIdUyggfQt1wv6W86R0502nw5syylGLuhZa_tyg8Ra236OE-Ja_2NtJ2vbX9vWH5K0dpxkuBwfXDFLOqIIDFP_0FDeN-Z1XVR9TVssFuq_-1pSaHShcc2GI2KQycjvPSt4WPKwSOe8NOvOvKIhK0PJTdi5lNxEvX2MddJDuFOVJgJ7gMTcEJhhAOMnOjAQigChEQM85qTHOWSU8440aVF1aCli006NeLoc-HL6G5pUsPI&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0F949KFQ7%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-5-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_4_bkgd&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - link "Boldfit Walking Shoes for Man, Breathable Knit Slip-On Casual Shoes s for Man with Memory Foam Insole, Thick Eva Outsole, and Padded Heel Support, Lightweight, Sock-Like Fit for All-Day Comfort" [ref=f2e1344] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd8a99IIsZDsfuKFO7TZQdbHOd2fnimu7tmkShvwBRiQmBvgjiJ0RVn4HKxIpSLzpSe9LT4m2f3z89f1W856lo5ODYDbzjMn4ZbuBuruxyOQyHCOyOgzio8MXHnpDXKe_e-573nk2wuqKrIg3s8jpq8nYDxTdwKqBVajCsxvHdrRtDU-eDwP3uPlQuc1F9brOi-bdmRcMnenYc8-Gg9a7hvL4WgkrQUs2DwtRsjyltQhllspMhFEdN-_QC_o2z1SZtR5VEWAprSrJwCYCNkZQoPZNkYWu192rIlDPxYXggOVpKlgt8wxc6eB6CzBa8goUVGa1KAHLs1pkdRsrDbjz6dvPz1-_DFr3_3o37e0HOoRwHyEIdUyggfQt1wv6W86R0502nw5syylGLuhZa_tyg8Ra236OE-Ja_2NtJ2vbX9vWH5K0dpxkuBwfXDFLOqIIDFP_0FDeN-Z1XVR9TVssFuq_-1pSaHShcc2GI2KQycjvPSt4WPKwSOe8NOvOvKIhK0PJTdi5lNxEvX2MddJDuFOVJgJ7gMTcEJhhAOMnOjAQigChEQM85qTHOWSU8440aVF1aCli006NeLoc-HL6G5pUsPI&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0F949KFQ7%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-5-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_4_title&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - link "Rated 3.8 out of 5 stars by 1230 reviews. Go to review section." [ref=f2e1347] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd8a99IIsZDsfuKFO7TZQdbHOd2fnimu7tmkShvwBRiQmBvgjiJ0RVn4HKxIpSLzpSe9LT4m2f3z89f1W856lo5ODYDbzjMn4ZbuBuruxyOQyHCOyOgzio8MXHnpDXKe_e-573nk2wuqKrIg3s8jpq8nYDxTdwKqBVajCsxvHdrRtDU-eDwP3uPlQuc1F9brOi-bdmRcMnenYc8-Gg9a7hvL4WgkrQUs2DwtRsjyltQhllspMhFEdN-_QC_o2z1SZtR5VEWAprSrJwCYCNkZQoPZNkYWu192rIlDPxYXggOVpKlgt8wxc6eB6CzBa8goUVGa1KAHLs1pkdRsrDbjz6dvPz1-_DFr3_3o37e0HOoRwHyEIdUyggfQt1wv6W86R0502nw5syylGLuhZa_tyg8Ra236OE-Ja_2NtJ2vbX9vWH5K0dpxkuBwfXDFLOqIIDFP_0FDeN-Z1XVR9TVssFuq_-1pSaHShcc2GI2KQycjvPSt4WPKwSOe8NOvOvKIhK0PJTdi5lNxEvX2MddJDuFOVJgJ7gMTcEJhhAOMnOjAQigChEQM85qTHOWSU8440aVF1aCli006NeLoc-HL6G5pUsPI&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0F949KFQ7%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-5-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_4_rating&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c#customerReviews
+                        - generic [ref=f2e1348]:
+                          - generic [ref=f2e1349]: "3.8"
+                          - generic [ref=f2e1350]: 3.8 out of 5 stars.
+                          - generic [ref=f2e1352]: 1,230
+                      - link "₹899.00" [ref=f2e1354] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd8a99IIsZDsfuKFO7TZQdbHOd2fnimu7tmkShvwBRiQmBvgjiJ0RVn4HKxIpSLzpSe9LT4m2f3z89f1W856lo5ODYDbzjMn4ZbuBuruxyOQyHCOyOgzio8MXHnpDXKe_e-573nk2wuqKrIg3s8jpq8nYDxTdwKqBVajCsxvHdrRtDU-eDwP3uPlQuc1F9brOi-bdmRcMnenYc8-Gg9a7hvL4WgkrQUs2DwtRsjyltQhllspMhFEdN-_QC_o2z1SZtR5VEWAprSrJwCYCNkZQoPZNkYWu192rIlDPxYXggOVpKlgt8wxc6eB6CzBa8goUVGa1KAHLs1pkdRsrDbjz6dvPz1-_DFr3_3o37e0HOoRwHyEIdUyggfQt1wv6W86R0502nw5syylGLuhZa_tyg8Ra236OE-Ja_2NtJ2vbX9vWH5K0dpxkuBwfXDFLOqIIDFP_0FDeN-Z1XVR9TVssFuq_-1pSaHShcc2GI2KQycjvPSt4WPKwSOe8NOvOvKIhK0PJTdi5lNxEvX2MddJDuFOVJgJ7gMTcEJhhAOMnOjAQigChEQM85qTHOWSU8440aVF1aCli006NeLoc-HL6G5pUsPI&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0F949KFQ7%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-5-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_4_price&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                        - generic [ref=f2e1356]:
+                          - generic [ref=f2e1357]: ₹899.00
+                          - generic [ref=f2e1358]:
+                            - text: ₹
+                            - generic [ref=f2e1359]:
+                              - text: "899"
+                              - generic [ref=f2e1360]: .
+                            - text: "00"
+                      - generic [ref=f2e1361]: "M.R.P: ₹2,499.00"
+                - listitem [ref=f2e1364]:
+                  - generic [ref=f2e1366]:
+                    - link [ref=f2e1367] [cursor=pointer]:
+                      - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTztv00AAVqiAYvGoMhQpbEHKEOnsO2MuvSAL2c4D9-E0TsOji3W-O9tXXNu1TZMw5A8wIjExwB9B7Iyw8jtYkUhB4ps-6XvpU8LtHx9_fb_RvGPp6GTfn88942D8vN1A3d1IZHIZjBFZHfnR8dGhh94Q1-nvnk097ywbYXVFVsSbW-Tli4Px1Fd0A6sGVqEKT6_N7HDbGp48G_rurHlfuclF9brOi-btuecPncnYc0-Hg9a7hvLwSgkqQUuWBIUoWZ7SWgQyS2UmgrCOmrfoOX2bZ6rMWg-qELCUVpVkYBMBGyMoUPu6yALX6z6uQlAn4lxwwPI0FayWeQYudXC1BRgteQUKKrNalIDlWS2yuo2VBtz59O3n569fBq27f72b9vY9HUK4hxCEOibQQPqW6_n9LefY6U6aTwa25RQjF_SstX2xQWyt7WmOY-Ja_2Ntx2t7uratPyRu7TjxcDnev2SWdEThG6b-oaG8byR1XVR9TVssFuq_-1pcaHShcc2GI2I4r2aH6GnBg5IHRZrw0qw7SUUDVgaSm7BzIbmJensY66SHcKcqTQQwIBE3BGYYwOiRDgyEQkBoyACPOOlxDhnlvCNNWlQdWorItFMjmiwHUzn5DaXvsQ0&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0F94CYSL1%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-6-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_5_bkgd&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                    - link [ref=f2e1369] [cursor=pointer]:
+                      - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTztv00AAVqiAYvGoMhQpbEHKEOnsO2MuvSAL2c4D9-E0TsOji3W-O9tXXNu1TZMw5A8wIjExwB9B7Iyw8jtYkUhB4ps-6XvpU8LtHx9_fb_RvGPp6GTfn88942D8vN1A3d1IZHIZjBFZHfnR8dGhh94Q1-nvnk097ywbYXVFVsSbW-Tli4Px1Fd0A6sGVqEKT6_N7HDbGp48G_rurHlfuclF9brOi-btuecPncnYc0-Hg9a7hvLwSgkqQUuWBIUoWZ7SWgQyS2UmgrCOmrfoOX2bZ6rMWg-qELCUVpVkYBMBGyMoUPu6yALX6z6uQlAn4lxwwPI0FayWeQYudXC1BRgteQUKKrNalIDlWS2yuo2VBtz59O3n569fBq27f72b9vY9HUK4hxCEOibQQPqW6_n9LefY6U6aTwa25RQjF_SstX2xQWyt7WmOY-Ja_2Ntx2t7uratPyRu7TjxcDnev2SWdEThG6b-oaG8byR1XVR9TVssFuq_-1pcaHShcc2GI2I4r2aH6GnBg5IHRZrw0qw7SUUDVgaSm7BzIbmJensY66SHcKcqTQQwIBE3BGYYwOiRDgyEQkBoyACPOOlxDhnlvCNNWlQdWorItFMjmiwHUzn5DaXvsQ0&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0F94CYSL1%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-6-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_5_img&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - generic [ref=f2e1371]:
+                        - img "Boldfit Running Shoes for Man Comfortable Sports Shoes for Men Running Lightweight Gym Shoe for Men Workout Soft Cushioned Walking Shoe for Man Anti Slip Gym Footwear"
+                    - generic [ref=f2e1372]:
+                      - link [ref=f2e1373] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTztv00AAVqiAYvGoMhQpbEHKEOnsO2MuvSAL2c4D9-E0TsOji3W-O9tXXNu1TZMw5A8wIjExwB9B7Iyw8jtYkUhB4ps-6XvpU8LtHx9_fb_RvGPp6GTfn88942D8vN1A3d1IZHIZjBFZHfnR8dGhh94Q1-nvnk097ywbYXVFVsSbW-Tli4Px1Fd0A6sGVqEKT6_N7HDbGp48G_rurHlfuclF9brOi-btuecPncnYc0-Hg9a7hvLwSgkqQUuWBIUoWZ7SWgQyS2UmgrCOmrfoOX2bZ6rMWg-qELCUVpVkYBMBGyMoUPu6yALX6z6uQlAn4lxwwPI0FayWeQYudXC1BRgteQUKKrNalIDlWS2yuo2VBtz59O3n569fBq27f72b9vY9HUK4hxCEOibQQPqW6_n9LefY6U6aTwa25RQjF_SstX2xQWyt7WmOY-Ja_2Ntx2t7uratPyRu7TjxcDnev2SWdEThG6b-oaG8byR1XVR9TVssFuq_-1pcaHShcc2GI2I4r2aH6GnBg5IHRZrw0qw7SUUDVgaSm7BzIbmJensY66SHcKcqTQQwIBE3BGYYwOiRDgyEQkBoyACPOOlxDhnlvCNNWlQdWorItFMjmiwHUzn5DaXvsQ0&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0F94CYSL1%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-6-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_5_bkgd&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - link "Boldfit Running Shoes for Man Comfortable Sports Shoes for Men Running Lightweight Gym Shoe for Men Workout Soft Cushioned Walking Shoe for Man Anti Slip Gym Footwear" [ref=f2e1375] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTztv00AAVqiAYvGoMhQpbEHKEOnsO2MuvSAL2c4D9-E0TsOji3W-O9tXXNu1TZMw5A8wIjExwB9B7Iyw8jtYkUhB4ps-6XvpU8LtHx9_fb_RvGPp6GTfn88942D8vN1A3d1IZHIZjBFZHfnR8dGhh94Q1-nvnk097ywbYXVFVsSbW-Tli4Px1Fd0A6sGVqEKT6_N7HDbGp48G_rurHlfuclF9brOi-btuecPncnYc0-Hg9a7hvLwSgkqQUuWBIUoWZ7SWgQyS2UmgrCOmrfoOX2bZ6rMWg-qELCUVpVkYBMBGyMoUPu6yALX6z6uQlAn4lxwwPI0FayWeQYudXC1BRgteQUKKrNalIDlWS2yuo2VBtz59O3n569fBq27f72b9vY9HUK4hxCEOibQQPqW6_n9LefY6U6aTwa25RQjF_SstX2xQWyt7WmOY-Ja_2Ntx2t7uratPyRu7TjxcDnev2SWdEThG6b-oaG8byR1XVR9TVssFuq_-1pcaHShcc2GI2I4r2aH6GnBg5IHRZrw0qw7SUUDVgaSm7BzIbmJensY66SHcKcqTQQwIBE3BGYYwOiRDgyEQkBoyACPOOlxDhnlvCNNWlQdWorItFMjmiwHUzn5DaXvsQ0&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0F94CYSL1%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-6-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_5_title&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - link "Rated 3.9 out of 5 stars by 862 reviews. Go to review section." [ref=f2e1378] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTztv00AAVqiAYvGoMhQpbEHKEOnsO2MuvSAL2c4D9-E0TsOji3W-O9tXXNu1TZMw5A8wIjExwB9B7Iyw8jtYkUhB4ps-6XvpU8LtHx9_fb_RvGPp6GTfn88942D8vN1A3d1IZHIZjBFZHfnR8dGhh94Q1-nvnk097ywbYXVFVsSbW-Tli4Px1Fd0A6sGVqEKT6_N7HDbGp48G_rurHlfuclF9brOi-btuecPncnYc0-Hg9a7hvLwSgkqQUuWBIUoWZ7SWgQyS2UmgrCOmrfoOX2bZ6rMWg-qELCUVpVkYBMBGyMoUPu6yALX6z6uQlAn4lxwwPI0FayWeQYudXC1BRgteQUKKrNalIDlWS2yuo2VBtz59O3n569fBq27f72b9vY9HUK4hxCEOibQQPqW6_n9LefY6U6aTwa25RQjF_SstX2xQWyt7WmOY-Ja_2Ntx2t7uratPyRu7TjxcDnev2SWdEThG6b-oaG8byR1XVR9TVssFuq_-1pcaHShcc2GI2I4r2aH6GnBg5IHRZrw0qw7SUUDVgaSm7BzIbmJensY66SHcKcqTQQwIBE3BGYYwOiRDgyEQkBoyACPOOlxDhnlvCNNWlQdWorItFMjmiwHUzn5DaXvsQ0&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0F94CYSL1%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-6-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_5_rating&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c#customerReviews
+                        - generic [ref=f2e1379]:
+                          - generic [ref=f2e1380]: "3.9"
+                          - generic [ref=f2e1381]: 3.9 out of 5 stars.
+                          - generic [ref=f2e1383]: "862"
+                      - link "₹1,099.00" [ref=f2e1385] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTztv00AAVqiAYvGoMhQpbEHKEOnsO2MuvSAL2c4D9-E0TsOji3W-O9tXXNu1TZMw5A8wIjExwB9B7Iyw8jtYkUhB4ps-6XvpU8LtHx9_fb_RvGPp6GTfn88942D8vN1A3d1IZHIZjBFZHfnR8dGhh94Q1-nvnk097ywbYXVFVsSbW-Tli4Px1Fd0A6sGVqEKT6_N7HDbGp48G_rurHlfuclF9brOi-btuecPncnYc0-Hg9a7hvLwSgkqQUuWBIUoWZ7SWgQyS2UmgrCOmrfoOX2bZ6rMWg-qELCUVpVkYBMBGyMoUPu6yALX6z6uQlAn4lxwwPI0FayWeQYudXC1BRgteQUKKrNalIDlWS2yuo2VBtz59O3n569fBq27f72b9vY9HUK4hxCEOibQQPqW6_n9LefY6U6aTwa25RQjF_SstX2xQWyt7WmOY-Ja_2Ntx2t7uratPyRu7TjxcDnev2SWdEThG6b-oaG8byR1XVR9TVssFuq_-1pcaHShcc2GI2I4r2aH6GnBg5IHRZrw0qw7SUUDVgaSm7BzIbmJensY66SHcKcqTQQwIBE3BGYYwOiRDgyEQkBoyACPOOlxDhnlvCNNWlQdWorItFMjmiwHUzn5DaXvsQ0&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0F94CYSL1%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-6-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_5_price&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                        - generic [ref=f2e1387]:
+                          - generic [ref=f2e1388]: ₹1,099.00
+                          - generic [ref=f2e1389]:
+                            - text: ₹
+                            - generic [ref=f2e1390]:
+                              - text: 1,099
+                              - generic [ref=f2e1391]: .
+                            - text: "00"
+                      - generic [ref=f2e1392]: "M.R.P: ₹2,499.00"
+                - listitem [ref=f2e1395]:
+                  - generic [ref=f2e1397]:
+                    - link [ref=f2e1398] [cursor=pointer]:
+                      - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd8ZcckEWsp0PnFKncZoWdbHOd2fnimu7tmkShvwBRiQmBvgjiJ0RVn4HKxIpSLzpSe9LTwl3f3z89f1W_Z6lo-OxP597xsHopFlD7f1IpHIVjBBZH_rR0eFLD70hrtPbP5963nk6xOqarIk3t8ir04PR1Fd0A6sGVqEKz27M7HDXGhy_GPjurP5Quc1F-brK8vrduecPnMnIc88G_ca7mvL4WglKQQu2CHJRsCyhlQhkmshUBGEV1e_QC_o2S1WZNh6VIWAJLUvJwDYCtkaQo-ZNkQau135ahqBaiAvBAcuSRLBKZim40sH1FmC04CXIqUwrUQCWpZVIqyZWanDv07efn79-6Tfu__Vu25sPdAhhFyEIdUyggfQd1_N7O86R057Un_Vty8mHLuhYG_tyi9ja2NMMx8S1_sfGjjf2dGNbf0jc2HPiwWo0vmKWdETuG6b-oaa8ry2qKi97mrZcLtV_97U41-hS45oNhyczrz8-7T7PeVDwIE8WvDCr1qKkASsCyU3YupTcRJ0uxjrpINwqCxOBDiARNwRmGMDoiQ4MhEJAaMgAjzjpcA4Z5bwlTZqXLVqIyLQTI5qs-lM5-Q3APrFJ&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FVSNDJW8%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-7-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_6_bkgd&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                    - link [ref=f2e1400] [cursor=pointer]:
+                      - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd8ZcckEWsp0PnFKncZoWdbHOd2fnimu7tmkShvwBRiQmBvgjiJ0RVn4HKxIpSLzpSe9LTwl3f3z89f1W_Z6lo-OxP597xsHopFlD7f1IpHIVjBBZH_rR0eFLD70hrtPbP5963nk6xOqarIk3t8ir04PR1Fd0A6sGVqEKz27M7HDXGhy_GPjurP5Quc1F-brK8vrduecPnMnIc88G_ca7mvL4WglKQQu2CHJRsCyhlQhkmshUBGEV1e_QC_o2S1WZNh6VIWAJLUvJwDYCtkaQo-ZNkQau135ahqBaiAvBAcuSRLBKZim40sH1FmC04CXIqUwrUQCWpZVIqyZWanDv07efn79-6Tfu__Vu25sPdAhhFyEIdUyggfQd1_N7O86R057Un_Vty8mHLuhYG_tyi9ja2NMMx8S1_sfGjjf2dGNbf0jc2HPiwWo0vmKWdETuG6b-oaa8ry2qKi97mrZcLtV_97U41-hS45oNhyczrz8-7T7PeVDwIE8WvDCr1qKkASsCyU3YupTcRJ0uxjrpINwqCxOBDiARNwRmGMDoiQ4MhEJAaMgAjzjpcA4Z5bwlTZqXLVqIyLQTI5qs-lM5-Q3APrFJ&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FVSNDJW8%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-7-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_6_img&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - generic [ref=f2e1402]:
+                        - img "Boldfit Walking Shoes for Man Daywalk Max Soft Cushioned Shoe for Men Lightweight Slip on Shoe for Men Without Lace Shoes for Man Stylish Regular Wear"
+                    - generic [ref=f2e1403]:
+                      - link [ref=f2e1404] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd8ZcckEWsp0PnFKncZoWdbHOd2fnimu7tmkShvwBRiQmBvgjiJ0RVn4HKxIpSLzpSe9LTwl3f3z89f1W_Z6lo-OxP597xsHopFlD7f1IpHIVjBBZH_rR0eFLD70hrtPbP5963nk6xOqarIk3t8ir04PR1Fd0A6sGVqEKz27M7HDXGhy_GPjurP5Quc1F-brK8vrduecPnMnIc88G_ca7mvL4WglKQQu2CHJRsCyhlQhkmshUBGEV1e_QC_o2S1WZNh6VIWAJLUvJwDYCtkaQo-ZNkQau135ahqBaiAvBAcuSRLBKZim40sH1FmC04CXIqUwrUQCWpZVIqyZWanDv07efn79-6Tfu__Vu25sPdAhhFyEIdUyggfQd1_N7O86R057Un_Vty8mHLuhYG_tyi9ja2NMMx8S1_sfGjjf2dGNbf0jc2HPiwWo0vmKWdETuG6b-oaa8ry2qKi97mrZcLtV_97U41-hS45oNhyczrz8-7T7PeVDwIE8WvDCr1qKkASsCyU3YupTcRJ0uxjrpINwqCxOBDiARNwRmGMDoiQ4MhEJAaMgAjzjpcA4Z5bwlTZqXLVqIyLQTI5qs-lM5-Q3APrFJ&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FVSNDJW8%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-7-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_6_bkgd&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - link "Boldfit Walking Shoes for Man Daywalk Max Soft Cushioned Shoe for Men Lightweight Slip on Shoe for Men Without Lace Shoes for Man Stylish Regular Wear" [ref=f2e1406] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd8ZcckEWsp0PnFKncZoWdbHOd2fnimu7tmkShvwBRiQmBvgjiJ0RVn4HKxIpSLzpSe9LTwl3f3z89f1W_Z6lo-OxP597xsHopFlD7f1IpHIVjBBZH_rR0eFLD70hrtPbP5963nk6xOqarIk3t8ir04PR1Fd0A6sGVqEKz27M7HDXGhy_GPjurP5Quc1F-brK8vrduecPnMnIc88G_ca7mvL4WglKQQu2CHJRsCyhlQhkmshUBGEV1e_QC_o2S1WZNh6VIWAJLUvJwDYCtkaQo-ZNkQau135ahqBaiAvBAcuSRLBKZim40sH1FmC04CXIqUwrUQCWpZVIqyZWanDv07efn79-6Tfu__Vu25sPdAhhFyEIdUyggfQd1_N7O86R057Un_Vty8mHLuhYG_tyi9ja2NMMx8S1_sfGjjf2dGNbf0jc2HPiwWo0vmKWdETuG6b-oaa8ry2qKi97mrZcLtV_97U41-hS45oNhyczrz8-7T7PeVDwIE8WvDCr1qKkASsCyU3YupTcRJ0uxjrpINwqCxOBDiARNwRmGMDoiQ4MhEJAaMgAjzjpcA4Z5bwlTZqXLVqIyLQTI5qs-lM5-Q3APrFJ&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FVSNDJW8%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-7-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_6_title&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - link "Rated 3.9 out of 5 stars by 616 reviews. Go to review section." [ref=f2e1409] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd8ZcckEWsp0PnFKncZoWdbHOd2fnimu7tmkShvwBRiQmBvgjiJ0RVn4HKxIpSLzpSe9LTwl3f3z89f1W_Z6lo-OxP597xsHopFlD7f1IpHIVjBBZH_rR0eFLD70hrtPbP5963nk6xOqarIk3t8ir04PR1Fd0A6sGVqEKz27M7HDXGhy_GPjurP5Quc1F-brK8vrduecPnMnIc88G_ca7mvL4WglKQQu2CHJRsCyhlQhkmshUBGEV1e_QC_o2S1WZNh6VIWAJLUvJwDYCtkaQo-ZNkQau135ahqBaiAvBAcuSRLBKZim40sH1FmC04CXIqUwrUQCWpZVIqyZWanDv07efn79-6Tfu__Vu25sPdAhhFyEIdUyggfQd1_N7O86R057Un_Vty8mHLuhYG_tyi9ja2NMMx8S1_sfGjjf2dGNbf0jc2HPiwWo0vmKWdETuG6b-oaa8ry2qKi97mrZcLtV_97U41-hS45oNhyczrz8-7T7PeVDwIE8WvDCr1qKkASsCyU3YupTcRJ0uxjrpINwqCxOBDiARNwRmGMDoiQ4MhEJAaMgAjzjpcA4Z5bwlTZqXLVqIyLQTI5qs-lM5-Q3APrFJ&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FVSNDJW8%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-7-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_6_rating&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c#customerReviews
+                        - generic [ref=f2e1410]:
+                          - generic [ref=f2e1411]: "3.9"
+                          - generic [ref=f2e1412]: 3.9 out of 5 stars.
+                          - generic [ref=f2e1414]: "616"
+                      - link "Mega Deal Days" [ref=f2e1416] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd8ZcckEWsp0PnFKncZoWdbHOd2fnimu7tmkShvwBRiQmBvgjiJ0RVn4HKxIpSLzpSe9LTwl3f3z89f1W_Z6lo-OxP597xsHopFlD7f1IpHIVjBBZH_rR0eFLD70hrtPbP5963nk6xOqarIk3t8ir04PR1Fd0A6sGVqEKz27M7HDXGhy_GPjurP5Quc1F-brK8vrduecPnMnIc88G_ca7mvL4WglKQQu2CHJRsCyhlQhkmshUBGEV1e_QC_o2S1WZNh6VIWAJLUvJwDYCtkaQo-ZNkQau135ahqBaiAvBAcuSRLBKZim40sH1FmC04CXIqUwrUQCWpZVIqyZWanDv07efn79-6Tfu__Vu25sPdAhhFyEIdUyggfQd1_N7O86R057Un_Vty8mHLuhYG_tyi9ja2NMMx8S1_sfGjjf2dGNbf0jc2HPiwWo0vmKWdETuG6b-oaa8ry2qKi97mrZcLtV_97U41-hS45oNhyczrz8-7T7PeVDwIE8WvDCr1qKkASsCyU3YupTcRJ0uxjrpINwqCxOBDiARNwRmGMDoiQ4MhEJAaMgAjzjpcA4Z5bwlTZqXLVqIyLQTI5qs-lM5-Q3APrFJ&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FVSNDJW8%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-7-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_6_badge&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - link "-57% ₹1,299.00" [ref=f2e1421] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShS2IKUIdLZd8ZcckEWsp0PnFKncZoWdbHOd2fnimu7tmkShvwBRiQmBvgjiJ0RVn4HKxIpSLzpSe9LTwl3f3z89f1W_Z6lo-OxP597xsHopFlD7f1IpHIVjBBZH_rR0eFLD70hrtPbP5963nk6xOqarIk3t8ir04PR1Fd0A6sGVqEKz27M7HDXGhy_GPjurP5Quc1F-brK8vrduecPnMnIc88G_ca7mvL4WglKQQu2CHJRsCyhlQhkmshUBGEV1e_QC_o2S1WZNh6VIWAJLUvJwDYCtkaQo-ZNkQau135ahqBaiAvBAcuSRLBKZim40sH1FmC04CXIqUwrUQCWpZVIqyZWanDv07efn79-6Tfu__Vu25sPdAhhFyEIdUyggfQd1_N7O86R057Un_Vty8mHLuhYG_tyi9ja2NMMx8S1_sfGjjf2dGNbf0jc2HPiwWo0vmKWdETuG6b-oaa8ry2qKi97mrZcLtV_97U41-hS45oNhyczrz8-7T7PeVDwIE8WvDCr1qKkASsCyU3YupTcRJ0uxjrpINwqCxOBDiARNwRmGMDoiQ4MhEJAaMgAjzjpcA4Z5bwlTZqXLVqIyLQTI5qs-lM5-Q3APrFJ&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0FVSNDJW8%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-7-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_6_price&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                        - generic [ref=f2e1422]:
+                          - generic [ref=f2e1423]: "-57%"
+                          - generic [ref=f2e1424]:
+                            - generic [ref=f2e1425]: ₹1,299.00
+                            - generic [ref=f2e1426]:
+                              - text: ₹
+                              - generic [ref=f2e1427]:
+                                - text: 1,299
+                                - generic [ref=f2e1428]: .
+                              - text: "00"
+                      - generic [ref=f2e1429]: "M.R.P: ₹2,999.00"
+                - listitem [ref=f2e1432]:
+                  - generic [ref=f2e1434]:
+                    - link [ref=f2e1435] [cursor=pointer]:
+                      - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShSugUpQ6Sz71zj5FJZyHY-cEudxm2gymKd787OFdd27aNJGPIHGJGYGOCPIHZGWPkdrEikIPGmJ70vPSXa_vHx1_c79Qe2js4Og-nUN45GL5s11N6NeSaW4Qjh1XEQnxy_8NEb7Lm93YuJ719kQ1Nd4RX2pzY-f3U0mgSKbpiqYapQhbNbp060bQ_Ong8C77T-WLnLePVa5kX9_tQPBu545HuzQb_xrqY8uVHCipOSzsOClzRPieShyFKR8TCScf0euSRv80wVWWOvigBNSVUJCjYRsDGCAjVv8yz0_PbTKgJyzi85AzRPU06lyDNwrYObLUBJySpQEJFJXgKaZ5JnsmkqNbjz6dvPz1-_9BsP_3o37c1HOoSwixCEuomhgfQtzw96W-6J2x7XD_qO7RZDD3TstXO1QWKvnUluJtiz_8faSdbOZO3Yf0jS2HGTwXJ0eE1t4fIiMCz9Q015X5tLWVQ9TVssFuq_-1pSaGShMc2BQ2y4s-H5_rOChSULi3TOSku25hUJaRkKZsHWlWAW6nRNU8cdZLaq0kKgC3DMDG5SE8B4XwcGQhHAJKKAxQx3GIOUMNYSFimqFil5bDmpEY-X_YkY_wanNLER&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0F94CZFX3%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-8-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_7_bkgd&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                    - link [ref=f2e1437] [cursor=pointer]:
+                      - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShSugUpQ6Sz71zj5FJZyHY-cEudxm2gymKd787OFdd27aNJGPIHGJGYGOCPIHZGWPkdrEikIPGmJ70vPSXa_vHx1_c79Qe2js4Og-nUN45GL5s11N6NeSaW4Qjh1XEQnxy_8NEb7Lm93YuJ719kQ1Nd4RX2pzY-f3U0mgSKbpiqYapQhbNbp060bQ_Ong8C77T-WLnLePVa5kX9_tQPBu545HuzQb_xrqY8uVHCipOSzsOClzRPieShyFKR8TCScf0euSRv80wVWWOvigBNSVUJCjYRsDGCAjVv8yz0_PbTKgJyzi85AzRPU06lyDNwrYObLUBJySpQEJFJXgKaZ5JnsmkqNbjz6dvPz1-_9BsP_3o37c1HOoSwixCEuomhgfQtzw96W-6J2x7XD_qO7RZDD3TstXO1QWKvnUluJtiz_8faSdbOZO3Yf0jS2HGTwXJ0eE1t4fIiMCz9Q015X5tLWVQ9TVssFuq_-1pSaGShMc2BQ2y4s-H5_rOChSULi3TOSku25hUJaRkKZsHWlWAW6nRNU8cdZLaq0kKgC3DMDG5SE8B4XwcGQhHAJKKAxQx3GIOUMNYSFimqFil5bDmpEY-X_YkY_wanNLER&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0F94CZFX3%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-8-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_7_img&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - generic [ref=f2e1439]:
+                        - img "Boldfit Running Shoes for Man Comfortable Sports Shoes for Men Running Lightweight Gym Shoe for Men Workout Soft Cushioned Walking Shoe for Man Anti Slip Gym Footwear"
+                    - generic [ref=f2e1440]:
+                      - link [ref=f2e1441] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShSugUpQ6Sz71zj5FJZyHY-cEudxm2gymKd787OFdd27aNJGPIHGJGYGOCPIHZGWPkdrEikIPGmJ70vPSXa_vHx1_c79Qe2js4Og-nUN45GL5s11N6NeSaW4Qjh1XEQnxy_8NEb7Lm93YuJ719kQ1Nd4RX2pzY-f3U0mgSKbpiqYapQhbNbp060bQ_Ong8C77T-WLnLePVa5kX9_tQPBu545HuzQb_xrqY8uVHCipOSzsOClzRPieShyFKR8TCScf0euSRv80wVWWOvigBNSVUJCjYRsDGCAjVv8yz0_PbTKgJyzi85AzRPU06lyDNwrYObLUBJySpQEJFJXgKaZ5JnsmkqNbjz6dvPz1-_9BsP_3o37c1HOoSwixCEuomhgfQtzw96W-6J2x7XD_qO7RZDD3TstXO1QWKvnUluJtiz_8faSdbOZO3Yf0jS2HGTwXJ0eE1t4fIiMCz9Q015X5tLWVQ9TVssFuq_-1pSaGShMc2BQ2y4s-H5_rOChSULi3TOSku25hUJaRkKZsHWlWAW6nRNU8cdZLaq0kKgC3DMDG5SE8B4XwcGQhHAJKKAxQx3GIOUMNYSFimqFil5bDmpEY-X_YkY_wanNLER&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0F94CZFX3%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-8-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_7_bkgd&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - link "Boldfit Running Shoes for Man Comfortable Sports Shoes for Men Running Lightweight Gym Shoe for Men Workout Soft Cushioned Walking Shoe for Man Anti Slip Gym Footwear" [ref=f2e1443] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShSugUpQ6Sz71zj5FJZyHY-cEudxm2gymKd787OFdd27aNJGPIHGJGYGOCPIHZGWPkdrEikIPGmJ70vPSXa_vHx1_c79Qe2js4Og-nUN45GL5s11N6NeSaW4Qjh1XEQnxy_8NEb7Lm93YuJ719kQ1Nd4RX2pzY-f3U0mgSKbpiqYapQhbNbp060bQ_Ong8C77T-WLnLePVa5kX9_tQPBu545HuzQb_xrqY8uVHCipOSzsOClzRPieShyFKR8TCScf0euSRv80wVWWOvigBNSVUJCjYRsDGCAjVv8yz0_PbTKgJyzi85AzRPU06lyDNwrYObLUBJySpQEJFJXgKaZ5JnsmkqNbjz6dvPz1-_9BsP_3o37c1HOoSwixCEuomhgfQtzw96W-6J2x7XD_qO7RZDD3TstXO1QWKvnUluJtiz_8faSdbOZO3Yf0jS2HGTwXJ0eE1t4fIiMCz9Q015X5tLWVQ9TVssFuq_-1pSaGShMc2BQ2y4s-H5_rOChSULi3TOSku25hUJaRkKZsHWlWAW6nRNU8cdZLaq0kKgC3DMDG5SE8B4XwcGQhHAJKKAxQx3GIOUMNYSFimqFil5bDmpEY-X_YkY_wanNLER&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0F94CZFX3%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-8-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_7_title&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                      - link "Rated 3.9 out of 5 stars by 862 reviews. Go to review section." [ref=f2e1446] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShSugUpQ6Sz71zj5FJZyHY-cEudxm2gymKd787OFdd27aNJGPIHGJGYGOCPIHZGWPkdrEikIPGmJ70vPSXa_vHx1_c79Qe2js4Og-nUN45GL5s11N6NeSaW4Qjh1XEQnxy_8NEb7Lm93YuJ719kQ1Nd4RX2pzY-f3U0mgSKbpiqYapQhbNbp060bQ_Ong8C77T-WLnLePVa5kX9_tQPBu545HuzQb_xrqY8uVHCipOSzsOClzRPieShyFKR8TCScf0euSRv80wVWWOvigBNSVUJCjYRsDGCAjVv8yz0_PbTKgJyzi85AzRPU06lyDNwrYObLUBJySpQEJFJXgKaZ5JnsmkqNbjz6dvPz1-_9BsP_3o37c1HOoSwixCEuomhgfQtzw96W-6J2x7XD_qO7RZDD3TstXO1QWKvnUluJtiz_8faSdbOZO3Yf0jS2HGTwXJ0eE1t4fIiMCz9Q015X5tLWVQ9TVssFuq_-1pSaGShMc2BQ2y4s-H5_rOChSULi3TOSku25hUJaRkKZsHWlWAW6nRNU8cdZLaq0kKgC3DMDG5SE8B4XwcGQhHAJKKAxQx3GIOUMNYSFimqFil5bDmpEY-X_YkY_wanNLER&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0F94CZFX3%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-8-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_7_rating&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c#customerReviews
+                        - generic [ref=f2e1447]:
+                          - generic [ref=f2e1448]: "3.9"
+                          - generic [ref=f2e1449]: 3.9 out of 5 stars.
+                          - generic [ref=f2e1451]: "862"
+                      - link "₹959.00" [ref=f2e1453] [cursor=pointer]:
+                        - /url: https://sponsored-ads.amazon.in/clk/?_encoding=UTF8&p=eAFVTz1v00AAVaiAYvFRZShSugUpQ6Sz71zj5FJZyHY-cEudxm2gymKd787OFdd27aNJGPIHGJGYGOCPIHZGWPkdrEikIPGmJ70vPSXa_vHx1_c79Qe2js4Og-nUN45GL5s11N6NeSaW4Qjh1XEQnxy_8NEb7Lm93YuJ719kQ1Nd4RX2pzY-f3U0mgSKbpiqYapQhbNbp060bQ_Ong8C77T-WLnLePVa5kX9_tQPBu545HuzQb_xrqY8uVHCipOSzsOClzRPieShyFKR8TCScf0euSRv80wVWWOvigBNSVUJCjYRsDGCAjVv8yz0_PbTKgJyzi85AzRPU06lyDNwrYObLUBJySpQEJFJXgKaZ5JnsmkqNbjz6dvPz1-_9BsP_3o37c1HOoSwixCEuomhgfQtzw96W-6J2x7XD_qO7RZDD3TstXO1QWKvnUluJtiz_8faSdbOZO3Yf0jS2HGTwXJ0eE1t4fIiMCz9Q015X5tLWVQ9TVssFuq_-1pSaGShMc2BQ2y4s-H5_rOChSULi3TOSku25hUJaRkKZsHWlWAW6nRNU8cdZLaq0kKgC3DMDG5SE8B4XwcGQhHAJKKAxQx3GIOUMNYSFimqFil5bDmpEY-X_YkY_wanNLER&v=c1&r=https%3A%2F%2Fwww.amazon.in%2Fgp%2Faw%2Fd%2FB0F94CZFX3%3Fpd_rd_plhdr%3Dt%26hsa_cr_id%3D0%26qid%3D1786629716%26sr%3D1-8-9fd4e6c6-0f32-411b-9abc-dfd97dd0cadd%26i%3Daps%26aref%3DBl4fOxDQiO&ref_=sbx__sbtcd2_asin_7_price&pd_rd_w=giKqg&content-id=amzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d%3Aamzn1.sym.1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_p=1183c3aa-8812-4b69-b5a0-47d783e4595d&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=MFM44&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+                        - generic [ref=f2e1455]:
+                          - generic [ref=f2e1456]: ₹959.00
+                          - generic [ref=f2e1457]:
+                            - text: ₹
+                            - generic [ref=f2e1458]:
+                              - text: "959"
+                              - generic [ref=f2e1459]: .
+                            - text: "00"
+                      - generic [ref=f2e1460]: "M.R.P: ₹2,499.00"
+      - generic [ref=f2e1464]:
+        - heading "More results" [level=2] [ref=f2e1468]
+        - generic:
+          - list
+      - listitem [ref=f2e1469]:
+        - generic [ref=f2e1474]:
+          - link [ref=f2e1478] [cursor=pointer]:
+            - /url: /ASIAN-TARZAN-04-Sneaker-Synthetic-Lightweight/dp/B0DJD7J4BJ/ref=sr_1_9?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-9
+          - generic [ref=f2e1480]:
+            - group "colours available" [ref=f2e1482]:
+              - list [ref=f2e1483]:
+                - generic [ref=f2e1484]:
+                  - listitem:
+                    - link "BEIGELGRN":
+                      - /url: /ASIAN-TARZAN-04-Sneaker-Synthetic-Lightweight/dp/B0DJD7J4BJ/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-9
+                - generic [ref=f2e1487]:
+                  - listitem:
+                    - link "Black With Pink Dots":
+                      - /url: /ASIAN-TARZAN-04-Sneaker-Synthetic-Lightweight/dp/B0FJLSSGNG/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-9
+                - generic [ref=f2e1490]:
+                  - listitem:
+                    - link "FULL WHITE":
+                      - /url: /ASIAN-TARZAN-04-Sneaker-Synthetic-Lightweight/dp/B0FJLR32QG/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-9
+                - generic [ref=f2e1493]:
+                  - listitem:
+                    - link "OFFWHITE SKY":
+                      - /url: /ASIAN-TARZAN-04-Sneaker-Synthetic-Lightweight/dp/B0FJLSDZ7H/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-9
+            - generic [ref=f2e1496]:
+              - heading "ASIAN" [level=2] [ref=f2e1498]
+              - link [ref=f2e1499] [cursor=pointer]:
+                - /url: /ASIAN-TARZAN-04-Sneaker-Synthetic-Lightweight/dp/B0DJD7J4BJ/ref=sr_1_9?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-9
+                - heading "Men THUNDER-07 Stylish Casual Mid Top Sneaker and Trendy Shoes with Laces for Men & Boys, Perfect, College, Parties and Outings, Lightweight, Comfortable, and Durable for All-Day Use" [level=2] [ref=f2e1500]
+            - generic [ref=f2e1502]:
+              - text: "3.8"
+              - button "3.8 out of 5 stars, rating details" [ref=f2e1504] [cursor=pointer]:
+                - generic [ref=f2e1505]: 3.8 out of 5 stars
+              - link "1,288 ratings" [ref=f2e1508] [cursor=pointer]:
+                - /url: /ASIAN-TARZAN-04-Sneaker-Synthetic-Lightweight/dp/B0DJD7J4BJ/ref=sr_1_9?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-9#customerReviews
+                - text: (1.2K)
+            - generic [ref=f2e1509]:
+              - generic [ref=f2e1511]:
+                - generic [ref=f2e1512]: Price, product page
+                - 'link "₹749 M.R.P: ₹999 M.R.P: ₹999" [ref=f2e1513] [cursor=pointer]':
+                  - /url: /ASIAN-TARZAN-04-Sneaker-Synthetic-Lightweight/dp/B0DJD7J4BJ/ref=sr_1_9?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-9
+                  - generic [ref=f2e1514]:
+                    - generic [ref=f2e1515]: ₹749
+                    - generic [ref=f2e1516]: ₹749
+                  - generic [ref=f2e1517]: "M.R.P: ₹999"
+                  - generic [ref=f2e1518]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e1519]:
+                      - generic [ref=f2e1520]: ₹999
+                      - text: ₹999
+                - text: (25% off)
+              - generic [ref=f2e1523]:
+                - generic [ref=f2e1524]: You pay ₹734.02
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e1527]:
+              - generic [ref=f2e1528]: FREE delivery Sat, 22 Aug
+              - generic [ref=f2e1530]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e1542] [cursor=pointer]
+      - listitem [ref=f2e1543]:
+        - generic [ref=f2e1548]:
+          - group "Best sellerin Men's Walking Shoes" [ref=f2e1553]:
+            - generic "Best seller" [ref=f2e1555]
+          - link [ref=f2e1559] [cursor=pointer]:
+            - /url: /Campus-OXYFIT-D-Gry-Walking-Shoes/dp/B09RPF9D6S/ref=sr_1_10?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-10
+          - generic [ref=f2e1561]:
+            - group "colours available" [ref=f2e1563]:
+              - list [ref=f2e1564]:
+                - generic [ref=f2e1565]:
+                  - listitem:
+                    - link "GRY/D.GRY":
+                      - /url: /Campus-OXYFIT-D-Gry-Walking-Shoes/dp/B09RPF9D6S/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-10
+                - generic [ref=f2e1568]:
+                  - listitem:
+                    - link "BLK/D.GRY":
+                      - /url: /Campus-OXYFIT-D-Gry-Walking-Shoes/dp/B09RP1P237/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-10
+                - generic [ref=f2e1571]:
+                  - listitem:
+                    - link "BLK/GOLD":
+                      - /url: /Campus-OXYFIT-D-Gry-Walking-Shoes/dp/B09RPFSV4Y/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-10
+                - generic [ref=f2e1574]:
+                  - listitem:
+                    - link "BLU/GRY":
+                      - /url: /Campus-OXYFIT-D-Gry-Walking-Shoes/dp/B09RPPR4S2/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-10
+                - generic [ref=f2e1577]:
+                  - listitem:
+                    - link "BLU/MSTD":
+                      - /url: /Campus-OXYFIT-D-Gry-Walking-Shoes/dp/B0B94BGZT6/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-10
+                - generic [ref=f2e1580]:
+                  - listitem:
+                    - link "BT.GRN/GRY":
+                      - /url: /Campus-OXYFIT-D-Gry-Walking-Shoes/dp/B09RP7RSTF/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-10
+              - link "+3 other colors/patterns" [ref=f2e1584] [cursor=pointer]:
+                - /url: /Campus-OXYFIT-D-Gry-Walking-Shoes/dp/B09RPF9D6S/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-10
+                - text: "+3"
+            - generic [ref=f2e1585]:
+              - heading "Campus" [level=2] [ref=f2e1587]
+              - link [ref=f2e1588] [cursor=pointer]:
+                - /url: /Campus-OXYFIT-D-Gry-Walking-Shoes/dp/B09RPF9D6S/ref=sr_1_10?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-10
+                - heading "Men Oxyfit (N) Walking Shoes" [level=2] [ref=f2e1589]
+            - generic [ref=f2e1590]:
+              - generic [ref=f2e1591]:
+                - text: "4.2"
+                - button "4.2 out of 5 stars, rating details" [ref=f2e1593] [cursor=pointer]:
+                  - generic [ref=f2e1594]: 4.2 out of 5 stars
+                - link "27,667 ratings" [ref=f2e1597] [cursor=pointer]:
+                  - /url: /Campus-OXYFIT-D-Gry-Walking-Shoes/dp/B09RPF9D6S/ref=sr_1_10?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-10#customerReviews
+                  - text: (27.6K)
+              - generic [ref=f2e1598]: 300+ bought in past month
+            - generic [ref=f2e1599]:
+              - link "Mega Deal Days" [ref=f2e1601] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e1606]:
+                - generic [ref=f2e1607]: Price, product page
+                - 'link "₹659 M.R.P: ₹999 M.R.P: ₹999" [ref=f2e1608] [cursor=pointer]':
+                  - /url: /Campus-OXYFIT-D-Gry-Walking-Shoes/dp/B09RPF9D6S/ref=sr_1_10?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-10
+                  - generic [ref=f2e1609]:
+                    - generic [ref=f2e1610]: ₹659
+                    - generic [ref=f2e1611]: ₹659
+                  - generic [ref=f2e1612]: "M.R.P: ₹999"
+                  - generic [ref=f2e1613]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e1614]:
+                      - generic [ref=f2e1615]: ₹999
+                      - text: ₹999
+                - text: (34% off)
+              - generic [ref=f2e1618]:
+                - generic [ref=f2e1619]: You pay ₹626.05
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e1622]:
+              - generic [ref=f2e1623]: FREE delivery Sat, 22 Aug
+              - generic [ref=f2e1625]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e1637] [cursor=pointer]
+      - listitem [ref=f2e1638]:
+        - generic [ref=f2e1645]:
+          - link [ref=f2e1649] [cursor=pointer]:
+            - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMTAzNjAyNjk5MzkzMjo6MDo6&url=%2FBacca-Bucci-Colossus-All-Terrain-Streetwear%2Fdp%2FB0FDQVMW7J%2Fref%3Dsr_1_11_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-11-spons%26aref%3DjtEyUv1ql9%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=jtEyUv1ql9&sp_cr=ZAZ
+          - generic [ref=f2e1651]:
+            - group "colours available" [ref=f2e1653]:
+              - list
+              - link "+3 other colors/patterns" [ref=f2e1655] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMTAzNjAyNjk5MzkzMjo6MDo6&url=%2FBacca-Bucci-Colossus-All-Terrain-Streetwear%2Fdp%2FB0FDQVMW7J%2Fref%3Dsr_1_11_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-11-spons%26aref%3DjtEyUv1ql9%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=jtEyUv1ql9&sp_cr=ZAZ
+            - generic [ref=f2e1656]:
+              - button "View Sponsored information or leave ad feedback" [ref=f2e1659] [cursor=pointer]:
+                - generic [ref=f2e1660]: Sponsored
+              - heading "Bacca Bucci" [level=2] [ref=f2e1663]
+              - link [ref=f2e1664] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMTAzNjAyNjk5MzkzMjo6MDo6&url=%2FBacca-Bucci-Colossus-All-Terrain-Streetwear%2Fdp%2FB0FDQVMW7J%2Fref%3Dsr_1_11_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-11-spons%26aref%3DjtEyUv1ql9%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=jtEyUv1ql9&sp_cr=ZAZ
+                - heading "Sponsored Ad - Colossus Men's Chunky All-Terrain Sneakers with Rugged Outsole & Ortholite Insole | Outdoor Trail Walking Shoes | Breathable Mesh & Synthetic Uppers" [level=2] [ref=f2e1665]: Colossus Men's Chunky All-Terrain Sneakers with Rugged Outsole & Ortholite Insole | Outdoor Trail Walking Shoes | Breathable Mesh & Synthetic Uppers
+            - generic [ref=f2e1667]:
+              - text: "4.1"
+              - button "4.1 out of 5 stars, rating details" [ref=f2e1669] [cursor=pointer]:
+                - generic [ref=f2e1670]: 4.1 out of 5 stars
+              - link "472 ratings" [ref=f2e1673] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMTAzNjAyNjk5MzkzMjo6MDo6&url=%2FBacca-Bucci-Colossus-All-Terrain-Streetwear%2Fdp%2FB0FDQVMW7J%2Fref%3Dsr_1_11_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-11-spons%26aref%3DjtEyUv1ql9%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=jtEyUv1ql9&sp_cr=ZAZ#customerReviews
+                - text: (472)
+            - generic [ref=f2e1674]:
+              - link "Mega Deal Days" [ref=f2e1676] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e1681]:
+                - generic [ref=f2e1682]: Price, product page
+                - 'link "₹2,170 M.R.P: ₹3,999 M.R.P: ₹3,999" [ref=f2e1683] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMTAzNjAyNjk5MzkzMjo6MDo6&url=%2FBacca-Bucci-Colossus-All-Terrain-Streetwear%2Fdp%2FB0FDQVMW7J%2Fref%3Dsr_1_11_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-11-spons%26aref%3DjtEyUv1ql9%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=jtEyUv1ql9&sp_cr=ZAZ
+                  - generic [ref=f2e1684]:
+                    - generic [ref=f2e1685]: ₹2,170
+                    - generic [ref=f2e1686]: ₹2,170
+                  - generic [ref=f2e1687]: "M.R.P: ₹3,999"
+                  - generic [ref=f2e1688]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e1689]:
+                      - generic [ref=f2e1690]: ₹3,999
+                      - text: ₹3,999
+                - text: (46% off)
+              - generic [ref=f2e1693]:
+                - generic [ref=f2e1694]: You pay ₹2,061.50
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e1695]: FREE delivery Sat, 22 Aug
+            - button "Add to cart" [ref=f2e1710] [cursor=pointer]
+      - listitem [ref=f2e1711]:
+        - generic [ref=f2e1718]:
+          - link [ref=f2e1722] [cursor=pointer]:
+            - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMDg0NjQ4NzgzNjkzMjo6MDo6&url=%2FBacca-Afterburn-Disruptor-Multiple-Sneakers-White%2Fdp%2FB07S7MTB5G%2Fref%3Dsr_1_12_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-12-spons%26aref%3DQUqRKKkpgy%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=QUqRKKkpgy&sp_cr=ZAZ
+          - generic [ref=f2e1724]:
+            - group "colours available" [ref=f2e1726]:
+              - list
+              - link "+4 other colors/patterns" [ref=f2e1728] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMDg0NjQ4NzgzNjkzMjo6MDo6&url=%2FBacca-Afterburn-Disruptor-Multiple-Sneakers-White%2Fdp%2FB07S7MTB5G%2Fref%3Dsr_1_12_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-12-spons%26aref%3DQUqRKKkpgy%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=QUqRKKkpgy&sp_cr=ZAZ
+            - generic [ref=f2e1729]:
+              - button "View Sponsored information or leave ad feedback" [ref=f2e1732] [cursor=pointer]:
+                - generic [ref=f2e1733]: Sponsored
+              - heading "Bacca Bucci" [level=2] [ref=f2e1736]
+              - link [ref=f2e1737] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMDg0NjQ4NzgzNjkzMjo6MDo6&url=%2FBacca-Afterburn-Disruptor-Multiple-Sneakers-White%2Fdp%2FB07S7MTB5G%2Fref%3Dsr_1_12_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-12-spons%26aref%3DQUqRKKkpgy%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=QUqRKKkpgy&sp_cr=ZAZ
+                - heading "Sponsored Ad - Men's Energy Afterburn Disruptor Sneakers" [level=2] [ref=f2e1738]: Men's Energy Afterburn Disruptor Sneakers
+            - generic [ref=f2e1739]:
+              - generic [ref=f2e1740]:
+                - text: "3.8"
+                - button "3.8 out of 5 stars, rating details" [ref=f2e1742] [cursor=pointer]:
+                  - generic [ref=f2e1743]: 3.8 out of 5 stars
+                - link "7,571 ratings" [ref=f2e1746] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMDg0NjQ4NzgzNjkzMjo6MDo6&url=%2FBacca-Afterburn-Disruptor-Multiple-Sneakers-White%2Fdp%2FB07S7MTB5G%2Fref%3Dsr_1_12_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-12-spons%26aref%3DQUqRKKkpgy%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=QUqRKKkpgy&sp_cr=ZAZ#customerReviews
+                  - text: (7.5K)
+              - generic [ref=f2e1747]: 300+ bought in past month
+            - generic [ref=f2e1748]:
+              - generic [ref=f2e1750]:
+                - generic [ref=f2e1751]: Price, product page
+                - 'link "₹949 M.R.P: ₹2,499 M.R.P: ₹2,499" [ref=f2e1752] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMDg0NjQ4NzgzNjkzMjo6MDo6&url=%2FBacca-Afterburn-Disruptor-Multiple-Sneakers-White%2Fdp%2FB07S7MTB5G%2Fref%3Dsr_1_12_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-12-spons%26aref%3DQUqRKKkpgy%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=QUqRKKkpgy&sp_cr=ZAZ
+                  - generic [ref=f2e1753]:
+                    - generic [ref=f2e1754]: ₹949
+                    - generic [ref=f2e1755]: ₹949
+                  - generic [ref=f2e1756]: "M.R.P: ₹2,499"
+                  - generic [ref=f2e1757]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e1758]:
+                      - generic [ref=f2e1759]: ₹2,499
+                      - text: ₹2,499
+                - text: (62% off)
+              - generic [ref=f2e1762]:
+                - generic [ref=f2e1763]: You pay ₹901.55
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e1764]: FREE delivery Sat, 22 Aug
+            - button "Add to cart" [ref=f2e1779] [cursor=pointer]
+      - listitem [ref=f2e1780]:
+        - generic [ref=f2e1787]:
+          - link [ref=f2e1791] [cursor=pointer]:
+            - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMTAyOTY4MTE3OTMzMjo6MDo6&url=%2FBacca-Bucci-Mens-Cappuccino-Skystompers%2Fdp%2FB0CVF1XKWP%2Fref%3Dsr_1_13_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-13-spons%26aref%3D2EZFc4e4ff%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=2EZFc4e4ff&sp_cr=ZAZ
+          - generic [ref=f2e1793]:
+            - group "colours available" [ref=f2e1795]:
+              - list
+              - link "+2 other colors/patterns" [ref=f2e1797] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMTAyOTY4MTE3OTMzMjo6MDo6&url=%2FBacca-Bucci-Mens-Cappuccino-Skystompers%2Fdp%2FB0CVF1XKWP%2Fref%3Dsr_1_13_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-13-spons%26aref%3D2EZFc4e4ff%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=2EZFc4e4ff&sp_cr=ZAZ
+            - generic [ref=f2e1798]:
+              - button "View Sponsored information or leave ad feedback" [ref=f2e1801] [cursor=pointer]:
+                - generic [ref=f2e1802]: Sponsored
+              - heading "Bacca Bucci" [level=2] [ref=f2e1805]
+              - link [ref=f2e1806] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMTAyOTY4MTE3OTMzMjo6MDo6&url=%2FBacca-Bucci-Mens-Cappuccino-Skystompers%2Fdp%2FB0CVF1XKWP%2Fref%3Dsr_1_13_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-13-spons%26aref%3D2EZFc4e4ff%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=2EZFc4e4ff&sp_cr=ZAZ
+                - heading "Sponsored Ad - Men Lace Up Shoes" [level=2] [ref=f2e1807]: Men Lace Up Shoes
+            - generic [ref=f2e1809]:
+              - text: "4.3"
+              - button "4.3 out of 5 stars, rating details" [ref=f2e1811] [cursor=pointer]:
+                - generic [ref=f2e1812]: 4.3 out of 5 stars
+              - link "322 ratings" [ref=f2e1815] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMTAyOTY4MTE3OTMzMjo6MDo6&url=%2FBacca-Bucci-Mens-Cappuccino-Skystompers%2Fdp%2FB0CVF1XKWP%2Fref%3Dsr_1_13_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-13-spons%26aref%3D2EZFc4e4ff%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=2EZFc4e4ff&sp_cr=ZAZ#customerReviews
+                - text: (322)
+            - generic [ref=f2e1816]:
+              - link "Mega Deal Days" [ref=f2e1818] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e1823]:
+                - generic [ref=f2e1824]: Price, product page
+                - 'link "₹1,614 M.R.P: ₹2,999 M.R.P: ₹2,999" [ref=f2e1825] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMTAyOTY4MTE3OTMzMjo6MDo6&url=%2FBacca-Bucci-Mens-Cappuccino-Skystompers%2Fdp%2FB0CVF1XKWP%2Fref%3Dsr_1_13_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-13-spons%26aref%3D2EZFc4e4ff%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=2EZFc4e4ff&sp_cr=ZAZ
+                  - generic [ref=f2e1826]:
+                    - generic [ref=f2e1827]: ₹1,614
+                    - generic [ref=f2e1828]: ₹1,614
+                  - generic [ref=f2e1829]: "M.R.P: ₹2,999"
+                  - generic [ref=f2e1830]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e1831]:
+                      - generic [ref=f2e1832]: ₹2,999
+                      - text: ₹2,999
+                - text: (46% off)
+              - generic [ref=f2e1835]:
+                - generic [ref=f2e1836]: You pay ₹1,533.30
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e1837]: FREE delivery Sat, 22 Aug
+            - button "Add to cart" [ref=f2e1852] [cursor=pointer]
+      - listitem [ref=f2e1853]:
+        - generic [ref=f2e1860]:
+          - link [ref=f2e1864] [cursor=pointer]:
+            - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMDkyODUzMTcwNTkzMjo6MDo6&url=%2FBacca-Bucci-Sneakers-Ultra-Light-Cushioned%2Fdp%2FB0G4DD892H%2Fref%3Dsr_1_14_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-14-spons%26aref%3DzkDOpXTW78%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=zkDOpXTW78&sp_cr=ZAZ
+          - generic [ref=f2e1866]:
+            - group "colours available" [ref=f2e1868]:
+              - list
+              - link "+3 other colors/patterns" [ref=f2e1870] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMDkyODUzMTcwNTkzMjo6MDo6&url=%2FBacca-Bucci-Sneakers-Ultra-Light-Cushioned%2Fdp%2FB0G4DD892H%2Fref%3Dsr_1_14_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-14-spons%26aref%3DzkDOpXTW78%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=zkDOpXTW78&sp_cr=ZAZ
+            - generic [ref=f2e1871]:
+              - button "View Sponsored information or leave ad feedback" [ref=f2e1874] [cursor=pointer]:
+                - generic [ref=f2e1875]: Sponsored
+              - heading "Bacca Bucci" [level=2] [ref=f2e1878]
+              - link [ref=f2e1879] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMDkyODUzMTcwNTkzMjo6MDo6&url=%2FBacca-Bucci-Sneakers-Ultra-Light-Cushioned%2Fdp%2FB0G4DD892H%2Fref%3Dsr_1_14_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-14-spons%26aref%3DzkDOpXTW78%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=zkDOpXTW78&sp_cr=ZAZ
+                - heading "Sponsored Ad - Balance Men’s Sports Sneakers | Ultra-Light Jacquard Running Shoes with Cushioned Rebound Sole | EVA + Rubber Heavy-Duty Outsole | All-Day Comfort & Breathable Daily Trainers" [level=2] [ref=f2e1880]: Balance Men’s Sports Sneakers | Ultra-Light Jacquard Running Shoes with Cushioned Rebound Sole | EVA + Rubber Heavy-Duty Outsole | All-Day Comfort & Breathable Daily Trainers
+            - generic [ref=f2e1882]:
+              - text: "4.1"
+              - button "4.1 out of 5 stars, rating details" [ref=f2e1884] [cursor=pointer]:
+                - generic [ref=f2e1885]: 4.1 out of 5 stars
+              - link "84 ratings" [ref=f2e1888] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMDkyODUzMTcwNTkzMjo6MDo6&url=%2FBacca-Bucci-Sneakers-Ultra-Light-Cushioned%2Fdp%2FB0G4DD892H%2Fref%3Dsr_1_14_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-14-spons%26aref%3DzkDOpXTW78%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=zkDOpXTW78&sp_cr=ZAZ#customerReviews
+                - text: (84)
+            - generic [ref=f2e1889]:
+              - link "Mega Deal Days" [ref=f2e1891] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e1896]:
+                - generic [ref=f2e1897]: Price, product page
+                - 'link "₹2,165 M.R.P: ₹4,999 M.R.P: ₹4,999" [ref=f2e1898] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMDkyODUzMTcwNTkzMjo6MDo6&url=%2FBacca-Bucci-Sneakers-Ultra-Light-Cushioned%2Fdp%2FB0G4DD892H%2Fref%3Dsr_1_14_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-14-spons%26aref%3DzkDOpXTW78%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=zkDOpXTW78&sp_cr=ZAZ
+                  - generic [ref=f2e1899]:
+                    - generic [ref=f2e1900]: ₹2,165
+                    - generic [ref=f2e1901]: ₹2,165
+                  - generic [ref=f2e1902]: "M.R.P: ₹4,999"
+                  - generic [ref=f2e1903]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e1904]:
+                      - generic [ref=f2e1905]: ₹4,999
+                      - text: ₹4,999
+                - text: (57% off)
+              - generic [ref=f2e1908]:
+                - generic [ref=f2e1909]: You pay ₹2,056.75
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e1910]: FREE delivery Thu, 27 Aug
+            - button "Add to cart" [ref=f2e1925] [cursor=pointer]
+      - listitem [ref=f2e1926]:
+        - generic [ref=f2e1933]:
+          - link [ref=f2e1937] [cursor=pointer]:
+            - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMTAyOTY4MTE3OTIzMjo6MDo6&url=%2FBacca-Everyday-Training-Abrasion-Sockliner%2Fdp%2FB0BSHF2JDQ%2Fref%3Dsr_1_15_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-15-spons%26aref%3DfYTKDwHy2K%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=fYTKDwHy2K&sp_cr=ZAZ
+          - generic [ref=f2e1939]:
+            - group "colours available" [ref=f2e1941]:
+              - list
+              - link "+3 other colors/patterns" [ref=f2e1943] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMTAyOTY4MTE3OTIzMjo6MDo6&url=%2FBacca-Everyday-Training-Abrasion-Sockliner%2Fdp%2FB0BSHF2JDQ%2Fref%3Dsr_1_15_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-15-spons%26aref%3DfYTKDwHy2K%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=fYTKDwHy2K&sp_cr=ZAZ
+            - generic [ref=f2e1944]:
+              - button "View Sponsored information or leave ad feedback" [ref=f2e1947] [cursor=pointer]:
+                - generic [ref=f2e1948]: Sponsored
+              - heading "Bacca Bucci" [level=2] [ref=f2e1951]
+              - link [ref=f2e1952] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMTAyOTY4MTE3OTIzMjo6MDo6&url=%2FBacca-Everyday-Training-Abrasion-Sockliner%2Fdp%2FB0BSHF2JDQ%2Fref%3Dsr_1_15_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-15-spons%26aref%3DfYTKDwHy2K%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=fYTKDwHy2K&sp_cr=ZAZ
+                - heading "Sponsored Ad - Mens Ironman Running Shoes" [level=2] [ref=f2e1953]: Mens Ironman Running Shoes
+            - generic [ref=f2e1954]:
+              - generic [ref=f2e1955]:
+                - text: "3.8"
+                - button "3.8 out of 5 stars, rating details" [ref=f2e1957] [cursor=pointer]:
+                  - generic [ref=f2e1958]: 3.8 out of 5 stars
+                - link "1,405 ratings" [ref=f2e1961] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMTAyOTY4MTE3OTIzMjo6MDo6&url=%2FBacca-Everyday-Training-Abrasion-Sockliner%2Fdp%2FB0BSHF2JDQ%2Fref%3Dsr_1_15_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-15-spons%26aref%3DfYTKDwHy2K%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=fYTKDwHy2K&sp_cr=ZAZ#customerReviews
+                  - text: (1.4K)
+              - generic [ref=f2e1962]: 50+ bought in past month
+            - generic [ref=f2e1963]:
+              - link "Mega Deal Days" [ref=f2e1965] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e1970]:
+                - generic [ref=f2e1971]: Price, product page
+                - 'link "₹1,423 M.R.P: ₹3,499 M.R.P: ₹3,499" [ref=f2e1972] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMTAyOTY4MTE3OTIzMjo6MDo6&url=%2FBacca-Everyday-Training-Abrasion-Sockliner%2Fdp%2FB0BSHF2JDQ%2Fref%3Dsr_1_15_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-15-spons%26aref%3DfYTKDwHy2K%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=fYTKDwHy2K&sp_cr=ZAZ
+                  - generic [ref=f2e1973]:
+                    - generic [ref=f2e1974]: ₹1,423
+                    - generic [ref=f2e1975]: ₹1,423
+                  - generic [ref=f2e1976]: "M.R.P: ₹3,499"
+                  - generic [ref=f2e1977]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e1978]:
+                      - generic [ref=f2e1979]: ₹3,499
+                      - text: ₹3,499
+                - text: (59% off)
+              - generic [ref=f2e1982]:
+                - generic [ref=f2e1983]: You pay ₹1,351.85
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e1984]: FREE delivery Sat, 22 Aug
+            - button "Add to cart" [ref=f2e1999] [cursor=pointer]
+      - listitem [ref=f2e2000]:
+        - generic [ref=f2e2005]:
+          - link [ref=f2e2009] [cursor=pointer]:
+            - /url: /Puma-Dazzler-Black-Puma-Silver-Sneaker/dp/B09RFYKC8D/ref=sr_1_16?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-16
+          - generic [ref=f2e2011]:
+            - group "colours available" [ref=f2e2013]:
+              - list [ref=f2e2014]:
+                - generic [ref=f2e2015]:
+                  - listitem:
+                    - link "Black-Silver":
+                      - /url: /Puma-Dazzler-Black-Puma-Silver-Sneaker/dp/B09RFYKC8D/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-16
+                - generic [ref=f2e2018]:
+                  - listitem:
+                    - link "Black-White-Gold":
+                      - /url: /Puma-Dazzler-Black-Puma-Silver-Sneaker/dp/B0D6VX13T4/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-16
+                - generic [ref=f2e2021]:
+                  - listitem:
+                    - link "Black-White-Silver":
+                      - /url: /Puma-Dazzler-Black-Puma-Silver-Sneaker/dp/B0D6VSV4NC/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-16
+                - generic [ref=f2e2024]:
+                  - listitem:
+                    - link "Peacoat-High Risk Red-White":
+                      - /url: /Puma-Dazzler-Black-Puma-Silver-Sneaker/dp/B09XXN666Q/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-16
+                - generic [ref=f2e2027]:
+                  - listitem:
+                    - link "White-Smokey Gray-Silver":
+                      - /url: /Puma-Dazzler-Black-Puma-Silver-Sneaker/dp/B0D6VVLFPJ/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-16
+            - generic [ref=f2e2030]:
+              - heading "PUMA" [level=2] [ref=f2e2032]
+              - link [ref=f2e2033] [cursor=pointer]:
+                - /url: /Puma-Dazzler-Black-Puma-Silver-Sneaker/dp/B09RFYKC8D/ref=sr_1_16?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-16
+                - heading "Mens Dazzler Sneaker" [level=2] [ref=f2e2034]
+            - generic [ref=f2e2036]:
+              - text: "3.9"
+              - button "3.9 out of 5 stars, rating details" [ref=f2e2038] [cursor=pointer]:
+                - generic [ref=f2e2039]: 3.9 out of 5 stars
+              - link "10,116 ratings" [ref=f2e2042] [cursor=pointer]:
+                - /url: /Puma-Dazzler-Black-Puma-Silver-Sneaker/dp/B09RFYKC8D/ref=sr_1_16?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-16#customerReviews
+                - text: (10.1K)
+            - generic [ref=f2e2043]:
+              - generic [ref=f2e2045]:
+                - generic [ref=f2e2046]: Price, product page
+                - 'link "₹1,549 M.R.P: ₹3,999 M.R.P: ₹3,999" [ref=f2e2047] [cursor=pointer]':
+                  - /url: /Puma-Dazzler-Black-Puma-Silver-Sneaker/dp/B09RFYKC8D/ref=sr_1_16?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-16
+                  - generic [ref=f2e2048]:
+                    - generic [ref=f2e2049]: ₹1,549
+                    - generic [ref=f2e2050]: ₹1,549
+                  - generic [ref=f2e2051]: "M.R.P: ₹3,999"
+                  - generic [ref=f2e2052]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e2053]:
+                      - generic [ref=f2e2054]: ₹3,999
+                      - text: ₹3,999
+                - text: (61% off)
+              - generic [ref=f2e2055]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e2062]:
+              - generic [ref=f2e2063]: FREE delivery Sat, 22 Aug
+              - generic [ref=f2e2065]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e2077] [cursor=pointer]
+      - listitem [ref=f2e2078]:
+        - generic [ref=f2e2083]:
+          - link [ref=f2e2087] [cursor=pointer]:
+            - /url: /Bata-mens-BEIGE-Casual-Shoes/dp/B00SWEF79A/ref=sr_1_17?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-17
+          - generic [ref=f2e2089]:
+            - group "colours available" [ref=f2e2091]:
+              - list [ref=f2e2092]:
+                - generic [ref=f2e2093]:
+                  - listitem:
+                    - link "Beige":
+                      - /url: /Bata-mens-BEIGE-Casual-Shoes/dp/B00SWEF79A/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-17
+                - generic [ref=f2e2096]:
+                  - listitem:
+                    - link "Black":
+                      - /url: /Bata-mens-BEIGE-Casual-Shoes/dp/B00SWEDBIE/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-17
+                - generic [ref=f2e2099]:
+                  - listitem:
+                    - link "Black4":
+                      - /url: /Bata-mens-BEIGE-Casual-Shoes/dp/B00SWEDGAW/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-17
+                - generic [ref=f2e2102]:
+                  - listitem:
+                    - link "Black3":
+                      - /url: /Bata-mens-BEIGE-Casual-Shoes/dp/B00SWEDIRS/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-17
+            - generic [ref=f2e2105]:
+              - heading "Bata" [level=2] [ref=f2e2107]
+              - link [ref=f2e2108] [cursor=pointer]:
+                - /url: /Bata-mens-BEIGE-Casual-Shoes/dp/B00SWEF79A/ref=sr_1_17?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-17
+                - heading "Men's Slip-on Walking Shoe" [level=2] [ref=f2e2109]
+            - generic [ref=f2e2111]:
+              - text: "3.7"
+              - button "3.7 out of 5 stars, rating details" [ref=f2e2113] [cursor=pointer]:
+                - generic [ref=f2e2114]: 3.7 out of 5 stars
+              - link "7,535 ratings" [ref=f2e2117] [cursor=pointer]:
+                - /url: /Bata-mens-BEIGE-Casual-Shoes/dp/B00SWEF79A/ref=sr_1_17?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-17#customerReviews
+                - text: (7.5K)
+            - generic [ref=f2e2118]:
+              - generic [ref=f2e2120]:
+                - generic [ref=f2e2121]: Price, product page
+                - 'link "₹449 M.R.P: ₹649 M.R.P: ₹649" [ref=f2e2122] [cursor=pointer]':
+                  - /url: /Bata-mens-BEIGE-Casual-Shoes/dp/B00SWEF79A/ref=sr_1_17?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-17
+                  - generic [ref=f2e2123]:
+                    - generic [ref=f2e2124]: ₹449
+                    - generic [ref=f2e2125]: ₹449
+                  - generic [ref=f2e2126]: "M.R.P: ₹649"
+                  - generic [ref=f2e2127]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e2128]:
+                      - generic [ref=f2e2129]: ₹649
+                      - text: ₹649
+                - text: (31% off)
+              - generic [ref=f2e2130]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e2137]:
+              - generic [ref=f2e2139]:
+                - img "Bazaar"
+              - generic [ref=f2e2140]: FREE delivery Sat, 22 Aug on first order
+              - generic [ref=f2e2142]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e2154] [cursor=pointer]
+      - listitem [ref=f2e2155]:
+        - generic [ref=f2e2160]:
+          - link [ref=f2e2164] [cursor=pointer]:
+            - /url: /Centrino-Brown-Formal-Shoe-64055-2/dp/B0CFY1YFJC/ref=sr_1_18?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-18
+          - generic [ref=f2e2166]:
+            - group "colours available" [ref=f2e2168]:
+              - list [ref=f2e2169]:
+                - generic [ref=f2e2170]:
+                  - listitem:
+                    - link "Brown":
+                      - /url: /Centrino-Brown-Formal-Shoe-64055-2/dp/B0CFY1YFJC/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-18
+                - generic [ref=f2e2173]:
+                  - listitem:
+                    - link "Black":
+                      - /url: /Centrino-Brown-Formal-Shoe-64055-2/dp/B0CFY32GFF/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-18
+                - generic [ref=f2e2176]:
+                  - listitem:
+                    - link "Tan":
+                      - /url: /Centrino-Brown-Formal-Shoe-64055-2/dp/B0CFY1HNYR/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-18
+            - generic [ref=f2e2179]:
+              - heading "Centrino" [level=2] [ref=f2e2181]
+              - link [ref=f2e2182] [cursor=pointer]:
+                - /url: /Centrino-Brown-Formal-Shoe-64055-2/dp/B0CFY1YFJC/ref=sr_1_18?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-18
+                - heading "Formal Shoe for Men | Lace-Up Derby for Business & Casual Wear | Stylish Design with Comfortable Fit Craftsmanship for All-Day Support (64055)" [level=2] [ref=f2e2183]
+            - generic [ref=f2e2185]:
+              - text: "3.6"
+              - button "3.6 out of 5 stars, rating details" [ref=f2e2187] [cursor=pointer]:
+                - generic [ref=f2e2188]: 3.6 out of 5 stars
+              - link "1,436 ratings" [ref=f2e2191] [cursor=pointer]:
+                - /url: /Centrino-Brown-Formal-Shoe-64055-2/dp/B0CFY1YFJC/ref=sr_1_18?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-18#customerReviews
+                - text: (1.4K)
+            - generic [ref=f2e2192]:
+              - link "Mega Deal Days" [ref=f2e2194] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e2199]:
+                - generic [ref=f2e2200]: Price, product page
+                - 'link "₹399 M.R.P: ₹2,199 M.R.P: ₹2,199" [ref=f2e2201] [cursor=pointer]':
+                  - /url: /Centrino-Brown-Formal-Shoe-64055-2/dp/B0CFY1YFJC/ref=sr_1_18?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-18
+                  - generic [ref=f2e2202]:
+                    - generic [ref=f2e2203]: ₹399
+                    - generic [ref=f2e2204]: ₹399
+                  - generic [ref=f2e2205]: "M.R.P: ₹2,199"
+                  - generic [ref=f2e2206]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e2207]:
+                      - generic [ref=f2e2208]: ₹2,199
+                      - text: ₹2,199
+                - text: (82% off)
+              - generic [ref=f2e2209]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e2216]:
+              - generic [ref=f2e2217]: FREE delivery Sat, 22 Aug on first order
+              - generic [ref=f2e2219]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e2231] [cursor=pointer]
+      - listitem [ref=f2e2232]:
+        - generic [ref=f2e2237]:
+          - link [ref=f2e2241] [cursor=pointer]:
+            - /url: /Sparx-SM-648-Orange-Running-SX0648GDGNO0008/dp/B08K9QDH7Q/ref=sr_1_19?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-19
+          - generic [ref=f2e2243]:
+            - group "colours available" [ref=f2e2245]:
+              - list [ref=f2e2246]:
+                - generic [ref=f2e2247]:
+                  - listitem:
+                    - link "DARK GREY NEON ORANGE":
+                      - /url: /Sparx-SM-648-Orange-Running-SX0648GDGNO0008/dp/B08K9QDH7Q/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-19
+                - generic [ref=f2e2250]:
+                  - listitem:
+                    - link "DARK GREY NEON ORANGE2":
+                      - /url: /Sparx-SM-648-Orange-Running-SX0648GDGNO0008/dp/B0C5T6VSNR/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-19
+                - generic [ref=f2e2253]:
+                  - listitem:
+                    - link "DARK GREY NEON ORANGE4":
+                      - /url: /Sparx-SM-648-Orange-Running-SX0648GDGNO0008/dp/B08R2LXZW1/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-19
+                - generic [ref=f2e2256]:
+                  - listitem:
+                    - link "NAVY BLUE RED1":
+                      - /url: /Sparx-SM-648-Orange-Running-SX0648GDGNO0008/dp/B08R55STWV/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-19
+                - generic [ref=f2e2259]:
+                  - listitem:
+                    - link "NAVY BLUE RED2":
+                      - /url: /Sparx-SM-648-Orange-Running-SX0648GDGNO0008/dp/B09HKX59HT/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-19
+                - generic [ref=f2e2262]:
+                  - listitem:
+                    - link "DARK GREY NEON ORANGE1":
+                      - /url: /Sparx-SM-648-Orange-Running-SX0648GDGNO0008/dp/B08RNRM22T/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-19
+              - link "+14 other colors/patterns" [ref=f2e2266] [cursor=pointer]:
+                - /url: /Sparx-SM-648-Orange-Running-SX0648GDGNO0008/dp/B08K9QDH7Q/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-19
+                - text: "+14"
+            - generic [ref=f2e2267]:
+              - heading "SPARX" [level=2] [ref=f2e2269]
+              - link [ref=f2e2270] [cursor=pointer]:
+                - /url: /Sparx-SM-648-Orange-Running-SX0648GDGNO0008/dp/B08K9QDH7Q/ref=sr_1_19?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-19
+                - heading "Mens Sm-648 Sports Shoes" [level=2] [ref=f2e2271]
+            - generic [ref=f2e2272]:
+              - generic [ref=f2e2273]:
+                - text: "4.1"
+                - button "4.1 out of 5 stars, rating details" [ref=f2e2275] [cursor=pointer]:
+                  - generic [ref=f2e2276]: 4.1 out of 5 stars
+                - link "10,748 ratings" [ref=f2e2279] [cursor=pointer]:
+                  - /url: /Sparx-SM-648-Orange-Running-SX0648GDGNO0008/dp/B08K9QDH7Q/ref=sr_1_19?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-19#customerReviews
+                  - text: (10.7K)
+              - generic [ref=f2e2280]: 200+ bought in past month
+            - generic [ref=f2e2281]:
+              - generic [ref=f2e2283]:
+                - generic [ref=f2e2284]: Price, product page
+                - 'link "₹752 M.R.P: ₹1,099 M.R.P: ₹1,099" [ref=f2e2285] [cursor=pointer]':
+                  - /url: /Sparx-SM-648-Orange-Running-SX0648GDGNO0008/dp/B08K9QDH7Q/ref=sr_1_19?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-19
+                  - generic [ref=f2e2286]:
+                    - generic [ref=f2e2287]: ₹752
+                    - generic [ref=f2e2288]: ₹752
+                  - generic [ref=f2e2289]: "M.R.P: ₹1,099"
+                  - generic [ref=f2e2290]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e2291]:
+                      - generic [ref=f2e2292]: ₹1,099
+                      - text: ₹1,099
+                - text: (32% off)
+              - generic [ref=f2e2293]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e2300]:
+              - generic [ref=f2e2301]: FREE delivery Sat, 22 Aug
+              - generic [ref=f2e2303]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e2315] [cursor=pointer]
+      - listitem [ref=f2e2316]:
+        - generic [ref=f2e2321]:
+          - link [ref=f2e2325] [cursor=pointer]:
+            - /url: /Jordan-AR4430-106-Lift-Off-Mens/dp/B07K2GT54Q/ref=sr_1_20?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-20
+          - generic [ref=f2e2327]:
+            - group "colours available" [ref=f2e2329]:
+              - list [ref=f2e2330]:
+                - generic [ref=f2e2331]:
+                  - listitem:
+                    - link "White/Black-red":
+                      - /url: /Jordan-AR4430-106-Lift-Off-Mens/dp/B07K2GT54Q/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-20
+                - generic [ref=f2e2334]:
+                  - listitem:
+                    - link "White/White-black-gym Red":
+                      - /url: /Jordan-AR4430-106-Lift-Off-Mens/dp/B0059KV68G/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-20
+            - generic [ref=f2e2337]:
+              - heading "Jordan" [level=2] [ref=f2e2339]
+              - link [ref=f2e2340] [cursor=pointer]:
+                - /url: /Jordan-AR4430-106-Lift-Off-Mens/dp/B07K2GT54Q/ref=sr_1_20?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-20
+                - heading "mens" [level=2] [ref=f2e2341]
+            - generic [ref=f2e2343]:
+              - text: "4.4"
+              - button "4.4 out of 5 stars, rating details" [ref=f2e2345] [cursor=pointer]:
+                - generic [ref=f2e2346]: 4.4 out of 5 stars
+              - link "31 ratings" [ref=f2e2349] [cursor=pointer]:
+                - /url: /Jordan-AR4430-106-Lift-Off-Mens/dp/B07K2GT54Q/ref=sr_1_20?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-20#customerReviews
+                - text: (31)
+            - generic [ref=f2e2350]:
+              - generic [ref=f2e2352]:
+                - generic [ref=f2e2353]: Price, product page
+                - link "₹35,746" [ref=f2e2354] [cursor=pointer]:
+                  - /url: /Jordan-AR4430-106-Lift-Off-Mens/dp/B07K2GT54Q/ref=sr_1_20?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-20
+                  - generic [ref=f2e2355]:
+                    - generic [ref=f2e2356]: ₹35,746
+                    - generic [ref=f2e2357]: ₹35,746
+              - generic [ref=f2e2358]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e2363]: FREE delivery 24 - 26 Aug
+            - generic [ref=f2e2383] [cursor=pointer]:
+              - button "Add to cart" [ref=f2e2384]
+              - generic [ref=f2e2385]: Add to cart
+      - generic [ref=f2e2389]:
+        - generic [ref=f2e2394]:
+          - heading "Trending now" [level=2] [ref=f2e2396]
+          - button "View Sponsored information or leave ad feedback" [ref=f2e2399] [cursor=pointer]: Sponsored
+        - region "Trending now" [ref=f2e2401]:
+          - list [ref=f2e2407]:
+            - listitem "1 of 5" [ref=f2e2408]:
+              - generic [ref=f2e2414]:
+                - link [ref=f2e2418] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE4MTE1ODkyNDczMjo6MDo6&url=%2FBacca-Bucci-Zephyr-All-Day-Training%2Fdp%2FB0FNCYZR6K%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0FNCYZR6K%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3DLCZD3yXvrA%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=LCZD3yXvrA&sp_cr=ZAZ
+                - generic [ref=f2e2420]:
+                  - group "colours available" [ref=f2e2422]:
+                    - list
+                    - link "+3 other colors/patterns" [ref=f2e2424] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE4MTE1ODkyNDczMjo6MDo6&url=%2FBacca-Bucci-Zephyr-All-Day-Training%2Fdp%2FB0FNCYZR6K%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0FNCYZR6K%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3DLCZD3yXvrA%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=LCZD3yXvrA&sp_cr=ZAZ
+                  - generic [ref=f2e2425]:
+                    - heading "Bacca Bucci" [level=2] [ref=f2e2427]
+                    - link [ref=f2e2428] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE4MTE1ODkyNDczMjo6MDo6&url=%2FBacca-Bucci-Zephyr-All-Day-Training%2Fdp%2FB0FNCYZR6K%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0FNCYZR6K%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3DLCZD3yXvrA%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=LCZD3yXvrA&sp_cr=ZAZ
+                      - heading "Sponsored Ad - Zephyr – All-Day Comfort Running & Training Shoes" [level=2] [ref=f2e2429]: Zephyr – All-Day Comfort Running & Training Shoes
+                  - generic [ref=f2e2431]:
+                    - text: "4.0"
+                    - button "4.0 out of 5 stars, rating details" [ref=f2e2433] [cursor=pointer]:
+                      - generic [ref=f2e2434]: 4.0 out of 5 stars
+                    - link "310 ratings" [ref=f2e2437] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE4MTE1ODkyNDczMjo6MDo6&url=%2FBacca-Bucci-Zephyr-All-Day-Training%2Fdp%2FB0FNCYZR6K%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0FNCYZR6K%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3DLCZD3yXvrA%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=LCZD3yXvrA&sp_cr=ZAZ#customerReviews
+                      - text: (310)
+                  - generic [ref=f2e2438]:
+                    - link "Mega Deal Days" [ref=f2e2440] [cursor=pointer]:
+                      - /url: /deals
+                    - generic [ref=f2e2445]:
+                      - generic [ref=f2e2446]: Price, product page
+                      - 'link "₹1,898 M.R.P: ₹3,999 M.R.P: ₹3,999" [ref=f2e2447] [cursor=pointer]':
+                        - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE4MTE1ODkyNDczMjo6MDo6&url=%2FBacca-Bucci-Zephyr-All-Day-Training%2Fdp%2FB0FNCYZR6K%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0FNCYZR6K%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3DLCZD3yXvrA%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=LCZD3yXvrA&sp_cr=ZAZ
+                        - generic [ref=f2e2448]:
+                          - generic [ref=f2e2449]: ₹1,898
+                          - generic [ref=f2e2450]: ₹1,898
+                        - generic [ref=f2e2451]: "M.R.P: ₹3,999"
+                        - generic [ref=f2e2452]:
+                          - text: "M.R.P:"
+                          - generic [ref=f2e2453]:
+                            - generic [ref=f2e2454]: ₹3,999
+                            - text: ₹3,999
+                      - text: (53% off)
+                    - generic [ref=f2e2457]:
+                      - generic [ref=f2e2458]: You pay ₹1,803.10
+                      - text: with coupon (limited sizes/colours)
+                  - generic [ref=f2e2459]:
+                    - generic [ref=f2e2460]: FREE delivery Tue, 25 Aug
+                    - generic "Only 2 left in stock." [ref=f2e2465]
+                  - button "Add to cart" [ref=f2e2476] [cursor=pointer]
+            - listitem "2 of 5" [ref=f2e2477]:
+              - generic [ref=f2e2483]:
+                - link [ref=f2e2487] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTEyODkxMTkwNDQzMjo6MTo6&url=%2FSparx-SM-648-Orange-Running-SX0648GDGNO0008%2Fdp%2FB08K9QDH7Q%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB08K9QDH7Q%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3DKzUDduutDR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=KzUDduutDR&sp_cr=ZAZ
+                - generic [ref=f2e2489]:
+                  - group "colours available" [ref=f2e2491]:
+                    - list
+                    - link "+19 other colors/patterns" [ref=f2e2493] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTEyODkxMTkwNDQzMjo6MTo6&url=%2FSparx-SM-648-Orange-Running-SX0648GDGNO0008%2Fdp%2FB08K9QDH7Q%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB08K9QDH7Q%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3DKzUDduutDR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=KzUDduutDR&sp_cr=ZAZ
+                  - generic [ref=f2e2494]:
+                    - heading "SPARX" [level=2] [ref=f2e2496]
+                    - link [ref=f2e2497] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTEyODkxMTkwNDQzMjo6MTo6&url=%2FSparx-SM-648-Orange-Running-SX0648GDGNO0008%2Fdp%2FB08K9QDH7Q%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB08K9QDH7Q%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3DKzUDduutDR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=KzUDduutDR&sp_cr=ZAZ
+                      - heading "Sponsored Ad - Mens Sm-648 Sports Shoes" [level=2] [ref=f2e2498]: Mens Sm-648 Sports Shoes
+                  - generic [ref=f2e2499]:
+                    - generic [ref=f2e2500]:
+                      - text: "4.1"
+                      - button "4.1 out of 5 stars, rating details" [ref=f2e2502] [cursor=pointer]:
+                        - generic [ref=f2e2503]: 4.1 out of 5 stars
+                      - link "10,748 ratings" [ref=f2e2506] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTEyODkxMTkwNDQzMjo6MTo6&url=%2FSparx-SM-648-Orange-Running-SX0648GDGNO0008%2Fdp%2FB08K9QDH7Q%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB08K9QDH7Q%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3DKzUDduutDR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=KzUDduutDR&sp_cr=ZAZ#customerReviews
+                        - text: (10.7K)
+                    - generic [ref=f2e2507]: 200+ bought in past month
+                  - generic [ref=f2e2508]:
+                    - generic [ref=f2e2510]:
+                      - generic [ref=f2e2511]: Price, product page
+                      - 'link "₹752 M.R.P: ₹1,099 M.R.P: ₹1,099" [ref=f2e2512] [cursor=pointer]':
+                        - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTEyODkxMTkwNDQzMjo6MTo6&url=%2FSparx-SM-648-Orange-Running-SX0648GDGNO0008%2Fdp%2FB08K9QDH7Q%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB08K9QDH7Q%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3DKzUDduutDR%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=KzUDduutDR&sp_cr=ZAZ
+                        - generic [ref=f2e2513]:
+                          - generic [ref=f2e2514]: ₹752
+                          - generic [ref=f2e2515]: ₹752
+                        - generic [ref=f2e2516]: "M.R.P: ₹1,099"
+                        - generic [ref=f2e2517]:
+                          - text: "M.R.P:"
+                          - generic [ref=f2e2518]:
+                            - generic [ref=f2e2519]: ₹1,099
+                            - text: ₹1,099
+                      - text: (32% off)
+                    - generic [ref=f2e2520]: Up to 5% back with Amazon Pay ICICI card
+                  - generic [ref=f2e2527]:
+                    - generic [ref=f2e2528]: FREE delivery Sat, 22 Aug
+                    - generic [ref=f2e2530]: Or fastest delivery Tomorrow 6 am - 10 am
+                  - button "Add to cart" [ref=f2e2542] [cursor=pointer]
+            - listitem "3 of 5" [ref=f2e2543]:
+              - generic [ref=f2e2549]:
+                - link [ref=f2e2553] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTI1MTIzODUxMTkzMjo6Mjo6&url=%2FPuma-Unisex-Adult-Skyrocket-Black-Black-White-37943701%2Fdp%2FB0C33ZLSJS%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0C33ZLSJS%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3Dt2bI5xeWMm%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=t2bI5xeWMm&sp_cr=ZAZ
+                - generic [ref=f2e2555]:
+                  - group "colours available" [ref=f2e2557]:
+                    - list
+                    - link "+24 other colors/patterns" [ref=f2e2559] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTI1MTIzODUxMTkzMjo6Mjo6&url=%2FPuma-Unisex-Adult-Skyrocket-Black-Black-White-37943701%2Fdp%2FB0C33ZLSJS%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0C33ZLSJS%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3Dt2bI5xeWMm%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=t2bI5xeWMm&sp_cr=ZAZ
+                  - generic [ref=f2e2560]:
+                    - heading "PUMA" [level=2] [ref=f2e2562]
+                    - link [ref=f2e2563] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTI1MTIzODUxMTkzMjo6Mjo6&url=%2FPuma-Unisex-Adult-Skyrocket-Black-Black-White-37943701%2Fdp%2FB0C33ZLSJS%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0C33ZLSJS%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3Dt2bI5xeWMm%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=t2bI5xeWMm&sp_cr=ZAZ
+                      - heading "Sponsored Ad - Unisex-Adult Skyrocket Lite Running Shoe" [level=2] [ref=f2e2564]: Unisex-Adult Skyrocket Lite Running Shoe
+                  - generic [ref=f2e2566]:
+                    - text: "4.3"
+                    - button "4.3 out of 5 stars, rating details" [ref=f2e2568] [cursor=pointer]:
+                      - generic [ref=f2e2569]: 4.3 out of 5 stars
+                    - link "1,282 ratings" [ref=f2e2572] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTI1MTIzODUxMTkzMjo6Mjo6&url=%2FPuma-Unisex-Adult-Skyrocket-Black-Black-White-37943701%2Fdp%2FB0C33ZLSJS%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0C33ZLSJS%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3Dt2bI5xeWMm%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=t2bI5xeWMm&sp_cr=ZAZ#customerReviews
+                      - text: (1.2K)
+                  - generic [ref=f2e2573]:
+                    - generic [ref=f2e2575]:
+                      - generic [ref=f2e2576]: Price, product page
+                      - 'link "₹2,999 M.R.P: ₹4,999 M.R.P: ₹4,999" [ref=f2e2577] [cursor=pointer]':
+                        - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTI1MTIzODUxMTkzMjo6Mjo6&url=%2FPuma-Unisex-Adult-Skyrocket-Black-Black-White-37943701%2Fdp%2FB0C33ZLSJS%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0C33ZLSJS%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3Dt2bI5xeWMm%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=t2bI5xeWMm&sp_cr=ZAZ
+                        - generic [ref=f2e2578]:
+                          - generic [ref=f2e2579]: ₹2,999
+                          - generic [ref=f2e2580]: ₹2,999
+                        - generic [ref=f2e2581]: "M.R.P: ₹4,999"
+                        - generic [ref=f2e2582]:
+                          - text: "M.R.P:"
+                          - generic [ref=f2e2583]:
+                            - generic [ref=f2e2584]: ₹4,999
+                            - text: ₹4,999
+                      - text: (40% off)
+                    - generic [ref=f2e2587]:
+                      - generic [ref=f2e2588]: You pay ₹2,849.05
+                      - text: with coupon (limited sizes/colours)
+                  - generic [ref=f2e2589]: FREE delivery Sat, 22 Aug
+                  - button "Add to cart" [ref=f2e2604] [cursor=pointer]
+            - listitem "4 of 5" [ref=f2e2605]:
+              - generic [ref=f2e2611]:
+                - link [ref=f2e2615] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTEzMjY2NzEyNjQzMjo6Mzo6&url=%2FCampus-North-Plus-Running-Shoes%2Fdp%2FB08PRY7ZY8%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB08PRY7ZY8%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3DS2ErmHnySI%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=S2ErmHnySI&sp_cr=ZAZ
+                - generic [ref=f2e2617]:
+                  - group "colours available" [ref=f2e2619]:
+                    - list
+                    - link "+12 other colors/patterns" [ref=f2e2621] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTEzMjY2NzEyNjQzMjo6Mzo6&url=%2FCampus-North-Plus-Running-Shoes%2Fdp%2FB08PRY7ZY8%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB08PRY7ZY8%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3DS2ErmHnySI%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=S2ErmHnySI&sp_cr=ZAZ
+                  - generic [ref=f2e2622]:
+                    - heading "Campus" [level=2] [ref=f2e2624]
+                    - link [ref=f2e2625] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTEzMjY2NzEyNjQzMjo6Mzo6&url=%2FCampus-North-Plus-Running-Shoes%2Fdp%2FB08PRY7ZY8%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB08PRY7ZY8%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3DS2ErmHnySI%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=S2ErmHnySI&sp_cr=ZAZ
+                      - heading "Sponsored Ad - Men North Plus Running Shoes" [level=2] [ref=f2e2626]: Men North Plus Running Shoes
+                  - generic [ref=f2e2627]:
+                    - generic [ref=f2e2628]:
+                      - text: "4.0"
+                      - button "4.0 out of 5 stars, rating details" [ref=f2e2630] [cursor=pointer]:
+                        - generic [ref=f2e2631]: 4.0 out of 5 stars
+                      - link "18,115 ratings" [ref=f2e2634] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTEzMjY2NzEyNjQzMjo6Mzo6&url=%2FCampus-North-Plus-Running-Shoes%2Fdp%2FB08PRY7ZY8%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB08PRY7ZY8%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3DS2ErmHnySI%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=S2ErmHnySI&sp_cr=ZAZ#customerReviews
+                        - text: (18.1K)
+                    - generic [ref=f2e2635]: 100+ bought in past month
+                  - generic [ref=f2e2636]:
+                    - generic [ref=f2e2638]:
+                      - generic [ref=f2e2639]: Price, product page
+                      - 'link "₹1,079 M.R.P: ₹1,899 M.R.P: ₹1,899" [ref=f2e2640] [cursor=pointer]':
+                        - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTEzMjY2NzEyNjQzMjo6Mzo6&url=%2FCampus-North-Plus-Running-Shoes%2Fdp%2FB08PRY7ZY8%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB08PRY7ZY8%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3DS2ErmHnySI%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=S2ErmHnySI&sp_cr=ZAZ
+                        - generic [ref=f2e2641]:
+                          - generic [ref=f2e2642]: ₹1,079
+                          - generic [ref=f2e2643]: ₹1,079
+                        - generic [ref=f2e2644]: "M.R.P: ₹1,899"
+                        - generic [ref=f2e2645]:
+                          - text: "M.R.P:"
+                          - generic [ref=f2e2646]:
+                            - generic [ref=f2e2647]: ₹1,899
+                            - text: ₹1,899
+                      - text: (43% off)
+                    - generic [ref=f2e2650]:
+                      - generic [ref=f2e2651]: You pay ₹1,046.63
+                      - text: with coupon (limited sizes/colours)
+                  - generic [ref=f2e2654]:
+                    - generic [ref=f2e2655]: FREE delivery Sat, 15 Aug
+                    - generic [ref=f2e2657]: Or fastest delivery Tomorrow, 14 Aug
+                  - button "Add to cart" [ref=f2e2669] [cursor=pointer]
+            - listitem "5 of 5" [ref=f2e2670]:
+              - generic [ref=f2e2676]:
+                - link [ref=f2e2680] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE4NjcyMzUxMDMzMjo6NDo6&url=%2FBoldfit-Comfortable-Lightweight-Cushioned-Footwear%2Fdp%2FB0H2FB3C9C%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0H2FB3C9C%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3D604vJ5htag%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=604vJ5htag&sp_cr=ZAZ
+                - generic [ref=f2e2682]:
+                  - group "colours available" [ref=f2e2684]:
+                    - list
+                    - link "+2 other colors/patterns" [ref=f2e2686] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE4NjcyMzUxMDMzMjo6NDo6&url=%2FBoldfit-Comfortable-Lightweight-Cushioned-Footwear%2Fdp%2FB0H2FB3C9C%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0H2FB3C9C%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3D604vJ5htag%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=604vJ5htag&sp_cr=ZAZ
+                  - generic [ref=f2e2687]:
+                    - heading "Boldfit" [level=2] [ref=f2e2689]
+                    - link [ref=f2e2690] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE4NjcyMzUxMDMzMjo6NDo6&url=%2FBoldfit-Comfortable-Lightweight-Cushioned-Footwear%2Fdp%2FB0H2FB3C9C%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0H2FB3C9C%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3D604vJ5htag%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=604vJ5htag&sp_cr=ZAZ
+                      - heading "Sponsored Ad - Running Shoes for Man Comfortable Sports Shoes for Men Running Lightweight Gym Shoe for Men Workout Soft Cushioned Walking Shoe for Man Anti Slip Gym Footwear- PaceX" [level=2] [ref=f2e2691]: Running Shoes for Man Comfortable Sports Shoes for Men Running Lightweight Gym Shoe for Men Workout Soft Cushioned Walking Shoe for Man Anti Slip Gym Footwear- PaceX
+                  - generic [ref=f2e2692]:
+                    - generic [ref=f2e2693]:
+                      - text: "4.1"
+                      - button "4.1 out of 5 stars, rating details" [ref=f2e2695] [cursor=pointer]:
+                        - generic [ref=f2e2696]: 4.1 out of 5 stars
+                      - link "6 ratings" [ref=f2e2699] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE4NjcyMzUxMDMzMjo6NDo6&url=%2FBoldfit-Comfortable-Lightweight-Cushioned-Footwear%2Fdp%2FB0H2FB3C9C%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0H2FB3C9C%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3D604vJ5htag%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=604vJ5htag&sp_cr=ZAZ#customerReviews
+                        - text: (6)
+                    - generic [ref=f2e2700]: 50+ bought in past month
+                  - generic [ref=f2e2701]:
+                    - generic [ref=f2e2703]:
+                      - generic [ref=f2e2704]: Price, product page
+                      - 'link "₹2,499 M.R.P: ₹4,999 M.R.P: ₹4,999" [ref=f2e2705] [cursor=pointer]':
+                        - /url: /sspa/click?ie=UTF8&spc=MTo0MTgxMzM5MzUzODU3NzM2OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljOjMwMTE4NjcyMzUxMDMzMjo6NDo6&url=%2FBoldfit-Comfortable-Lightweight-Cushioned-Footwear%2Fdp%2FB0H2FB3C9C%2Fref%3Dsxin_24_pa_sp_search_thematic_sspa%3Fcontent-id%3Damzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%253Aamzn1.sym.ed1dc214-655d-439d-94db-1ad9c2f35607%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0H2FB3C9C%26pd_rd_r%3D11520caa-2731-4c56-ac4b-b4f1056aa56c%26pd_rd_w%3DrzKFQ%26pd_rd_wg%3DMFM44%26pf_rd_p%3Ded1dc214-655d-439d-94db-1ad9c2f35607%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-883a54c7-f466-4d42-997c-6d482a360a1a-spons%26aref%3D604vJ5htag%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM%26psc%3D1&aref=604vJ5htag&sp_cr=ZAZ
+                        - generic [ref=f2e2706]:
+                          - generic [ref=f2e2707]: ₹2,499
+                          - generic [ref=f2e2708]: ₹2,499
+                        - generic [ref=f2e2709]: "M.R.P: ₹4,999"
+                        - generic [ref=f2e2710]:
+                          - text: "M.R.P:"
+                          - generic [ref=f2e2711]:
+                            - generic [ref=f2e2712]: ₹4,999
+                            - text: ₹4,999
+                      - text: (50% off)
+                    - generic [ref=f2e2713]: Up to 5% back with Amazon Pay ICICI card
+                  - generic [ref=f2e2718]: FREE delivery Sat, 22 Aug
+                  - button "Add to cart" [ref=f2e2733] [cursor=pointer]
+      - generic [ref=f2e2741]:
+        - link "Sponsored video; click to navigate to featured product page." [ref=f2e2745] [cursor=pointer]:
+          - /url: https://aax-eu-zaz.amazon.in/x/c/JBnGFV6XDtp6_ZSXkerZproAAAGf-236xwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICA5xJX-/clv1c_ek-wBPHXFbbWzjK3YotEsT4pbU5Wa6aMHuEmKzIkmgFfFhpJqI4N71z_1dkEua38ihXBGDsCFzwa05uEPpCOQdIesv98agWSyQklTq6e1K26DBvwV-WNusw55uE4TkKZ1O9Ru4ZZz33ED08Z20XcP9zPiF2ckH2q5qC4v7fuy4QJNXPZC0TqlU5-YVkZR58WXvy5stPb_0dPjmfxst5t2vCRAUWlgo0NmFvFf0T2FgEiJn0eFuj24FpzH5_u-M0ccpfkY1U0bOoBbhTVUNJ20D3Bpalw72DLCHeghilrNaV-kpWyAtk80jC1SDb3G-fb0k_lELpGdlR6jxujAO9jFsUYbr_rpy1QzJB2CthFHUuinVVb5OWvz4fTooY0fVt8sbnJbD7JpCzZmjSAhO3Q4XJVhjjG7UqAvllL2yODq1TgVIIpPG77ZeGswIPcx_UH9VKmWjsKi-jQhIX7jq9qO0CTAM_WhGb-LVFWW6XzbU-MlvMBXdmvzxdu_Zrsu6S8DDbrYkdFe2QuAd2UbQuK7RA87slpr5WJfbHpUiDJfQiZiy_-p51jZsihkeRoE4I8eZ6XqL_Csu4gkVlXWXl2NPG4nyURxNWFlt6XDaWJY-IZk7swPR1oKdBdSDPz21KvBUCRcJ81Lrj2qttOW-vLK14BahN8xISF-W8uQX9UUwA45dYMG4gWt7fgVEgquPhhlDUbkS3pKwdaeJ25eutr5C_eQMw8aHTWgig2DxwDYm5ucVNovmbiIERNjPUbypweug0fnFHPs_r6ZUrV59yOXNQvy-tqOG0eNr0rS4sTTvamidOcTWIJLqhhAfteUJd1KlK0m1Io3gPKRmHy5tn3s_H_MqrjtG_GS_VOgkBY6xrr8-VGg4WAWPYKRTnvjUPfvMlPeB-xz2WEMBHUnu2gNUzeBE7RkuJjtsfn06XwUuoi-YOnKRy48aNX91rYPC0XQYURCpAGqvf7zaGNSPiClNjiO18m8LM-gL5WQ0NO0hF6eSkF41ouAFkz2Hakez7NaLAoh2TUdRQ9rE9njsM-MqOlcb9IgScqb8CwAtr6k_Y2lN1oL8z_hfHw1zJ0Wto2ck0Gyt5pGWFf-wB9pkYohSkBD7otxequLN8ExQ695zX6EPNhsbcRnK9G7E2N5R68Lw6GsRphzM_NCUkT7_77aCYHacbeIeJypvUxxkQ5CLVkveeJ8ULGfcZjBePsbYamxgU3nSSPbZW8bNKPyuhhjOPOEPEZXPNApKDSs1NerZJO8mtU8WtPb5EmMOIwfLYLnoAQ4AAbLsCD8HF0qQ4uCmmmoUPcFQOu3pA5GlD-A44Uxvrk8tCDSfml2OBUpTQ8NXoAUe-EBvYKbVX8wJIF9yTmZwh_Nd6AZsmmeIjM5sgfUaMRg0uRrXW3xEg_q0FNI27fu3MmcgbDkK1N7xnz0dB3LcRKX2A7ruaoBvgcqmNUvtetu88JnOc_JcJisAzpMgWGXBBA_TNDDl8_uh8oyZOj09ytVpwMBatiom7ujB1NWFGtkn_rQNsVooYI3eXVHPwfmt2o2ee6wNRRhZ4Jor3orbg0frOgsMTF3vbuf-rhgi55NDTRA1AjXyOIO3FXCcmjOVYUzB7aRWpmkhy4Jk2Volie73k9H09R0kLGYsFutagW7t19x2CYPIoCrYHDvJEnaFf0GG2H3PcXyF2vG72SMSqZfwPMk1W59o7VMrFN5NbHA8U5/https://www.amazon.in/dp/B0D1KMR6TK?aref=lQxIwwlA9f&pd_rd_i=B0D1KMR6TK&pf_rd_p=99dedbe4-593f-43df-83ad-e695f25cb916&pd_rd_wg=MFM44&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_w=2gc9Z&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c
+        - generic [ref=f2e2754]:
+          - link [ref=f2e2760] [cursor=pointer]:
+            - /url: https://aax-eu-zaz.amazon.in/x/c/JBnGFV6XDtp6_ZSXkerZproAAAGf-236xwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICA5xJX-/clv1c_ek-wBPHXFbbWzjK3YotEsT4pbU5Wa6aMHuEmKzIkmgFfFhpJqI4N71z_1dkEua38ihXBGDsCFzwa05uEPpCOQdIesv98agWSyQklTq6e1K26DBvwV-WNusw55uE4TkKZ1O9Ru4ZZz33ED08Z20XcP9zPiF2ckH2q5qC4v7fuy4QJNXPZC0TqlU5-YVkZR58WXvy5stPb_0dPjmfxst5t2vCRAUWlgo0NmFvFf0T2FgEiJn0eFuj24FpzH5_u-M0ccpfkY1U0bOoBbhTVUNJ20D3Bpalw72DLCHeghilrNaV-kpWyAtk80jC1SDb3G-fb0k_lELpGdlR6jxujAO9jFsUYbr_rpy1QzJB2CthFHUuinVVb5OWvz4fTooY0fVt8sbnJbD7JpCzZmjSAhO3Q4XJVhjjG7UqAvllL2yODq1TgVIIpPG77ZeGswIPcx_UH9VKmWjsKi-jQhIX7jq9qO0CTAM_WhGb-LVFWW6XzbU-MlvMBXdmvzxdu_Zrsu6S8DDbrYkdFe2QuAd2UbQuK7RA87slpr5WJfbHpUiDJfQiZiy_-p51jZsihkeRoE4I8eZ6XqL_Csu4gkVlXWXl2NPG4nyURxNWFlt6XDaWJY-IZk7swPR1oKdBdSDPz21KvBUCRcJ81Lrj2qttOW-vLK14BahN8xISF-W8uQX9UUwA45dYMG4gWt7fgVEgquPhhlDUbkS3pKwdaeJ25eutr5C_eQMw8aHTWgig2DxwDYm5ucVNovmbiIERNjPUbypweug0fnFHPs_r6ZUrV59yOXNQvy-tqOG0eNr0rS4sTTvamidOcTWIJLqhhAfteUJd1KlK0m1Io3gPKRmHy5tn3s_H_MqrjtG_GS_VOgkBY6xrr8-VGg4WAWPYKRTnvjUPfvMlPeB-xz2WEMBHUnu2gNUzeBE7RkuJjtsfn06XwUuoi-YOnKRy48aNX91rYPC0XQYURCpAGqvf7zaGNSPiClNjiO18m8LM-gL5WQ0NO0hF6eSkF41ouAFkz2Hakez7NaLAoh2TUdRQ9rE9njsM-MqOlcb9IgScqb8CwAtr6k_Y2lN1oL8z_hfHw1zJ0Wto2ck0Gyt5pGWFf-wB9pkYohSkBD7otxequLN8ExQ695zX6EPNhsbcRnK9G7E2N5R68Lw6GsRphzM_NCUkT7_77aCYHacbeIeJypvUxxkQ5CLVkveeJ8ULGfcZjBePsbYamxgU3nSSPbZW8bNKPyuhhjOPOEPEZXPNApKDSs1NerZJO8mtU8WtPb5EmMOIwfLYLnoAQ4AAbLsCD8HF0qQ4uCmmmoUPcFQOu3pA5GlD-A44Uxvrk8tCDSfml2OBUpTQ8NXoAUe-EBvYKbVX8wJIF9yTmZwh_Nd6AZsmmeIjM5sgfUaMRg0uRrXW3xEg_q0FNI27fu3MmcgbDkK1N7xnz0dB3LcRKX2A7ruaoBvgcqmNUvtetu88JnOc_JcJisAzpMgWGXBBA_TNDDl8_uh8oyZOj09ytVpwMBatiom7ujB1NWFGtkn_rQNsVooYI3eXVHPwfmt2o2ee6wNRRhZ4Jor3orbg0frOgsMTF3vbuf-rhgi55NDTRA1AjXyOIO3FXCcmjOVYUzB7aRWpmkhy4Jk2Volie73k9H09R0kLGYsFutagW7t19x2CYPIoCrYHDvJEnaFf0GG2H3PcXyF2vG72SMSqZfwPMk1W59o7VMrFN5NbHA8U5/https://www.amazon.in/Boldfit-Trekking-Outdoor-Repellent-Tracking/dp/B0D1KMR6TK/ref=sxin_25_sbv_search_btf?aref=lQxIwwlA9f&content-id=amzn1.sym.99dedbe4-593f-43df-83ad-e695f25cb916%3Aamzn1.sym.99dedbe4-593f-43df-83ad-e695f25cb916&cv_ct_cx=shoes&keywords=shoes&pd_rd_i=B0D1KMR6TK&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c&pd_rd_w=2gc9Z&pd_rd_wg=MFM44&pf_rd_p=99dedbe4-593f-43df-83ad-e695f25cb916&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&qid=1786629716&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-1-9131241a-a358-4619-a7b8-0f5a65d91d81
+          - generic [ref=f2e2764]:
+            - generic [ref=f2e2765]:
+              - generic [ref=f2e2766]: Sponsored
+              - link [ref=f2e2770] [cursor=pointer]:
+                - /url: https://aax-eu-zaz.amazon.in/x/c/JBnGFV6XDtp6_ZSXkerZproAAAGf-236xwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICA5xJX-/clv1c_ek-wBPHXFbbWzjK3YotEsT4pbU5Wa6aMHuEmKzIkmgFfFhpJqI4N71z_1dkEua38ihXBGDsCFzwa05uEPpCOQdIesv98agWSyQklTq6e1K26DBvwV-WNusw55uE4TkKZ1O9Ru4ZZz33ED08Z20XcP9zPiF2ckH2q5qC4v7fuy4QJNXPZC0TqlU5-YVkZR58WXvy5stPb_0dPjmfxst5t2vCRAUWlgo0NmFvFf0T2FgEiJn0eFuj24FpzH5_u-M0ccpfkY1U0bOoBbhTVUNJ20D3Bpalw72DLCHeghilrNaV-kpWyAtk80jC1SDb3G-fb0k_lELpGdlR6jxujAO9jFsUYbr_rpy1QzJB2CthFHUuinVVb5OWvz4fTooY0fVt8sbnJbD7JpCzZmjSAhO3Q4XJVhjjG7UqAvllL2yODq1TgVIIpPG77ZeGswIPcx_UH9VKmWjsKi-jQhIX7jq9qO0CTAM_WhGb-LVFWW6XzbU-MlvMBXdmvzxdu_Zrsu6S8DDbrYkdFe2QuAd2UbQuK7RA87slpr5WJfbHpUiDJfQiZiy_-p51jZsihkeRoE4I8eZ6XqL_Csu4gkVlXWXl2NPG4nyURxNWFlt6XDaWJY-IZk7swPR1oKdBdSDPz21KvBUCRcJ81Lrj2qttOW-vLK14BahN8xISF-W8uQX9UUwA45dYMG4gWt7fgVEgquPhhlDUbkS3pKwdaeJ25eutr5C_eQMw8aHTWgig2DxwDYm5ucVNovmbiIERNjPUbypweug0fnFHPs_r6ZUrV59yOXNQvy-tqOG0eNr0rS4sTTvamidOcTWIJLqhhAfteUJd1KlK0m1Io3gPKRmHy5tn3s_H_MqrjtG_GS_VOgkBY6xrr8-VGg4WAWPYKRTnvjUPfvMlPeB-xz2WEMBHUnu2gNUzeBE7RkuJjtsfn06XwUuoi-YOnKRy48aNX91rYPC0XQYURCpAGqvf7zaGNSPiClNjiO18m8LM-gL5WQ0NO0hF6eSkF41ouAFkz2Hakez7NaLAoh2TUdRQ9rE9njsM-MqOlcb9IgScqb8CwAtr6k_Y2lN1oL8z_hfHw1zJ0Wto2ck0Gyt5pGWFf-wB9pkYohSkBD7otxequLN8ExQ695zX6EPNhsbcRnK9G7E2N5R68Lw6GsRphzM_NCUkT7_77aCYHacbeIeJypvUxxkQ5CLVkveeJ8ULGfcZjBePsbYamxgU3nSSPbZW8bNKPyuhhjOPOEPEZXPNApKDSs1NerZJO8mtU8WtPb5EmMOIwfLYLnoAQ4AAbLsCD8HF0qQ4uCmmmoUPcFQOu3pA5GlD-A44Uxvrk8tCDSfml2OBUpTQ8NXoAUe-EBvYKbVX8wJIF9yTmZwh_Nd6AZsmmeIjM5sgfUaMRg0uRrXW3xEg_q0FNI27fu3MmcgbDkK1N7xnz0dB3LcRKX2A7ruaoBvgcqmNUvtetu88JnOc_JcJisAzpMgWGXBBA_TNDDl8_uh8oyZOj09ytVpwMBatiom7ujB1NWFGtkn_rQNsVooYI3eXVHPwfmt2o2ee6wNRRhZ4Jor3orbg0frOgsMTF3vbuf-rhgi55NDTRA1AjXyOIO3FXCcmjOVYUzB7aRWpmkhy4Jk2Volie73k9H09R0kLGYsFutagW7t19x2CYPIoCrYHDvJEnaFf0GG2H3PcXyF2vG72SMSqZfwPMk1W59o7VMrFN5NbHA8U5/https://www.amazon.in/Boldfit-Trekking-Outdoor-Repellent-Tracking/dp/B0D1KMR6TK/ref=sxin_25_sbv_search_btf?aref=lQxIwwlA9f&content-id=amzn1.sym.99dedbe4-593f-43df-83ad-e695f25cb916%3Aamzn1.sym.99dedbe4-593f-43df-83ad-e695f25cb916&cv_ct_cx=shoes&keywords=shoes&pd_rd_i=B0D1KMR6TK&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c&pd_rd_w=2gc9Z&pd_rd_wg=MFM44&pf_rd_p=99dedbe4-593f-43df-83ad-e695f25cb916&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&qid=1786629716&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-1-9131241a-a358-4619-a7b8-0f5a65d91d81
+                - heading "Boldfit Trekking Shoes for Man Outdoor Hiking Shoes for Man High Neck Footwear for Men Anti Skid Trekking Boots Water Repellent for Men Breathable Hiking Boots Riding Shoe for Bikers laceup Biker shoe" [level=2] [ref=f2e2771]
+            - generic [ref=f2e2772]:
+              - generic [ref=f2e2773]:
+                - text: "4.0"
+                - button "4.0 out of 5 stars, rating details" [ref=f2e2775] [cursor=pointer]:
+                  - generic [ref=f2e2776]: 4.0 out of 5 stars
+                - link "1,853 ratings" [ref=f2e2779] [cursor=pointer]:
+                  - /url: https://aax-eu-zaz.amazon.in/x/c/JBnGFV6XDtp6_ZSXkerZproAAAGf-236xwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICA5xJX-/clv1c_ek-wBPHXFbbWzjK3YotEsT4pbU5Wa6aMHuEmKzIkmgFfFhpJqI4N71z_1dkEua38ihXBGDsCFzwa05uEPpCOQdIesv98agWSyQklTq6e1K26DBvwV-WNusw55uE4TkKZ1O9Ru4ZZz33ED08Z20XcP9zPiF2ckH2q5qC4v7fuy4QJNXPZC0TqlU5-YVkZR58WXvy5stPb_0dPjmfxst5t2vCRAUWlgo0NmFvFf0T2FgEiJn0eFuj24FpzH5_u-M0ccpfkY1U0bOoBbhTVUNJ20D3Bpalw72DLCHeghilrNaV-kpWyAtk80jC1SDb3G-fb0k_lELpGdlR6jxujAO9jFsUYbr_rpy1QzJB2CthFHUuinVVb5OWvz4fTooY0fVt8sbnJbD7JpCzZmjSAhO3Q4XJVhjjG7UqAvllL2yODq1TgVIIpPG77ZeGswIPcx_UH9VKmWjsKi-jQhIX7jq9qO0CTAM_WhGb-LVFWW6XzbU-MlvMBXdmvzxdu_Zrsu6S8DDbrYkdFe2QuAd2UbQuK7RA87slpr5WJfbHpUiDJfQiZiy_-p51jZsihkeRoE4I8eZ6XqL_Csu4gkVlXWXl2NPG4nyURxNWFlt6XDaWJY-IZk7swPR1oKdBdSDPz21KvBUCRcJ81Lrj2qttOW-vLK14BahN8xISF-W8uQX9UUwA45dYMG4gWt7fgVEgquPhhlDUbkS3pKwdaeJ25eutr5C_eQMw8aHTWgig2DxwDYm5ucVNovmbiIERNjPUbypweug0fnFHPs_r6ZUrV59yOXNQvy-tqOG0eNr0rS4sTTvamidOcTWIJLqhhAfteUJd1KlK0m1Io3gPKRmHy5tn3s_H_MqrjtG_GS_VOgkBY6xrr8-VGg4WAWPYKRTnvjUPfvMlPeB-xz2WEMBHUnu2gNUzeBE7RkuJjtsfn06XwUuoi-YOnKRy48aNX91rYPC0XQYURCpAGqvf7zaGNSPiClNjiO18m8LM-gL5WQ0NO0hF6eSkF41ouAFkz2Hakez7NaLAoh2TUdRQ9rE9njsM-MqOlcb9IgScqb8CwAtr6k_Y2lN1oL8z_hfHw1zJ0Wto2ck0Gyt5pGWFf-wB9pkYohSkBD7otxequLN8ExQ695zX6EPNhsbcRnK9G7E2N5R68Lw6GsRphzM_NCUkT7_77aCYHacbeIeJypvUxxkQ5CLVkveeJ8ULGfcZjBePsbYamxgU3nSSPbZW8bNKPyuhhjOPOEPEZXPNApKDSs1NerZJO8mtU8WtPb5EmMOIwfLYLnoAQ4AAbLsCD8HF0qQ4uCmmmoUPcFQOu3pA5GlD-A44Uxvrk8tCDSfml2OBUpTQ8NXoAUe-EBvYKbVX8wJIF9yTmZwh_Nd6AZsmmeIjM5sgfUaMRg0uRrXW3xEg_q0FNI27fu3MmcgbDkK1N7xnz0dB3LcRKX2A7ruaoBvgcqmNUvtetu88JnOc_JcJisAzpMgWGXBBA_TNDDl8_uh8oyZOj09ytVpwMBatiom7ujB1NWFGtkn_rQNsVooYI3eXVHPwfmt2o2ee6wNRRhZ4Jor3orbg0frOgsMTF3vbuf-rhgi55NDTRA1AjXyOIO3FXCcmjOVYUzB7aRWpmkhy4Jk2Volie73k9H09R0kLGYsFutagW7t19x2CYPIoCrYHDvJEnaFf0GG2H3PcXyF2vG72SMSqZfwPMk1W59o7VMrFN5NbHA8U5/https://www.amazon.in/Boldfit-Trekking-Outdoor-Repellent-Tracking/dp/B0D1KMR6TK/ref=sxin_25_sbv_search_btf?aref=lQxIwwlA9f&content-id=amzn1.sym.99dedbe4-593f-43df-83ad-e695f25cb916%3Aamzn1.sym.99dedbe4-593f-43df-83ad-e695f25cb916&cv_ct_cx=shoes&keywords=shoes&pd_rd_i=B0D1KMR6TK&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c&pd_rd_w=2gc9Z&pd_rd_wg=MFM44&pf_rd_p=99dedbe4-593f-43df-83ad-e695f25cb916&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&qid=1786629716&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-1-9131241a-a358-4619-a7b8-0f5a65d91d81#customerReviews
+                  - text: (1.8K)
+              - generic [ref=f2e2780]: 100+ bought in past month
+            - generic [ref=f2e2783]:
+              - generic [ref=f2e2784]:
+                - generic [ref=f2e2786]:
+                  - generic [ref=f2e2787]: Price, product page
+                  - 'link "₹1,469 M.R.P: ₹3,999 M.R.P: ₹3,999" [ref=f2e2788] [cursor=pointer]':
+                    - /url: https://aax-eu-zaz.amazon.in/x/c/JBnGFV6XDtp6_ZSXkerZproAAAGf-236xwoAAAH2AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICA5xJX-/clv1c_ek-wBPHXFbbWzjK3YotEsT4pbU5Wa6aMHuEmKzIkmgFfFhpJqI4N71z_1dkEua38ihXBGDsCFzwa05uEPpCOQdIesv98agWSyQklTq6e1K26DBvwV-WNusw55uE4TkKZ1O9Ru4ZZz33ED08Z20XcP9zPiF2ckH2q5qC4v7fuy4QJNXPZC0TqlU5-YVkZR58WXvy5stPb_0dPjmfxst5t2vCRAUWlgo0NmFvFf0T2FgEiJn0eFuj24FpzH5_u-M0ccpfkY1U0bOoBbhTVUNJ20D3Bpalw72DLCHeghilrNaV-kpWyAtk80jC1SDb3G-fb0k_lELpGdlR6jxujAO9jFsUYbr_rpy1QzJB2CthFHUuinVVb5OWvz4fTooY0fVt8sbnJbD7JpCzZmjSAhO3Q4XJVhjjG7UqAvllL2yODq1TgVIIpPG77ZeGswIPcx_UH9VKmWjsKi-jQhIX7jq9qO0CTAM_WhGb-LVFWW6XzbU-MlvMBXdmvzxdu_Zrsu6S8DDbrYkdFe2QuAd2UbQuK7RA87slpr5WJfbHpUiDJfQiZiy_-p51jZsihkeRoE4I8eZ6XqL_Csu4gkVlXWXl2NPG4nyURxNWFlt6XDaWJY-IZk7swPR1oKdBdSDPz21KvBUCRcJ81Lrj2qttOW-vLK14BahN8xISF-W8uQX9UUwA45dYMG4gWt7fgVEgquPhhlDUbkS3pKwdaeJ25eutr5C_eQMw8aHTWgig2DxwDYm5ucVNovmbiIERNjPUbypweug0fnFHPs_r6ZUrV59yOXNQvy-tqOG0eNr0rS4sTTvamidOcTWIJLqhhAfteUJd1KlK0m1Io3gPKRmHy5tn3s_H_MqrjtG_GS_VOgkBY6xrr8-VGg4WAWPYKRTnvjUPfvMlPeB-xz2WEMBHUnu2gNUzeBE7RkuJjtsfn06XwUuoi-YOnKRy48aNX91rYPC0XQYURCpAGqvf7zaGNSPiClNjiO18m8LM-gL5WQ0NO0hF6eSkF41ouAFkz2Hakez7NaLAoh2TUdRQ9rE9njsM-MqOlcb9IgScqb8CwAtr6k_Y2lN1oL8z_hfHw1zJ0Wto2ck0Gyt5pGWFf-wB9pkYohSkBD7otxequLN8ExQ695zX6EPNhsbcRnK9G7E2N5R68Lw6GsRphzM_NCUkT7_77aCYHacbeIeJypvUxxkQ5CLVkveeJ8ULGfcZjBePsbYamxgU3nSSPbZW8bNKPyuhhjOPOEPEZXPNApKDSs1NerZJO8mtU8WtPb5EmMOIwfLYLnoAQ4AAbLsCD8HF0qQ4uCmmmoUPcFQOu3pA5GlD-A44Uxvrk8tCDSfml2OBUpTQ8NXoAUe-EBvYKbVX8wJIF9yTmZwh_Nd6AZsmmeIjM5sgfUaMRg0uRrXW3xEg_q0FNI27fu3MmcgbDkK1N7xnz0dB3LcRKX2A7ruaoBvgcqmNUvtetu88JnOc_JcJisAzpMgWGXBBA_TNDDl8_uh8oyZOj09ytVpwMBatiom7ujB1NWFGtkn_rQNsVooYI3eXVHPwfmt2o2ee6wNRRhZ4Jor3orbg0frOgsMTF3vbuf-rhgi55NDTRA1AjXyOIO3FXCcmjOVYUzB7aRWpmkhy4Jk2Volie73k9H09R0kLGYsFutagW7t19x2CYPIoCrYHDvJEnaFf0GG2H3PcXyF2vG72SMSqZfwPMk1W59o7VMrFN5NbHA8U5/https://www.amazon.in/Boldfit-Trekking-Outdoor-Repellent-Tracking/dp/B0D1KMR6TK/ref=sxin_25_sbv_search_btf?aref=lQxIwwlA9f&content-id=amzn1.sym.99dedbe4-593f-43df-83ad-e695f25cb916%3Aamzn1.sym.99dedbe4-593f-43df-83ad-e695f25cb916&cv_ct_cx=shoes&keywords=shoes&pd_rd_i=B0D1KMR6TK&pd_rd_r=11520caa-2731-4c56-ac4b-b4f1056aa56c&pd_rd_w=2gc9Z&pd_rd_wg=MFM44&pf_rd_p=99dedbe4-593f-43df-83ad-e695f25cb916&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&qid=1786629716&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sr=1-1-9131241a-a358-4619-a7b8-0f5a65d91d81
+                    - generic [ref=f2e2789]:
+                      - generic [ref=f2e2790]: ₹1,469
+                      - generic [ref=f2e2791]: ₹1,469
+                    - generic [ref=f2e2792]: "M.R.P: ₹3,999"
+                    - generic [ref=f2e2793]:
+                      - text: "M.R.P:"
+                      - generic [ref=f2e2794]:
+                        - generic [ref=f2e2795]: ₹3,999
+                        - text: ₹3,999
+                  - text: (63% off)
+                - generic [ref=f2e2796]: Up to 5% back with Amazon Pay ICICI card
+              - generic [ref=f2e2801]: FREE delivery Sat, 22 Aug
+      - generic [ref=f2e2807]:
+        - heading "More results" [level=2] [ref=f2e2811]
+        - generic:
+          - list
+      - listitem [ref=f2e2812]:
+        - generic [ref=f2e2819]:
+          - link [ref=f2e2823] [cursor=pointer]:
+            - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMDkyODUzMTcwNTgzMjo6MDo6&url=%2FBacca-Bucci-Evolve-Ultimate-Sandstone%2Fdp%2FB0DMFLDDZS%2Fref%3Dsr_1_21_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-21-spons%26aref%3Dz8KVRoojos%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=z8KVRoojos&sp_cr=ZAZ
+          - generic [ref=f2e2825]:
+            - group "colours available" [ref=f2e2827]:
+              - list
+              - link "+2 other colors/patterns" [ref=f2e2829] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMDkyODUzMTcwNTgzMjo6MDo6&url=%2FBacca-Bucci-Evolve-Ultimate-Sandstone%2Fdp%2FB0DMFLDDZS%2Fref%3Dsr_1_21_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-21-spons%26aref%3Dz8KVRoojos%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=z8KVRoojos&sp_cr=ZAZ
+            - generic [ref=f2e2830]:
+              - button "View Sponsored information or leave ad feedback" [ref=f2e2833] [cursor=pointer]:
+                - generic [ref=f2e2834]: Sponsored
+              - heading "Bacca Bucci" [level=2] [ref=f2e2837]
+              - link [ref=f2e2838] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMDkyODUzMTcwNTgzMjo6MDo6&url=%2FBacca-Bucci-Evolve-Ultimate-Sandstone%2Fdp%2FB0DMFLDDZS%2Fref%3Dsr_1_21_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-21-spons%26aref%3Dz8KVRoojos%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=z8KVRoojos&sp_cr=ZAZ
+                - heading "Sponsored Ad - Men Lace Up Sneaker Shoes" [level=2] [ref=f2e2839]: Men Lace Up Sneaker Shoes
+            - generic [ref=f2e2841]:
+              - text: "3.7"
+              - button "3.7 out of 5 stars, rating details" [ref=f2e2843] [cursor=pointer]:
+                - generic [ref=f2e2844]: 3.7 out of 5 stars
+              - link "76 ratings" [ref=f2e2847] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMDkyODUzMTcwNTgzMjo6MDo6&url=%2FBacca-Bucci-Evolve-Ultimate-Sandstone%2Fdp%2FB0DMFLDDZS%2Fref%3Dsr_1_21_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-21-spons%26aref%3Dz8KVRoojos%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=z8KVRoojos&sp_cr=ZAZ#customerReviews
+                - text: (76)
+            - generic [ref=f2e2848]:
+              - link "Mega Deal Days" [ref=f2e2850] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e2855]:
+                - generic [ref=f2e2856]: Price, product page
+                - 'link "₹1,709 M.R.P: ₹3,499 M.R.P: ₹3,499" [ref=f2e2857] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMDkyODUzMTcwNTgzMjo6MDo6&url=%2FBacca-Bucci-Evolve-Ultimate-Sandstone%2Fdp%2FB0DMFLDDZS%2Fref%3Dsr_1_21_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-21-spons%26aref%3Dz8KVRoojos%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=z8KVRoojos&sp_cr=ZAZ
+                  - generic [ref=f2e2858]:
+                    - generic [ref=f2e2859]: ₹1,709
+                    - generic [ref=f2e2860]: ₹1,709
+                  - generic [ref=f2e2861]: "M.R.P: ₹3,499"
+                  - generic [ref=f2e2862]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e2863]:
+                      - generic [ref=f2e2864]: ₹3,499
+                      - text: ₹3,499
+                - text: (51% off)
+              - generic [ref=f2e2867]:
+                - generic [ref=f2e2868]: You pay ₹1,623.55
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e2869]: FREE delivery Sat, 22 Aug
+            - button "Add to cart" [ref=f2e2884] [cursor=pointer]
+      - listitem [ref=f2e2885]:
+        - generic [ref=f2e2892]:
+          - link [ref=f2e2896] [cursor=pointer]:
+            - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMTI2MjI2NDQ3MDYzMjo6MDo6&url=%2FBacca-Bucci-Fashion-Sneakers-Training%2Fdp%2FB09F7T1KW8%2Fref%3Dsr_1_22_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-22-spons%26aref%3DUXbihu7VFN%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=UXbihu7VFN&sp_cr=ZAZ
+          - generic [ref=f2e2898]:
+            - group "colours available" [ref=f2e2900]:
+              - list
+              - link "+2 other colors/patterns" [ref=f2e2902] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMTI2MjI2NDQ3MDYzMjo6MDo6&url=%2FBacca-Bucci-Fashion-Sneakers-Training%2Fdp%2FB09F7T1KW8%2Fref%3Dsr_1_22_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-22-spons%26aref%3DUXbihu7VFN%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=UXbihu7VFN&sp_cr=ZAZ
+            - generic [ref=f2e2903]:
+              - button "View Sponsored information or leave ad feedback" [ref=f2e2906] [cursor=pointer]:
+                - generic [ref=f2e2907]: Sponsored
+              - heading "Bacca Bucci" [level=2] [ref=f2e2910]
+              - link [ref=f2e2911] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMTI2MjI2NDQ3MDYzMjo6MDo6&url=%2FBacca-Bucci-Fashion-Sneakers-Training%2Fdp%2FB09F7T1KW8%2Fref%3Dsr_1_22_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-22-spons%26aref%3DUXbihu7VFN%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=UXbihu7VFN&sp_cr=ZAZ
+                - heading "Sponsored Ad - Men Lace Up Running Shoes" [level=2] [ref=f2e2912]: Men Lace Up Running Shoes
+            - generic [ref=f2e2914]:
+              - text: "4.1"
+              - button "4.1 out of 5 stars, rating details" [ref=f2e2916] [cursor=pointer]:
+                - generic [ref=f2e2917]: 4.1 out of 5 stars
+              - link "2,218 ratings" [ref=f2e2920] [cursor=pointer]:
+                - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMTI2MjI2NDQ3MDYzMjo6MDo6&url=%2FBacca-Bucci-Fashion-Sneakers-Training%2Fdp%2FB09F7T1KW8%2Fref%3Dsr_1_22_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-22-spons%26aref%3DUXbihu7VFN%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=UXbihu7VFN&sp_cr=ZAZ#customerReviews
+                - text: (2.2K)
+            - generic [ref=f2e2921]:
+              - link "Mega Deal Days" [ref=f2e2923] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e2928]:
+                - generic [ref=f2e2929]: Price, product page
+                - 'link "₹1,519 M.R.P: ₹2,999 M.R.P: ₹2,999" [ref=f2e2930] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo1MjgzNzEwMDk5NjYwMzAzOjE3ODY2Mjk3MTY6c3BfbXRmOjMwMTI2MjI2NDQ3MDYzMjo6MDo6&url=%2FBacca-Bucci-Fashion-Sneakers-Training%2Fdp%2FB09F7T1KW8%2Fref%3Dsr_1_22_sspa%3Fdib%3DeyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg%26dib_tag%3Dse%26keywords%3Dshoes%26qid%3D1786629716%26sr%3D8-22-spons%26aref%3DUXbihu7VFN%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9tdGY%26psc%3D1&aref=UXbihu7VFN&sp_cr=ZAZ
+                  - generic [ref=f2e2931]:
+                    - generic [ref=f2e2932]: ₹1,519
+                    - generic [ref=f2e2933]: ₹1,519
+                  - generic [ref=f2e2934]: "M.R.P: ₹2,999"
+                  - generic [ref=f2e2935]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e2936]:
+                      - generic [ref=f2e2937]: ₹2,999
+                      - text: ₹2,999
+                - text: (49% off)
+              - generic [ref=f2e2940]:
+                - generic [ref=f2e2941]: You pay ₹1,443.05
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e2942]: FREE delivery Sat, 22 Aug
+            - button "Add to cart" [ref=f2e2957] [cursor=pointer]
+      - listitem [ref=f2e2958]:
+        - generic [ref=f2e2963]:
+          - link [ref=f2e2967] [cursor=pointer]:
+            - /url: /Bata-Men-Casual-Derby-Shoes/dp/B09WYF5T6Q/ref=sr_1_23?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-23
+          - generic [ref=f2e2969]:
+            - group "colours available" [ref=f2e2971]:
+              - list [ref=f2e2972]:
+                - generic [ref=f2e2973]:
+                  - listitem:
+                    - link "Brown":
+                      - /url: /Bata-Men-Casual-Derby-Shoes/dp/B09WYF5T6Q/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-23
+                - generic [ref=f2e2976]:
+                  - listitem:
+                    - link "Black":
+                      - /url: /Bata-Men-Casual-Derby-Shoes/dp/B09WYF5S81/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-23
+            - generic [ref=f2e2979]:
+              - heading "Bata" [level=2] [ref=f2e2981]
+              - link [ref=f2e2982] [cursor=pointer]:
+                - /url: /Bata-Men-Casual-Derby-Shoes/dp/B09WYF5T6Q/ref=sr_1_23?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-23
+                - heading "Men's Lace-up Sneaker" [level=2] [ref=f2e2983]
+            - generic [ref=f2e2985]:
+              - text: "4.0"
+              - button "4.0 out of 5 stars, rating details" [ref=f2e2987] [cursor=pointer]:
+                - generic [ref=f2e2988]: 4.0 out of 5 stars
+              - link "2,775 ratings" [ref=f2e2991] [cursor=pointer]:
+                - /url: /Bata-Men-Casual-Derby-Shoes/dp/B09WYF5T6Q/ref=sr_1_23?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-23#customerReviews
+                - text: (2.7K)
+            - generic [ref=f2e2992]:
+              - link "Limited time deal" [ref=f2e2994] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e2999]:
+                - generic [ref=f2e3000]: Price, product page
+                - 'link "₹1,439 M.R.P: ₹1,699 M.R.P: ₹1,699" [ref=f2e3001] [cursor=pointer]':
+                  - /url: /Bata-Men-Casual-Derby-Shoes/dp/B09WYF5T6Q/ref=sr_1_23?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-23
+                  - generic [ref=f2e3002]:
+                    - generic [ref=f2e3003]: ₹1,439
+                    - generic [ref=f2e3004]: ₹1,439
+                  - generic [ref=f2e3005]: "M.R.P: ₹1,699"
+                  - generic [ref=f2e3006]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e3007]:
+                      - generic [ref=f2e3008]: ₹1,699
+                      - text: ₹1,699
+                - text: (15% off)
+              - generic [ref=f2e3009]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e3016]:
+              - generic [ref=f2e3017]: FREE delivery Sat, 22 Aug
+              - generic [ref=f2e3019]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e3031] [cursor=pointer]
+      - listitem [ref=f2e3032]:
+        - generic [ref=f2e3037]:
+          - generic [ref=f2e3038]: New Season
+          - link [ref=f2e3046] [cursor=pointer]:
+            - /url: /ASICS-1011C243-700-NOVABLAST-6-Shoes/dp/B0G2XCGZ8J/ref=sr_1_24?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-24
+          - generic [ref=f2e3048]:
+            - generic [ref=f2e3049]:
+              - heading "ASICS" [level=2] [ref=f2e3051]
+              - link [ref=f2e3052] [cursor=pointer]:
+                - /url: /ASICS-1011C243-700-NOVABLAST-6-Shoes/dp/B0G2XCGZ8J/ref=sr_1_24?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-24
+                - heading "NOVABLAST 6" [level=2] [ref=f2e3053]
+            - generic [ref=f2e3055]:
+              - text: "5.0"
+              - button "5.0 out of 5 stars, rating details" [ref=f2e3057] [cursor=pointer]:
+                - generic [ref=f2e3058]: 5.0 out of 5 stars
+              - link "2 ratings" [ref=f2e3061] [cursor=pointer]:
+                - /url: /ASICS-1011C243-700-NOVABLAST-6-Shoes/dp/B0G2XCGZ8J/ref=sr_1_24?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-24#customerReviews
+                - text: (2)
+            - generic [ref=f2e3064]:
+              - generic [ref=f2e3065]: Price, product page
+              - 'link "₹14,199 M.R.P: ₹14,999 M.R.P: ₹14,999" [ref=f2e3066] [cursor=pointer]':
+                - /url: /ASICS-1011C243-700-NOVABLAST-6-Shoes/dp/B0G2XCGZ8J/ref=sr_1_24?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-24
+                - generic [ref=f2e3067]:
+                  - generic [ref=f2e3068]: ₹14,199
+                  - generic [ref=f2e3069]: ₹14,199
+                - generic [ref=f2e3070]: "M.R.P: ₹14,999"
+                - generic [ref=f2e3071]:
+                  - text: "M.R.P:"
+                  - generic [ref=f2e3072]:
+                    - generic [ref=f2e3073]: ₹14,999
+                    - text: ₹14,999
+              - text: (5% off)
+            - button "Add to cart" [ref=f2e3089] [cursor=pointer]
+      - listitem [ref=f2e3090]:
+        - generic [ref=f2e3095]:
+          - link [ref=f2e3099] [cursor=pointer]:
+            - /url: /Reebok-Stride-Runner-Running-Shoes/dp/B09SHVH6PP/ref=sr_1_25?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-25
+          - generic [ref=f2e3101]:
+            - group "colours available" [ref=f2e3103]:
+              - list [ref=f2e3104]:
+                - generic [ref=f2e3105]:
+                  - listitem:
+                    - link "All Black":
+                      - /url: /Reebok-Stride-Runner-Running-Shoes/dp/B09SHVH6PP/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-25
+                - generic [ref=f2e3108]:
+                  - listitem:
+                    - link "Batik Blue":
+                      - /url: /Reebok-Stride-Runner-Running-Shoes/dp/B0B5HM8T34/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-25
+                - generic [ref=f2e3111]:
+                  - listitem:
+                    - link "Batik Blue / White / Court Green":
+                      - /url: /Reebok-Stride-Runner-Running-Shoes/dp/B09N6D7JFN/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-25
+                - generic [ref=f2e3114]:
+                  - listitem:
+                    - link "Black":
+                      - /url: /Reebok-Stride-Runner-Running-Shoes/dp/B0BVBVK74H/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-25
+                - generic [ref=f2e3117]:
+                  - listitem:
+                    - link "Black / Lgh Solid Grey":
+                      - /url: /Reebok-Stride-Runner-Running-Shoes/dp/B09N6H1RNY/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-25
+                - generic [ref=f2e3120]:
+                  - listitem:
+                    - link "Black / Solar Lime R":
+                      - /url: /Reebok-Stride-Runner-Running-Shoes/dp/B0B5J64X6B/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-25
+              - link "+19 other colors/patterns" [ref=f2e3124] [cursor=pointer]:
+                - /url: /Reebok-Stride-Runner-Running-Shoes/dp/B09SHVH6PP/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-25
+                - text: "+19"
+            - generic [ref=f2e3125]:
+              - heading "Reebok" [level=2] [ref=f2e3127]
+              - link [ref=f2e3128] [cursor=pointer]:
+                - /url: /Reebok-Stride-Runner-Running-Shoes/dp/B09SHVH6PP/ref=sr_1_25?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-25
+                - heading "Men's Running Shoes EVA Cushioned Breathable Mesh Sports Shoes for Men | Lightweight Gym Shoe for Men | Running, Jogging, Walking & Gym | Stride Runner" [level=2] [ref=f2e3129]
+            - generic [ref=f2e3131]:
+              - text: "3.8"
+              - button "3.8 out of 5 stars, rating details" [ref=f2e3133] [cursor=pointer]:
+                - generic [ref=f2e3134]: 3.8 out of 5 stars
+              - link "7,387 ratings" [ref=f2e3137] [cursor=pointer]:
+                - /url: /Reebok-Stride-Runner-Running-Shoes/dp/B09SHVH6PP/ref=sr_1_25?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-25#customerReviews
+                - text: (7.3K)
+            - generic [ref=f2e3138]:
+              - generic [ref=f2e3140]:
+                - generic [ref=f2e3141]: Price, product page
+                - 'link "₹1,449 M.R.P: ₹2,499 M.R.P: ₹2,499" [ref=f2e3142] [cursor=pointer]':
+                  - /url: /Reebok-Stride-Runner-Running-Shoes/dp/B09SHVH6PP/ref=sr_1_25?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-25
+                  - generic [ref=f2e3143]:
+                    - generic [ref=f2e3144]: ₹1,449
+                    - generic [ref=f2e3145]: ₹1,449
+                  - generic [ref=f2e3146]: "M.R.P: ₹2,499"
+                  - generic [ref=f2e3147]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e3148]:
+                      - generic [ref=f2e3149]: ₹2,499
+                      - text: ₹2,499
+                - text: (42% off)
+              - generic [ref=f2e3150]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e3157]:
+              - generic [ref=f2e3158]: FREE delivery Sat, 22 Aug
+              - generic [ref=f2e3160]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e3172] [cursor=pointer]
+      - listitem [ref=f2e3173]:
+        - generic [ref=f2e3178]:
+          - link [ref=f2e3182] [cursor=pointer]:
+            - /url: /ASICS-Unisex-Adult-METASPEED-Illuminate/dp/B0D82J4LT2/ref=sr_1_26?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-26
+          - generic [ref=f2e3184]:
+            - group "colours available" [ref=f2e3186]:
+              - list [ref=f2e3187]:
+                - generic [ref=f2e3188]:
+                  - listitem:
+                    - link "Illuminate Mint/Black":
+                      - /url: /ASICS-Unisex-Adult-METASPEED-Illuminate/dp/B0D82J4LT2/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-26
+                - generic [ref=f2e3191]:
+                  - listitem:
+                    - link "Light Blue/Black":
+                      - /url: /ASICS-Unisex-Adult-METASPEED-Illuminate/dp/B0D82DJ5GG/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-26
+                - generic [ref=f2e3194]:
+                  - listitem:
+                    - link "Sunrise Red/Black":
+                      - /url: /ASICS-Unisex-Adult-METASPEED-Illuminate/dp/B0CFP9XLHV/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-26
+                - generic [ref=f2e3197]:
+                  - listitem:
+                    - link "Safety Yellow/Black":
+                      - /url: /ASICS-Unisex-Adult-METASPEED-Illuminate/dp/B0CT9KBX7V/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-26
+            - generic [ref=f2e3200]:
+              - heading "ASICS" [level=2] [ref=f2e3202]
+              - link [ref=f2e3203] [cursor=pointer]:
+                - /url: /ASICS-Unisex-Adult-METASPEED-Illuminate/dp/B0D82J4LT2/ref=sr_1_26?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-26
+                - heading "Unisex Adult METASPEED Edge Shoes" [level=2] [ref=f2e3204]
+            - generic [ref=f2e3206]:
+              - text: "4.1"
+              - button "4.1 out of 5 stars, rating details" [ref=f2e3208] [cursor=pointer]:
+                - generic [ref=f2e3209]: 4.1 out of 5 stars
+              - link "37 ratings" [ref=f2e3212] [cursor=pointer]:
+                - /url: /ASICS-Unisex-Adult-METASPEED-Illuminate/dp/B0D82J4LT2/ref=sr_1_26?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-26#customerReviews
+                - text: (37)
+            - generic [ref=f2e3213]:
+              - generic [ref=f2e3215]:
+                - generic [ref=f2e3216]: Price, product page
+                - link "₹50,358" [ref=f2e3217] [cursor=pointer]:
+                  - /url: /ASICS-Unisex-Adult-METASPEED-Illuminate/dp/B0D82J4LT2/ref=sr_1_26?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-26
+                  - generic [ref=f2e3218]:
+                    - generic [ref=f2e3219]: ₹50,358
+                    - generic [ref=f2e3220]: ₹50,358
+              - generic [ref=f2e3221]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e3226]: FREE delivery 21 - 24 Aug
+            - button "Add to cart" [ref=f2e3243] [cursor=pointer]
+      - listitem [ref=f2e3244]:
+        - generic [ref=f2e3249]:
+          - group "Best sellerin Men's Training Shoes" [ref=f2e3254]:
+            - generic "Best seller" [ref=f2e3256]
+          - link [ref=f2e3260] [cursor=pointer]:
+            - /url: /Impakto-Barefoot-Lightweight-Training-Superior/dp/B0DYP83N6X/ref=sr_1_27?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-27
+          - generic [ref=f2e3262]:
+            - group "colours available" [ref=f2e3264]:
+              - list [ref=f2e3265]:
+                - generic [ref=f2e3266]:
+                  - listitem:
+                    - link "Olive":
+                      - /url: /Impakto-Barefoot-Lightweight-Training-Superior/dp/B0DYP83N6X/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-27
+                - generic [ref=f2e3269]:
+                  - listitem:
+                    - link "Black":
+                      - /url: /Impakto-Barefoot-Lightweight-Training-Superior/dp/B0DCP4YY16/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-27
+                - generic [ref=f2e3272]:
+                  - listitem:
+                    - link "Navy":
+                      - /url: /Impakto-Barefoot-Lightweight-Training-Superior/dp/B0F13BGBVJ/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-27
+                - generic [ref=f2e3275]:
+                  - listitem:
+                    - link "Sky blue":
+                      - /url: /Impakto-Barefoot-Lightweight-Training-Superior/dp/B0GQB5827S/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-27
+            - generic [ref=f2e3278]:
+              - heading "Impakto" [level=2] [ref=f2e3280]
+              - link [ref=f2e3281] [cursor=pointer]:
+                - /url: /Impakto-Barefoot-Lightweight-Training-Superior/dp/B0DYP83N6X/ref=sr_1_27?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-27
+                - heading "Barefoot Rooted Wide feet Shoes for Men | Lightweight Running & Training Shoes with Soft Sole & Superior Grip | Running, Jogging Regular Gym Shoes for Men" [level=2] [ref=f2e3282]
+            - generic [ref=f2e3283]:
+              - generic [ref=f2e3284]:
+                - text: "4.2"
+                - button "4.2 out of 5 stars, rating details" [ref=f2e3286] [cursor=pointer]:
+                  - generic [ref=f2e3287]: 4.2 out of 5 stars
+                - link "1,965 ratings" [ref=f2e3290] [cursor=pointer]:
+                  - /url: /Impakto-Barefoot-Lightweight-Training-Superior/dp/B0DYP83N6X/ref=sr_1_27?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-27#customerReviews
+                  - text: (1.9K)
+              - generic [ref=f2e3291]: 500+ bought in past month
+            - generic [ref=f2e3292]:
+              - generic [ref=f2e3294]:
+                - generic [ref=f2e3295]: Price, product page
+                - 'link "₹1,099 M.R.P: ₹2,999 M.R.P: ₹2,999" [ref=f2e3296] [cursor=pointer]':
+                  - /url: /Impakto-Barefoot-Lightweight-Training-Superior/dp/B0DYP83N6X/ref=sr_1_27?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-27
+                  - generic [ref=f2e3297]:
+                    - generic [ref=f2e3298]: ₹1,099
+                    - generic [ref=f2e3299]: ₹1,099
+                  - generic [ref=f2e3300]: "M.R.P: ₹2,999"
+                  - generic [ref=f2e3301]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e3302]:
+                      - generic [ref=f2e3303]: ₹2,999
+                      - text: ₹2,999
+                - text: (63% off)
+              - generic [ref=f2e3304]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e3311]:
+              - generic [ref=f2e3312]: FREE delivery Sat, 22 Aug
+              - generic [ref=f2e3314]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e3326] [cursor=pointer]
+      - listitem [ref=f2e3327]:
+        - generic [ref=f2e3332]:
+          - link [ref=f2e3336] [cursor=pointer]:
+            - /url: /Campus-Hurricane-D-Gry-Running-Shoes/dp/B0BBG4SFWZ/ref=sr_1_28?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-28
+          - generic [ref=f2e3338]:
+            - group "colours available" [ref=f2e3340]:
+              - list [ref=f2e3341]:
+                - generic [ref=f2e3342]:
+                  - listitem:
+                    - link "Dark Grey/ Black":
+                      - /url: /Campus-Hurricane-D-Gry-Running-Shoes/dp/B0BBG4SFWZ/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-28
+                - generic [ref=f2e3345]:
+                  - listitem:
+                    - link "BLK/N.ORG":
+                      - /url: /Campus-Hurricane-D-Gry-Running-Shoes/dp/B09FY4FSHJ/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-28
+                - generic [ref=f2e3348]:
+                  - listitem:
+                    - link "BT.GRN/BLK":
+                      - /url: /Campus-Hurricane-D-Gry-Running-Shoes/dp/B09HCKBZH9/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-28
+                - generic [ref=f2e3351]:
+                  - listitem:
+                    - link "NAVY/R.SLATE":
+                      - /url: /Campus-Hurricane-D-Gry-Running-Shoes/dp/B0B4KGH3HJ/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-28
+                - generic [ref=f2e3354]:
+                  - listitem:
+                    - link "NAVY/RED":
+                      - /url: /Campus-Hurricane-D-Gry-Running-Shoes/dp/B09RP833MG/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-28
+                - generic [ref=f2e3357]:
+                  - listitem:
+                    - link "WHT/BLK":
+                      - /url: /Campus-Hurricane-D-Gry-Running-Shoes/dp/B09ZPCV67J/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-28
+              - link "+2 other colors/patterns" [ref=f2e3361] [cursor=pointer]:
+                - /url: /Campus-Hurricane-D-Gry-Running-Shoes/dp/B0BBG4SFWZ/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-28
+                - text: "+2"
+            - generic [ref=f2e3362]:
+              - heading "Campus" [level=2] [ref=f2e3364]
+              - link [ref=f2e3365] [cursor=pointer]:
+                - /url: /Campus-Hurricane-D-Gry-Running-Shoes/dp/B0BBG4SFWZ/ref=sr_1_28?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-28
+                - heading "Men Hurricane Running Shoes" [level=2] [ref=f2e3366]
+            - generic [ref=f2e3367]:
+              - generic [ref=f2e3368]:
+                - text: "4.2"
+                - button "4.2 out of 5 stars, rating details" [ref=f2e3370] [cursor=pointer]:
+                  - generic [ref=f2e3371]: 4.2 out of 5 stars
+                - link "7,750 ratings" [ref=f2e3374] [cursor=pointer]:
+                  - /url: /Campus-Hurricane-D-Gry-Running-Shoes/dp/B0BBG4SFWZ/ref=sr_1_28?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-28#customerReviews
+                  - text: (7.7K)
+              - generic [ref=f2e3375]: 400+ bought in past month
+            - generic [ref=f2e3376]:
+              - link "Mega Deal Days" [ref=f2e3378] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e3383]:
+                - generic [ref=f2e3384]: Price, product page
+                - 'link "₹899 M.R.P: ₹1,699 M.R.P: ₹1,699" [ref=f2e3385] [cursor=pointer]':
+                  - /url: /Campus-Hurricane-D-Gry-Running-Shoes/dp/B0BBG4SFWZ/ref=sr_1_28?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-28
+                  - generic [ref=f2e3386]:
+                    - generic [ref=f2e3387]: ₹899
+                    - generic [ref=f2e3388]: ₹899
+                  - generic [ref=f2e3389]: "M.R.P: ₹1,699"
+                  - generic [ref=f2e3390]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e3391]:
+                      - generic [ref=f2e3392]: ₹1,699
+                      - text: ₹1,699
+                - text: (47% off)
+              - generic [ref=f2e3395]:
+                - generic [ref=f2e3396]: You pay ₹854.05
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e3399]:
+              - generic [ref=f2e3400]: FREE delivery Sat, 22 Aug
+              - generic [ref=f2e3402]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e3414] [cursor=pointer]
+      - listitem [ref=f2e3415]:
+        - generic [ref=f2e3420]:
+          - link [ref=f2e3424] [cursor=pointer]:
+            - /url: /U-S-POLO-ASSN-Mens-Sneakers/dp/B0DQ879TJL/ref=sr_1_29?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-29
+          - generic [ref=f2e3426]:
+            - group "colours available" [ref=f2e3428]:
+              - list [ref=f2e3429]:
+                - generic [ref=f2e3430]:
+                  - listitem:
+                    - link "Beige":
+                      - /url: /U-S-POLO-ASSN-Mens-Sneakers/dp/B0DQ879TJL/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-29
+                - generic [ref=f2e3433]:
+                  - listitem:
+                    - link "Cream":
+                      - /url: /U-S-POLO-ASSN-Mens-Sneakers/dp/B0DQP6RD8N/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-29
+                - generic [ref=f2e3436]:
+                  - listitem:
+                    - link "Off White":
+                      - /url: /U-S-POLO-ASSN-Mens-Sneakers/dp/B0DQ8BC26V/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-29
+                - generic [ref=f2e3439]:
+                  - listitem:
+                    - link "Tan":
+                      - /url: /U-S-POLO-ASSN-Mens-Sneakers/dp/B0DQ894LM6/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-29
+                - generic [ref=f2e3442]:
+                  - listitem:
+                    - link "White":
+                      - /url: /U-S-POLO-ASSN-Mens-Sneakers/dp/B0DQ88X6PV/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-29
+            - generic [ref=f2e3445]:
+              - heading "U.S. POLO ASSN." [level=2] [ref=f2e3447]
+              - link [ref=f2e3448] [cursor=pointer]:
+                - /url: /U-S-POLO-ASSN-Mens-Sneakers/dp/B0DQ879TJL/ref=sr_1_29?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-29
+                - heading "Mens Joan Sneakers" [level=2] [ref=f2e3449]
+            - generic [ref=f2e3450]:
+              - generic [ref=f2e3451]:
+                - text: "4.3"
+                - button "4.3 out of 5 stars, rating details" [ref=f2e3453] [cursor=pointer]:
+                  - generic [ref=f2e3454]: 4.3 out of 5 stars
+                - link "435 ratings" [ref=f2e3457] [cursor=pointer]:
+                  - /url: /U-S-POLO-ASSN-Mens-Sneakers/dp/B0DQ879TJL/ref=sr_1_29?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-29#customerReviews
+                  - text: (435)
+              - generic [ref=f2e3458]: 100+ bought in past month
+            - generic [ref=f2e3459]:
+              - generic [ref=f2e3461]:
+                - generic [ref=f2e3462]: Price, product page
+                - 'link "₹2,391 M.R.P: ₹4,599 M.R.P: ₹4,599" [ref=f2e3463] [cursor=pointer]':
+                  - /url: /U-S-POLO-ASSN-Mens-Sneakers/dp/B0DQ879TJL/ref=sr_1_29?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-29
+                  - generic [ref=f2e3464]:
+                    - generic [ref=f2e3465]: ₹2,391
+                    - generic [ref=f2e3466]: ₹2,391
+                  - generic [ref=f2e3467]: "M.R.P: ₹4,599"
+                  - generic [ref=f2e3468]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e3469]:
+                      - generic [ref=f2e3470]: ₹4,599
+                      - text: ₹4,599
+                - text: (48% off)
+              - generic [ref=f2e3473]:
+                - generic [ref=f2e3474]: You pay ₹2,319.27
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e3475]: FREE delivery Sat, 22 Aug
+            - button "Add to cart" [ref=f2e3490] [cursor=pointer]
+      - listitem [ref=f2e3491]:
+        - generic [ref=f2e3496]:
+          - link [ref=f2e3500] [cursor=pointer]:
+            - /url: /ATHCO-Drift-Walking-Shoes_08-ATHST-76/dp/B0FNKK4247/ref=sr_1_30?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-30
+          - generic [ref=f2e3502]:
+            - group "colours available" [ref=f2e3504]:
+              - list [ref=f2e3505]:
+                - generic [ref=f2e3506]:
+                  - listitem:
+                    - link "BLACK":
+                      - /url: /ATHCO-Drift-Walking-Shoes_08-ATHST-76/dp/B0FNKK4247/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-30
+                - generic [ref=f2e3509]:
+                  - listitem:
+                    - link "BLACK-WHITE":
+                      - /url: /ATHCO-Drift-Walking-Shoes_08-ATHST-76/dp/B0GHZCBSYY/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-30
+                - generic [ref=f2e3512]:
+                  - listitem:
+                    - link "Grey":
+                      - /url: /ATHCO-Drift-Walking-Shoes_08-ATHST-76/dp/B0FTT1DP2C/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-30
+                - generic [ref=f2e3515]:
+                  - listitem:
+                    - link "NAVY":
+                      - /url: /ATHCO-Drift-Walking-Shoes_08-ATHST-76/dp/B0FNKLX5H3/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-30
+                - generic [ref=f2e3518]:
+                  - listitem:
+                    - link "Olive":
+                      - /url: /ATHCO-Drift-Walking-Shoes_08-ATHST-76/dp/B0FTT1YJ4X/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-30
+                - generic [ref=f2e3521]:
+                  - listitem:
+                    - link "TEAL BLUE":
+                      - /url: /ATHCO-Drift-Walking-Shoes_08-ATHST-76/dp/B0GHYYTJ4F/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-30
+            - generic [ref=f2e3524]:
+              - heading "ATHCO" [level=2] [ref=f2e3526]
+              - link [ref=f2e3527] [cursor=pointer]:
+                - /url: /ATHCO-Drift-Walking-Shoes_08-ATHST-76/dp/B0FNKK4247/ref=sr_1_30?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-30
+                - heading "Mens Drift Memory Foam Comfort Shoes|Running|Walking|Training|Gym|Jogging|Sneaker|Athletic|Slipon|Flexible|Lightweight|Dailyuse|Sports|Casual|ExtraSoft|Fitness" [level=2] [ref=f2e3528]
+            - generic [ref=f2e3529]:
+              - generic [ref=f2e3530]:
+                - text: "4.2"
+                - button "4.2 out of 5 stars, rating details" [ref=f2e3532] [cursor=pointer]:
+                  - generic [ref=f2e3533]: 4.2 out of 5 stars
+                - link "1,187 ratings" [ref=f2e3536] [cursor=pointer]:
+                  - /url: /ATHCO-Drift-Walking-Shoes_08-ATHST-76/dp/B0FNKK4247/ref=sr_1_30?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-30#customerReviews
+                  - text: (1.1K)
+              - generic [ref=f2e3537]: 500+ bought in past month
+            - generic [ref=f2e3538]:
+              - link "Mega Deal Days" [ref=f2e3540] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e3545]:
+                - generic [ref=f2e3546]: Price, product page
+                - 'link "₹749 M.R.P: ₹5,999 M.R.P: ₹5,999" [ref=f2e3547] [cursor=pointer]':
+                  - /url: /ATHCO-Drift-Walking-Shoes_08-ATHST-76/dp/B0FNKK4247/ref=sr_1_30?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-30
+                  - generic [ref=f2e3548]:
+                    - generic [ref=f2e3549]: ₹749
+                    - generic [ref=f2e3550]: ₹749
+                  - generic [ref=f2e3551]: "M.R.P: ₹5,999"
+                  - generic [ref=f2e3552]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e3553]:
+                      - generic [ref=f2e3554]: ₹5,999
+                      - text: ₹5,999
+                - text: (88% off)
+              - generic [ref=f2e3555]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e3562]:
+              - generic [ref=f2e3563]: FREE delivery Sat, 22 Aug
+              - generic [ref=f2e3565]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e3577] [cursor=pointer]
+      - listitem [ref=f2e3578]:
+        - generic [ref=f2e3583]:
+          - link [ref=f2e3587] [cursor=pointer]:
+            - /url: /Roger-Advantage-Shoes-Savannah-Ivory/dp/B0C5QGHD4H/ref=sr_1_31?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-31
+          - generic [ref=f2e3589]:
+            - group "colours available" [ref=f2e3591]:
+              - list [ref=f2e3592]:
+                - generic [ref=f2e3593]:
+                  - listitem:
+                    - link "Savannah/Ivory":
+                      - /url: /Roger-Advantage-Shoes-Savannah-Ivory/dp/B0C5QGHD4H/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-31
+                - generic [ref=f2e3596]:
+                  - listitem:
+                    - link "Metal Navy":
+                      - /url: /Roger-Advantage-Shoes-Savannah-Ivory/dp/B09NM3L83P/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-31
+                - generic [ref=f2e3599]:
+                  - listitem:
+                    - link "Rosebrown/Fog":
+                      - /url: /Roger-Advantage-Shoes-Savannah-Ivory/dp/B0CN9475XM/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-31
+                - generic [ref=f2e3602]:
+                  - listitem:
+                    - link "Cinder/Fog":
+                      - /url: /Roger-Advantage-Shoes-Savannah-Ivory/dp/B0DM2MV4GQ/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-31
+                - generic [ref=f2e3605]:
+                  - listitem:
+                    - link "Ivory/Heron":
+                      - /url: /Roger-Advantage-Shoes-Savannah-Ivory/dp/B0F7CNGDGJ/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-31
+                - generic [ref=f2e3608]:
+                  - listitem:
+                    - link "Frost/Rock":
+                      - /url: /Roger-Advantage-Shoes-Savannah-Ivory/dp/B0CN94T786/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-31
+              - link "+83 other colors/patterns" [ref=f2e3612] [cursor=pointer]:
+                - /url: /Roger-Advantage-Shoes-Savannah-Ivory/dp/B0C5QGHD4H/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-31
+                - text: "+83"
+            - generic [ref=f2e3613]:
+              - heading "On" [level=2] [ref=f2e3615]
+              - link [ref=f2e3616] [cursor=pointer]:
+                - /url: /Roger-Advantage-Shoes-Savannah-Ivory/dp/B0C5QGHD4H/ref=sr_1_31?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-31
+                - heading "Running Womens Cloudrunner Sneaker" [level=2] [ref=f2e3617]
+            - generic [ref=f2e3619]:
+              - text: "4.5"
+              - button "4.5 out of 5 stars, rating details" [ref=f2e3621] [cursor=pointer]:
+                - generic [ref=f2e3622]: 4.5 out of 5 stars
+              - link "1,448 ratings" [ref=f2e3625] [cursor=pointer]:
+                - /url: /Roger-Advantage-Shoes-Savannah-Ivory/dp/B0C5QGHD4H/ref=sr_1_31?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-31#customerReviews
+                - text: (1.4K)
+            - generic [ref=f2e3626]:
+              - generic [ref=f2e3628]:
+                - generic [ref=f2e3629]: Price, product page
+                - link "₹66,551" [ref=f2e3630] [cursor=pointer]:
+                  - /url: /Roger-Advantage-Shoes-Savannah-Ivory/dp/B0C5QGHD4H/ref=sr_1_31?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-31
+                  - generic [ref=f2e3631]:
+                    - generic [ref=f2e3632]: ₹66,551
+                    - generic [ref=f2e3633]: ₹66,551
+              - generic [ref=f2e3634]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e3639]: FREE delivery 21 - 24 Aug
+            - generic [ref=f2e3659] [cursor=pointer]:
+              - button "Add to cart" [ref=f2e3660]
+              - generic [ref=f2e3661]: Add to cart
+      - listitem [ref=f2e3662]:
+        - generic [ref=f2e3667]:
+          - link [ref=f2e3671] [cursor=pointer]:
+            - /url: /Liberty-Force-Roger-Running-Shoe-9/dp/B0B9ZKT1TX/ref=sr_1_32?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-32
+          - generic [ref=f2e3673]:
+            - generic [ref=f2e3674]:
+              - heading "Liberty" [level=2] [ref=f2e3676]
+              - link [ref=f2e3677] [cursor=pointer]:
+                - /url: /Liberty-Force-Roger-Running-Shoe-9/dp/B0B9ZKT1TX/ref=sr_1_32?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-32
+                - heading "Force 10 Black Sports Shoes for Men - Knit-Mesh Lace-Up Sports Wear" [level=2] [ref=f2e3678]
+            - generic [ref=f2e3679]:
+              - generic [ref=f2e3680]:
+                - text: "4.0"
+                - button "4.0 out of 5 stars, rating details" [ref=f2e3682] [cursor=pointer]:
+                  - generic [ref=f2e3683]: 4.0 out of 5 stars
+                - link "1,229 ratings" [ref=f2e3686] [cursor=pointer]:
+                  - /url: /Liberty-Force-Roger-Running-Shoe-9/dp/B0B9ZKT1TX/ref=sr_1_32?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-32#customerReviews
+                  - text: (1.2K)
+              - generic [ref=f2e3687]: 300+ bought in past month
+            - generic [ref=f2e3688]:
+              - generic [ref=f2e3690]:
+                - generic [ref=f2e3691]: Price, product page
+                - 'link "₹999 M.R.P: ₹1,799 M.R.P: ₹1,799" [ref=f2e3692] [cursor=pointer]':
+                  - /url: /Liberty-Force-Roger-Running-Shoe-9/dp/B0B9ZKT1TX/ref=sr_1_32?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-32
+                  - generic [ref=f2e3693]:
+                    - generic [ref=f2e3694]: ₹999
+                    - generic [ref=f2e3695]: ₹999
+                  - generic [ref=f2e3696]: "M.R.P: ₹1,799"
+                  - generic [ref=f2e3697]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e3698]:
+                      - generic [ref=f2e3699]: ₹1,799
+                      - text: ₹1,799
+                - text: (44% off)
+              - generic [ref=f2e3700]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e3707]:
+              - generic [ref=f2e3708]: FREE delivery Sat, 22 Aug
+              - generic [ref=f2e3710]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e3722] [cursor=pointer]
+      - listitem [ref=f2e3723]:
+        - generic [ref=f2e3728]:
+          - link [ref=f2e3732] [cursor=pointer]:
+            - /url: /Campus-Hurricane-BTGRN-BLK-Running-Shoes/dp/B09HCHNNH1/ref=sr_1_33?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-33
+          - generic [ref=f2e3734]:
+            - group "colours available" [ref=f2e3736]:
+              - list [ref=f2e3737]:
+                - generic [ref=f2e3738]:
+                  - listitem:
+                    - link "BT.GRN/BLK":
+                      - /url: /Campus-Hurricane-BTGRN-BLK-Running-Shoes/dp/B09HCHNNH1/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-33
+                - generic [ref=f2e3741]:
+                  - listitem:
+                    - link "BLK/N.ORG":
+                      - /url: /Campus-Hurricane-BTGRN-BLK-Running-Shoes/dp/B09FY5KKMK/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-33
+                - generic [ref=f2e3744]:
+                  - listitem:
+                    - link "Dark Grey/ Black":
+                      - /url: /Campus-Hurricane-BTGRN-BLK-Running-Shoes/dp/B0BBG6MFLK/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-33
+                - generic [ref=f2e3747]:
+                  - listitem:
+                    - link "NAVY/R.SLATE":
+                      - /url: /Campus-Hurricane-BTGRN-BLK-Running-Shoes/dp/B0B4KKN4LF/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-33
+                - generic [ref=f2e3750]:
+                  - listitem:
+                    - link "NAVY/RED":
+                      - /url: /Campus-Hurricane-BTGRN-BLK-Running-Shoes/dp/B09RP32CM5/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-33
+                - generic [ref=f2e3753]:
+                  - listitem:
+                    - link "WHT/BLK":
+                      - /url: /Campus-Hurricane-BTGRN-BLK-Running-Shoes/dp/B09ZNPCF93/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-33
+              - link "+2 other colors/patterns" [ref=f2e3757] [cursor=pointer]:
+                - /url: /Campus-Hurricane-BTGRN-BLK-Running-Shoes/dp/B09HCHNNH1/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-33
+                - text: "+2"
+            - generic [ref=f2e3758]:
+              - heading "Campus" [level=2] [ref=f2e3760]
+              - link [ref=f2e3761] [cursor=pointer]:
+                - /url: /Campus-Hurricane-BTGRN-BLK-Running-Shoes/dp/B09HCHNNH1/ref=sr_1_33?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-33
+                - heading "Men Hurricane Running Shoes" [level=2] [ref=f2e3762]
+            - generic [ref=f2e3763]:
+              - generic [ref=f2e3764]:
+                - text: "4.2"
+                - button "4.2 out of 5 stars, rating details" [ref=f2e3766] [cursor=pointer]:
+                  - generic [ref=f2e3767]: 4.2 out of 5 stars
+                - link "7,750 ratings" [ref=f2e3770] [cursor=pointer]:
+                  - /url: /Campus-Hurricane-BTGRN-BLK-Running-Shoes/dp/B09HCHNNH1/ref=sr_1_33?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-33#customerReviews
+                  - text: (7.7K)
+              - generic [ref=f2e3771]: 300+ bought in past month
+            - generic [ref=f2e3772]:
+              - link "Mega Deal Days" [ref=f2e3774] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e3779]:
+                - generic [ref=f2e3780]: Price, product page
+                - 'link "₹899 M.R.P: ₹1,699 M.R.P: ₹1,699" [ref=f2e3781] [cursor=pointer]':
+                  - /url: /Campus-Hurricane-BTGRN-BLK-Running-Shoes/dp/B09HCHNNH1/ref=sr_1_33?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-33
+                  - generic [ref=f2e3782]:
+                    - generic [ref=f2e3783]: ₹899
+                    - generic [ref=f2e3784]: ₹899
+                  - generic [ref=f2e3785]: "M.R.P: ₹1,699"
+                  - generic [ref=f2e3786]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e3787]:
+                      - generic [ref=f2e3788]: ₹1,699
+                      - text: ₹1,699
+                - text: (47% off)
+              - generic [ref=f2e3791]:
+                - generic [ref=f2e3792]: You pay ₹854.05
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e3795]:
+              - generic [ref=f2e3796]: FREE delivery Sat, 22 Aug
+              - generic [ref=f2e3798]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e3810] [cursor=pointer]
+      - listitem [ref=f2e3811]:
+        - generic [ref=f2e3816]:
+          - link [ref=f2e3820] [cursor=pointer]:
+            - /url: /ASICS-DYNABLAST-Running-Island-Indigo/dp/B0B1ZYSDDD/ref=sr_1_34?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-34
+          - generic [ref=f2e3822]:
+            - group "colours available" [ref=f2e3824]:
+              - list [ref=f2e3825]:
+                - generic [ref=f2e3826]:
+                  - listitem:
+                    - link "Island Blue Indigo Blue":
+                      - /url: /ASICS-DYNABLAST-Running-Island-Indigo/dp/B0B1ZYSDDD/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-34
+                - generic [ref=f2e3829]:
+                  - listitem:
+                    - link "Black/Bright Orange":
+                      - /url: /ASICS-DYNABLAST-Running-Island-Indigo/dp/B0C5Y3G32Q/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-34
+                - generic [ref=f2e3832]:
+                  - listitem:
+                    - link "Deep Ocean/Moonrock":
+                      - /url: /ASICS-DYNABLAST-Running-Island-Indigo/dp/B0C5Y3RHKF/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-34
+                - generic [ref=f2e3835]:
+                  - listitem:
+                    - link "Black/White":
+                      - /url: /ASICS-DYNABLAST-Running-Island-Indigo/dp/B0B56QTX46/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-34
+            - generic [ref=f2e3838]:
+              - heading "ASICS" [level=2] [ref=f2e3840]
+              - link [ref=f2e3841] [cursor=pointer]:
+                - /url: /ASICS-DYNABLAST-Running-Island-Indigo/dp/B0B1ZYSDDD/ref=sr_1_34?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-34
+                - heading "Men Dynablast 3 Platform" [level=2] [ref=f2e3842]
+            - generic [ref=f2e3844]:
+              - text: "4.2"
+              - button "4.2 out of 5 stars, rating details" [ref=f2e3846] [cursor=pointer]:
+                - generic [ref=f2e3847]: 4.2 out of 5 stars
+              - link "160 ratings" [ref=f2e3850] [cursor=pointer]:
+                - /url: /ASICS-DYNABLAST-Running-Island-Indigo/dp/B0B1ZYSDDD/ref=sr_1_34?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-34#customerReviews
+                - text: (160)
+            - generic [ref=f2e3851]:
+              - generic [ref=f2e3853]:
+                - generic [ref=f2e3854]: Price, product page
+                - link "₹67,484" [ref=f2e3855] [cursor=pointer]:
+                  - /url: /ASICS-DYNABLAST-Running-Island-Indigo/dp/B0B1ZYSDDD/ref=sr_1_34?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-34
+                  - generic [ref=f2e3856]:
+                    - generic [ref=f2e3857]: ₹67,484
+                    - generic [ref=f2e3858]: ₹67,484
+              - generic [ref=f2e3859]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e3864]: FREE delivery 21 - 24 Aug
+            - generic [ref=f2e3884] [cursor=pointer]:
+              - button "Add to cart" [ref=f2e3885]
+              - generic [ref=f2e3886]: Add to cart
+      - listitem [ref=f2e3887]:
+        - generic [ref=f2e3892]:
+          - link [ref=f2e3896] [cursor=pointer]:
+            - /url: /SPARX-Mens-Athleisure-Shoes-Orange/dp/B08WJ1X8QL/ref=sr_1_35?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-35
+          - generic [ref=f2e3898]:
+            - group "colours available" [ref=f2e3900]:
+              - list [ref=f2e3901]:
+                - generic [ref=f2e3902]:
+                  - listitem:
+                    - link "Grey Neon Orange":
+                      - /url: /SPARX-Mens-Athleisure-Shoes-Orange/dp/B08WJ1X8QL/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-35
+                - generic [ref=f2e3905]:
+                  - listitem:
+                    - link "Black":
+                      - /url: /SPARX-Mens-Athleisure-Shoes-Orange/dp/B097TLTQS9/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-35
+                - generic [ref=f2e3908]:
+                  - listitem:
+                    - link "Black Silver":
+                      - /url: /SPARX-Mens-Athleisure-Shoes-Orange/dp/B08WJ1WW77/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-35
+                - generic [ref=f2e3911]:
+                  - listitem:
+                    - link "Grey":
+                      - /url: /SPARX-Mens-Athleisure-Shoes-Orange/dp/B0C5HLC66X/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-35
+                - generic [ref=f2e3914]:
+                  - listitem:
+                    - link "Torquoise Blue":
+                      - /url: /SPARX-Mens-Athleisure-Shoes-Orange/dp/B08WHXYXK4/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-35
+                - generic [ref=f2e3917]:
+                  - listitem:
+                    - link "Blue":
+                      - /url: /SPARX-Mens-Athleisure-Shoes-Orange/dp/B096Q7XYS2/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-35
+              - link "+10 other colors/patterns" [ref=f2e3921] [cursor=pointer]:
+                - /url: /SPARX-Mens-Athleisure-Shoes-Orange/dp/B08WJ1X8QL/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-35
+                - text: "+10"
+            - generic [ref=f2e3922]:
+              - heading "SPARX" [level=2] [ref=f2e3924]
+              - link [ref=f2e3925] [cursor=pointer]:
+                - /url: /SPARX-Mens-Athleisure-Shoes-Orange/dp/B08WJ1X8QL/ref=sr_1_35?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-35
+                - heading "Men Mesh Running Shoes" [level=2] [ref=f2e3926]
+            - generic [ref=f2e3927]:
+              - generic [ref=f2e3928]:
+                - text: "4.1"
+                - button "4.1 out of 5 stars, rating details" [ref=f2e3930] [cursor=pointer]:
+                  - generic [ref=f2e3931]: 4.1 out of 5 stars
+                - link "14,768 ratings" [ref=f2e3934] [cursor=pointer]:
+                  - /url: /SPARX-Mens-Athleisure-Shoes-Orange/dp/B08WJ1X8QL/ref=sr_1_35?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-35#customerReviews
+                  - text: (14.7K)
+              - generic [ref=f2e3935]: 100+ bought in past month
+            - generic [ref=f2e3936]:
+              - generic [ref=f2e3938]:
+                - generic [ref=f2e3939]: Price, product page
+                - 'link "₹699 M.R.P: ₹899 M.R.P: ₹899" [ref=f2e3940] [cursor=pointer]':
+                  - /url: /SPARX-Mens-Athleisure-Shoes-Orange/dp/B08WJ1X8QL/ref=sr_1_35?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-35
+                  - generic [ref=f2e3941]:
+                    - generic [ref=f2e3942]: ₹699
+                    - generic [ref=f2e3943]: ₹699
+                  - generic [ref=f2e3944]: "M.R.P: ₹899"
+                  - generic [ref=f2e3945]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e3946]:
+                      - generic [ref=f2e3947]: ₹899
+                      - text: ₹899
+                - text: (22% off)
+              - generic [ref=f2e3948]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e3955]:
+              - generic [ref=f2e3956]: FREE delivery Sun, 23 Aug
+              - generic [ref=f2e3958]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e3970] [cursor=pointer]
+      - listitem [ref=f2e3971]:
+        - generic [ref=f2e3976]:
+          - link [ref=f2e3980] [cursor=pointer]:
+            - /url: /ASICS-9-Black-Graphite-Grey/dp/B0FF2XJD4B/ref=sr_1_36?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-36
+          - generic [ref=f2e3982]:
+            - group "colours available" [ref=f2e3984]:
+              - list [ref=f2e3985]:
+                - generic [ref=f2e3986]:
+                  - listitem:
+                    - link "Black/Graphite Grey":
+                      - /url: /ASICS-9-Black-Graphite-Grey/dp/B0FF2XJD4B/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-36
+                - generic [ref=f2e3989]:
+                  - listitem:
+                    - link "Pearl Pink/Morganite":
+                      - /url: /ASICS-9-Black-Graphite-Grey/dp/B0FV63PZ14/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-36
+                - generic [ref=f2e3992]:
+                  - listitem:
+                    - link "White/White":
+                      - /url: /ASICS-9-Black-Graphite-Grey/dp/B0FTQ11Z4X/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-36
+                - generic [ref=f2e3995]:
+                  - listitem:
+                    - link "Mineral Beige/Cream":
+                      - /url: /ASICS-9-Black-Graphite-Grey/dp/B0FV7GBW62/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-36
+                - generic [ref=f2e3998]:
+                  - listitem:
+                    - link "Piedmont Grey/Cream":
+                      - /url: /ASICS-9-Black-Graphite-Grey/dp/B0FV769C56/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-36
+                - generic [ref=f2e4001]:
+                  - listitem:
+                    - link "COBALT BURST/SUN CORAL":
+                      - /url: /ASICS-9-Black-Graphite-Grey/dp/B0G4H8KGZ7/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-36
+              - link "+20 other colors/patterns" [ref=f2e4005] [cursor=pointer]:
+                - /url: /ASICS-9-Black-Graphite-Grey/dp/B0FF2XJD4B/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-36
+                - text: "+20"
+            - generic [ref=f2e4006]:
+              - heading "ASICS" [level=2] [ref=f2e4008]
+              - link [ref=f2e4009] [cursor=pointer]:
+                - /url: /ASICS-9-Black-Graphite-Grey/dp/B0FF2XJD4B/ref=sr_1_36?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-36
+                - heading "Gel-Nimbus 28" [level=2] [ref=f2e4010]
+            - generic [ref=f2e4012]:
+              - text: "4.5"
+              - button "4.5 out of 5 stars, rating details" [ref=f2e4014] [cursor=pointer]:
+                - generic [ref=f2e4015]: 4.5 out of 5 stars
+              - link "365 ratings" [ref=f2e4018] [cursor=pointer]:
+                - /url: /ASICS-9-Black-Graphite-Grey/dp/B0FF2XJD4B/ref=sr_1_36?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-36#customerReviews
+                - text: (365)
+            - generic [ref=f2e4019]:
+              - generic [ref=f2e4021]:
+                - generic [ref=f2e4022]: Price, product page
+                - 'link "₹73,437.85 M.R.P: ₹84,567.10 M.R.P: ₹84,567.10" [ref=f2e4023] [cursor=pointer]':
+                  - /url: /ASICS-9-Black-Graphite-Grey/dp/B0FF2XJD4B/ref=sr_1_36?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-36
+                  - generic [ref=f2e4024]:
+                    - generic [ref=f2e4025]: ₹73,437.85
+                    - generic [ref=f2e4026]:
+                      - text: ₹
+                      - generic [ref=f2e4027]:
+                        - text: 73,437
+                        - generic [ref=f2e4028]: .
+                      - text: "85"
+                  - generic [ref=f2e4029]: "M.R.P: ₹84,567.10"
+                  - generic [ref=f2e4030]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e4031]:
+                      - generic [ref=f2e4032]: ₹84,567.10
+                      - text: ₹84,567.10
+                - text: (13% off)
+              - generic [ref=f2e4033]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e4038]: FREE delivery 23 - 25 Aug
+            - button "Add to cart" [ref=f2e4055] [cursor=pointer]
+      - listitem [ref=f2e4056]:
+        - generic [ref=f2e4061]:
+          - link [ref=f2e4065] [cursor=pointer]:
+            - /url: /ALTRA-AL0A4VQL-Rivera-Running-Black/dp/B08RCLMT2J/ref=sr_1_37?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-37
+          - generic [ref=f2e4067]:
+            - generic [ref=f2e4068]:
+              - heading "ALTRA" [level=2] [ref=f2e4070]
+              - link [ref=f2e4071] [cursor=pointer]:
+                - /url: /ALTRA-AL0A4VQL-Rivera-Running-Black/dp/B08RCLMT2J/ref=sr_1_37?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-37
+                - heading "Men's AL0A4VQL Rivera Road Running Shoe" [level=2] [ref=f2e4072]
+            - generic [ref=f2e4074]:
+              - text: "4.4"
+              - button "4.4 out of 5 stars, rating details" [ref=f2e4076] [cursor=pointer]:
+                - generic [ref=f2e4077]: 4.4 out of 5 stars
+              - link "515 ratings" [ref=f2e4080] [cursor=pointer]:
+                - /url: /ALTRA-AL0A4VQL-Rivera-Running-Black/dp/B08RCLMT2J/ref=sr_1_37?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-37#customerReviews
+                - text: (515)
+            - generic [ref=f2e4081]:
+              - generic [ref=f2e4083]:
+                - generic [ref=f2e4084]: Price, product page
+                - link "₹64,838.91" [ref=f2e4085] [cursor=pointer]:
+                  - /url: /ALTRA-AL0A4VQL-Rivera-Running-Black/dp/B08RCLMT2J/ref=sr_1_37?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-37
+                  - generic [ref=f2e4086]:
+                    - generic [ref=f2e4087]: ₹64,838.91
+                    - generic [ref=f2e4088]:
+                      - text: ₹
+                      - generic [ref=f2e4089]:
+                        - text: 64,838
+                        - generic [ref=f2e4090]: .
+                      - text: "91"
+              - generic [ref=f2e4091]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e4096]: FREE delivery 22 - 25 Aug
+            - generic [ref=f2e4116] [cursor=pointer]:
+              - button "Add to cart" [ref=f2e4117]
+              - generic [ref=f2e4118]: Add to cart
+      - listitem [ref=f2e4119]:
+        - generic [ref=f2e4124]:
+          - group "Best sellerin Men's Sneakers" [ref=f2e4129]:
+            - generic "Best seller" [ref=f2e4131]
+          - link [ref=f2e4135] [cursor=pointer]:
+            - /url: /Puma-Unisex-Adult-Smashic-Coffee-Club-Navy-Navy/dp/B0DV6GP31C/ref=sr_1_38?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-38
+          - generic [ref=f2e4137]:
+            - group "colours available" [ref=f2e4139]:
+              - list [ref=f2e4140]:
+                - generic [ref=f2e4141]:
+                  - listitem:
+                    - link "Haute Coffee-Club Navy-Navy":
+                      - /url: /Puma-Unisex-Adult-Smashic-Coffee-Club-Navy-Navy/dp/B0DV6GP31C/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-38
+                - generic [ref=f2e4144]:
+                  - listitem:
+                    - link "Black-Matte Silver":
+                      - /url: /Puma-Unisex-Adult-Smashic-Coffee-Club-Navy-Navy/dp/B0BSLLDJRC/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-38
+                - generic [ref=f2e4147]:
+                  - listitem:
+                    - link "White-Matte Silver":
+                      - /url: /Puma-Unisex-Adult-Smashic-Coffee-Club-Navy-Navy/dp/B0BSLKMG4T/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-38
+                - generic [ref=f2e4150]:
+                  - listitem:
+                    - link "Desert Dust-Black-Gum":
+                      - /url: /Puma-Unisex-Adult-Smashic-Coffee-Club-Navy-Navy/dp/B0FYNBX6PC/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-38
+                - generic [ref=f2e4153]:
+                  - listitem:
+                    - link "Peacoat-White":
+                      - /url: /Puma-Unisex-Adult-Smashic-Coffee-Club-Navy-Navy/dp/B081R1BXKJ/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-38
+                - generic [ref=f2e4156]:
+                  - listitem:
+                    - link "Puma White-Puma Black":
+                      - /url: /Puma-Unisex-Adult-Smashic-Coffee-Club-Navy-Navy/dp/B081R1F69W/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-38
+              - link "+4 other colors/patterns" [ref=f2e4160] [cursor=pointer]:
+                - /url: /Puma-Unisex-Adult-Smashic-Coffee-Club-Navy-Navy/dp/B0DV6GP31C/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-38
+                - text: "+4"
+            - generic [ref=f2e4161]:
+              - heading "PUMA" [level=2] [ref=f2e4163]
+              - link [ref=f2e4164] [cursor=pointer]:
+                - /url: /Puma-Unisex-Adult-Smashic-Coffee-Club-Navy-Navy/dp/B0DV6GP31C/ref=sr_1_38?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-38
+                - heading "| Smashic Comfort Casual Sneakers" [level=2] [ref=f2e4165]
+            - generic [ref=f2e4166]:
+              - generic [ref=f2e4167]:
+                - text: "4.0"
+                - button "4.0 out of 5 stars, rating details" [ref=f2e4169] [cursor=pointer]:
+                  - generic [ref=f2e4170]: 4.0 out of 5 stars
+                - link "4,837 ratings" [ref=f2e4173] [cursor=pointer]:
+                  - /url: /Puma-Unisex-Adult-Smashic-Coffee-Club-Navy-Navy/dp/B0DV6GP31C/ref=sr_1_38?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-38#customerReviews
+                  - text: (4.8K)
+              - generic [ref=f2e4174]: 500+ bought in past month
+            - generic [ref=f2e4175]:
+              - generic [ref=f2e4177]:
+                - generic [ref=f2e4178]: Price, product page
+                - 'link "₹2,249 M.R.P: ₹4,499 M.R.P: ₹4,499" [ref=f2e4179] [cursor=pointer]':
+                  - /url: /Puma-Unisex-Adult-Smashic-Coffee-Club-Navy-Navy/dp/B0DV6GP31C/ref=sr_1_38?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-38
+                  - generic [ref=f2e4180]:
+                    - generic [ref=f2e4181]: ₹2,249
+                    - generic [ref=f2e4182]: ₹2,249
+                  - generic [ref=f2e4183]: "M.R.P: ₹4,499"
+                  - generic [ref=f2e4184]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e4185]:
+                      - generic [ref=f2e4186]: ₹4,499
+                      - text: ₹4,499
+                - text: (50% off)
+              - generic [ref=f2e4189]:
+                - generic [ref=f2e4190]: You pay ₹2,181.53
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e4191]: FREE delivery Sat, 22 Aug
+            - button "Add to cart" [ref=f2e4206] [cursor=pointer]
+      - listitem [ref=f2e4207]:
+        - generic [ref=f2e4212]:
+          - link [ref=f2e4216] [cursor=pointer]:
+            - /url: /Stefan-Stylish-Casual-Sneaker-Shoes/dp/B0B8T7TGQD/ref=sr_1_39?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-39
+          - generic [ref=f2e4218]:
+            - group "colours available" [ref=f2e4220]:
+              - list [ref=f2e4221]:
+                - generic [ref=f2e4222]:
+                  - listitem:
+                    - link "Tan":
+                      - /url: /Stefan-Stylish-Casual-Sneaker-Shoes/dp/B0B8T7TGQD/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-39
+                - generic [ref=f2e4225]:
+                  - listitem:
+                    - link "OFF WHITE":
+                      - /url: /Stefan-Stylish-Casual-Sneaker-Shoes/dp/B0B8T3C321/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-39
+            - generic [ref=f2e4228]:
+              - heading "U.S. POLO ASSN." [level=2] [ref=f2e4230]
+              - link [ref=f2e4231] [cursor=pointer]:
+                - /url: /Stefan-Stylish-Casual-Sneaker-Shoes/dp/B0B8T7TGQD/ref=sr_1_39?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-39
+                - heading "Mens Stefan| Stylish Casual Sneaker Shoes" [level=2] [ref=f2e4232]
+            - generic [ref=f2e4233]:
+              - generic [ref=f2e4234]:
+                - text: "4.3"
+                - button "4.3 out of 5 stars, rating details" [ref=f2e4236] [cursor=pointer]:
+                  - generic [ref=f2e4237]: 4.3 out of 5 stars
+                - link "1,295 ratings" [ref=f2e4240] [cursor=pointer]:
+                  - /url: /Stefan-Stylish-Casual-Sneaker-Shoes/dp/B0B8T7TGQD/ref=sr_1_39?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-39#customerReviews
+                  - text: (1.2K)
+              - generic [ref=f2e4241]: 200+ bought in past month
+            - generic [ref=f2e4242]:
+              - generic [ref=f2e4244]:
+                - generic [ref=f2e4245]: Price, product page
+                - 'link "₹2,399 M.R.P: ₹3,999 M.R.P: ₹3,999" [ref=f2e4246] [cursor=pointer]':
+                  - /url: /Stefan-Stylish-Casual-Sneaker-Shoes/dp/B0B8T7TGQD/ref=sr_1_39?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-39
+                  - generic [ref=f2e4247]:
+                    - generic [ref=f2e4248]: ₹2,399
+                    - generic [ref=f2e4249]: ₹2,399
+                  - generic [ref=f2e4250]: "M.R.P: ₹3,999"
+                  - generic [ref=f2e4251]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e4252]:
+                      - generic [ref=f2e4253]: ₹3,999
+                      - text: ₹3,999
+                - text: (40% off)
+              - generic [ref=f2e4254]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e4261]:
+              - generic [ref=f2e4262]: FREE delivery Sat, 22 Aug
+              - generic [ref=f2e4264]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e4276] [cursor=pointer]
+      - listitem [ref=f2e4277]:
+        - generic [ref=f2e4282]:
+          - link [ref=f2e4286] [cursor=pointer]:
+            - /url: /adidas-Ultra-Boost-Undefeated-Ef1968/dp/B08LKFGLB3/ref=sr_1_40?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-40
+          - generic [ref=f2e4288]:
+            - group "colours available" [ref=f2e4290]:
+              - list [ref=f2e4291]:
+                - generic [ref=f2e4292]:
+                  - listitem:
+                    - link "White opulent garden":
+                      - /url: /adidas-Ultra-Boost-Undefeated-Ef1968/dp/B08LKFGLB3/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-40
+                - generic [ref=f2e4295]:
+                  - listitem:
+                    - link "Royal Blue Glow Blue Royal Blue":
+                      - /url: /adidas-Ultra-Boost-Undefeated-Ef1968/dp/B0CYLYK452/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-40
+                - generic [ref=f2e4298]:
+                  - listitem:
+                    - link "Team Royal Blue Cloud White Legend Ink":
+                      - /url: /adidas-Ultra-Boost-Undefeated-Ef1968/dp/B0C2QMWN5F/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-40
+                - generic [ref=f2e4301]:
+                  - listitem:
+                    - link "Lucid Pink Silver Met Preloved Ink":
+                      - /url: /adidas-Ultra-Boost-Undefeated-Ef1968/dp/B0C2QJD53G/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-40
+                - generic [ref=f2e4304]:
+                  - listitem:
+                    - link "Ambient Sky/Halo Blue/Acid Yellow":
+                      - /url: /adidas-Ultra-Boost-Undefeated-Ef1968/dp/B08S7RZJDS/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-40
+                - generic [ref=f2e4307]:
+                  - listitem:
+                    - link "BLACK":
+                      - /url: /adidas-Ultra-Boost-Undefeated-Ef1968/dp/B073RKVZJB/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-40
+              - link "+97 other colors/patterns" [ref=f2e4311] [cursor=pointer]:
+                - /url: /adidas-Ultra-Boost-Undefeated-Ef1968/dp/B08LKFGLB3/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-40
+                - text: "+97"
+            - generic [ref=f2e4312]:
+              - heading "adidas" [level=2] [ref=f2e4314]
+              - link [ref=f2e4315] [cursor=pointer]:
+                - /url: /adidas-Ultra-Boost-Undefeated-Ef1968/dp/B08LKFGLB3/ref=sr_1_40?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-40
+                - heading "Unisex-Adult Adilette Comfort Sandal" [level=2] [ref=f2e4316]
+            - generic [ref=f2e4318]:
+              - text: "4.0"
+              - button "4.0 out of 5 stars, rating details" [ref=f2e4320] [cursor=pointer]:
+                - generic [ref=f2e4321]: 4.0 out of 5 stars
+              - link "29,041 ratings" [ref=f2e4324] [cursor=pointer]:
+                - /url: /adidas-Ultra-Boost-Undefeated-Ef1968/dp/B08LKFGLB3/ref=sr_1_40?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-40#customerReviews
+                - text: (29K)
+            - generic [ref=f2e4325]:
+              - generic [ref=f2e4327]:
+                - generic [ref=f2e4328]: Price, product page
+                - link "₹57,292" [ref=f2e4329] [cursor=pointer]:
+                  - /url: /adidas-Ultra-Boost-Undefeated-Ef1968/dp/B08LKFGLB3/ref=sr_1_40?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-40
+                  - generic [ref=f2e4330]:
+                    - generic [ref=f2e4331]: ₹57,292
+                    - generic [ref=f2e4332]: ₹57,292
+              - generic [ref=f2e4333]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e4338]: FREE delivery 21 - 24 Aug
+            - generic [ref=f2e4358] [cursor=pointer]:
+              - button "Add to cart" [ref=f2e4359]
+              - generic [ref=f2e4360]: Add to cart
+      - listitem [ref=f2e4361]:
+        - generic [ref=f2e4366]:
+          - link [ref=f2e4370] [cursor=pointer]:
+            - /url: /PUMA-Deviate-NITROTM-Running-Shoes/dp/B0FB931JR3/ref=sr_1_41?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-41
+          - generic [ref=f2e4372]:
+            - group "colours available" [ref=f2e4374]:
+              - list [ref=f2e4375]:
+                - generic [ref=f2e4376]:
+                  - listitem:
+                    - link "Baltic Sea Blue-Fresh Water":
+                      - /url: /PUMA-Deviate-NITROTM-Running-Shoes/dp/B0FB931JR3/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-41
+                - generic [ref=f2e4379]:
+                  - listitem:
+                    - link "Apple Spritz-Lux Lime":
+                      - /url: /PUMA-Deviate-NITROTM-Running-Shoes/dp/B0FB936MXS/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-41
+                - generic [ref=f2e4382]:
+                  - listitem:
+                    - link "Vibrant Silver-Lux Lime":
+                      - /url: /PUMA-Deviate-NITROTM-Running-Shoes/dp/B0GFLQF9PK/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-41
+                - generic [ref=f2e4385]:
+                  - listitem:
+                    - link "Black White Silver":
+                      - /url: /PUMA-Deviate-NITROTM-Running-Shoes/dp/B0FB94HYQX/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-41
+                - generic [ref=f2e4388]:
+                  - listitem:
+                    - link "White":
+                      - /url: /PUMA-Deviate-NITROTM-Running-Shoes/dp/B0GVJ6XDGJ/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-41
+                - generic [ref=f2e4391]:
+                  - listitem:
+                    - link "White-Fresh Water":
+                      - /url: /PUMA-Deviate-NITROTM-Running-Shoes/dp/B0GVTJ7C69/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-41
+              - link "+13 other colors/patterns" [ref=f2e4395] [cursor=pointer]:
+                - /url: /PUMA-Deviate-NITROTM-Running-Shoes/dp/B0FB931JR3/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-41
+                - text: "+13"
+            - generic [ref=f2e4396]:
+              - heading "PUMA" [level=2] [ref=f2e4398]
+              - link [ref=f2e4399] [cursor=pointer]:
+                - /url: /PUMA-Deviate-NITROTM-Running-Shoes/dp/B0FB931JR3/ref=sr_1_41?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-41
+                - heading "Deviate Nitro 4 Puma White-Fresh Water" [level=2] [ref=f2e4400]
+            - generic [ref=f2e4402]:
+              - text: "4.4"
+              - button "4.4 out of 5 stars, rating details" [ref=f2e4404] [cursor=pointer]:
+                - generic [ref=f2e4405]: 4.4 out of 5 stars
+              - link "22 ratings" [ref=f2e4408] [cursor=pointer]:
+                - /url: /PUMA-Deviate-NITROTM-Running-Shoes/dp/B0FB931JR3/ref=sr_1_41?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-41#customerReviews
+                - text: (22)
+            - generic [ref=f2e4409]:
+              - link "Limited time deal" [ref=f2e4411] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e4416]:
+                - generic [ref=f2e4417]: Price, product page
+                - 'link "₹11,899 M.R.P: ₹16,999 M.R.P: ₹16,999" [ref=f2e4418] [cursor=pointer]':
+                  - /url: /PUMA-Deviate-NITROTM-Running-Shoes/dp/B0FB931JR3/ref=sr_1_41?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-41
+                  - generic [ref=f2e4419]:
+                    - generic [ref=f2e4420]: ₹11,899
+                    - generic [ref=f2e4421]: ₹11,899
+                  - generic [ref=f2e4422]: "M.R.P: ₹16,999"
+                  - generic [ref=f2e4423]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e4424]:
+                      - generic [ref=f2e4425]: ₹16,999
+                      - text: ₹16,999
+                - text: (30% off)
+              - generic [ref=f2e4426]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e4431]: FREE delivery Sun, 23 Aug
+            - button "Add to cart" [ref=f2e4446] [cursor=pointer]
+      - listitem [ref=f2e4447]:
+        - generic [ref=f2e4452]:
+          - link [ref=f2e4456] [cursor=pointer]:
+            - /url: /ASIAN-MEXICO-11-Synthetic-Lightweight-Comfortable/dp/B0DBD4JYKK/ref=sr_1_42?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-42
+          - generic [ref=f2e4458]:
+            - group "colours available" [ref=f2e4460]:
+              - list [ref=f2e4461]:
+                - generic [ref=f2e4462]:
+                  - listitem:
+                    - link "Beige Lef Green":
+                      - /url: /ASIAN-MEXICO-11-Synthetic-Lightweight-Comfortable/dp/B0DBD4JYKK/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-42
+                - generic [ref=f2e4465]:
+                  - listitem:
+                    - link "White Navy":
+                      - /url: /ASIAN-MEXICO-11-Synthetic-Lightweight-Comfortable/dp/B0D6KPDR4G/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-42
+                - generic [ref=f2e4468]:
+                  - listitem:
+                    - link "White Navy Mustard":
+                      - /url: /ASIAN-MEXICO-11-Synthetic-Lightweight-Comfortable/dp/B0D5XWSYRK/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-42
+                - generic [ref=f2e4471]:
+                  - listitem:
+                    - link "BEEJ LEAF GREEN":
+                      - /url: /ASIAN-MEXICO-11-Synthetic-Lightweight-Comfortable/dp/B0F88J6RRM/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-42
+                - generic [ref=f2e4474]:
+                  - listitem:
+                    - link "Full White":
+                      - /url: /ASIAN-MEXICO-11-Synthetic-Lightweight-Comfortable/dp/B0D5XWVY6Q/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-42
+                - generic [ref=f2e4477]:
+                  - listitem:
+                    - link "Beige Mustard":
+                      - /url: /ASIAN-MEXICO-11-Synthetic-Lightweight-Comfortable/dp/B0D5XXLDKY/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-42
+              - link "+4 other colors/patterns" [ref=f2e4481] [cursor=pointer]:
+                - /url: /ASIAN-MEXICO-11-Synthetic-Lightweight-Comfortable/dp/B0DBD4JYKK/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-42
+                - text: "+4"
+            - generic [ref=f2e4482]:
+              - heading "ASIAN" [level=2] [ref=f2e4484]
+              - link [ref=f2e4485] [cursor=pointer]:
+                - /url: /ASIAN-MEXICO-11-Synthetic-Lightweight-Comfortable/dp/B0DBD4JYKK/ref=sr_1_42?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-42
+                - heading "Men's MEXICO-11 Casual Sneaker Shoes with Synthetic Upper Lightweight Comfortable Mid Top Sneaker Shoes for Men's & Boy's" [level=2] [ref=f2e4486]
+            - generic [ref=f2e4487]:
+              - generic [ref=f2e4488]:
+                - text: "3.7"
+                - button "3.7 out of 5 stars, rating details" [ref=f2e4490] [cursor=pointer]:
+                  - generic [ref=f2e4491]: 3.7 out of 5 stars
+                - link "4,624 ratings" [ref=f2e4494] [cursor=pointer]:
+                  - /url: /ASIAN-MEXICO-11-Synthetic-Lightweight-Comfortable/dp/B0DBD4JYKK/ref=sr_1_42?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-42#customerReviews
+                  - text: (4.6K)
+              - generic [ref=f2e4495]: 100+ bought in past month
+            - generic [ref=f2e4496]:
+              - generic [ref=f2e4498]:
+                - generic [ref=f2e4499]: Price, product page
+                - 'link "₹899 M.R.P: ₹1,499 M.R.P: ₹1,499" [ref=f2e4500] [cursor=pointer]':
+                  - /url: /ASIAN-MEXICO-11-Synthetic-Lightweight-Comfortable/dp/B0DBD4JYKK/ref=sr_1_42?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-42
+                  - generic [ref=f2e4501]:
+                    - generic [ref=f2e4502]: ₹899
+                    - generic [ref=f2e4503]: ₹899
+                  - generic [ref=f2e4504]: "M.R.P: ₹1,499"
+                  - generic [ref=f2e4505]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e4506]:
+                      - generic [ref=f2e4507]: ₹1,499
+                      - text: ₹1,499
+                - text: (40% off)
+              - generic [ref=f2e4510]:
+                - generic [ref=f2e4511]: You pay ₹881.02
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e4514]:
+              - generic [ref=f2e4515]: FREE delivery Sat, 22 Aug
+              - generic [ref=f2e4517]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e4529] [cursor=pointer]
+      - listitem [ref=f2e4530]:
+        - generic [ref=f2e4535]:
+          - link [ref=f2e4539] [cursor=pointer]:
+            - /url: /Reebok-Sports-Flylite-Voyager-Running/dp/B0DYV5NTN8/ref=sr_1_43?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-43
+          - generic [ref=f2e4541]:
+            - group "colours available" [ref=f2e4543]:
+              - list [ref=f2e4544]:
+                - generic [ref=f2e4545]:
+                  - listitem:
+                    - link "Jet Black":
+                      - /url: /Reebok-Sports-Flylite-Voyager-Running/dp/B0DYV5NTN8/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-43
+                - generic [ref=f2e4548]:
+                  - listitem:
+                    - link "Grey":
+                      - /url: /Reebok-Sports-Flylite-Voyager-Running/dp/B0D6N73QT5/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-43
+            - generic [ref=f2e4551]:
+              - heading "Reebok" [level=2] [ref=f2e4553]
+              - link [ref=f2e4554] [cursor=pointer]:
+                - /url: /Reebok-Sports-Flylite-Voyager-Running/dp/B0DYV5NTN8/ref=sr_1_43?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-43
+                - heading "Men's Running Shoes Lightweight Durable Sports Shoes for Men | Lightweight Gym Shoe for Men | Running, Jogging, Walking & Gym | Flylite Lss Voyager M" [level=2] [ref=f2e4555]
+            - generic [ref=f2e4557]:
+              - text: "3.9"
+              - button "3.9 out of 5 stars, rating details" [ref=f2e4559] [cursor=pointer]:
+                - generic [ref=f2e4560]: 3.9 out of 5 stars
+              - link "407 ratings" [ref=f2e4563] [cursor=pointer]:
+                - /url: /Reebok-Sports-Flylite-Voyager-Running/dp/B0DYV5NTN8/ref=sr_1_43?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-43#customerReviews
+                - text: (407)
+            - generic [ref=f2e4564]:
+              - generic [ref=f2e4566]:
+                - generic [ref=f2e4567]: Price, product page
+                - 'link "₹1,449 M.R.P: ₹2,599 M.R.P: ₹2,599" [ref=f2e4568] [cursor=pointer]':
+                  - /url: /Reebok-Sports-Flylite-Voyager-Running/dp/B0DYV5NTN8/ref=sr_1_43?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-43
+                  - generic [ref=f2e4569]:
+                    - generic [ref=f2e4570]: ₹1,449
+                    - generic [ref=f2e4571]: ₹1,449
+                  - generic [ref=f2e4572]: "M.R.P: ₹2,599"
+                  - generic [ref=f2e4573]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e4574]:
+                      - generic [ref=f2e4575]: ₹2,599
+                      - text: ₹2,599
+                - text: (44% off)
+              - generic [ref=f2e4576]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e4583]:
+              - generic [ref=f2e4584]: FREE delivery Sat, 22 Aug
+              - generic [ref=f2e4586]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e4598] [cursor=pointer]
+      - listitem [ref=f2e4599]:
+        - generic [ref=f2e4604]:
+          - link [ref=f2e4608] [cursor=pointer]:
+            - /url: /Reebok-Courtflex-Black-Badminton-Shoes/dp/B0F8NZZNC5/ref=sr_1_44?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-44
+          - generic [ref=f2e4610]:
+            - group "colours available" [ref=f2e4612]:
+              - list [ref=f2e4613]:
+                - generic [ref=f2e4614]:
+                  - listitem:
+                    - link "Black":
+                      - /url: /Reebok-Courtflex-Black-Badminton-Shoes/dp/B0F8NZZNC5/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-44
+                - generic [ref=f2e4617]:
+                  - listitem:
+                    - link "Blue":
+                      - /url: /Reebok-Courtflex-Black-Badminton-Shoes/dp/B0F9LF4SZX/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-44
+                - generic [ref=f2e4620]:
+                  - listitem:
+                    - link "White & Grey":
+                      - /url: /Reebok-Courtflex-Black-Badminton-Shoes/dp/B0D6N758HK/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-44
+                - generic [ref=f2e4623]:
+                  - listitem:
+                    - link "White & Black":
+                      - /url: /Reebok-Courtflex-Black-Badminton-Shoes/dp/B0F8P22NTY/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-44
+            - generic [ref=f2e4626]:
+              - heading "Reebok" [level=2] [ref=f2e4628]
+              - link [ref=f2e4629] [cursor=pointer]:
+                - /url: /Reebok-Courtflex-Black-Badminton-Shoes/dp/B0F8NZZNC5/ref=sr_1_44?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-44
+                - heading "Men's Badminton Shoes Cushioned Non-Marking Indoor Sports Shoes for Men | Lightweight Flexible Court Shoe | Badminton, Tennis & Indoor Sports | Courtflex M" [level=2] [ref=f2e4630]
+            - generic [ref=f2e4631]:
+              - generic [ref=f2e4632]:
+                - text: "4.2"
+                - button "4.2 out of 5 stars, rating details" [ref=f2e4634] [cursor=pointer]:
+                  - generic [ref=f2e4635]: 4.2 out of 5 stars
+                - link "631 ratings" [ref=f2e4638] [cursor=pointer]:
+                  - /url: /Reebok-Courtflex-Black-Badminton-Shoes/dp/B0F8NZZNC5/ref=sr_1_44?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-44#customerReviews
+                  - text: (631)
+              - generic [ref=f2e4639]: 200+ bought in past month
+            - generic [ref=f2e4640]:
+              - generic [ref=f2e4642]:
+                - generic [ref=f2e4643]: Price, product page
+                - 'link "₹2,199 M.R.P: ₹3,999 M.R.P: ₹3,999" [ref=f2e4644] [cursor=pointer]':
+                  - /url: /Reebok-Courtflex-Black-Badminton-Shoes/dp/B0F8NZZNC5/ref=sr_1_44?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-44
+                  - generic [ref=f2e4645]:
+                    - generic [ref=f2e4646]: ₹2,199
+                    - generic [ref=f2e4647]: ₹2,199
+                  - generic [ref=f2e4648]: "M.R.P: ₹3,999"
+                  - generic [ref=f2e4649]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e4650]:
+                      - generic [ref=f2e4651]: ₹3,999
+                      - text: ₹3,999
+                - text: (45% off)
+              - generic [ref=f2e4652]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e4659]:
+              - generic [ref=f2e4660]: FREE delivery Sat, 15 Aug
+              - generic [ref=f2e4662]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e4674] [cursor=pointer]
+      - listitem [ref=f2e4675]:
+        - generic [ref=f2e4680]:
+          - link [ref=f2e4684] [cursor=pointer]:
+            - /url: /Nike-Precision-White-Pulse-Hydrogen-Basketball/dp/B0FMN3X2XZ/ref=sr_1_45?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-45
+          - generic [ref=f2e4686]:
+            - group "colours available" [ref=f2e4688]:
+              - list [ref=f2e4689]:
+                - generic [ref=f2e4690]:
+                  - listitem:
+                    - link "White/Royal Pulse-Hydrogen Blue":
+                      - /url: /Nike-Precision-White-Pulse-Hydrogen-Basketball/dp/B0FMN3X2XZ/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-45
+                - generic [ref=f2e4693]:
+                  - listitem:
+                    - link "BLACK/UNIVERSITY RED-WHITE":
+                      - /url: /Nike-Precision-White-Pulse-Hydrogen-Basketball/dp/B0DZXR7RCQ/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-45
+                - generic [ref=f2e4696]:
+                  - listitem:
+                    - link "Black/White-White":
+                      - /url: /Nike-Precision-White-Pulse-Hydrogen-Basketball/dp/B0FMN9XK8Q/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-45
+                - generic [ref=f2e4699]:
+                  - listitem:
+                    - link "PHANTOM/OFF NOIR-SUMMIT WHITE-OFF NOIR":
+                      - /url: /Nike-Precision-White-Pulse-Hydrogen-Basketball/dp/B0G2RBXMVC/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-45
+            - generic [ref=f2e4702]:
+              - heading "Nike" [level=2] [ref=f2e4704]
+              - link [ref=f2e4705] [cursor=pointer]:
+                - /url: /Nike-Precision-White-Pulse-Hydrogen-Basketball/dp/B0FMN3X2XZ/ref=sr_1_45?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-45
+                - heading "Nike Mens Precision Mid Basketball Shoes" [level=2] [ref=f2e4706]
+            - generic [ref=f2e4708]:
+              - text: "4.3"
+              - button "4.3 out of 5 stars, rating details" [ref=f2e4710] [cursor=pointer]:
+                - generic [ref=f2e4711]: 4.3 out of 5 stars
+              - link "244 ratings" [ref=f2e4714] [cursor=pointer]:
+                - /url: /Nike-Precision-White-Pulse-Hydrogen-Basketball/dp/B0FMN3X2XZ/ref=sr_1_45?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-45#customerReviews
+                - text: (244)
+            - generic [ref=f2e4715]:
+              - link "Limited time deal" [ref=f2e4717] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e4722]:
+                - generic [ref=f2e4723]: Price, product page
+                - 'link "₹5,350 M.R.P: ₹6,295 M.R.P: ₹6,295" [ref=f2e4724] [cursor=pointer]':
+                  - /url: /Nike-Precision-White-Pulse-Hydrogen-Basketball/dp/B0FMN3X2XZ/ref=sr_1_45?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-45
+                  - generic [ref=f2e4725]:
+                    - generic [ref=f2e4726]: ₹5,350
+                    - generic [ref=f2e4727]: ₹5,350
+                  - generic [ref=f2e4728]: "M.R.P: ₹6,295"
+                  - generic [ref=f2e4729]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e4730]:
+                      - generic [ref=f2e4731]: ₹6,295
+                      - text: ₹6,295
+                - text: (15% off)
+              - generic [ref=f2e4732]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e4737]: FREE delivery Sun, 23 Aug
+            - button "Add to cart" [ref=f2e4752] [cursor=pointer]
+      - listitem [ref=f2e4753]:
+        - generic [ref=f2e4758]:
+          - link [ref=f2e4762] [cursor=pointer]:
+            - /url: /Adidas-FTWWHT-Running-Shoes-9-CL7633_9/dp/B07M92Q8XK/ref=sr_1_46?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-46
+          - generic [ref=f2e4764]:
+            - group "colours available" [ref=f2e4766]:
+              - list [ref=f2e4767]:
+                - generic [ref=f2e4768]:
+                  - listitem:
+                    - link "FTWWHT/SILVMT":
+                      - /url: /Adidas-FTWWHT-Running-Shoes-9-CL7633_9/dp/B07M92Q8XK/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-46
+                - generic [ref=f2e4771]:
+                  - listitem:
+                    - link "CARBON/VISGRE/BORANG":
+                      - /url: /Adidas-FTWWHT-Running-Shoes-9-CL7633_9/dp/B07M92Q4KR/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-46
+                - generic [ref=f2e4774]:
+                  - listitem:
+                    - link "CBLACK/FTWWHT":
+                      - /url: /Adidas-FTWWHT-Running-Shoes-9-CL7633_9/dp/B07M8S2BQX/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-46
+                - generic [ref=f2e4777]:
+                  - listitem:
+                    - link "CONAVY/SILVMT/TRUBLU":
+                      - /url: /Adidas-FTWWHT-Running-Shoes-9-CL7633_9/dp/B07LH5ZHCW/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-46
+                - generic [ref=f2e4780]:
+                  - listitem:
+                    - link "TECINK/LEGINK":
+                      - /url: /Adidas-FTWWHT-Running-Shoes-9-CL7633_9/dp/B07M871J34/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-46
+                - generic [ref=f2e4783]:
+                  - listitem:
+                    - link "BLUNIT/ACTGOL/SILVMT":
+                      - /url: /Adidas-FTWWHT-Running-Shoes-9-CL7633_9/dp/B07M8HLT3T/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-46
+              - link "+5 other colors/patterns" [ref=f2e4787] [cursor=pointer]:
+                - /url: /Adidas-FTWWHT-Running-Shoes-9-CL7633_9/dp/B07M92Q8XK/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-46
+                - text: "+5"
+            - generic [ref=f2e4788]:
+              - heading "adidas" [level=2] [ref=f2e4790]
+              - link [ref=f2e4791] [cursor=pointer]:
+                - /url: /Adidas-FTWWHT-Running-Shoes-9-CL7633_9/dp/B07M92Q8XK/ref=sr_1_46?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-46
+                - heading "Men Drogo M Running Shoe" [level=2] [ref=f2e4792]
+            - generic [ref=f2e4793]:
+              - generic [ref=f2e4794]:
+                - text: "4.0"
+                - button "4.0 out of 5 stars, rating details" [ref=f2e4796] [cursor=pointer]:
+                  - generic [ref=f2e4797]: 4.0 out of 5 stars
+                - link "16,549 ratings" [ref=f2e4800] [cursor=pointer]:
+                  - /url: /Adidas-FTWWHT-Running-Shoes-9-CL7633_9/dp/B07M92Q8XK/ref=sr_1_46?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-46#customerReviews
+                  - text: (16.5K)
+              - generic [ref=f2e4801]: 200+ bought in past month
+            - generic [ref=f2e4802]:
+              - link "Mega Deal Days" [ref=f2e4804] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e4809]:
+                - generic [ref=f2e4810]: Price, product page
+                - 'link "₹1,749 M.R.P: ₹3,299 M.R.P: ₹3,299" [ref=f2e4811] [cursor=pointer]':
+                  - /url: /Adidas-FTWWHT-Running-Shoes-9-CL7633_9/dp/B07M92Q8XK/ref=sr_1_46?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-46
+                  - generic [ref=f2e4812]:
+                    - generic [ref=f2e4813]: ₹1,749
+                    - generic [ref=f2e4814]: ₹1,749
+                  - generic [ref=f2e4815]: "M.R.P: ₹3,299"
+                  - generic [ref=f2e4816]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e4817]:
+                      - generic [ref=f2e4818]: ₹3,299
+                      - text: ₹3,299
+                - text: (47% off)
+              - generic [ref=f2e4819]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e4826]:
+              - generic [ref=f2e4827]: FREE delivery Sat, 22 Aug
+              - generic [ref=f2e4829]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e4841] [cursor=pointer]
+      - listitem [ref=f2e4842]:
+        - generic [ref=f2e4847]:
+          - link [ref=f2e4851] [cursor=pointer]:
+            - /url: /Reebok-RMSOPA4120-Baseliner-White/dp/B0F8P1DZQM/ref=sr_1_47?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-47
+          - generic [ref=f2e4853]:
+            - group "colours available" [ref=f2e4855]:
+              - list [ref=f2e4856]:
+                - generic [ref=f2e4857]:
+                  - listitem:
+                    - link "White 2":
+                      - /url: /Reebok-RMSOPA4120-Baseliner-White/dp/B0F8P1DZQM/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-47
+                - generic [ref=f2e4860]:
+                  - listitem:
+                    - link "Black 1":
+                      - /url: /Reebok-RMSOPA4120-Baseliner-White/dp/B0F8P11VGD/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-47
+                - generic [ref=f2e4863]:
+                  - listitem:
+                    - link "Grey":
+                      - /url: /Reebok-RMSOPA4120-Baseliner-White/dp/B0H3BC4QFN/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-47
+                - generic [ref=f2e4866]:
+                  - listitem:
+                    - link "White 1":
+                      - /url: /Reebok-RMSOPA4120-Baseliner-White/dp/B0G9391HHW/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-47
+                - generic [ref=f2e4869]:
+                  - listitem:
+                    - link "Black 2":
+                      - /url: /Reebok-RMSOPA4120-Baseliner-White/dp/B0H3BKD9ZS/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-47
+            - generic [ref=f2e4872]:
+              - heading "Reebok" [level=2] [ref=f2e4874]
+              - link [ref=f2e4875] [cursor=pointer]:
+                - /url: /Reebok-RMSOPA4120-Baseliner-White/dp/B0F8P1DZQM/ref=sr_1_47?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-47
+                - heading "Men's - Baseliner Shoe - High Performance Sports - Tennis Shoe with Superior Traction." [level=2] [ref=f2e4876]
+            - generic [ref=f2e4877]:
+              - generic [ref=f2e4878]:
+                - text: "4.0"
+                - button "4.0 out of 5 stars, rating details" [ref=f2e4880] [cursor=pointer]:
+                  - generic [ref=f2e4881]: 4.0 out of 5 stars
+                - link "692 ratings" [ref=f2e4884] [cursor=pointer]:
+                  - /url: /Reebok-RMSOPA4120-Baseliner-White/dp/B0F8P1DZQM/ref=sr_1_47?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-47#customerReviews
+                  - text: (692)
+              - generic [ref=f2e4885]: 200+ bought in past month
+            - generic [ref=f2e4886]:
+              - generic [ref=f2e4888]:
+                - generic [ref=f2e4889]: Price, product page
+                - 'link "₹2,299 M.R.P: ₹3,999 M.R.P: ₹3,999" [ref=f2e4890] [cursor=pointer]':
+                  - /url: /Reebok-RMSOPA4120-Baseliner-White/dp/B0F8P1DZQM/ref=sr_1_47?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-47
+                  - generic [ref=f2e4891]:
+                    - generic [ref=f2e4892]: ₹2,299
+                    - generic [ref=f2e4893]: ₹2,299
+                  - generic [ref=f2e4894]: "M.R.P: ₹3,999"
+                  - generic [ref=f2e4895]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e4896]:
+                      - generic [ref=f2e4897]: ₹3,999
+                      - text: ₹3,999
+                - text: (43% off)
+              - generic [ref=f2e4898]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e4905]:
+              - generic [ref=f2e4906]: FREE delivery Sat, 22 Aug
+              - generic [ref=f2e4908]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e4920] [cursor=pointer]
+      - listitem [ref=f2e4921]:
+        - generic [ref=f2e4926]:
+          - link [ref=f2e4930] [cursor=pointer]:
+            - /url: /Campus-North-Black-Running-Shoes/dp/B08PSHLJGL/ref=sr_1_48?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-48
+          - generic [ref=f2e4932]:
+            - group "colours available" [ref=f2e4934]:
+              - list [ref=f2e4935]:
+                - generic [ref=f2e4936]:
+                  - listitem:
+                    - link "FULL BLK":
+                      - /url: /Campus-North-Black-Running-Shoes/dp/B08PSHLJGL/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-48
+                - generic [ref=f2e4939]:
+                  - listitem:
+                    - link "BLK/RED":
+                      - /url: /Campus-North-Black-Running-Shoes/dp/B08PS13FTD/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-48
+                - generic [ref=f2e4942]:
+                  - listitem:
+                    - link "Black":
+                      - /url: /Campus-North-Black-Running-Shoes/dp/B08PSHZLN2/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-48
+                - generic [ref=f2e4945]:
+                  - listitem:
+                    - link "L.GRY/MHRN":
+                      - /url: /Campus-North-Black-Running-Shoes/dp/B08PRYCLQ6/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-48
+                - generic [ref=f2e4948]:
+                  - listitem:
+                    - link "MODERATE BLU":
+                      - /url: /Campus-North-Black-Running-Shoes/dp/B08PSBG61C/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-48
+                - generic [ref=f2e4951]:
+                  - listitem:
+                    - link "NAVY/WHT":
+                      - /url: /Campus-North-Black-Running-Shoes/dp/B08PRFCXYV/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-48
+              - link "+7 other colors/patterns" [ref=f2e4955] [cursor=pointer]:
+                - /url: /Campus-North-Black-Running-Shoes/dp/B08PSHLJGL/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-48
+                - text: "+7"
+            - generic [ref=f2e4956]:
+              - heading "Campus" [level=2] [ref=f2e4958]
+              - link [ref=f2e4959] [cursor=pointer]:
+                - /url: /Campus-North-Black-Running-Shoes/dp/B08PSHLJGL/ref=sr_1_48?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-48
+                - heading "Men North Plus Running Shoes" [level=2] [ref=f2e4960]
+            - generic [ref=f2e4961]:
+              - generic [ref=f2e4962]:
+                - text: "4.0"
+                - button "4.0 out of 5 stars, rating details" [ref=f2e4964] [cursor=pointer]:
+                  - generic [ref=f2e4965]: 4.0 out of 5 stars
+                - link "18,115 ratings" [ref=f2e4968] [cursor=pointer]:
+                  - /url: /Campus-North-Black-Running-Shoes/dp/B08PSHLJGL/ref=sr_1_48?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-48#customerReviews
+                  - text: (18.1K)
+              - generic [ref=f2e4969]: 300+ bought in past month
+            - generic [ref=f2e4970]:
+              - link "Mega Deal Days" [ref=f2e4972] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e4977]:
+                - generic [ref=f2e4978]: Price, product page
+                - 'link "₹1,089 M.R.P: ₹1,899 M.R.P: ₹1,899" [ref=f2e4979] [cursor=pointer]':
+                  - /url: /Campus-North-Black-Running-Shoes/dp/B08PSHLJGL/ref=sr_1_48?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-48
+                  - generic [ref=f2e4980]:
+                    - generic [ref=f2e4981]: ₹1,089
+                    - generic [ref=f2e4982]: ₹1,089
+                  - generic [ref=f2e4983]: "M.R.P: ₹1,899"
+                  - generic [ref=f2e4984]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e4985]:
+                      - generic [ref=f2e4986]: ₹1,899
+                      - text: ₹1,899
+                - text: (43% off)
+              - generic [ref=f2e4989]:
+                - generic [ref=f2e4990]: You pay ₹1,056.33
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e4993]:
+              - generic [ref=f2e4994]: FREE delivery Sat, 15 Aug
+              - generic [ref=f2e4996]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e5008] [cursor=pointer]
+      - listitem [ref=f2e5009]:
+        - generic [ref=f2e5014]:
+          - link [ref=f2e5018] [cursor=pointer]:
+            - /url: /Nivia-103BK-Marathon-Running-Shoes/dp/B07JHXYXMN/ref=sr_1_49?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-49
+          - generic [ref=f2e5020]:
+            - group "colours available" [ref=f2e5022]:
+              - list [ref=f2e5023]:
+                - generic [ref=f2e5024]:
+                  - listitem:
+                    - link "Navy/Black":
+                      - /url: /Nivia-103BK-Marathon-Running-Shoes/dp/B07JHXYXMN/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-49
+                - generic [ref=f2e5027]:
+                  - listitem:
+                    - link "Black/Blue":
+                      - /url: /Nivia-103BK-Marathon-Running-Shoes/dp/B0155FS15K/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-49
+            - generic [ref=f2e5030]:
+              - heading "Nivia" [level=2] [ref=f2e5032]
+              - link [ref=f2e5033] [cursor=pointer]:
+                - /url: /Nivia-103BK-Marathon-Running-Shoes/dp/B07JHXYXMN/ref=sr_1_49?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-49
+                - heading "Men Marathon Running Shoe for Mens | Rubber Outsole with Breathable Mesh Upper with PVC Synthetic Leather | Die Cut N.R E.VA Sockliner | Ideal for Trail Running" [level=2] [ref=f2e5034]
+            - generic [ref=f2e5035]:
+              - generic [ref=f2e5036]:
+                - text: "4.0"
+                - button "4.0 out of 5 stars, rating details" [ref=f2e5038] [cursor=pointer]:
+                  - generic [ref=f2e5039]: 4.0 out of 5 stars
+                - link "1,909 ratings" [ref=f2e5042] [cursor=pointer]:
+                  - /url: /Nivia-103BK-Marathon-Running-Shoes/dp/B07JHXYXMN/ref=sr_1_49?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-49#customerReviews
+                  - text: (1.9K)
+              - generic [ref=f2e5043]: 300+ bought in past month
+            - generic [ref=f2e5044]:
+              - generic [ref=f2e5046]:
+                - generic [ref=f2e5047]: Price, product page
+                - 'link "₹996 M.R.P: ₹1,329 M.R.P: ₹1,329" [ref=f2e5048] [cursor=pointer]':
+                  - /url: /Nivia-103BK-Marathon-Running-Shoes/dp/B07JHXYXMN/ref=sr_1_49?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-49
+                  - generic [ref=f2e5049]:
+                    - generic [ref=f2e5050]: ₹996
+                    - generic [ref=f2e5051]: ₹996
+                  - generic [ref=f2e5052]: "M.R.P: ₹1,329"
+                  - generic [ref=f2e5053]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e5054]:
+                      - generic [ref=f2e5055]: ₹1,329
+                      - text: ₹1,329
+                - text: (25% off)
+              - generic [ref=f2e5056]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e5063]:
+              - generic [ref=f2e5064]: FREE delivery Sat, 22 Aug
+              - generic [ref=f2e5066]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e5078] [cursor=pointer]
+      - listitem [ref=f2e5079]:
+        - generic [ref=f2e5084]:
+          - link [ref=f2e5088] [cursor=pointer]:
+            - /url: /DOCTOR-EXTRA-SOFT-Comfortable-Lightweight/dp/B0DF5W1SWW/ref=sr_1_50?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-50
+          - generic [ref=f2e5090]:
+            - group "colours available" [ref=f2e5092]:
+              - list [ref=f2e5093]:
+                - generic [ref=f2e5094]:
+                  - listitem:
+                    - link "Grey":
+                      - /url: /DOCTOR-EXTRA-SOFT-Comfortable-Lightweight/dp/B0DF5W1SWW/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-50
+                - generic [ref=f2e5097]:
+                  - listitem:
+                    - link "Olive":
+                      - /url: /DOCTOR-EXTRA-SOFT-Comfortable-Lightweight/dp/B0DWKRXX3R/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-50
+                - generic [ref=f2e5100]:
+                  - listitem:
+                    - link "Navy":
+                      - /url: /DOCTOR-EXTRA-SOFT-Comfortable-Lightweight/dp/B0DF5X4PSB/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-50
+                - generic [ref=f2e5103]:
+                  - listitem:
+                    - link "Black":
+                      - /url: /DOCTOR-EXTRA-SOFT-Comfortable-Lightweight/dp/B0DF5X9HJR/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-50
+            - generic [ref=f2e5106]:
+              - heading "DOCTOR EXTRA SOFT" [level=2] [ref=f2e5108]
+              - link [ref=f2e5109] [cursor=pointer]:
+                - /url: /DOCTOR-EXTRA-SOFT-Comfortable-Lightweight/dp/B0DF5W1SWW/ref=sr_1_50?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-50
+                - heading "Men's Sports Shoes with Memory Foam Cushioned Insole|Running Walking Gym Training Jogging Athletics|Comfortable & Stylish|Casual & Lightweight|Slipon Sneaker Gent's & Boy's ART-2008" [level=2] [ref=f2e5110]
+            - generic [ref=f2e5111]:
+              - generic [ref=f2e5112]:
+                - text: "4.2"
+                - button "4.2 out of 5 stars, rating details" [ref=f2e5114] [cursor=pointer]:
+                  - generic [ref=f2e5115]: 4.2 out of 5 stars
+                - link "2,430 ratings" [ref=f2e5118] [cursor=pointer]:
+                  - /url: /DOCTOR-EXTRA-SOFT-Comfortable-Lightweight/dp/B0DF5W1SWW/ref=sr_1_50?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-50#customerReviews
+                  - text: (2.4K)
+              - generic [ref=f2e5119]: 100+ bought in past month
+            - generic [ref=f2e5120]:
+              - link "Mega Deal Days" [ref=f2e5122] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e5127]:
+                - generic [ref=f2e5128]: Price, product page
+                - 'link "₹1,319 M.R.P: ₹5,999 M.R.P: ₹5,999" [ref=f2e5129] [cursor=pointer]':
+                  - /url: /DOCTOR-EXTRA-SOFT-Comfortable-Lightweight/dp/B0DF5W1SWW/ref=sr_1_50?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-50
+                  - generic [ref=f2e5130]:
+                    - generic [ref=f2e5131]: ₹1,319
+                    - generic [ref=f2e5132]: ₹1,319
+                  - generic [ref=f2e5133]: "M.R.P: ₹5,999"
+                  - generic [ref=f2e5134]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e5135]:
+                      - generic [ref=f2e5136]: ₹5,999
+                      - text: ₹5,999
+                - text: (78% off)
+              - generic [ref=f2e5139]:
+                - generic [ref=f2e5140]: You pay ₹1,279.43
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e5143]:
+              - generic [ref=f2e5144]: FREE delivery Sat, 22 Aug
+              - generic [ref=f2e5146]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e5158] [cursor=pointer]
+      - listitem [ref=f2e5159]:
+        - generic [ref=f2e5164]:
+          - link [ref=f2e5168] [cursor=pointer]:
+            - /url: /New-Balance-Womens-Lifestyle-Black/dp/B08M1YHW9Q/ref=sr_1_51?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-51
+          - generic [ref=f2e5170]:
+            - group "colours available" [ref=f2e5172]:
+              - list [ref=f2e5173]:
+                - generic [ref=f2e5174]:
+                  - listitem:
+                    - link "Black":
+                      - /url: /New-Balance-Womens-Lifestyle-Black/dp/B08M1YHW9Q/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-51
+                - generic [ref=f2e5177]:
+                  - listitem:
+                    - link "Blue":
+                      - /url: /New-Balance-Womens-Lifestyle-Black/dp/B0847SYBRR/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-51
+                - generic [ref=f2e5180]:
+                  - listitem:
+                    - link "Citra Yellow":
+                      - /url: /New-Balance-Womens-Lifestyle-Black/dp/B08Z45NJNN/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-51
+                - generic [ref=f2e5183]:
+                  - listitem:
+                    - link "Outerspace":
+                      - /url: /New-Balance-Womens-Lifestyle-Black/dp/B0FQBVCJCY/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-51
+                - generic [ref=f2e5186]:
+                  - listitem:
+                    - link "NB Burgundy":
+                      - /url: /New-Balance-Womens-Lifestyle-Black/dp/B0FQBXDY8C/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-51
+                - generic [ref=f2e5189]:
+                  - listitem:
+                    - link "Nightwatch Green":
+                      - /url: /New-Balance-Womens-Lifestyle-Black/dp/B08PCDL96S/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-51
+              - link "+4 other colors/patterns" [ref=f2e5193] [cursor=pointer]:
+                - /url: /New-Balance-Womens-Lifestyle-Black/dp/B08M1YHW9Q/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-51
+                - text: "+4"
+            - generic [ref=f2e5194]:
+              - heading "new balance" [level=2] [ref=f2e5196]
+              - link [ref=f2e5197] [cursor=pointer]:
+                - /url: /New-Balance-Womens-Lifestyle-Black/dp/B08M1YHW9Q/ref=sr_1_51?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-51
+                - heading "Men 720 Sneaker" [level=2] [ref=f2e5198]
+            - generic [ref=f2e5200]:
+              - text: "3.7"
+              - button "3.7 out of 5 stars, rating details" [ref=f2e5202] [cursor=pointer]:
+                - generic [ref=f2e5203]: 3.7 out of 5 stars
+              - link "57 ratings" [ref=f2e5206] [cursor=pointer]:
+                - /url: /New-Balance-Womens-Lifestyle-Black/dp/B08M1YHW9Q/ref=sr_1_51?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-51#customerReviews
+                - text: (57)
+            - generic [ref=f2e5207]:
+              - generic [ref=f2e5209]:
+                - generic [ref=f2e5210]: Price, product page
+                - 'link "₹3,299 M.R.P: ₹5,999 M.R.P: ₹5,999" [ref=f2e5211] [cursor=pointer]':
+                  - /url: /New-Balance-Womens-Lifestyle-Black/dp/B08M1YHW9Q/ref=sr_1_51?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-51
+                  - generic [ref=f2e5212]:
+                    - generic [ref=f2e5213]: ₹3,299
+                    - generic [ref=f2e5214]: ₹3,299
+                  - generic [ref=f2e5215]: "M.R.P: ₹5,999"
+                  - generic [ref=f2e5216]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e5217]:
+                      - generic [ref=f2e5218]: ₹5,999
+                      - text: ₹5,999
+                - text: (45% off)
+              - generic [ref=f2e5219]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e5224]: FREE delivery Sat, 22 Aug
+            - button "Add to cart" [ref=f2e5239] [cursor=pointer]
+      - listitem [ref=f2e5240]:
+        - generic [ref=f2e5245]:
+          - link [ref=f2e5249] [cursor=pointer]:
+            - /url: /Campus-DRIVO-L-Sky-Running-Shoes/dp/B0FWKWPDDD/ref=sr_1_52?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-52
+          - generic [ref=f2e5251]:
+            - group "colours available" [ref=f2e5253]:
+              - list [ref=f2e5254]:
+                - generic [ref=f2e5255]:
+                  - listitem:
+                    - link "WHITE/SKY":
+                      - /url: /Campus-DRIVO-L-Sky-Running-Shoes/dp/B0FWKWPDDD/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-52
+                - generic [ref=f2e5258]:
+                  - listitem:
+                    - link "BLACK":
+                      - /url: /Campus-DRIVO-L-Sky-Running-Shoes/dp/B0FWKMKMYD/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-52
+                - generic [ref=f2e5261]:
+                  - listitem:
+                    - link "LIGHT GREY/NAVY":
+                      - /url: /Campus-DRIVO-L-Sky-Running-Shoes/dp/B0FWKT6PFP/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-52
+                - generic [ref=f2e5264]:
+                  - listitem:
+                    - link "WHITE/BEIGE":
+                      - /url: /Campus-DRIVO-L-Sky-Running-Shoes/dp/B0FWKP119X/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-52
+            - generic [ref=f2e5267]:
+              - heading "Campus" [level=2] [ref=f2e5269]
+              - link [ref=f2e5270] [cursor=pointer]:
+                - /url: /Campus-DRIVO-L-Sky-Running-Shoes/dp/B0FWKWPDDD/ref=sr_1_52?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-52
+                - heading "Men's DRIVO Running Shoes" [level=2] [ref=f2e5271]
+            - generic [ref=f2e5272]:
+              - generic [ref=f2e5273]:
+                - text: "4.2"
+                - button "4.2 out of 5 stars, rating details" [ref=f2e5275] [cursor=pointer]:
+                  - generic [ref=f2e5276]: 4.2 out of 5 stars
+                - link "912 ratings" [ref=f2e5279] [cursor=pointer]:
+                  - /url: /Campus-DRIVO-L-Sky-Running-Shoes/dp/B0FWKWPDDD/ref=sr_1_52?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-52#customerReviews
+                  - text: (912)
+              - generic [ref=f2e5280]: 200+ bought in past month
+            - generic [ref=f2e5281]:
+              - link "Mega Deal Days" [ref=f2e5283] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e5288]:
+                - generic [ref=f2e5289]: Price, product page
+                - 'link "₹1,348 M.R.P: ₹2,499 M.R.P: ₹2,499" [ref=f2e5290] [cursor=pointer]':
+                  - /url: /Campus-DRIVO-L-Sky-Running-Shoes/dp/B0FWKWPDDD/ref=sr_1_52?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-52
+                  - generic [ref=f2e5291]:
+                    - generic [ref=f2e5292]: ₹1,348
+                    - generic [ref=f2e5293]: ₹1,348
+                  - generic [ref=f2e5294]: "M.R.P: ₹2,499"
+                  - generic [ref=f2e5295]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e5296]:
+                      - generic [ref=f2e5297]: ₹2,499
+                      - text: ₹2,499
+                - text: (46% off)
+              - generic [ref=f2e5300]:
+                - generic [ref=f2e5301]: You pay ₹1,280.60
+                - text: with coupon (limited sizes/colours)
+            - generic [ref=f2e5302]: FREE delivery Sat, 22 Aug
+            - button "Add to cart" [ref=f2e5317] [cursor=pointer]
+      - listitem [ref=f2e5318]:
+        - generic [ref=f2e5323]:
+          - link [ref=f2e5327] [cursor=pointer]:
+            - /url: /Balance-Unisex-U370IPC-Casual-White/dp/B0FH4T5B9T/ref=sr_1_53?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-53
+          - generic [ref=f2e5329]:
+            - group "colours available" [ref=f2e5331]:
+              - list [ref=f2e5332]:
+                - generic [ref=f2e5333]:
+                  - listitem:
+                    - link "Sea Salt":
+                      - /url: /Balance-Unisex-U370IPC-Casual-White/dp/B0FH4T5B9T/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-53
+                - generic [ref=f2e5336]:
+                  - listitem:
+                    - link "Castlerock":
+                      - /url: /Balance-Unisex-U370IPC-Casual-White/dp/B0FH4SB43Q/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-53
+                - generic [ref=f2e5339]:
+                  - listitem:
+                    - link "Boulder":
+                      - /url: /Balance-Unisex-U370IPC-Casual-White/dp/B0FH4TGS3Z/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-53
+                - generic [ref=f2e5342]:
+                  - listitem:
+                    - link "Frosted Glass":
+                      - /url: /Balance-Unisex-U370IPC-Casual-White/dp/B0FH4SFTSM/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-53
+                - generic [ref=f2e5345]:
+                  - listitem:
+                    - link "Rose Sugar":
+                      - /url: /Balance-Unisex-U370IPC-Casual-White/dp/B0FH4SDJQX/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-53
+                - generic [ref=f2e5348]:
+                  - listitem:
+                    - link "BLACK":
+                      - /url: /Balance-Unisex-U370IPC-Casual-White/dp/B0GLFJJFCR/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-53
+              - link "+7 other colors/patterns" [ref=f2e5352] [cursor=pointer]:
+                - /url: /Balance-Unisex-U370IPC-Casual-White/dp/B0FH4T5B9T/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-53
+                - text: "+7"
+            - generic [ref=f2e5353]:
+              - heading "new balance" [level=2] [ref=f2e5355]
+              - link [ref=f2e5356] [cursor=pointer]:
+                - /url: /Balance-Unisex-U370IPC-Casual-White/dp/B0FH4T5B9T/ref=sr_1_53?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-53
+                - heading "Unisex-Adult 370 Sneaker" [level=2] [ref=f2e5357]
+            - generic [ref=f2e5359]:
+              - text: "3.8"
+              - button "3.8 out of 5 stars, rating details" [ref=f2e5361] [cursor=pointer]:
+                - generic [ref=f2e5362]: 3.8 out of 5 stars
+              - link "13 ratings" [ref=f2e5365] [cursor=pointer]:
+                - /url: /Balance-Unisex-U370IPC-Casual-White/dp/B0FH4T5B9T/ref=sr_1_53?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-53#customerReviews
+                - text: (13)
+            - link "See options" [ref=f2e5373] [cursor=pointer]:
+              - /url: /Balance-Unisex-U370IPC-Casual-White/dp/B0FH4T5B9T/ref=sr_1_53_so_SHOES?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-53
+            - generic [ref=f2e5375]:
+              - text: No featured offers available₹7,558
+              - link "(1 new offer)" [ref=f2e5377] [cursor=pointer]:
+                - /url: /gp/offer-listing/B0FH4T5B9T/ref=sr_1_53_olp?keywords=shoes&dib_tag=se&dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&qid=1786629716&sr=8-53
+      - listitem [ref=f2e5378]:
+        - generic [ref=f2e5383]:
+          - link [ref=f2e5387] [cursor=pointer]:
+            - /url: /Mens-Cloud-Sneakers-Sand-Dune/dp/B0D31TFD37/ref=sr_1_54?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-54
+          - generic [ref=f2e5389]:
+            - group "colours available" [ref=f2e5391]:
+              - list [ref=f2e5392]:
+                - generic [ref=f2e5393]:
+                  - listitem:
+                    - link "Sand/Dune":
+                      - /url: /Mens-Cloud-Sneakers-Sand-Dune/dp/B0D31TFD37/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-54
+                - generic [ref=f2e5396]:
+                  - listitem:
+                    - link "Alloy/Wolf":
+                      - /url: /Mens-Cloud-Sneakers-Sand-Dune/dp/B0D31V4FTG/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-54
+                - generic [ref=f2e5399]:
+                  - listitem:
+                    - link "Black/Black":
+                      - /url: /Mens-Cloud-Sneakers-Sand-Dune/dp/B0D31TDYJ3/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-54
+                - generic [ref=f2e5402]:
+                  - listitem:
+                    - link "Iceberg/Tin":
+                      - /url: /Mens-Cloud-Sneakers-Sand-Dune/dp/B0F7DR4J9Z/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-54
+                - generic [ref=f2e5405]:
+                  - listitem:
+                    - link "Olive/Safari":
+                      - /url: /Mens-Cloud-Sneakers-Sand-Dune/dp/B0F7D11BB9/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-54
+                - generic [ref=f2e5408]:
+                  - listitem:
+                    - link "Caper/Grove":
+                      - /url: /Mens-Cloud-Sneakers-Sand-Dune/dp/B0D31W6NPG/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-54
+              - link "+3 other colors/patterns" [ref=f2e5412] [cursor=pointer]:
+                - /url: /Mens-Cloud-Sneakers-Sand-Dune/dp/B0D31TFD37/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-54
+                - text: "+3"
+            - generic [ref=f2e5413]:
+              - heading "On" [level=2] [ref=f2e5415]
+              - link [ref=f2e5416] [cursor=pointer]:
+                - /url: /Mens-Cloud-Sneakers-Sand-Dune/dp/B0D31TFD37/ref=sr_1_54?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-54
+                - heading "Men's Cloud 6 WP Sneakers" [level=2] [ref=f2e5417]
+            - generic [ref=f2e5419]:
+              - text: "4.4"
+              - button "4.4 out of 5 stars, rating details" [ref=f2e5421] [cursor=pointer]:
+                - generic [ref=f2e5422]: 4.4 out of 5 stars
+              - link "698 ratings" [ref=f2e5425] [cursor=pointer]:
+                - /url: /Mens-Cloud-Sneakers-Sand-Dune/dp/B0D31TFD37/ref=sr_1_54?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-54#customerReviews
+                - text: (698)
+            - generic [ref=f2e5426]:
+              - generic [ref=f2e5428]:
+                - generic [ref=f2e5429]: Price, product page
+                - link "₹74,344" [ref=f2e5430] [cursor=pointer]:
+                  - /url: /Mens-Cloud-Sneakers-Sand-Dune/dp/B0D31TFD37/ref=sr_1_54?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-54
+                  - generic [ref=f2e5431]:
+                    - generic [ref=f2e5432]: ₹74,344
+                    - generic [ref=f2e5433]: ₹74,344
+              - generic [ref=f2e5434]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e5439]: FREE delivery 24 - 26 Aug
+            - button "Add to cart" [ref=f2e5456] [cursor=pointer]
+      - listitem [ref=f2e5457]:
+        - generic [ref=f2e5462]:
+          - generic [ref=f2e5463]: New Season
+          - link [ref=f2e5471] [cursor=pointer]:
+            - /url: /Red-Tape-Sneakers-Round-Lace-Up/dp/B0H6WMWQ5B/ref=sr_1_55?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-55
+          - generic [ref=f2e5473]:
+            - group "colours available" [ref=f2e5475]:
+              - list [ref=f2e5476]:
+                - generic [ref=f2e5477]:
+                  - listitem:
+                    - link "Grey":
+                      - /url: /Red-Tape-Sneakers-Round-Lace-Up/dp/B0H6WMWQ5B/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-55
+                - generic [ref=f2e5480]:
+                  - listitem:
+                    - link "Black White":
+                      - /url: /Red-Tape-Sneakers-Round-Lace-Up/dp/B0H6WRCQQC/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-55
+            - generic [ref=f2e5483]:
+              - heading "Red Tape" [level=2] [ref=f2e5485]
+              - link [ref=f2e5486] [cursor=pointer]:
+                - /url: /Red-Tape-Sneakers-Round-Lace-Up/dp/B0H6WMWQ5B/ref=sr_1_55?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-55
+                - heading "Men's Sneakers White Blue Mesh Pu Round Toe Lace-Up" [level=2] [ref=f2e5487]
+            - generic [ref=f2e5488]:
+              - generic [ref=f2e5489]:
+                - text: "4.1"
+                - button "4.1 out of 5 stars, rating details" [ref=f2e5491] [cursor=pointer]:
+                  - generic [ref=f2e5492]: 4.1 out of 5 stars
+                - link "8 ratings" [ref=f2e5495] [cursor=pointer]:
+                  - /url: /Red-Tape-Sneakers-Round-Lace-Up/dp/B0H6WMWQ5B/ref=sr_1_55?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-55#customerReviews
+                  - text: (8)
+              - generic [ref=f2e5496]: 100+ bought in past month
+            - generic [ref=f2e5497]:
+              - link "Limited time deal" [ref=f2e5499] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e5504]:
+                - generic [ref=f2e5505]: Price, product page
+                - 'link "₹994 M.R.P: ₹6,499 M.R.P: ₹6,499" [ref=f2e5506] [cursor=pointer]':
+                  - /url: /Red-Tape-Sneakers-Round-Lace-Up/dp/B0H6WMWQ5B/ref=sr_1_55?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-55
+                  - generic [ref=f2e5507]:
+                    - generic [ref=f2e5508]: ₹994
+                    - generic [ref=f2e5509]: ₹994
+                  - generic [ref=f2e5510]: "M.R.P: ₹6,499"
+                  - generic [ref=f2e5511]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e5512]:
+                      - generic [ref=f2e5513]: ₹6,499
+                      - text: ₹6,499
+                - text: (85% off)
+              - generic [ref=f2e5514]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e5519]: FREE delivery Mon, 24 Aug
+            - button "Add to cart" [ref=f2e5534] [cursor=pointer]
+      - listitem [ref=f2e5535]:
+        - generic [ref=f2e5540]:
+          - link [ref=f2e5544] [cursor=pointer]:
+            - /url: /Balance-Womens-Sports-Shoes-Green/dp/B0D2Y6WXG7/ref=sr_1_56?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-56
+          - generic [ref=f2e5546]:
+            - group "colours available" [ref=f2e5548]:
+              - list [ref=f2e5549]:
+                - generic [ref=f2e5550]:
+                  - listitem:
+                    - link "Reflection_2":
+                      - /url: /Balance-Womens-Sports-Shoes-Green/dp/B0D2Y6WXG7/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-56
+                - generic [ref=f2e5553]:
+                  - listitem:
+                    - link "Clementine":
+                      - /url: /Balance-Womens-Sports-Shoes-Green/dp/B0D35G588L/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-56
+                - generic [ref=f2e5556]:
+                  - listitem:
+                    - link "Shipyard":
+                      - /url: /Balance-Womens-Sports-Shoes-Green/dp/B0DJVCXS69/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-56
+                - generic [ref=f2e5559]:
+                  - listitem:
+                    - link "BLACK CEMENT":
+                      - /url: /Balance-Womens-Sports-Shoes-Green/dp/B0D2Y5CW7X/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-56
+                - generic [ref=f2e5562]:
+                  - listitem:
+                    - link "Clementine_2":
+                      - /url: /Balance-Womens-Sports-Shoes-Green/dp/B0D2Y996F1/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-56
+                - generic [ref=f2e5565]:
+                  - listitem:
+                    - link "Pearl Grey/Calcium/Dusk Shower":
+                      - /url: /Balance-Womens-Sports-Shoes-Green/dp/B0D2Y7KL58/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-56
+              - link "+12 other colors/patterns" [ref=f2e5569] [cursor=pointer]:
+                - /url: /Balance-Womens-Sports-Shoes-Green/dp/B0D2Y6WXG7/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-56
+                - text: "+12"
+            - generic [ref=f2e5570]:
+              - heading "new balance" [level=2] [ref=f2e5572]
+              - link [ref=f2e5573] [cursor=pointer]:
+                - /url: /Balance-Womens-Sports-Shoes-Green/dp/B0D2Y6WXG7/ref=sr_1_56?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-56
+                - heading "Women 880 Running Shoes" [level=2] [ref=f2e5574]
+            - generic [ref=f2e5576]:
+              - text: "4.4"
+              - button "4.4 out of 5 stars, rating details" [ref=f2e5578] [cursor=pointer]:
+                - generic [ref=f2e5579]: 4.4 out of 5 stars
+              - link "179 ratings" [ref=f2e5582] [cursor=pointer]:
+                - /url: /Balance-Womens-Sports-Shoes-Green/dp/B0D2Y6WXG7/ref=sr_1_56?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-56#customerReviews
+                - text: (179)
+            - generic [ref=f2e5583]:
+              - generic [ref=f2e5585]:
+                - generic [ref=f2e5586]: Price, product page
+                - 'link "₹6,422 M.R.P: ₹12,999 M.R.P: ₹12,999" [ref=f2e5587] [cursor=pointer]':
+                  - /url: /Balance-Womens-Sports-Shoes-Green/dp/B0D2Y6WXG7/ref=sr_1_56?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-56
+                  - generic [ref=f2e5588]:
+                    - generic [ref=f2e5589]: ₹6,422
+                    - generic [ref=f2e5590]: ₹6,422
+                  - generic [ref=f2e5591]: "M.R.P: ₹12,999"
+                  - generic [ref=f2e5592]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e5593]:
+                      - generic [ref=f2e5594]: ₹12,999
+                      - text: ₹12,999
+                - text: (51% off)
+              - generic [ref=f2e5595]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e5600]: FREE delivery Sat, 22 Aug
+            - button "Add to cart" [ref=f2e5615] [cursor=pointer]
+      - listitem [ref=f2e5616]:
+        - generic [ref=f2e5621]:
+          - link [ref=f2e5625] [cursor=pointer]:
+            - /url: /Balance-Womens-Sports-Shoes-Grey/dp/B0DLV9QS5C/ref=sr_1_57?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-57
+          - generic [ref=f2e5627]:
+            - group "colours available" [ref=f2e5629]:
+              - list [ref=f2e5630]:
+                - generic [ref=f2e5631]:
+                  - listitem:
+                    - link "NB 103 WHITE":
+                      - /url: /Balance-Womens-Sports-Shoes-Grey/dp/B0DLV9QS5C/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-57
+                - generic [ref=f2e5634]:
+                  - listitem:
+                    - link "Rose Sugar":
+                      - /url: /Balance-Womens-Sports-Shoes-Grey/dp/B0F3DC3QSW/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-57
+                - generic [ref=f2e5637]:
+                  - listitem:
+                    - link "BLACK_4":
+                      - /url: /Balance-Womens-Sports-Shoes-Grey/dp/B0DLVBTN7L/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-57
+                - generic [ref=f2e5640]:
+                  - listitem:
+                    - link "Pearl Grey":
+                      - /url: /Balance-Womens-Sports-Shoes-Grey/dp/B0F99JR9S5/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-57
+            - generic [ref=f2e5643]:
+              - heading "new balance" [level=2] [ref=f2e5645]
+              - link [ref=f2e5646] [cursor=pointer]:
+                - /url: /Balance-Womens-Sports-Shoes-Grey/dp/B0DLV9QS5C/ref=sr_1_57?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-57
+                - heading "Women 413 Running Shoes" [level=2] [ref=f2e5647]
+            - generic [ref=f2e5649]:
+              - text: "3.8"
+              - button "3.8 out of 5 stars, rating details" [ref=f2e5651] [cursor=pointer]:
+                - generic [ref=f2e5652]: 3.8 out of 5 stars
+              - link "21 ratings" [ref=f2e5655] [cursor=pointer]:
+                - /url: /Balance-Womens-Sports-Shoes-Grey/dp/B0DLV9QS5C/ref=sr_1_57?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-57#customerReviews
+                - text: (21)
+            - generic [ref=f2e5656]:
+              - generic [ref=f2e5658]:
+                - generic [ref=f2e5659]: Price, product page
+                - 'link "₹3,221 M.R.P: ₹6,999 M.R.P: ₹6,999" [ref=f2e5660] [cursor=pointer]':
+                  - /url: /Balance-Womens-Sports-Shoes-Grey/dp/B0DLV9QS5C/ref=sr_1_57?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-57
+                  - generic [ref=f2e5661]:
+                    - generic [ref=f2e5662]: ₹3,221
+                    - generic [ref=f2e5663]: ₹3,221
+                  - generic [ref=f2e5664]: "M.R.P: ₹6,999"
+                  - generic [ref=f2e5665]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e5666]:
+                      - generic [ref=f2e5667]: ₹6,999
+                      - text: ₹6,999
+                - text: (54% off)
+              - generic [ref=f2e5668]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e5673]: FREE delivery Sat, 22 Aug
+            - button "Add to cart" [ref=f2e5688] [cursor=pointer]
+      - listitem [ref=f2e5689]:
+        - generic [ref=f2e5694]:
+          - link [ref=f2e5698] [cursor=pointer]:
+            - /url: /Nike-DR2695-Run-Swift-3/dp/B0FBRCC2ZY/ref=sr_1_58?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-58
+          - generic [ref=f2e5700]:
+            - group "colours available" [ref=f2e5702]:
+              - list [ref=f2e5703]:
+                - generic [ref=f2e5704]:
+                  - listitem:
+                    - link "SPRUCE AURA/BLACK-BRIGHT CRIMSON":
+                      - /url: /Nike-DR2695-Run-Swift-3/dp/B0FBRCC2ZY/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-58
+                - generic [ref=f2e5707]:
+                  - listitem:
+                    - link "BLACK/RED ORBIT-SMOKE GREY":
+                      - /url: /Nike-DR2695-Run-Swift-3/dp/B0G2RJQN3C/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-58
+                - generic [ref=f2e5710]:
+                  - listitem:
+                    - link "Black/White-Sapphire-Barely Grape":
+                      - /url: /Nike-DR2695-Run-Swift-3/dp/B0FQN2M294/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-58
+                - generic [ref=f2e5713]:
+                  - listitem:
+                    - link "Off White/Blue Crystal-White-Off Noir":
+                      - /url: /Nike-DR2695-Run-Swift-3/dp/B0FQMT6SC5/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-58
+                - generic [ref=f2e5716]:
+                  - listitem:
+                    - link "Pale Ivory/Black Spruce-Sanddrift-Sail":
+                      - /url: /Nike-DR2695-Run-Swift-3/dp/B0FQMWYKDB/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-58
+            - generic [ref=f2e5719]:
+              - heading "Nike" [level=2] [ref=f2e5721]
+              - link [ref=f2e5722] [cursor=pointer]:
+                - /url: /Nike-DR2695-Run-Swift-3/dp/B0FBRCC2ZY/ref=sr_1_58?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-58
+                - heading "Nike Mens Run Swift Running Shoes" [level=2] [ref=f2e5723]
+            - generic [ref=f2e5725]:
+              - text: "4.1"
+              - button "4.1 out of 5 stars, rating details" [ref=f2e5727] [cursor=pointer]:
+                - generic [ref=f2e5728]: 4.1 out of 5 stars
+              - link "32 ratings" [ref=f2e5731] [cursor=pointer]:
+                - /url: /Nike-DR2695-Run-Swift-3/dp/B0FBRCC2ZY/ref=sr_1_58?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-58#customerReviews
+                - text: (32)
+            - generic [ref=f2e5732]:
+              - link "Mega Deal Days" [ref=f2e5734] [cursor=pointer]:
+                - /url: /deals
+              - generic [ref=f2e5739]:
+                - generic [ref=f2e5740]: Price, product page
+                - 'link "₹4,091 M.R.P: ₹6,295 M.R.P: ₹6,295" [ref=f2e5741] [cursor=pointer]':
+                  - /url: /Nike-DR2695-Run-Swift-3/dp/B0FBRCC2ZY/ref=sr_1_58?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-58
+                  - generic [ref=f2e5742]:
+                    - generic [ref=f2e5743]: ₹4,091
+                    - generic [ref=f2e5744]: ₹4,091
+                  - generic [ref=f2e5745]: "M.R.P: ₹6,295"
+                  - generic [ref=f2e5746]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e5747]:
+                      - generic [ref=f2e5748]: ₹6,295
+                      - text: ₹6,295
+                - text: (35% off)
+              - generic [ref=f2e5749]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e5754]: FREE delivery Tue, 25 Aug
+            - button "Add to cart" [ref=f2e5769] [cursor=pointer]
+      - listitem [ref=f2e5770]:
+        - generic [ref=f2e5775]:
+          - link [ref=f2e5779] [cursor=pointer]:
+            - /url: /SPARX-SM-277-Enhanced-Durability/dp/B01MTL4S5K/ref=sr_1_59?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-59
+          - generic [ref=f2e5781]:
+            - group "colours available" [ref=f2e5783]:
+              - list [ref=f2e5784]:
+                - generic [ref=f2e5785]:
+                  - listitem:
+                    - link "BLACK WHITE":
+                      - /url: /SPARX-SM-277-Enhanced-Durability/dp/B01MTL4S5K/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-59
+                - generic [ref=f2e5788]:
+                  - listitem:
+                    - link "BLACK RED":
+                      - /url: /SPARX-SM-277-Enhanced-Durability/dp/B076HT54P2/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-59
+                - generic [ref=f2e5791]:
+                  - listitem:
+                    - link "NAVY BLUE ORANGE":
+                      - /url: /SPARX-SM-277-Enhanced-Durability/dp/B078KQWRDL/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-59
+                - generic [ref=f2e5794]:
+                  - listitem:
+                    - link "NAVY BLUE ORANGE2":
+                      - /url: /SPARX-SM-277-Enhanced-Durability/dp/B0764BMT4Y/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-59
+                - generic [ref=f2e5797]:
+                  - listitem:
+                    - link "BLACK RED1":
+                      - /url: /SPARX-SM-277-Enhanced-Durability/dp/B078HVYN4C/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-59
+                - generic [ref=f2e5800]:
+                  - listitem:
+                    - link "Blue":
+                      - /url: /SPARX-SM-277-Enhanced-Durability/dp/B078KQSH1W/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-59
+              - link "+5 other colors/patterns" [ref=f2e5804] [cursor=pointer]:
+                - /url: /SPARX-SM-277-Enhanced-Durability/dp/B01MTL4S5K/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-59
+                - text: "+5"
+            - generic [ref=f2e5805]:
+              - heading "SPARX" [level=2] [ref=f2e5807]
+              - link [ref=f2e5808] [cursor=pointer]:
+                - /url: /SPARX-SM-277-Enhanced-Durability/dp/B01MTL4S5K/ref=sr_1_59?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-59
+                - heading "Men Running Shoes" [level=2] [ref=f2e5809]
+            - generic [ref=f2e5810]:
+              - generic [ref=f2e5811]:
+                - text: "4.0"
+                - button "4.0 out of 5 stars, rating details" [ref=f2e5813] [cursor=pointer]:
+                  - generic [ref=f2e5814]: 4.0 out of 5 stars
+                - link "19,692 ratings" [ref=f2e5817] [cursor=pointer]:
+                  - /url: /SPARX-SM-277-Enhanced-Durability/dp/B01MTL4S5K/ref=sr_1_59?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-59#customerReviews
+                  - text: (19.6K)
+              - generic [ref=f2e5818]: 100+ bought in past month
+            - generic [ref=f2e5819]:
+              - generic [ref=f2e5821]:
+                - generic [ref=f2e5822]: Price, product page
+                - 'link "₹769 M.R.P: ₹1,025 M.R.P: ₹1,025" [ref=f2e5823] [cursor=pointer]':
+                  - /url: /SPARX-SM-277-Enhanced-Durability/dp/B01MTL4S5K/ref=sr_1_59?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-59
+                  - generic [ref=f2e5824]:
+                    - generic [ref=f2e5825]: ₹769
+                    - generic [ref=f2e5826]: ₹769
+                  - generic [ref=f2e5827]: "M.R.P: ₹1,025"
+                  - generic [ref=f2e5828]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e5829]:
+                      - generic [ref=f2e5830]: ₹1,025
+                      - text: ₹1,025
+                - text: (25% off)
+              - generic [ref=f2e5831]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e5838]:
+              - generic [ref=f2e5839]: FREE delivery Sat, 15 Aug
+              - generic [ref=f2e5841]: Or fastest delivery Tomorrow, 14 Aug
+            - button "Add to cart" [ref=f2e5853] [cursor=pointer]
+      - listitem [ref=f2e5854]:
+        - generic [ref=f2e5859]:
+          - link [ref=f2e5863] [cursor=pointer]:
+            - /url: /SPARX-Sports-Shoe-SL-167-Women/dp/B0C6TX544P/ref=sr_1_60?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-60
+          - generic [ref=f2e5865]:
+            - group "colours available" [ref=f2e5867]:
+              - list [ref=f2e5868]:
+                - generic [ref=f2e5869]:
+                  - listitem:
+                    - link "LIGHT GREY PINK":
+                      - /url: /SPARX-Sports-Shoe-SL-167-Women/dp/B0C6TX544P/ref=cs_sr_dp_1?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-60
+                - generic [ref=f2e5872]:
+                  - listitem:
+                    - link "Black":
+                      - /url: /SPARX-Sports-Shoe-SL-167-Women/dp/B08JVZY2HV/ref=cs_sr_dp_2?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-60
+                - generic [ref=f2e5875]:
+                  - listitem:
+                    - link "Grey Green":
+                      - /url: /SPARX-Sports-Shoe-SL-167-Women/dp/B08RDRX13Q/ref=cs_sr_dp_3?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-60
+                - generic [ref=f2e5878]:
+                  - listitem:
+                    - link "AQUA GREEN HAZE YELLOW":
+                      - /url: /SPARX-Sports-Shoe-SL-167-Women/dp/B0C6V1TPZV/ref=cs_sr_dp_4?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-60
+                - generic [ref=f2e5881]:
+                  - listitem:
+                    - link "BLACK PEACH1":
+                      - /url: /SPARX-Sports-Shoe-SL-167-Women/dp/B08JW2RNBX/ref=cs_sr_dp_5?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-60
+                - generic [ref=f2e5884]:
+                  - listitem:
+                    - link "NAVY BLUE RED":
+                      - /url: /SPARX-Sports-Shoe-SL-167-Women/dp/B08JW2HWSP/ref=cs_sr_dp_6?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-60
+              - link "+9 other colors/patterns" [ref=f2e5888] [cursor=pointer]:
+                - /url: /SPARX-Sports-Shoe-SL-167-Women/dp/B0C6TX544P/ref=cs_sr_dp_n?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-60
+                - text: "+9"
+            - generic [ref=f2e5889]:
+              - heading "SPARX" [level=2] [ref=f2e5891]
+              - link [ref=f2e5892] [cursor=pointer]:
+                - /url: /SPARX-Sports-Shoe-SL-167-Women/dp/B0C6TX544P/ref=sr_1_60?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-60
+                - heading "Women Shoes" [level=2] [ref=f2e5893]
+            - generic [ref=f2e5894]:
+              - generic [ref=f2e5895]:
+                - text: "4.2"
+                - button "4.2 out of 5 stars, rating details" [ref=f2e5897] [cursor=pointer]:
+                  - generic [ref=f2e5898]: 4.2 out of 5 stars
+                - link "10,150 ratings" [ref=f2e5901] [cursor=pointer]:
+                  - /url: /SPARX-Sports-Shoe-SL-167-Women/dp/B0C6TX544P/ref=sr_1_60?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-60#customerReviews
+                  - text: (10.1K)
+              - generic [ref=f2e5902]: 400+ bought in past month
+            - generic [ref=f2e5903]:
+              - generic [ref=f2e5905]:
+                - generic [ref=f2e5906]: Price, product page
+                - 'link "₹808 M.R.P: ₹1,099 M.R.P: ₹1,099" [ref=f2e5907] [cursor=pointer]':
+                  - /url: /SPARX-Sports-Shoe-SL-167-Women/dp/B0C6TX544P/ref=sr_1_60?dib=eyJ2IjoiMSJ9._bd7PfFejrHxhbslnAUTyP8vNL_KYT28HF1gAklWBxB1s7BJ2G5blx5tr6HZvpt0I6YWPeQLQRLzbRNT5UtxIJhkM-IZTm87bs0lBWcNTcNhN3z9UBnZdsTtyJoMFjFGJdGIFxqIV4HY62WfGRGeIQXO2MhegXI6c11uXbeygJPtz-fR_Hzb_7A1UodFpgdzyRJrmz23kCuj0M0vPeszLfDBKqItYVj5kIP5dmDb_W4wUpDoCPgqxUJ6nkVuarisw-qGmhdpkvdK2vvg7SgeitaLIwFH4z3QjomQCHr5RLI.RCYVLz9i-yU7UW7FRg_KhVwINoTgk9i5OHNA2fA0Oxg&dib_tag=se&keywords=shoes&qid=1786629716&sr=8-60
+                  - generic [ref=f2e5908]:
+                    - generic [ref=f2e5909]: ₹808
+                    - generic [ref=f2e5910]: ₹808
+                  - generic [ref=f2e5911]: "M.R.P: ₹1,099"
+                  - generic [ref=f2e5912]:
+                    - text: "M.R.P:"
+                    - generic [ref=f2e5913]:
+                      - generic [ref=f2e5914]: ₹1,099
+                      - text: ₹1,099
+                - text: (26% off)
+              - generic [ref=f2e5915]: Up to 5% back with Amazon Pay ICICI card
+            - generic [ref=f2e5922]:
+              - generic [ref=f2e5923]: FREE delivery Sat, 15 Aug
+              - generic [ref=f2e5925]: Or fastest delivery Tomorrow 6 am - 10 am
+            - button "Add to cart" [ref=f2e5937] [cursor=pointer]
+      - generic [ref=f2e5941]:
+        - generic [ref=f2e5946]:
+          - heading "Today's deals" [level=2] [ref=f2e5948]
+          - button "View Sponsored information or leave ad feedback" [ref=f2e5951] [cursor=pointer]: Sponsored
+        - region "Today's deals" [ref=f2e5953]:
+          - list [ref=f2e5959]:
+            - listitem "1 of 5" [ref=f2e5960]:
+              - generic [ref=f2e5966]:
+                - link [ref=f2e5970] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDA4NDY0ODc4MzY4MzI6OjA6Og&url=%2FBacca-Bucci-Black-Orange-Running%2Fdp%2FB08HNGK3B7%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB08HNGK3B7%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3Dj8Xr4P8j1X%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=j8Xr4P8j1X&sp_cr=ZAZ
+                - generic [ref=f2e5973]:
+                  - group "colours available" [ref=f2e5975]:
+                    - list
+                    - link "+3 other colors/patterns" [ref=f2e5977] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDA4NDY0ODc4MzY4MzI6OjA6Og&url=%2FBacca-Bucci-Black-Orange-Running%2Fdp%2FB08HNGK3B7%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB08HNGK3B7%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3Dj8Xr4P8j1X%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=j8Xr4P8j1X&sp_cr=ZAZ
+                  - generic [ref=f2e5978]:
+                    - heading "Bacca Bucci" [level=2] [ref=f2e5980]
+                    - link [ref=f2e5981] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDA4NDY0ODc4MzY4MzI6OjA6Og&url=%2FBacca-Bucci-Black-Orange-Running%2Fdp%2FB08HNGK3B7%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB08HNGK3B7%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3Dj8Xr4P8j1X%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=j8Xr4P8j1X&sp_cr=ZAZ
+                      - heading "Sponsored Ad - Men Lace Up Running Shoes" [level=2] [ref=f2e5982]: Men Lace Up Running Shoes
+                  - generic [ref=f2e5983]:
+                    - generic [ref=f2e5984]:
+                      - text: "4.0"
+                      - button "4.0 out of 5 stars, rating details" [ref=f2e5986] [cursor=pointer]:
+                        - generic [ref=f2e5987]: 4.0 out of 5 stars
+                      - link "3,971 ratings" [ref=f2e5990] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDA4NDY0ODc4MzY4MzI6OjA6Og&url=%2FBacca-Bucci-Black-Orange-Running%2Fdp%2FB08HNGK3B7%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB08HNGK3B7%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3Dj8Xr4P8j1X%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=j8Xr4P8j1X&sp_cr=ZAZ#customerReviews
+                        - text: (3.9K)
+                    - generic [ref=f2e5991]: 50+ bought in past month
+                  - generic [ref=f2e5992]:
+                    - link "Mega Deal Days" [ref=f2e5994] [cursor=pointer]:
+                      - /url: /deals
+                    - generic [ref=f2e5999]:
+                      - generic [ref=f2e6000]: Price, product page
+                      - 'link "₹1,520 M.R.P: ₹2,999 M.R.P: ₹2,999" [ref=f2e6001] [cursor=pointer]':
+                        - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDA4NDY0ODc4MzY4MzI6OjA6Og&url=%2FBacca-Bucci-Black-Orange-Running%2Fdp%2FB08HNGK3B7%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB08HNGK3B7%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-1-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3Dj8Xr4P8j1X%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=j8Xr4P8j1X&sp_cr=ZAZ
+                        - generic [ref=f2e6002]:
+                          - generic [ref=f2e6003]: ₹1,520
+                          - generic [ref=f2e6004]: ₹1,520
+                        - generic [ref=f2e6005]: "M.R.P: ₹2,999"
+                        - generic [ref=f2e6006]:
+                          - text: "M.R.P:"
+                          - generic [ref=f2e6007]:
+                            - generic [ref=f2e6008]: ₹2,999
+                            - text: ₹2,999
+                      - text: (49% off)
+                    - generic [ref=f2e6011]:
+                      - generic [ref=f2e6012]: You pay ₹1,444
+                      - text: with coupon (limited sizes/colours)
+                  - generic [ref=f2e6013]: FREE delivery Sat, 22 Aug
+                  - button "Add to cart" [ref=f2e6028] [cursor=pointer]
+            - listitem "2 of 5" [ref=f2e6029]:
+              - generic [ref=f2e6035]:
+                - link [ref=f2e6039] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDExODExNTg5MjQ3MzI6OjE6Og&url=%2FBacca-Bucci-Zephyr-All-Day-Training%2Fdp%2FB0FNCYZR6K%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0FNCYZR6K%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DLCZD3yXvrA%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=LCZD3yXvrA&sp_cr=ZAZ
+                - generic [ref=f2e6041]:
+                  - group "colours available" [ref=f2e6043]:
+                    - list
+                    - link "+3 other colors/patterns" [ref=f2e6045] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDExODExNTg5MjQ3MzI6OjE6Og&url=%2FBacca-Bucci-Zephyr-All-Day-Training%2Fdp%2FB0FNCYZR6K%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0FNCYZR6K%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DLCZD3yXvrA%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=LCZD3yXvrA&sp_cr=ZAZ
+                  - generic [ref=f2e6046]:
+                    - heading "Bacca Bucci" [level=2] [ref=f2e6048]
+                    - link [ref=f2e6049] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDExODExNTg5MjQ3MzI6OjE6Og&url=%2FBacca-Bucci-Zephyr-All-Day-Training%2Fdp%2FB0FNCYZR6K%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0FNCYZR6K%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DLCZD3yXvrA%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=LCZD3yXvrA&sp_cr=ZAZ
+                      - heading "Sponsored Ad - Zephyr – All-Day Comfort Running & Training Shoes" [level=2] [ref=f2e6050]: Zephyr – All-Day Comfort Running & Training Shoes
+                  - generic [ref=f2e6052]:
+                    - text: "4.0"
+                    - button "4.0 out of 5 stars, rating details" [ref=f2e6054] [cursor=pointer]:
+                      - generic [ref=f2e6055]: 4.0 out of 5 stars
+                    - link "310 ratings" [ref=f2e6058] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDExODExNTg5MjQ3MzI6OjE6Og&url=%2FBacca-Bucci-Zephyr-All-Day-Training%2Fdp%2FB0FNCYZR6K%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0FNCYZR6K%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DLCZD3yXvrA%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=LCZD3yXvrA&sp_cr=ZAZ#customerReviews
+                      - text: (310)
+                  - generic [ref=f2e6059]:
+                    - link "Mega Deal Days" [ref=f2e6061] [cursor=pointer]:
+                      - /url: /deals
+                    - generic [ref=f2e6066]:
+                      - generic [ref=f2e6067]: Price, product page
+                      - 'link "₹1,898 M.R.P: ₹3,999 M.R.P: ₹3,999" [ref=f2e6068] [cursor=pointer]':
+                        - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDExODExNTg5MjQ3MzI6OjE6Og&url=%2FBacca-Bucci-Zephyr-All-Day-Training%2Fdp%2FB0FNCYZR6K%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0FNCYZR6K%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-2-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DLCZD3yXvrA%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=LCZD3yXvrA&sp_cr=ZAZ
+                        - generic [ref=f2e6069]:
+                          - generic [ref=f2e6070]: ₹1,898
+                          - generic [ref=f2e6071]: ₹1,898
+                        - generic [ref=f2e6072]: "M.R.P: ₹3,999"
+                        - generic [ref=f2e6073]:
+                          - text: "M.R.P:"
+                          - generic [ref=f2e6074]:
+                            - generic [ref=f2e6075]: ₹3,999
+                            - text: ₹3,999
+                      - text: (53% off)
+                    - generic [ref=f2e6078]:
+                      - generic [ref=f2e6079]: You pay ₹1,803.10
+                      - text: with coupon (limited sizes/colours)
+                  - generic [ref=f2e6080]:
+                    - generic [ref=f2e6081]: FREE delivery Tue, 25 Aug
+                    - generic "Only 2 left in stock." [ref=f2e6086]
+                  - button "Add to cart" [ref=f2e6097] [cursor=pointer]
+            - listitem "3 of 5" [ref=f2e6098]:
+              - generic [ref=f2e6104]:
+                - link [ref=f2e6108] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDA4NDY0ODc4MzY3MzI6OjI6Og&url=%2FBacca-Bucci-Essential-Everyday-Purpose%2Fdp%2FB0C3XXCJ49%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0C3XXCJ49%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3Dc1YgVGQAZa%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=c1YgVGQAZa&sp_cr=ZAZ
+                - generic [ref=f2e6110]:
+                  - group "colours available" [ref=f2e6112]:
+                    - list
+                    - link "+2 other colors/patterns" [ref=f2e6114] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDA4NDY0ODc4MzY3MzI6OjI6Og&url=%2FBacca-Bucci-Essential-Everyday-Purpose%2Fdp%2FB0C3XXCJ49%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0C3XXCJ49%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3Dc1YgVGQAZa%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=c1YgVGQAZa&sp_cr=ZAZ
+                  - generic [ref=f2e6115]:
+                    - heading "Bacca Bucci" [level=2] [ref=f2e6117]
+                    - link [ref=f2e6118] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDA4NDY0ODc4MzY3MzI6OjI6Og&url=%2FBacca-Bucci-Essential-Everyday-Purpose%2Fdp%2FB0C3XXCJ49%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0C3XXCJ49%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3Dc1YgVGQAZa%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=c1YgVGQAZa&sp_cr=ZAZ
+                      - heading "Sponsored Ad - Men Lace Up Running Shoes" [level=2] [ref=f2e6119]: Men Lace Up Running Shoes
+                  - generic [ref=f2e6120]:
+                    - generic [ref=f2e6121]:
+                      - text: "4.0"
+                      - button "4.0 out of 5 stars, rating details" [ref=f2e6123] [cursor=pointer]:
+                        - generic [ref=f2e6124]: 4.0 out of 5 stars
+                      - link "1,614 ratings" [ref=f2e6127] [cursor=pointer]:
+                        - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDA4NDY0ODc4MzY3MzI6OjI6Og&url=%2FBacca-Bucci-Essential-Everyday-Purpose%2Fdp%2FB0C3XXCJ49%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0C3XXCJ49%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3Dc1YgVGQAZa%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=c1YgVGQAZa&sp_cr=ZAZ#customerReviews
+                        - text: (1.6K)
+                    - generic [ref=f2e6128]: 200+ bought in past month
+                  - generic [ref=f2e6129]:
+                    - link "Mega Deal Days" [ref=f2e6131] [cursor=pointer]:
+                      - /url: /deals
+                    - generic [ref=f2e6136]:
+                      - generic [ref=f2e6137]: Price, product page
+                      - 'link "₹948 M.R.P: ₹2,499 M.R.P: ₹2,499" [ref=f2e6138] [cursor=pointer]':
+                        - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDA4NDY0ODc4MzY3MzI6OjI6Og&url=%2FBacca-Bucci-Essential-Everyday-Purpose%2Fdp%2FB0C3XXCJ49%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0C3XXCJ49%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-3-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3Dc1YgVGQAZa%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=c1YgVGQAZa&sp_cr=ZAZ
+                        - generic [ref=f2e6139]:
+                          - generic [ref=f2e6140]: ₹948
+                          - generic [ref=f2e6141]: ₹948
+                        - generic [ref=f2e6142]: "M.R.P: ₹2,499"
+                        - generic [ref=f2e6143]:
+                          - text: "M.R.P:"
+                          - generic [ref=f2e6144]:
+                            - generic [ref=f2e6145]: ₹2,499
+                            - text: ₹2,499
+                      - text: (62% off)
+                    - generic [ref=f2e6148]:
+                      - generic [ref=f2e6149]: You pay ₹900.60
+                      - text: with coupon (limited sizes/colours)
+                  - generic [ref=f2e6150]: FREE delivery Sat, 22 Aug
+                  - button "Add to cart" [ref=f2e6165] [cursor=pointer]
+            - listitem "4 of 5" [ref=f2e6166]:
+              - generic [ref=f2e6172]:
+                - link [ref=f2e6176] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyNjIyNjQ0NzA2MzI6OjM6Og&url=%2FBacca-Bucci-Fashion-Sneakers-Training%2Fdp%2FB09F7T1KW8%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB09F7T1KW8%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DUXbihu7VFN%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=UXbihu7VFN&sp_cr=ZAZ
+                - generic [ref=f2e6178]:
+                  - group "colours available" [ref=f2e6180]:
+                    - list
+                    - link "+2 other colors/patterns" [ref=f2e6182] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyNjIyNjQ0NzA2MzI6OjM6Og&url=%2FBacca-Bucci-Fashion-Sneakers-Training%2Fdp%2FB09F7T1KW8%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB09F7T1KW8%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DUXbihu7VFN%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=UXbihu7VFN&sp_cr=ZAZ
+                  - generic [ref=f2e6183]:
+                    - heading "Bacca Bucci" [level=2] [ref=f2e6185]
+                    - link [ref=f2e6186] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyNjIyNjQ0NzA2MzI6OjM6Og&url=%2FBacca-Bucci-Fashion-Sneakers-Training%2Fdp%2FB09F7T1KW8%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB09F7T1KW8%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DUXbihu7VFN%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=UXbihu7VFN&sp_cr=ZAZ
+                      - heading "Sponsored Ad - Men Lace Up Running Shoes" [level=2] [ref=f2e6187]: Men Lace Up Running Shoes
+                  - generic [ref=f2e6189]:
+                    - text: "4.1"
+                    - button "4.1 out of 5 stars, rating details" [ref=f2e6191] [cursor=pointer]:
+                      - generic [ref=f2e6192]: 4.1 out of 5 stars
+                    - link "2,218 ratings" [ref=f2e6195] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyNjIyNjQ0NzA2MzI6OjM6Og&url=%2FBacca-Bucci-Fashion-Sneakers-Training%2Fdp%2FB09F7T1KW8%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB09F7T1KW8%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DUXbihu7VFN%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=UXbihu7VFN&sp_cr=ZAZ#customerReviews
+                      - text: (2.2K)
+                  - generic [ref=f2e6196]:
+                    - link "Mega Deal Days" [ref=f2e6198] [cursor=pointer]:
+                      - /url: /deals
+                    - generic [ref=f2e6203]:
+                      - generic [ref=f2e6204]: Price, product page
+                      - 'link "₹1,519 M.R.P: ₹2,999 M.R.P: ₹2,999" [ref=f2e6205] [cursor=pointer]':
+                        - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyNjIyNjQ0NzA2MzI6OjM6Og&url=%2FBacca-Bucci-Fashion-Sneakers-Training%2Fdp%2FB09F7T1KW8%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB09F7T1KW8%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-4-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3DUXbihu7VFN%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=UXbihu7VFN&sp_cr=ZAZ
+                        - generic [ref=f2e6206]:
+                          - generic [ref=f2e6207]: ₹1,519
+                          - generic [ref=f2e6208]: ₹1,519
+                        - generic [ref=f2e6209]: "M.R.P: ₹2,999"
+                        - generic [ref=f2e6210]:
+                          - text: "M.R.P:"
+                          - generic [ref=f2e6211]:
+                            - generic [ref=f2e6212]: ₹2,999
+                            - text: ₹2,999
+                      - text: (49% off)
+                    - generic [ref=f2e6215]:
+                      - generic [ref=f2e6216]: You pay ₹1,443.05
+                      - text: with coupon (limited sizes/colours)
+                  - generic [ref=f2e6217]: FREE delivery Sat, 22 Aug
+                  - button "Add to cart" [ref=f2e6232] [cursor=pointer]
+            - listitem "5 of 5" [ref=f2e6233]:
+              - generic [ref=f2e6239]:
+                - link [ref=f2e6243] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyMTE1NDQyNTg1MzI6OjQ6Og&url=%2FBoldfit-Comfortable-Lightweight-Cushioned-Footwear%2Fdp%2FB0H7SRC3HK%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0H7SRC3HK%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3D4vcqDN1WzT%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=4vcqDN1WzT&sp_cr=ZAZ
+                - generic [ref=f2e6245]:
+                  - group "colours available" [ref=f2e6247]:
+                    - list
+                    - link "+2 other colors/patterns" [ref=f2e6249] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyMTE1NDQyNTg1MzI6OjQ6Og&url=%2FBoldfit-Comfortable-Lightweight-Cushioned-Footwear%2Fdp%2FB0H7SRC3HK%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0H7SRC3HK%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3D4vcqDN1WzT%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=4vcqDN1WzT&sp_cr=ZAZ
+                  - generic [ref=f2e6250]:
+                    - heading "Boldfit" [level=2] [ref=f2e6252]
+                    - link [ref=f2e6253] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyMTE1NDQyNTg1MzI6OjQ6Og&url=%2FBoldfit-Comfortable-Lightweight-Cushioned-Footwear%2Fdp%2FB0H7SRC3HK%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0H7SRC3HK%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3D4vcqDN1WzT%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=4vcqDN1WzT&sp_cr=ZAZ
+                      - heading "Sponsored Ad - Running Shoes for Man Comfortable Sports Shoes for Men Running Lightweight Gym Shoe for Men Workout Soft Cushioned Walking Shoe for Man Anti Slip Gym Footwear- PaceX" [level=2] [ref=f2e6254]: Running Shoes for Man Comfortable Sports Shoes for Men Running Lightweight Gym Shoe for Men Workout Soft Cushioned Walking Shoe for Man Anti Slip Gym Footwear- PaceX
+                  - generic [ref=f2e6256]:
+                    - text: "4.1"
+                    - button "4.1 out of 5 stars, rating details" [ref=f2e6258] [cursor=pointer]:
+                      - generic [ref=f2e6259]: 4.1 out of 5 stars
+                    - link "6 ratings" [ref=f2e6262] [cursor=pointer]:
+                      - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyMTE1NDQyNTg1MzI6OjQ6Og&url=%2FBoldfit-Comfortable-Lightweight-Cushioned-Footwear%2Fdp%2FB0H7SRC3HK%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0H7SRC3HK%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3D4vcqDN1WzT%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=4vcqDN1WzT&sp_cr=ZAZ#customerReviews
+                      - text: (6)
+                  - generic [ref=f2e6263]:
+                    - link "Limited time deal" [ref=f2e6265] [cursor=pointer]:
+                      - /url: /deals
+                    - generic [ref=f2e6270]:
+                      - generic [ref=f2e6271]: Price, product page
+                      - 'link "₹2,499 M.R.P: ₹4,999 M.R.P: ₹4,999" [ref=f2e6272] [cursor=pointer]':
+                        - /url: /sspa/click?ie=UTF8&spc=MTo2ODI2NDQxMTYxODg4OTk0OjE3ODY2Mjk3MTY6c3Bfc2VhcmNoX3RoZW1hdGljX2J0ZjozMDEyMTE1NDQyNTg1MzI6OjQ6Og&url=%2FBoldfit-Comfortable-Lightweight-Cushioned-Footwear%2Fdp%2FB0H7SRC3HK%2Fref%3Dsxbs_pa_sp_search_thematic_btf_sspa%3Fcontent-id%3Damzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%253Aamzn1.sym.515e16bb-7364-4e1a-be95-48485e24eafa%26cv_ct_cx%3Dshoes%26keywords%3Dshoes%26pd_rd_i%3DB0H7SRC3HK%26pd_rd_r%3D945ed148-e32f-4efe-86b2-b0e3deb16b6d%26pd_rd_w%3DbKb9Z%26pd_rd_wg%3D2JOgE%26pf_rd_p%3D515e16bb-7364-4e1a-be95-48485e24eafa%26pf_rd_r%3DQC8ZAQ6WSAZBGATYVCF5%26qid%3D1786629716%26sbo%3DRZvfv%252F%252FHxDF%252BO5021pAnSA%253D%253D%26sr%3D1-5-2907eac4-8056-42c7-8014-fdf7bd4c5395-spons%26aref%3D4vcqDN1WzT%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWNfYnRm%26psc%3D1&aref=4vcqDN1WzT&sp_cr=ZAZ
+                        - generic [ref=f2e6273]:
+                          - generic [ref=f2e6274]: ₹2,499
+                          - generic [ref=f2e6275]: ₹2,499
+                        - generic [ref=f2e6276]: "M.R.P: ₹4,999"
+                        - generic [ref=f2e6277]:
+                          - text: "M.R.P:"
+                          - generic [ref=f2e6278]:
+                            - generic [ref=f2e6279]: ₹4,999
+                            - text: ₹4,999
+                      - text: (50% off)
+                    - generic [ref=f2e6280]: Up to 5% back with Amazon Pay ICICI card
+                  - generic [ref=f2e6287]:
+                    - generic [ref=f2e6288]: FREE delivery Sat, 22 Aug
+                    - generic [ref=f2e6290]: Or fastest delivery Tomorrow 6 am - 10 am
+                  - button "Add to cart" [ref=f2e6302] [cursor=pointer]
+      - generic [ref=f2e6308]:
+        - generic "Related searches in shoes" [ref=f2e6309]:
+          - heading "Related searches" [level=2] [ref=f2e6312]
+        - list [ref=f2e6314]:
+          - generic [ref=f2e6315]:
+            - listitem [ref=f2e6316]:
+              - link "shoes for men" [ref=f2e6318] [cursor=pointer]:
+                - /url: /s?k=shoes+for+men&ref=rsl_sug_0_0&pd_rd_w=AYBVR&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=2JOgE&pd_rd_r=945ed148-e32f-4efe-86b2-b0e3deb16b6d&qid=1786629716
+            - listitem [ref=f2e6324]:
+              - link "shoes for girls" [ref=f2e6326] [cursor=pointer]:
+                - /url: /s?k=shoes+for+girls&ref=rsl_sug_0_3&pd_rd_w=AYBVR&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=2JOgE&pd_rd_r=945ed148-e32f-4efe-86b2-b0e3deb16b6d&qid=1786629716
+          - generic [ref=f2e6332]:
+            - listitem [ref=f2e6333]:
+              - link "shoes for women" [ref=f2e6335] [cursor=pointer]:
+                - /url: /s?k=shoes+for+women&ref=rsl_sug_0_1&pd_rd_w=AYBVR&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=2JOgE&pd_rd_r=945ed148-e32f-4efe-86b2-b0e3deb16b6d&qid=1786629716
+            - listitem [ref=f2e6341]:
+              - link "shoes for boys" [ref=f2e6343] [cursor=pointer]:
+                - /url: /s?k=shoes+for+boys&ref=rsl_sug_0_4&pd_rd_w=AYBVR&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=2JOgE&pd_rd_r=945ed148-e32f-4efe-86b2-b0e3deb16b6d&qid=1786629716
+          - generic [ref=f2e6349]:
+            - listitem [ref=f2e6350]:
+              - link "shoes nike" [ref=f2e6352] [cursor=pointer]:
+                - /url: /s?k=shoes+nike&ref=rsl_sug_0_2&pd_rd_w=AYBVR&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=2JOgE&pd_rd_r=945ed148-e32f-4efe-86b2-b0e3deb16b6d&qid=1786629716
+            - listitem [ref=f2e6358]:
+              - link "shoes puma" [ref=f2e6360] [cursor=pointer]:
+                - /url: /s?k=shoes+puma&ref=rsl_sug_0_5&pd_rd_w=AYBVR&content-id=amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01:amzn1.sym.c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_p=c6a4c27a-40f0-4447-9435-8e917ffa1d01&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=2JOgE&pd_rd_r=945ed148-e32f-4efe-86b2-b0e3deb16b6d&qid=1786629716
+      - navigation "pagination" [ref=f2e6368]:
+        - list [ref=f2e6370]:
+          - listitem [ref=f2e6371]:
+            - button "Previous" [disabled] [ref=f2e6373]
+          - listitem [ref=f2e6376]:
+            - button "Page 1" [ref=f2e6378]: "1"
+          - listitem [ref=f2e6379]:
+            - button "Go to page 2" [ref=f2e6381] [cursor=pointer]: "2"
+          - listitem [ref=f2e6382]:
+            - button "Go to page 3" [ref=f2e6384] [cursor=pointer]: "3"
+          - button [disabled] [ref=f2e6385]:
+            - img [ref=f2e6386]: ...
+          - button "7" [disabled] [ref=f2e6388]
+          - listitem [ref=f2e6389]:
+            - button "Go to next page, page 2" [ref=f2e6391] [cursor=pointer]: Next
+      - generic [ref=f2e6396]:
+        - separator [ref=f2e6397]
+        - generic [ref=f2e6398]:
+          - heading "Brands related to your search" [ref=f2e6399]
+          - button "Leave feedback on Sponsored ad" [ref=f2e6404] [cursor=pointer]: Sponsored
+          - generic [ref=f2e6408]:
+            - generic [ref=f2e6410]:
+              - generic:
+                - generic:
+                  - link:
+                    - /url: https://aax-eu-zaz.amazon.in/x/c/JOQ_fJgQgLXQ9zEQ48ESiVcAAAGf-237-goAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICANXxzO/clv1c_ek-wBIHXFcbWDn2nI5dDye7IyTIbuMZbZDSo7znnl4lUtHr0nlcsq6glfggiTZIb4wl_nQ3E-O4rS2UUDaV5y2zq4AEzejZ_17gHDisl1O26u9NnMp4bl5SOo3t9jurhtrhrbdwN2-nqq4kvzU-mC9Tno8m8llT4okSb59dLzAMRYUfFLmo_x6_4zwS3j9BKAWJzZoZJDiGw7TQchQhG8qEJORo5BVvj1d5bnOD6kaTZt2kmTxUlvQr7-NOuSGl3WNb9ZBJFMWCQmtkXfyOIs56LWAps8i4-NrcU1It7fWZC_Oo0Ja_culQQdKRgsSog-N3Z34jqTnupXGrABSgoe0neDfp3OeN0zFYLOvbX_kpS5MIaRY7-ZrUy-9ZBeHjD7r8aufG3cG2I9D8RghqKPqEkPEwjo9N7msO3zHms7BMcYWJWYN8c_Zk8D006xkneSGKSmxr40rWOKqTUChIrt_6jNWuDr3JW0OQ4k_8lXF_tCjtJtN1BUGz482hkRQa-RufrgbWR_ewBHFR_p7-Bx8GaCnQ354xShSF43W_U9dP8RvYEu32pJFjKpHV_GyEMPb_b3pjfjLdxtNrpUQf1C-vJBR9iVItUgZSshvjgrSkMXIalXV8hpqmPYUu0t1u5d0z2ImsOU_6iwu79TVWzU2uflLS51WEnrAkq8Hgs42KqnG4kbWz-T5nvM26VOtTBCMiW2Xecc08xp3XPc4mUBiKDYP37Mo2Ef2D8ILXGUDN51ekDY2Yh5s9lFrOn686w02MkI5CwbstPMEibVbGdsTOONm2kT6bN3f0O076jRMXuIsB2_aXmcPS2FOD035QWtZQ7iNN5S8yBYYjUi_kFFN6XBB7gqbAZns9wbKEvvO2LKr4ch9OhaEcvs1G1hSqJyW2yxy2SI8p0TWUoWZVZM9Sry9DCMj1odxg2bg88txXaEI-4fAIkjzRpupxzmD-XKuPVsoJC0Ulsci05TDwZpWksc6_jg3JRCWUk2ROO7qDNAWx7zCPlm9Y_5qELHC2_wghpnfsN89WjtEbiAT542c7-aO_r6g0GorO1W1Nzo0kDX3vfougD_uHLfeG8Syaj65HuU1njsISo1UychcxsHwCtbyQf0QETEjC3bOeSBN7-NJ-V7ZkNdg_emyhEdi17l4ab7ldz4v-xTR1YVxcK-YjCrdgy2f2HKVaiACO9n-zK-YPU2kofih_Xok4TME5i4Xv1aL3cPA1o6lYIDAmsdCQttpzBEqW4_1tHr-ndDb-d65NQ1CqrEsEtRmHbo3jYNwbwjWlHJmE2kegBzRzxRBrR2kPe5ZMG9zhQS10ILgybuq2qInDZRWeDnTROhJFPtuXYJI9AXX3yqPOI3f0GeXus_r8Go7UmIAoJT93G9imJv0YJ3sVn-rsM2T26_6ZlmmICO6R7eakPuUXapo5FIKDLmsbpxCrd0_aNkCyV3biYXFyfMhwoItfqsZsWva-l-IQCcctctdo1JqDTettfpvrQXHYq-Iv99Xl67it7KPFkmMI0fc3JWeeA00KIXVgPbwlcx4cIUsUj-OgIbDZTe38BzgY6Ip0f6I-1W7GF6gT51LEd3k6dJlZ3HCSGXTvdoga3ELXGF5IG7DDr2dBVa2idiE8F8gdPf0j3D6_vtHK6XqfeT4LgFOXVNUbiM76Ces433pxG59zRX8di5jEreQCztbmoYNwrTjRbW2BVlnffYG3zbB9489CjhrEtwxiJvIZVt8NJItgJ8SE2O4FSi-RR/https://www.amazon.in/stores/page/DF004B71-968F-40D3-A196-E1C80ECBA622/?_encoding=UTF8&store_ref=SB_A08987665CFNNW6A0LI5-A05089681UZ53BPFQF09P&pd_rd_plhdr=t&aaxitk=e09db658bafed54843f5ac5291c583c7&hsa_cr_id=0&lp_asins=B0D2H7L97B%2CB0D2H8JSG9&lp_query=shoes&lp_slot=desktop-hsa-3psl&aref=khzDhJLexP&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=FHS7O&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=07CeC&pd_rd_r=78c8be34-054a-4e09-b3a0-3c29ae97be06
+                  - generic:
+                    - link "Boldfit":
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JOQ_fJgQgLXQ9zEQ48ESiVcAAAGf-237-goAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICANXxzO/clv1c_ek-wBIHXFcbWDn2nI5dDye7IyTIbuMZbZDSo7znnl4lUtHr0nlcsq6glfggiTZIb4wl_nQ3E-O4rS2UUDaV5y2zq4AEzejZ_17gHDisl1O26u9NnMp4bl5SOo3t9jurhtrhrbdwN2-nqq4kvzU-mC9Tno8m8llT4okSb59dLzAMRYUfFLmo_x6_4zwS3j9BKAWJzZoZJDiGw7TQchQhG8qEJORo5BVvj1d5bnOD6kaTZt2kmTxUlvQr7-NOuSGl3WNb9ZBJFMWCQmtkXfyOIs56LWAps8i4-NrcU1It7fWZC_Oo0Ja_culQQdKRgsSog-N3Z34jqTnupXGrABSgoe0neDfp3OeN0zFYLOvbX_kpS5MIaRY7-ZrUy-9ZBeHjD7r8aufG3cG2I9D8RghqKPqEkPEwjo9N7msO3zHms7BMcYWJWYN8c_Zk8D006xkneSGKSmxr40rWOKqTUChIrt_6jNWuDr3JW0OQ4k_8lXF_tCjtJtN1BUGz482hkRQa-RufrgbWR_ewBHFR_p7-Bx8GaCnQ354xShSF43W_U9dP8RvYEu32pJFjKpHV_GyEMPb_b3pjfjLdxtNrpUQf1C-vJBR9iVItUgZSshvjgrSkMXIalXV8hpqmPYUu0t1u5d0z2ImsOU_6iwu79TVWzU2uflLS51WEnrAkq8Hgs42KqnG4kbWz-T5nvM26VOtTBCMiW2Xecc08xp3XPc4mUBiKDYP37Mo2Ef2D8ILXGUDN51ekDY2Yh5s9lFrOn686w02MkI5CwbstPMEibVbGdsTOONm2kT6bN3f0O076jRMXuIsB2_aXmcPS2FOD035QWtZQ7iNN5S8yBYYjUi_kFFN6XBB7gqbAZns9wbKEvvO2LKr4ch9OhaEcvs1G1hSqJyW2yxy2SI8p0TWUoWZVZM9Sry9DCMj1odxg2bg88txXaEI-4fAIkjzRpupxzmD-XKuPVsoJC0Ulsci05TDwZpWksc6_jg3JRCWUk2ROO7qDNAWx7zCPlm9Y_5qELHC2_wghpnfsN89WjtEbiAT542c7-aO_r6g0GorO1W1Nzo0kDX3vfougD_uHLfeG8Syaj65HuU1njsISo1UychcxsHwCtbyQf0QETEjC3bOeSBN7-NJ-V7ZkNdg_emyhEdi17l4ab7ldz4v-xTR1YVxcK-YjCrdgy2f2HKVaiACO9n-zK-YPU2kofih_Xok4TME5i4Xv1aL3cPA1o6lYIDAmsdCQttpzBEqW4_1tHr-ndDb-d65NQ1CqrEsEtRmHbo3jYNwbwjWlHJmE2kegBzRzxRBrR2kPe5ZMG9zhQS10ILgybuq2qInDZRWeDnTROhJFPtuXYJI9AXX3yqPOI3f0GeXus_r8Go7UmIAoJT93G9imJv0YJ3sVn-rsM2T26_6ZlmmICO6R7eakPuUXapo5FIKDLmsbpxCrd0_aNkCyV3biYXFyfMhwoItfqsZsWva-l-IQCcctctdo1JqDTettfpvrQXHYq-Iv99Xl67it7KPFkmMI0fc3JWeeA00KIXVgPbwlcx4cIUsUj-OgIbDZTe38BzgY6Ip0f6I-1W7GF6gT51LEd3k6dJlZ3HCSGXTvdoga3ELXGF5IG7DDr2dBVa2idiE8F8gdPf0j3D6_vtHK6XqfeT4LgFOXVNUbiM76Ces433pxG59zRX8di5jEreQCztbmoYNwrTjRbW2BVlnffYG3zbB9489CjhrEtwxiJvIZVt8NJItgJ8SE2O4FSi-RR/https://www.amazon.in/stores/page/DF004B71-968F-40D3-A196-E1C80ECBA622/?_encoding=UTF8&store_ref=SB_A08987665CFNNW6A0LI5-A05089681UZ53BPFQF09P&pd_rd_plhdr=t&aaxitk=e09db658bafed54843f5ac5291c583c7&hsa_cr_id=0&lp_asins=B0D2H7L97B%2CB0D2H8JSG9&lp_query=shoes&lp_slot=desktop-hsa-3psl&aref=khzDhJLexP&ref_=sbx_be_s_3psl_mbd_mb0_ls&pd_rd_w=FHS7O&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=07CeC&pd_rd_r=78c8be34-054a-4e09-b3a0-3c29ae97be06
+                      - img "Boldfit"
+                  - generic [ref=f2e6412]:
+                    - generic [ref=f2e6413]:
+                      - link [ref=f2e6414] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JOQ_fJgQgLXQ9zEQ48ESiVcAAAGf-237-goAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICANXxzO/clv1c_ek-wBIHXFcbWDn2nI5dDye7IyTIbuMZbZDSo7znnl4lUtHr0nlcsq6glfggiTZIb4wl_nQ3E-O4rS2UUDaV5y2zq4AEzejZ_17gHDisl1O26u9NnMp4bl5SOo3t9jurhtrhrbdwN2-nqq4kvzU-mC9Tno8m8llT4okSb59dLzAMRYUfFLmo_x6_4zwS3j9BKAWJzZoZJDiGw7TQchQhG8qEJORo5BVvj1d5bnOD6kaTZt2kmTxUlvQr7-NOuSGl3WNb9ZBJFMWCQmtkXfyOIs56LWAps8i4-NrcU1It7fWZC_Oo0Ja_culQQdKRgsSog-N3Z34jqTnupXGrABSgoe0neDfp3OeN0zFYLOvbX_kpS5MIaRY7-ZrUy-9ZBeHjD7r8aufG3cG2I9D8RghqKPqEkPEwjo9N7msO3zHms7BMcYWJWYN8c_Zk8D006xkneSGKSmxr40rWOKqTUChIrt_6jNWuDr3JW0OQ4k_8lXF_tCjtJtN1BUGz482hkRQa-RufrgbWR_ewBHFR_p7-Bx8GaCnQ354xShSF43W_U9dP8RvYEu32pJFjKpHV_GyEMPb_b3pjfjLdxtNrpUQf1C-vJBR9iVItUgZSshvjgrSkMXIalXV8hpqmPYUu0t1u5d0z2ImsOU_6iwu79TVWzU2uflLS51WEnrAkq8Hgs42KqnG4kbWz-T5nvM26VOtTBCMiW2Xecc08xp3XPc4mUBiKDYP37Mo2Ef2D8ILXGUDN51ekDY2Yh5s9lFrOn686w02MkI5CwbstPMEibVbGdsTOONm2kT6bN3f0O076jRMXuIsB2_aXmcPS2FOD035QWtZQ7iNN5S8yBYYjUi_kFFN6XBB7gqbAZns9wbKEvvO2LKr4ch9OhaEcvs1G1hSqJyW2yxy2SI8p0TWUoWZVZM9Sry9DCMj1odxg2bg88txXaEI-4fAIkjzRpupxzmD-XKuPVsoJC0Ulsci05TDwZpWksc6_jg3JRCWUk2ROO7qDNAWx7zCPlm9Y_5qELHC2_wghpnfsN89WjtEbiAT542c7-aO_r6g0GorO1W1Nzo0kDX3vfougD_uHLfeG8Syaj65HuU1njsISo1UychcxsHwCtbyQf0QETEjC3bOeSBN7-NJ-V7ZkNdg_emyhEdi17l4ab7ldz4v-xTR1YVxcK-YjCrdgy2f2HKVaiACO9n-zK-YPU2kofih_Xok4TME5i4Xv1aL3cPA1o6lYIDAmsdCQttpzBEqW4_1tHr-ndDb-d65NQ1CqrEsEtRmHbo3jYNwbwjWlHJmE2kegBzRzxRBrR2kPe5ZMG9zhQS10ILgybuq2qInDZRWeDnTROhJFPtuXYJI9AXX3yqPOI3f0GeXus_r8Go7UmIAoJT93G9imJv0YJ3sVn-rsM2T26_6ZlmmICO6R7eakPuUXapo5FIKDLmsbpxCrd0_aNkCyV3biYXFyfMhwoItfqsZsWva-l-IQCcctctdo1JqDTettfpvrQXHYq-Iv99Xl67it7KPFkmMI0fc3JWeeA00KIXVgPbwlcx4cIUsUj-OgIbDZTe38BzgY6Ip0f6I-1W7GF6gT51LEd3k6dJlZ3HCSGXTvdoga3ELXGF5IG7DDr2dBVa2idiE8F8gdPf0j3D6_vtHK6XqfeT4LgFOXVNUbiM76Ces433pxG59zRX8di5jEreQCztbmoYNwrTjRbW2BVlnffYG3zbB9489CjhrEtwxiJvIZVt8NJItgJ8SE2O4FSi-RR/https://www.amazon.in/stores/page/DF004B71-968F-40D3-A196-E1C80ECBA622/?_encoding=UTF8&store_ref=SB_A08987665CFNNW6A0LI5-A05089681UZ53BPFQF09P&pd_rd_plhdr=t&aaxitk=e09db658bafed54843f5ac5291c583c7&hsa_cr_id=0&lp_asins=B0D2H7L97B%2CB0D2H8JSG9&lp_query=shoes&lp_slot=desktop-hsa-3psl&aref=khzDhJLexP&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=FHS7O&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=07CeC&pd_rd_r=78c8be34-054a-4e09-b3a0-3c29ae97be06
+                      - link "Boldfit":
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JOQ_fJgQgLXQ9zEQ48ESiVcAAAGf-237-goAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICANXxzO/clv1c_ek-wBIHXFcbWDn2nI5dDye7IyTIbuMZbZDSo7znnl4lUtHr0nlcsq6glfggiTZIb4wl_nQ3E-O4rS2UUDaV5y2zq4AEzejZ_17gHDisl1O26u9NnMp4bl5SOo3t9jurhtrhrbdwN2-nqq4kvzU-mC9Tno8m8llT4okSb59dLzAMRYUfFLmo_x6_4zwS3j9BKAWJzZoZJDiGw7TQchQhG8qEJORo5BVvj1d5bnOD6kaTZt2kmTxUlvQr7-NOuSGl3WNb9ZBJFMWCQmtkXfyOIs56LWAps8i4-NrcU1It7fWZC_Oo0Ja_culQQdKRgsSog-N3Z34jqTnupXGrABSgoe0neDfp3OeN0zFYLOvbX_kpS5MIaRY7-ZrUy-9ZBeHjD7r8aufG3cG2I9D8RghqKPqEkPEwjo9N7msO3zHms7BMcYWJWYN8c_Zk8D006xkneSGKSmxr40rWOKqTUChIrt_6jNWuDr3JW0OQ4k_8lXF_tCjtJtN1BUGz482hkRQa-RufrgbWR_ewBHFR_p7-Bx8GaCnQ354xShSF43W_U9dP8RvYEu32pJFjKpHV_GyEMPb_b3pjfjLdxtNrpUQf1C-vJBR9iVItUgZSshvjgrSkMXIalXV8hpqmPYUu0t1u5d0z2ImsOU_6iwu79TVWzU2uflLS51WEnrAkq8Hgs42KqnG4kbWz-T5nvM26VOtTBCMiW2Xecc08xp3XPc4mUBiKDYP37Mo2Ef2D8ILXGUDN51ekDY2Yh5s9lFrOn686w02MkI5CwbstPMEibVbGdsTOONm2kT6bN3f0O076jRMXuIsB2_aXmcPS2FOD035QWtZQ7iNN5S8yBYYjUi_kFFN6XBB7gqbAZns9wbKEvvO2LKr4ch9OhaEcvs1G1hSqJyW2yxy2SI8p0TWUoWZVZM9Sry9DCMj1odxg2bg88txXaEI-4fAIkjzRpupxzmD-XKuPVsoJC0Ulsci05TDwZpWksc6_jg3JRCWUk2ROO7qDNAWx7zCPlm9Y_5qELHC2_wghpnfsN89WjtEbiAT542c7-aO_r6g0GorO1W1Nzo0kDX3vfougD_uHLfeG8Syaj65HuU1njsISo1UychcxsHwCtbyQf0QETEjC3bOeSBN7-NJ-V7ZkNdg_emyhEdi17l4ab7ldz4v-xTR1YVxcK-YjCrdgy2f2HKVaiACO9n-zK-YPU2kofih_Xok4TME5i4Xv1aL3cPA1o6lYIDAmsdCQttpzBEqW4_1tHr-ndDb-d65NQ1CqrEsEtRmHbo3jYNwbwjWlHJmE2kegBzRzxRBrR2kPe5ZMG9zhQS10ILgybuq2qInDZRWeDnTROhJFPtuXYJI9AXX3yqPOI3f0GeXus_r8Go7UmIAoJT93G9imJv0YJ3sVn-rsM2T26_6ZlmmICO6R7eakPuUXapo5FIKDLmsbpxCrd0_aNkCyV3biYXFyfMhwoItfqsZsWva-l-IQCcctctdo1JqDTettfpvrQXHYq-Iv99Xl67it7KPFkmMI0fc3JWeeA00KIXVgPbwlcx4cIUsUj-OgIbDZTe38BzgY6Ip0f6I-1W7GF6gT51LEd3k6dJlZ3HCSGXTvdoga3ELXGF5IG7DDr2dBVa2idiE8F8gdPf0j3D6_vtHK6XqfeT4LgFOXVNUbiM76Ces433pxG59zRX8di5jEreQCztbmoYNwrTjRbW2BVlnffYG3zbB9489CjhrEtwxiJvIZVt8NJItgJ8SE2O4FSi-RR/https://www.amazon.in/stores/page/DF004B71-968F-40D3-A196-E1C80ECBA622/?_encoding=UTF8&store_ref=SB_A08987665CFNNW6A0LI5-A05089681UZ53BPFQF09P&pd_rd_plhdr=t&aaxitk=e09db658bafed54843f5ac5291c583c7&hsa_cr_id=0&lp_asins=B0D2H7L97B%2CB0D2H8JSG9&lp_query=shoes&lp_slot=desktop-hsa-3psl&aref=khzDhJLexP&ref_=sbx_be_s_3psl_mbd_mb0_logo&pd_rd_w=FHS7O&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=07CeC&pd_rd_r=78c8be34-054a-4e09-b3a0-3c29ae97be06
+                        - generic:
+                          - img "Boldfit"
+                    - generic [ref=f2e6415]:
+                      - link [ref=f2e6416] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JOQ_fJgQgLXQ9zEQ48ESiVcAAAGf-237-goAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICANXxzO/clv1c_ek-wBIHXFcbWDn2nI5dDye7IyTIbuMZbZDSo7znnl4lUtHr0nlcsq6glfggiTZIb4wl_nQ3E-O4rS2UUDaV5y2zq4AEzejZ_17gHDisl1O26u9NnMp4bl5SOo3t9jurhtrhrbdwN2-nqq4kvzU-mC9Tno8m8llT4okSb59dLzAMRYUfFLmo_x6_4zwS3j9BKAWJzZoZJDiGw7TQchQhG8qEJORo5BVvj1d5bnOD6kaTZt2kmTxUlvQr7-NOuSGl3WNb9ZBJFMWCQmtkXfyOIs56LWAps8i4-NrcU1It7fWZC_Oo0Ja_culQQdKRgsSog-N3Z34jqTnupXGrABSgoe0neDfp3OeN0zFYLOvbX_kpS5MIaRY7-ZrUy-9ZBeHjD7r8aufG3cG2I9D8RghqKPqEkPEwjo9N7msO3zHms7BMcYWJWYN8c_Zk8D006xkneSGKSmxr40rWOKqTUChIrt_6jNWuDr3JW0OQ4k_8lXF_tCjtJtN1BUGz482hkRQa-RufrgbWR_ewBHFR_p7-Bx8GaCnQ354xShSF43W_U9dP8RvYEu32pJFjKpHV_GyEMPb_b3pjfjLdxtNrpUQf1C-vJBR9iVItUgZSshvjgrSkMXIalXV8hpqmPYUu0t1u5d0z2ImsOU_6iwu79TVWzU2uflLS51WEnrAkq8Hgs42KqnG4kbWz-T5nvM26VOtTBCMiW2Xecc08xp3XPc4mUBiKDYP37Mo2Ef2D8ILXGUDN51ekDY2Yh5s9lFrOn686w02MkI5CwbstPMEibVbGdsTOONm2kT6bN3f0O076jRMXuIsB2_aXmcPS2FOD035QWtZQ7iNN5S8yBYYjUi_kFFN6XBB7gqbAZns9wbKEvvO2LKr4ch9OhaEcvs1G1hSqJyW2yxy2SI8p0TWUoWZVZM9Sry9DCMj1odxg2bg88txXaEI-4fAIkjzRpupxzmD-XKuPVsoJC0Ulsci05TDwZpWksc6_jg3JRCWUk2ROO7qDNAWx7zCPlm9Y_5qELHC2_wghpnfsN89WjtEbiAT542c7-aO_r6g0GorO1W1Nzo0kDX3vfougD_uHLfeG8Syaj65HuU1njsISo1UychcxsHwCtbyQf0QETEjC3bOeSBN7-NJ-V7ZkNdg_emyhEdi17l4ab7ldz4v-xTR1YVxcK-YjCrdgy2f2HKVaiACO9n-zK-YPU2kofih_Xok4TME5i4Xv1aL3cPA1o6lYIDAmsdCQttpzBEqW4_1tHr-ndDb-d65NQ1CqrEsEtRmHbo3jYNwbwjWlHJmE2kegBzRzxRBrR2kPe5ZMG9zhQS10ILgybuq2qInDZRWeDnTROhJFPtuXYJI9AXX3yqPOI3f0GeXus_r8Go7UmIAoJT93G9imJv0YJ3sVn-rsM2T26_6ZlmmICO6R7eakPuUXapo5FIKDLmsbpxCrd0_aNkCyV3biYXFyfMhwoItfqsZsWva-l-IQCcctctdo1JqDTettfpvrQXHYq-Iv99Xl67it7KPFkmMI0fc3JWeeA00KIXVgPbwlcx4cIUsUj-OgIbDZTe38BzgY6Ip0f6I-1W7GF6gT51LEd3k6dJlZ3HCSGXTvdoga3ELXGF5IG7DDr2dBVa2idiE8F8gdPf0j3D6_vtHK6XqfeT4LgFOXVNUbiM76Ces433pxG59zRX8di5jEreQCztbmoYNwrTjRbW2BVlnffYG3zbB9489CjhrEtwxiJvIZVt8NJItgJ8SE2O4FSi-RR/https://www.amazon.in/stores/page/DF004B71-968F-40D3-A196-E1C80ECBA622/?_encoding=UTF8&store_ref=SB_A08987665CFNNW6A0LI5-A05089681UZ53BPFQF09P&pd_rd_plhdr=t&aaxitk=e09db658bafed54843f5ac5291c583c7&hsa_cr_id=0&lp_asins=B0D2H7L97B%2CB0D2H8JSG9&lp_query=shoes&lp_slot=desktop-hsa-3psl&aref=khzDhJLexP&ref_=sbx_be_s_3psl_mbd_mb0_bkgd&pd_rd_w=FHS7O&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=07CeC&pd_rd_r=78c8be34-054a-4e09-b3a0-3c29ae97be06
+                      - link "Level up your game with ultimate cricket shoes" [ref=f2e6417] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JOQ_fJgQgLXQ9zEQ48ESiVcAAAGf-237-goAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICANXxzO/clv1c_ek-wBIHXFcbWDn2nI5dDye7IyTIbuMZbZDSo7znnl4lUtHr0nlcsq6glfggiTZIb4wl_nQ3E-O4rS2UUDaV5y2zq4AEzejZ_17gHDisl1O26u9NnMp4bl5SOo3t9jurhtrhrbdwN2-nqq4kvzU-mC9Tno8m8llT4okSb59dLzAMRYUfFLmo_x6_4zwS3j9BKAWJzZoZJDiGw7TQchQhG8qEJORo5BVvj1d5bnOD6kaTZt2kmTxUlvQr7-NOuSGl3WNb9ZBJFMWCQmtkXfyOIs56LWAps8i4-NrcU1It7fWZC_Oo0Ja_culQQdKRgsSog-N3Z34jqTnupXGrABSgoe0neDfp3OeN0zFYLOvbX_kpS5MIaRY7-ZrUy-9ZBeHjD7r8aufG3cG2I9D8RghqKPqEkPEwjo9N7msO3zHms7BMcYWJWYN8c_Zk8D006xkneSGKSmxr40rWOKqTUChIrt_6jNWuDr3JW0OQ4k_8lXF_tCjtJtN1BUGz482hkRQa-RufrgbWR_ewBHFR_p7-Bx8GaCnQ354xShSF43W_U9dP8RvYEu32pJFjKpHV_GyEMPb_b3pjfjLdxtNrpUQf1C-vJBR9iVItUgZSshvjgrSkMXIalXV8hpqmPYUu0t1u5d0z2ImsOU_6iwu79TVWzU2uflLS51WEnrAkq8Hgs42KqnG4kbWz-T5nvM26VOtTBCMiW2Xecc08xp3XPc4mUBiKDYP37Mo2Ef2D8ILXGUDN51ekDY2Yh5s9lFrOn686w02MkI5CwbstPMEibVbGdsTOONm2kT6bN3f0O076jRMXuIsB2_aXmcPS2FOD035QWtZQ7iNN5S8yBYYjUi_kFFN6XBB7gqbAZns9wbKEvvO2LKr4ch9OhaEcvs1G1hSqJyW2yxy2SI8p0TWUoWZVZM9Sry9DCMj1odxg2bg88txXaEI-4fAIkjzRpupxzmD-XKuPVsoJC0Ulsci05TDwZpWksc6_jg3JRCWUk2ROO7qDNAWx7zCPlm9Y_5qELHC2_wghpnfsN89WjtEbiAT542c7-aO_r6g0GorO1W1Nzo0kDX3vfougD_uHLfeG8Syaj65HuU1njsISo1UychcxsHwCtbyQf0QETEjC3bOeSBN7-NJ-V7ZkNdg_emyhEdi17l4ab7ldz4v-xTR1YVxcK-YjCrdgy2f2HKVaiACO9n-zK-YPU2kofih_Xok4TME5i4Xv1aL3cPA1o6lYIDAmsdCQttpzBEqW4_1tHr-ndDb-d65NQ1CqrEsEtRmHbo3jYNwbwjWlHJmE2kegBzRzxRBrR2kPe5ZMG9zhQS10ILgybuq2qInDZRWeDnTROhJFPtuXYJI9AXX3yqPOI3f0GeXus_r8Go7UmIAoJT93G9imJv0YJ3sVn-rsM2T26_6ZlmmICO6R7eakPuUXapo5FIKDLmsbpxCrd0_aNkCyV3biYXFyfMhwoItfqsZsWva-l-IQCcctctdo1JqDTettfpvrQXHYq-Iv99Xl67it7KPFkmMI0fc3JWeeA00KIXVgPbwlcx4cIUsUj-OgIbDZTe38BzgY6Ip0f6I-1W7GF6gT51LEd3k6dJlZ3HCSGXTvdoga3ELXGF5IG7DDr2dBVa2idiE8F8gdPf0j3D6_vtHK6XqfeT4LgFOXVNUbiM76Ces433pxG59zRX8di5jEreQCztbmoYNwrTjRbW2BVlnffYG3zbB9489CjhrEtwxiJvIZVt8NJItgJ8SE2O4FSi-RR/https://www.amazon.in/stores/page/DF004B71-968F-40D3-A196-E1C80ECBA622/?_encoding=UTF8&store_ref=SB_A08987665CFNNW6A0LI5-A05089681UZ53BPFQF09P&pd_rd_plhdr=t&aaxitk=e09db658bafed54843f5ac5291c583c7&hsa_cr_id=0&lp_asins=B0D2H7L97B%2CB0D2H8JSG9&lp_query=shoes&lp_slot=desktop-hsa-3psl&aref=khzDhJLexP&ref_=sbx_be_s_3psl_mbd_mb0_hl&pd_rd_w=FHS7O&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=07CeC&pd_rd_r=78c8be34-054a-4e09-b3a0-3c29ae97be06
+            - generic [ref=f2e6422]:
+              - generic:
+                - generic:
+                  - link:
+                    - /url: https://aax-eu-zaz.amazon.in/x/c/JM1OlqR70AH_TmuKbRQjpTUAAAGf-237-woAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDWph0b/clv1c_ek-wBPHXLcTWXmxht59XI08zcTmXYvL4B4m1UFDrPk9TmXFzV3JnAJMGl94xCPGuoyyXO6PV3E9u2cLEGzLX8eX3WmW4MJAnbQy83JDuvUgnzbv7C2dgYEowAvp1jwZBxiB64yPjNZ5E5Vp2heaUw_zWvH2dkVOiUtwgb_eq0p83UUofictNeYjugDxcO9-cvDakr6ht_0RJ1PnbuiQg0l6-VM5-RwriZIpd4U836bNCE0GJgiHqo9GDozeXPYfXCw3qmvwa6bK0CJv_w12J6rlBzVe3MbYCCafQEkrY8jCBoHk-9_EsrC37nmWU6ac2KsJxra19aLxX08SuSh4Bwo8DC5f1Z4-_5pc-w3naUFoN3fTCSte1TBHdWqwK1-heMYktELLFrFu5n6cxj0FvG0_aIMVP6Otp5fsfRMlswi9biRabQRpLOskSoqd3UqPERFapOqAZv0q9dHAYvsKDHZg8ElBSMaNUEV2i1QaJy5m1XGMkgVJGCKb6r0QYlxG2TPVyGIa9fhc7VP6S0CM8DjAR328a6qHtbYTlqpKGksHdinjsioICxxG4HTaorgG1kJliQOaSIMRS34lpiAx3sYQ-5pcn_X3EBHo0OXuIbTtQdD6yCqgDR34fk7CRt2LoeqCbksrylYDkFWqI0AxGxHcbj9gU978Lfhd-BCOMHyK8nAd599SWBoLAuCNMkqvdS10HPcuG41zPH05fZEw6GT4QrNjltuDSjvPQb98qwE0FKhd5uzvUrMuKFoHA1L6rQUOsjYmP2097k2BKE353Q0Yvq_cil5cESJ3q4etsQ_AbjPXWy_4VhRXLeBZ3Pg2SqtCx4PLWIKWJ7_w_hmslyqae0iKRvBSF3Fi4IdEVT5T_kfVmo5KvHMLJNfGLr2xdRmNjBdlmmtz7Ra1HNPzsC3Up_P8lQGP8NhJW9Rg-k1KmXVIVyuffnHBP5MZirdEn3JBoq0cJCaCUX3uBj3O-EHM2_8fEHrlUDOsOrGiZ0yzbc_7RdVAgC7hXygW3e8wUSVtmXLUNWJQzoU0vSKUs1FQuMRWWyXdq0Ycfp0fG6B4abw-JPwFsiFqzR-4OY8zD2xrNNuspU7xGb62wt2KPKzsyyyRaT9S443ae--SgTrj4HWBvDU-ksjwftgjPH-CDm1m8N2iSuicUojuGyK-UcMviSmIShCiLAJNDzHeCaEvPCHOBTOFoU6GaxXST2mbnHxNQCdqed6KKSZ-upf2me_mEpPzXJOu_6Y_krud8zQ-76JaxlZLum-Ic4DcxUR7g5mKN3hCSrk9IHjvE8CPqxkuRnWyj9aSmb11WuTmcdKUSJo6LpqiejvOG1dOapleZFkaQRd49nQOsAgtFcUeZVnd5RrfGDR0ltHPZn8i03cm8jKVB1xkN1djW1ueXGKojeB_bhavlfiOX5R47ZHurkTjdf741-wYvfg1nHOCTEUm3V_E8CAS80cWJxK88syod5bQ49A0VYN64CmAXbBYjNg0fj_Zw9GkOhdYyN70hkY7WjQfrdgCbR68wa3R8CHmlJOEWemqAH8Fbn2TrfGtyGDuBixSl4H3ejDsRtT_MRmYu0VybLxIoVVS1LDLZvuJrpjalYhNxG7D61DbKRX6jUDs5wPEopaep10MIbAk51ZrXtNaZxJ7SDrddGFDusb6icgl3zrxO5dyRo6FpjbStR2iIsEx5-ta59WqGCtxl3mKq2u02Lw5iw0J3ZnCpPoBJHOKdZhfPPG2zFnpbssnxdgNM4Q/https://www.amazon.in/stores/page/2C2751EB-3516-429E-8446-528D891AA3EA/?_encoding=UTF8&store_ref=SB_A067106236Q7DEFYZLV2L-A034404367D0TEVKNRGN&pd_rd_plhdr=t&aaxitk=1dc08925e95f7ae46628a057e8b0d8d5&hsa_cr_id=0&lp_asins=B0DSFNVVCJ%2CB0F5MS5PD8%2CB0DSFLNKSC&lp_query=shoes&lp_slot=desktop-hsa-3psl&aref=VAF9ACwTA9&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=FHS7O&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=07CeC&pd_rd_r=78c8be34-054a-4e09-b3a0-3c29ae97be06
+                  - generic:
+                    - link "betterhood":
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JM1OlqR70AH_TmuKbRQjpTUAAAGf-237-woAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDWph0b/clv1c_ek-wBPHXLcTWXmxht59XI08zcTmXYvL4B4m1UFDrPk9TmXFzV3JnAJMGl94xCPGuoyyXO6PV3E9u2cLEGzLX8eX3WmW4MJAnbQy83JDuvUgnzbv7C2dgYEowAvp1jwZBxiB64yPjNZ5E5Vp2heaUw_zWvH2dkVOiUtwgb_eq0p83UUofictNeYjugDxcO9-cvDakr6ht_0RJ1PnbuiQg0l6-VM5-RwriZIpd4U836bNCE0GJgiHqo9GDozeXPYfXCw3qmvwa6bK0CJv_w12J6rlBzVe3MbYCCafQEkrY8jCBoHk-9_EsrC37nmWU6ac2KsJxra19aLxX08SuSh4Bwo8DC5f1Z4-_5pc-w3naUFoN3fTCSte1TBHdWqwK1-heMYktELLFrFu5n6cxj0FvG0_aIMVP6Otp5fsfRMlswi9biRabQRpLOskSoqd3UqPERFapOqAZv0q9dHAYvsKDHZg8ElBSMaNUEV2i1QaJy5m1XGMkgVJGCKb6r0QYlxG2TPVyGIa9fhc7VP6S0CM8DjAR328a6qHtbYTlqpKGksHdinjsioICxxG4HTaorgG1kJliQOaSIMRS34lpiAx3sYQ-5pcn_X3EBHo0OXuIbTtQdD6yCqgDR34fk7CRt2LoeqCbksrylYDkFWqI0AxGxHcbj9gU978Lfhd-BCOMHyK8nAd599SWBoLAuCNMkqvdS10HPcuG41zPH05fZEw6GT4QrNjltuDSjvPQb98qwE0FKhd5uzvUrMuKFoHA1L6rQUOsjYmP2097k2BKE353Q0Yvq_cil5cESJ3q4etsQ_AbjPXWy_4VhRXLeBZ3Pg2SqtCx4PLWIKWJ7_w_hmslyqae0iKRvBSF3Fi4IdEVT5T_kfVmo5KvHMLJNfGLr2xdRmNjBdlmmtz7Ra1HNPzsC3Up_P8lQGP8NhJW9Rg-k1KmXVIVyuffnHBP5MZirdEn3JBoq0cJCaCUX3uBj3O-EHM2_8fEHrlUDOsOrGiZ0yzbc_7RdVAgC7hXygW3e8wUSVtmXLUNWJQzoU0vSKUs1FQuMRWWyXdq0Ycfp0fG6B4abw-JPwFsiFqzR-4OY8zD2xrNNuspU7xGb62wt2KPKzsyyyRaT9S443ae--SgTrj4HWBvDU-ksjwftgjPH-CDm1m8N2iSuicUojuGyK-UcMviSmIShCiLAJNDzHeCaEvPCHOBTOFoU6GaxXST2mbnHxNQCdqed6KKSZ-upf2me_mEpPzXJOu_6Y_krud8zQ-76JaxlZLum-Ic4DcxUR7g5mKN3hCSrk9IHjvE8CPqxkuRnWyj9aSmb11WuTmcdKUSJo6LpqiejvOG1dOapleZFkaQRd49nQOsAgtFcUeZVnd5RrfGDR0ltHPZn8i03cm8jKVB1xkN1djW1ueXGKojeB_bhavlfiOX5R47ZHurkTjdf741-wYvfg1nHOCTEUm3V_E8CAS80cWJxK88syod5bQ49A0VYN64CmAXbBYjNg0fj_Zw9GkOhdYyN70hkY7WjQfrdgCbR68wa3R8CHmlJOEWemqAH8Fbn2TrfGtyGDuBixSl4H3ejDsRtT_MRmYu0VybLxIoVVS1LDLZvuJrpjalYhNxG7D61DbKRX6jUDs5wPEopaep10MIbAk51ZrXtNaZxJ7SDrddGFDusb6icgl3zrxO5dyRo6FpjbStR2iIsEx5-ta59WqGCtxl3mKq2u02Lw5iw0J3ZnCpPoBJHOKdZhfPPG2zFnpbssnxdgNM4Q/https://www.amazon.in/stores/page/2C2751EB-3516-429E-8446-528D891AA3EA/?_encoding=UTF8&store_ref=SB_A067106236Q7DEFYZLV2L-A034404367D0TEVKNRGN&pd_rd_plhdr=t&aaxitk=1dc08925e95f7ae46628a057e8b0d8d5&hsa_cr_id=0&lp_asins=B0DSFNVVCJ%2CB0F5MS5PD8%2CB0DSFLNKSC&lp_query=shoes&lp_slot=desktop-hsa-3psl&aref=VAF9ACwTA9&ref_=sbx_be_s_3psl_mbd_mb1_ls&pd_rd_w=FHS7O&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=07CeC&pd_rd_r=78c8be34-054a-4e09-b3a0-3c29ae97be06
+                      - img "betterhood"
+                  - generic [ref=f2e6424]:
+                    - generic [ref=f2e6425]:
+                      - link [ref=f2e6426] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JM1OlqR70AH_TmuKbRQjpTUAAAGf-237-woAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDWph0b/clv1c_ek-wBPHXLcTWXmxht59XI08zcTmXYvL4B4m1UFDrPk9TmXFzV3JnAJMGl94xCPGuoyyXO6PV3E9u2cLEGzLX8eX3WmW4MJAnbQy83JDuvUgnzbv7C2dgYEowAvp1jwZBxiB64yPjNZ5E5Vp2heaUw_zWvH2dkVOiUtwgb_eq0p83UUofictNeYjugDxcO9-cvDakr6ht_0RJ1PnbuiQg0l6-VM5-RwriZIpd4U836bNCE0GJgiHqo9GDozeXPYfXCw3qmvwa6bK0CJv_w12J6rlBzVe3MbYCCafQEkrY8jCBoHk-9_EsrC37nmWU6ac2KsJxra19aLxX08SuSh4Bwo8DC5f1Z4-_5pc-w3naUFoN3fTCSte1TBHdWqwK1-heMYktELLFrFu5n6cxj0FvG0_aIMVP6Otp5fsfRMlswi9biRabQRpLOskSoqd3UqPERFapOqAZv0q9dHAYvsKDHZg8ElBSMaNUEV2i1QaJy5m1XGMkgVJGCKb6r0QYlxG2TPVyGIa9fhc7VP6S0CM8DjAR328a6qHtbYTlqpKGksHdinjsioICxxG4HTaorgG1kJliQOaSIMRS34lpiAx3sYQ-5pcn_X3EBHo0OXuIbTtQdD6yCqgDR34fk7CRt2LoeqCbksrylYDkFWqI0AxGxHcbj9gU978Lfhd-BCOMHyK8nAd599SWBoLAuCNMkqvdS10HPcuG41zPH05fZEw6GT4QrNjltuDSjvPQb98qwE0FKhd5uzvUrMuKFoHA1L6rQUOsjYmP2097k2BKE353Q0Yvq_cil5cESJ3q4etsQ_AbjPXWy_4VhRXLeBZ3Pg2SqtCx4PLWIKWJ7_w_hmslyqae0iKRvBSF3Fi4IdEVT5T_kfVmo5KvHMLJNfGLr2xdRmNjBdlmmtz7Ra1HNPzsC3Up_P8lQGP8NhJW9Rg-k1KmXVIVyuffnHBP5MZirdEn3JBoq0cJCaCUX3uBj3O-EHM2_8fEHrlUDOsOrGiZ0yzbc_7RdVAgC7hXygW3e8wUSVtmXLUNWJQzoU0vSKUs1FQuMRWWyXdq0Ycfp0fG6B4abw-JPwFsiFqzR-4OY8zD2xrNNuspU7xGb62wt2KPKzsyyyRaT9S443ae--SgTrj4HWBvDU-ksjwftgjPH-CDm1m8N2iSuicUojuGyK-UcMviSmIShCiLAJNDzHeCaEvPCHOBTOFoU6GaxXST2mbnHxNQCdqed6KKSZ-upf2me_mEpPzXJOu_6Y_krud8zQ-76JaxlZLum-Ic4DcxUR7g5mKN3hCSrk9IHjvE8CPqxkuRnWyj9aSmb11WuTmcdKUSJo6LpqiejvOG1dOapleZFkaQRd49nQOsAgtFcUeZVnd5RrfGDR0ltHPZn8i03cm8jKVB1xkN1djW1ueXGKojeB_bhavlfiOX5R47ZHurkTjdf741-wYvfg1nHOCTEUm3V_E8CAS80cWJxK88syod5bQ49A0VYN64CmAXbBYjNg0fj_Zw9GkOhdYyN70hkY7WjQfrdgCbR68wa3R8CHmlJOEWemqAH8Fbn2TrfGtyGDuBixSl4H3ejDsRtT_MRmYu0VybLxIoVVS1LDLZvuJrpjalYhNxG7D61DbKRX6jUDs5wPEopaep10MIbAk51ZrXtNaZxJ7SDrddGFDusb6icgl3zrxO5dyRo6FpjbStR2iIsEx5-ta59WqGCtxl3mKq2u02Lw5iw0J3ZnCpPoBJHOKdZhfPPG2zFnpbssnxdgNM4Q/https://www.amazon.in/stores/page/2C2751EB-3516-429E-8446-528D891AA3EA/?_encoding=UTF8&store_ref=SB_A067106236Q7DEFYZLV2L-A034404367D0TEVKNRGN&pd_rd_plhdr=t&aaxitk=1dc08925e95f7ae46628a057e8b0d8d5&hsa_cr_id=0&lp_asins=B0DSFNVVCJ%2CB0F5MS5PD8%2CB0DSFLNKSC&lp_query=shoes&lp_slot=desktop-hsa-3psl&aref=VAF9ACwTA9&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=FHS7O&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=07CeC&pd_rd_r=78c8be34-054a-4e09-b3a0-3c29ae97be06
+                      - link "betterhood":
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JM1OlqR70AH_TmuKbRQjpTUAAAGf-237-woAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDWph0b/clv1c_ek-wBPHXLcTWXmxht59XI08zcTmXYvL4B4m1UFDrPk9TmXFzV3JnAJMGl94xCPGuoyyXO6PV3E9u2cLEGzLX8eX3WmW4MJAnbQy83JDuvUgnzbv7C2dgYEowAvp1jwZBxiB64yPjNZ5E5Vp2heaUw_zWvH2dkVOiUtwgb_eq0p83UUofictNeYjugDxcO9-cvDakr6ht_0RJ1PnbuiQg0l6-VM5-RwriZIpd4U836bNCE0GJgiHqo9GDozeXPYfXCw3qmvwa6bK0CJv_w12J6rlBzVe3MbYCCafQEkrY8jCBoHk-9_EsrC37nmWU6ac2KsJxra19aLxX08SuSh4Bwo8DC5f1Z4-_5pc-w3naUFoN3fTCSte1TBHdWqwK1-heMYktELLFrFu5n6cxj0FvG0_aIMVP6Otp5fsfRMlswi9biRabQRpLOskSoqd3UqPERFapOqAZv0q9dHAYvsKDHZg8ElBSMaNUEV2i1QaJy5m1XGMkgVJGCKb6r0QYlxG2TPVyGIa9fhc7VP6S0CM8DjAR328a6qHtbYTlqpKGksHdinjsioICxxG4HTaorgG1kJliQOaSIMRS34lpiAx3sYQ-5pcn_X3EBHo0OXuIbTtQdD6yCqgDR34fk7CRt2LoeqCbksrylYDkFWqI0AxGxHcbj9gU978Lfhd-BCOMHyK8nAd599SWBoLAuCNMkqvdS10HPcuG41zPH05fZEw6GT4QrNjltuDSjvPQb98qwE0FKhd5uzvUrMuKFoHA1L6rQUOsjYmP2097k2BKE353Q0Yvq_cil5cESJ3q4etsQ_AbjPXWy_4VhRXLeBZ3Pg2SqtCx4PLWIKWJ7_w_hmslyqae0iKRvBSF3Fi4IdEVT5T_kfVmo5KvHMLJNfGLr2xdRmNjBdlmmtz7Ra1HNPzsC3Up_P8lQGP8NhJW9Rg-k1KmXVIVyuffnHBP5MZirdEn3JBoq0cJCaCUX3uBj3O-EHM2_8fEHrlUDOsOrGiZ0yzbc_7RdVAgC7hXygW3e8wUSVtmXLUNWJQzoU0vSKUs1FQuMRWWyXdq0Ycfp0fG6B4abw-JPwFsiFqzR-4OY8zD2xrNNuspU7xGb62wt2KPKzsyyyRaT9S443ae--SgTrj4HWBvDU-ksjwftgjPH-CDm1m8N2iSuicUojuGyK-UcMviSmIShCiLAJNDzHeCaEvPCHOBTOFoU6GaxXST2mbnHxNQCdqed6KKSZ-upf2me_mEpPzXJOu_6Y_krud8zQ-76JaxlZLum-Ic4DcxUR7g5mKN3hCSrk9IHjvE8CPqxkuRnWyj9aSmb11WuTmcdKUSJo6LpqiejvOG1dOapleZFkaQRd49nQOsAgtFcUeZVnd5RrfGDR0ltHPZn8i03cm8jKVB1xkN1djW1ueXGKojeB_bhavlfiOX5R47ZHurkTjdf741-wYvfg1nHOCTEUm3V_E8CAS80cWJxK88syod5bQ49A0VYN64CmAXbBYjNg0fj_Zw9GkOhdYyN70hkY7WjQfrdgCbR68wa3R8CHmlJOEWemqAH8Fbn2TrfGtyGDuBixSl4H3ejDsRtT_MRmYu0VybLxIoVVS1LDLZvuJrpjalYhNxG7D61DbKRX6jUDs5wPEopaep10MIbAk51ZrXtNaZxJ7SDrddGFDusb6icgl3zrxO5dyRo6FpjbStR2iIsEx5-ta59WqGCtxl3mKq2u02Lw5iw0J3ZnCpPoBJHOKdZhfPPG2zFnpbssnxdgNM4Q/https://www.amazon.in/stores/page/2C2751EB-3516-429E-8446-528D891AA3EA/?_encoding=UTF8&store_ref=SB_A067106236Q7DEFYZLV2L-A034404367D0TEVKNRGN&pd_rd_plhdr=t&aaxitk=1dc08925e95f7ae46628a057e8b0d8d5&hsa_cr_id=0&lp_asins=B0DSFNVVCJ%2CB0F5MS5PD8%2CB0DSFLNKSC&lp_query=shoes&lp_slot=desktop-hsa-3psl&aref=VAF9ACwTA9&ref_=sbx_be_s_3psl_mbd_mb1_logo&pd_rd_w=FHS7O&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=07CeC&pd_rd_r=78c8be34-054a-4e09-b3a0-3c29ae97be06
+                        - generic:
+                          - img "betterhood"
+                    - generic [ref=f2e6427]:
+                      - link [ref=f2e6428] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JM1OlqR70AH_TmuKbRQjpTUAAAGf-237-woAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDWph0b/clv1c_ek-wBPHXLcTWXmxht59XI08zcTmXYvL4B4m1UFDrPk9TmXFzV3JnAJMGl94xCPGuoyyXO6PV3E9u2cLEGzLX8eX3WmW4MJAnbQy83JDuvUgnzbv7C2dgYEowAvp1jwZBxiB64yPjNZ5E5Vp2heaUw_zWvH2dkVOiUtwgb_eq0p83UUofictNeYjugDxcO9-cvDakr6ht_0RJ1PnbuiQg0l6-VM5-RwriZIpd4U836bNCE0GJgiHqo9GDozeXPYfXCw3qmvwa6bK0CJv_w12J6rlBzVe3MbYCCafQEkrY8jCBoHk-9_EsrC37nmWU6ac2KsJxra19aLxX08SuSh4Bwo8DC5f1Z4-_5pc-w3naUFoN3fTCSte1TBHdWqwK1-heMYktELLFrFu5n6cxj0FvG0_aIMVP6Otp5fsfRMlswi9biRabQRpLOskSoqd3UqPERFapOqAZv0q9dHAYvsKDHZg8ElBSMaNUEV2i1QaJy5m1XGMkgVJGCKb6r0QYlxG2TPVyGIa9fhc7VP6S0CM8DjAR328a6qHtbYTlqpKGksHdinjsioICxxG4HTaorgG1kJliQOaSIMRS34lpiAx3sYQ-5pcn_X3EBHo0OXuIbTtQdD6yCqgDR34fk7CRt2LoeqCbksrylYDkFWqI0AxGxHcbj9gU978Lfhd-BCOMHyK8nAd599SWBoLAuCNMkqvdS10HPcuG41zPH05fZEw6GT4QrNjltuDSjvPQb98qwE0FKhd5uzvUrMuKFoHA1L6rQUOsjYmP2097k2BKE353Q0Yvq_cil5cESJ3q4etsQ_AbjPXWy_4VhRXLeBZ3Pg2SqtCx4PLWIKWJ7_w_hmslyqae0iKRvBSF3Fi4IdEVT5T_kfVmo5KvHMLJNfGLr2xdRmNjBdlmmtz7Ra1HNPzsC3Up_P8lQGP8NhJW9Rg-k1KmXVIVyuffnHBP5MZirdEn3JBoq0cJCaCUX3uBj3O-EHM2_8fEHrlUDOsOrGiZ0yzbc_7RdVAgC7hXygW3e8wUSVtmXLUNWJQzoU0vSKUs1FQuMRWWyXdq0Ycfp0fG6B4abw-JPwFsiFqzR-4OY8zD2xrNNuspU7xGb62wt2KPKzsyyyRaT9S443ae--SgTrj4HWBvDU-ksjwftgjPH-CDm1m8N2iSuicUojuGyK-UcMviSmIShCiLAJNDzHeCaEvPCHOBTOFoU6GaxXST2mbnHxNQCdqed6KKSZ-upf2me_mEpPzXJOu_6Y_krud8zQ-76JaxlZLum-Ic4DcxUR7g5mKN3hCSrk9IHjvE8CPqxkuRnWyj9aSmb11WuTmcdKUSJo6LpqiejvOG1dOapleZFkaQRd49nQOsAgtFcUeZVnd5RrfGDR0ltHPZn8i03cm8jKVB1xkN1djW1ueXGKojeB_bhavlfiOX5R47ZHurkTjdf741-wYvfg1nHOCTEUm3V_E8CAS80cWJxK88syod5bQ49A0VYN64CmAXbBYjNg0fj_Zw9GkOhdYyN70hkY7WjQfrdgCbR68wa3R8CHmlJOEWemqAH8Fbn2TrfGtyGDuBixSl4H3ejDsRtT_MRmYu0VybLxIoVVS1LDLZvuJrpjalYhNxG7D61DbKRX6jUDs5wPEopaep10MIbAk51ZrXtNaZxJ7SDrddGFDusb6icgl3zrxO5dyRo6FpjbStR2iIsEx5-ta59WqGCtxl3mKq2u02Lw5iw0J3ZnCpPoBJHOKdZhfPPG2zFnpbssnxdgNM4Q/https://www.amazon.in/stores/page/2C2751EB-3516-429E-8446-528D891AA3EA/?_encoding=UTF8&store_ref=SB_A067106236Q7DEFYZLV2L-A034404367D0TEVKNRGN&pd_rd_plhdr=t&aaxitk=1dc08925e95f7ae46628a057e8b0d8d5&hsa_cr_id=0&lp_asins=B0DSFNVVCJ%2CB0F5MS5PD8%2CB0DSFLNKSC&lp_query=shoes&lp_slot=desktop-hsa-3psl&aref=VAF9ACwTA9&ref_=sbx_be_s_3psl_mbd_mb1_bkgd&pd_rd_w=FHS7O&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=07CeC&pd_rd_r=78c8be34-054a-4e09-b3a0-3c29ae97be06
+                      - link "betterhood PosturePro Insoles & Heel Support" [ref=f2e6429] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JM1OlqR70AH_TmuKbRQjpTUAAAGf-237-woAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICDWph0b/clv1c_ek-wBPHXLcTWXmxht59XI08zcTmXYvL4B4m1UFDrPk9TmXFzV3JnAJMGl94xCPGuoyyXO6PV3E9u2cLEGzLX8eX3WmW4MJAnbQy83JDuvUgnzbv7C2dgYEowAvp1jwZBxiB64yPjNZ5E5Vp2heaUw_zWvH2dkVOiUtwgb_eq0p83UUofictNeYjugDxcO9-cvDakr6ht_0RJ1PnbuiQg0l6-VM5-RwriZIpd4U836bNCE0GJgiHqo9GDozeXPYfXCw3qmvwa6bK0CJv_w12J6rlBzVe3MbYCCafQEkrY8jCBoHk-9_EsrC37nmWU6ac2KsJxra19aLxX08SuSh4Bwo8DC5f1Z4-_5pc-w3naUFoN3fTCSte1TBHdWqwK1-heMYktELLFrFu5n6cxj0FvG0_aIMVP6Otp5fsfRMlswi9biRabQRpLOskSoqd3UqPERFapOqAZv0q9dHAYvsKDHZg8ElBSMaNUEV2i1QaJy5m1XGMkgVJGCKb6r0QYlxG2TPVyGIa9fhc7VP6S0CM8DjAR328a6qHtbYTlqpKGksHdinjsioICxxG4HTaorgG1kJliQOaSIMRS34lpiAx3sYQ-5pcn_X3EBHo0OXuIbTtQdD6yCqgDR34fk7CRt2LoeqCbksrylYDkFWqI0AxGxHcbj9gU978Lfhd-BCOMHyK8nAd599SWBoLAuCNMkqvdS10HPcuG41zPH05fZEw6GT4QrNjltuDSjvPQb98qwE0FKhd5uzvUrMuKFoHA1L6rQUOsjYmP2097k2BKE353Q0Yvq_cil5cESJ3q4etsQ_AbjPXWy_4VhRXLeBZ3Pg2SqtCx4PLWIKWJ7_w_hmslyqae0iKRvBSF3Fi4IdEVT5T_kfVmo5KvHMLJNfGLr2xdRmNjBdlmmtz7Ra1HNPzsC3Up_P8lQGP8NhJW9Rg-k1KmXVIVyuffnHBP5MZirdEn3JBoq0cJCaCUX3uBj3O-EHM2_8fEHrlUDOsOrGiZ0yzbc_7RdVAgC7hXygW3e8wUSVtmXLUNWJQzoU0vSKUs1FQuMRWWyXdq0Ycfp0fG6B4abw-JPwFsiFqzR-4OY8zD2xrNNuspU7xGb62wt2KPKzsyyyRaT9S443ae--SgTrj4HWBvDU-ksjwftgjPH-CDm1m8N2iSuicUojuGyK-UcMviSmIShCiLAJNDzHeCaEvPCHOBTOFoU6GaxXST2mbnHxNQCdqed6KKSZ-upf2me_mEpPzXJOu_6Y_krud8zQ-76JaxlZLum-Ic4DcxUR7g5mKN3hCSrk9IHjvE8CPqxkuRnWyj9aSmb11WuTmcdKUSJo6LpqiejvOG1dOapleZFkaQRd49nQOsAgtFcUeZVnd5RrfGDR0ltHPZn8i03cm8jKVB1xkN1djW1ueXGKojeB_bhavlfiOX5R47ZHurkTjdf741-wYvfg1nHOCTEUm3V_E8CAS80cWJxK88syod5bQ49A0VYN64CmAXbBYjNg0fj_Zw9GkOhdYyN70hkY7WjQfrdgCbR68wa3R8CHmlJOEWemqAH8Fbn2TrfGtyGDuBixSl4H3ejDsRtT_MRmYu0VybLxIoVVS1LDLZvuJrpjalYhNxG7D61DbKRX6jUDs5wPEopaep10MIbAk51ZrXtNaZxJ7SDrddGFDusb6icgl3zrxO5dyRo6FpjbStR2iIsEx5-ta59WqGCtxl3mKq2u02Lw5iw0J3ZnCpPoBJHOKdZhfPPG2zFnpbssnxdgNM4Q/https://www.amazon.in/stores/page/2C2751EB-3516-429E-8446-528D891AA3EA/?_encoding=UTF8&store_ref=SB_A067106236Q7DEFYZLV2L-A034404367D0TEVKNRGN&pd_rd_plhdr=t&aaxitk=1dc08925e95f7ae46628a057e8b0d8d5&hsa_cr_id=0&lp_asins=B0DSFNVVCJ%2CB0F5MS5PD8%2CB0DSFLNKSC&lp_query=shoes&lp_slot=desktop-hsa-3psl&aref=VAF9ACwTA9&ref_=sbx_be_s_3psl_mbd_mb1_hl&pd_rd_w=FHS7O&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=07CeC&pd_rd_r=78c8be34-054a-4e09-b3a0-3c29ae97be06
+            - generic [ref=f2e6434]:
+              - generic:
+                - generic:
+                  - link:
+                    - /url: https://aax-eu-zaz.amazon.in/x/c/JJ_xaBVDj7GrX2DCurHxbpgAAAGf-237_AoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAyvh1I/clv1c_ek-wBPHXKjbXTixTdO9dI6s9P6sZtvJW3ypCLA4BsYhc8HCQN0xS2CfYNI-8vCw3rmq3JlbBC5Jcn52Qc_SbDt9BSbdyGjsbLvytLiIbIUonkVfzywpghFDi1OJUJnxh91sfugF4-G8oa_Eo9HV-Z9jnLx6ullre0kT117fzPMZeW28vLqAtx2CiUgCxhbotie3to6tq1zfHgv1dtE3J0A6dNd87x9qS0YhXuWh-UKIaTdFXhA__vQQ5ISS5Pi8Khy0v4UmRFwk9esefTjq6-hHQ0EpkrBLaSz5600bhG8YKDtZpLMxVHrtkwaFwA-JW6yrjyV3f_6yE1h3awDU42FDBsHEjHLnqyr7-QJKmoMgRFWtzNGp6EMmFeQhIoh9d5tfEuKJ_jQLjKk428ClImtLKRJ27pkd2m-p76lxT-MKJGGaPf9i39Pv84hahgARGCGzT0H8LVGZJLh37aI8UgfqFo3u6sK4Ydxq5mLq2kdhiVtiRE3CSNmecyrCorurPkQJRJr5V_79hodufDc8kSKcvn9w9fqnIvsXG6CeNYLp1aYdTTkIhEE-hvRC8qv0fSF53UPEc_HbYgHZeCHmBswF2C2URJJA02AxreyoOVaM4D0YkvoKw07sCLdP5iohrpLgVC1YH-FqR2uiV971iUE3ItsnytWkbn4DApQSBYUjMhbmqb_c5NTGgNa54taFedB0ouKqY0BTTRmGECxSBDyBrG_jvmdkDecLuss0lHeYd9CR46doCpUVog3MxgpB5Y9lx0_nrerK4WtLYavQ_TB826Ga5dWeuavKTAOKAwkepI6CWahF54AlxkdHZle_uRLyzgmFfteQL8TKAToyeI_znEOGQOAhzGuOFP1xhPTBufjmYisER43hzF5VPg4Gy1uEoO8eWBOVEqgqkSmyCPOgg4eFjTyoa9ZnG26ocs0DaRTty3C721CUvaNWyR9LvMWzltY_Cmh0-b1djd2Z6DiWxyKjHWdrF1gjvfMuGrod7iC24bKCU0U9Q4OmH0gWTAz5gtTMcYIFGCt0szfwEe7vMqYx4pvVirGdXwXj87kKQqEsdN06Mr5Ul2PFBYDfUkuNyTU2DHMqqJsmnVcPiH91yoBcoV7rBs134BQkCkCKbf3rpCMByOjzwKowSxBpoBvFpTlO4qF7pr3lzxG2VLQ-cHAOPV5uR5YsK5wC0ABQmuMRgneeKUZwo5-M5sMaWUggud_bXjjAMrvHEG67nmn3saZkIAjJ85jLKoXhc4cQweejln8sXPlVAYNW931Gr-07iUPVapaSEDBvx6URjhYIRBpKp3rTsQrATNHBzDyUQgJQjjNSrzIaM5mI83h_6EBWqJnY9wxaftt5K41ctudNR1KrU6t6FbjpuRJlApgT5D_HvlIHPlcFK1khDiKI1tNtQY3EdFWqFVuwbTYRvLQp3Q-kxS47Y3iiUM1RUqAi26EMtuwFdQAHNm6O6PUcRTRzskXR8eA6CJSz9yEkRKL05Gx1VCpp2Baf55jmZ2mIUO_jTXxbB3SRnPPXgRQLZBhlUXrJGeWV-4gBfh5nrpLUHkulu8zkCLfYaNVdu_2ICRcPqKauYdobaugEAC94S3tjo0_k64_Iy06xeHdBuQOIXRcgErHq_M4haPcMzX9MqGqXjog3cAkTbTqK4XsFq7cJuqM5i9amNxC0K2AMOgreZ_A5Q_RogKDn6An6IgGDqOy8l9jBQgDxHNXqBI-EwpxClp9I/https://www.amazon.in/stores/page/07141590-DD41-4B48-8D0D-0BF789F2CB3F/?_encoding=UTF8&store_ref=SB_A07588631ID9HXISM0A9Q-A0223151120YL7KF8GOPW&pd_rd_plhdr=t&aaxitk=2663ccab4cca3338ad97b7f67e240505&hsa_cr_id=0&lp_asins=B07YGR43WZ%2CB0CD5L21CJ%2CB09X96Y2KQ&lp_query=shoes&lp_slot=desktop-hsa-3psl&aref=xl0r2BOqlj&ref_=sbx_be_s_3psl_mbd_mb2_bkgd&pd_rd_w=FHS7O&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=07CeC&pd_rd_r=78c8be34-054a-4e09-b3a0-3c29ae97be06
+                  - generic:
+                    - link "RC. ROYAL CLASS":
+                      - /url: https://aax-eu-zaz.amazon.in/x/c/JJ_xaBVDj7GrX2DCurHxbpgAAAGf-237_AoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAyvh1I/clv1c_ek-wBPHXKjbXTixTdO9dI6s9P6sZtvJW3ypCLA4BsYhc8HCQN0xS2CfYNI-8vCw3rmq3JlbBC5Jcn52Qc_SbDt9BSbdyGjsbLvytLiIbIUonkVfzywpghFDi1OJUJnxh91sfugF4-G8oa_Eo9HV-Z9jnLx6ullre0kT117fzPMZeW28vLqAtx2CiUgCxhbotie3to6tq1zfHgv1dtE3J0A6dNd87x9qS0YhXuWh-UKIaTdFXhA__vQQ5ISS5Pi8Khy0v4UmRFwk9esefTjq6-hHQ0EpkrBLaSz5600bhG8YKDtZpLMxVHrtkwaFwA-JW6yrjyV3f_6yE1h3awDU42FDBsHEjHLnqyr7-QJKmoMgRFWtzNGp6EMmFeQhIoh9d5tfEuKJ_jQLjKk428ClImtLKRJ27pkd2m-p76lxT-MKJGGaPf9i39Pv84hahgARGCGzT0H8LVGZJLh37aI8UgfqFo3u6sK4Ydxq5mLq2kdhiVtiRE3CSNmecyrCorurPkQJRJr5V_79hodufDc8kSKcvn9w9fqnIvsXG6CeNYLp1aYdTTkIhEE-hvRC8qv0fSF53UPEc_HbYgHZeCHmBswF2C2URJJA02AxreyoOVaM4D0YkvoKw07sCLdP5iohrpLgVC1YH-FqR2uiV971iUE3ItsnytWkbn4DApQSBYUjMhbmqb_c5NTGgNa54taFedB0ouKqY0BTTRmGECxSBDyBrG_jvmdkDecLuss0lHeYd9CR46doCpUVog3MxgpB5Y9lx0_nrerK4WtLYavQ_TB826Ga5dWeuavKTAOKAwkepI6CWahF54AlxkdHZle_uRLyzgmFfteQL8TKAToyeI_znEOGQOAhzGuOFP1xhPTBufjmYisER43hzF5VPg4Gy1uEoO8eWBOVEqgqkSmyCPOgg4eFjTyoa9ZnG26ocs0DaRTty3C721CUvaNWyR9LvMWzltY_Cmh0-b1djd2Z6DiWxyKjHWdrF1gjvfMuGrod7iC24bKCU0U9Q4OmH0gWTAz5gtTMcYIFGCt0szfwEe7vMqYx4pvVirGdXwXj87kKQqEsdN06Mr5Ul2PFBYDfUkuNyTU2DHMqqJsmnVcPiH91yoBcoV7rBs134BQkCkCKbf3rpCMByOjzwKowSxBpoBvFpTlO4qF7pr3lzxG2VLQ-cHAOPV5uR5YsK5wC0ABQmuMRgneeKUZwo5-M5sMaWUggud_bXjjAMrvHEG67nmn3saZkIAjJ85jLKoXhc4cQweejln8sXPlVAYNW931Gr-07iUPVapaSEDBvx6URjhYIRBpKp3rTsQrATNHBzDyUQgJQjjNSrzIaM5mI83h_6EBWqJnY9wxaftt5K41ctudNR1KrU6t6FbjpuRJlApgT5D_HvlIHPlcFK1khDiKI1tNtQY3EdFWqFVuwbTYRvLQp3Q-kxS47Y3iiUM1RUqAi26EMtuwFdQAHNm6O6PUcRTRzskXR8eA6CJSz9yEkRKL05Gx1VCpp2Baf55jmZ2mIUO_jTXxbB3SRnPPXgRQLZBhlUXrJGeWV-4gBfh5nrpLUHkulu8zkCLfYaNVdu_2ICRcPqKauYdobaugEAC94S3tjo0_k64_Iy06xeHdBuQOIXRcgErHq_M4haPcMzX9MqGqXjog3cAkTbTqK4XsFq7cJuqM5i9amNxC0K2AMOgreZ_A5Q_RogKDn6An6IgGDqOy8l9jBQgDxHNXqBI-EwpxClp9I/https://www.amazon.in/stores/page/07141590-DD41-4B48-8D0D-0BF789F2CB3F/?_encoding=UTF8&store_ref=SB_A07588631ID9HXISM0A9Q-A0223151120YL7KF8GOPW&pd_rd_plhdr=t&aaxitk=2663ccab4cca3338ad97b7f67e240505&hsa_cr_id=0&lp_asins=B07YGR43WZ%2CB0CD5L21CJ%2CB09X96Y2KQ&lp_query=shoes&lp_slot=desktop-hsa-3psl&aref=xl0r2BOqlj&ref_=sbx_be_s_3psl_mbd_mb2_ls&pd_rd_w=FHS7O&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=07CeC&pd_rd_r=78c8be34-054a-4e09-b3a0-3c29ae97be06
+                      - img "RC. ROYAL CLASS"
+                  - generic [ref=f2e6436]:
+                    - generic [ref=f2e6437]:
+                      - link [ref=f2e6438] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JJ_xaBVDj7GrX2DCurHxbpgAAAGf-237_AoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAyvh1I/clv1c_ek-wBPHXKjbXTixTdO9dI6s9P6sZtvJW3ypCLA4BsYhc8HCQN0xS2CfYNI-8vCw3rmq3JlbBC5Jcn52Qc_SbDt9BSbdyGjsbLvytLiIbIUonkVfzywpghFDi1OJUJnxh91sfugF4-G8oa_Eo9HV-Z9jnLx6ullre0kT117fzPMZeW28vLqAtx2CiUgCxhbotie3to6tq1zfHgv1dtE3J0A6dNd87x9qS0YhXuWh-UKIaTdFXhA__vQQ5ISS5Pi8Khy0v4UmRFwk9esefTjq6-hHQ0EpkrBLaSz5600bhG8YKDtZpLMxVHrtkwaFwA-JW6yrjyV3f_6yE1h3awDU42FDBsHEjHLnqyr7-QJKmoMgRFWtzNGp6EMmFeQhIoh9d5tfEuKJ_jQLjKk428ClImtLKRJ27pkd2m-p76lxT-MKJGGaPf9i39Pv84hahgARGCGzT0H8LVGZJLh37aI8UgfqFo3u6sK4Ydxq5mLq2kdhiVtiRE3CSNmecyrCorurPkQJRJr5V_79hodufDc8kSKcvn9w9fqnIvsXG6CeNYLp1aYdTTkIhEE-hvRC8qv0fSF53UPEc_HbYgHZeCHmBswF2C2URJJA02AxreyoOVaM4D0YkvoKw07sCLdP5iohrpLgVC1YH-FqR2uiV971iUE3ItsnytWkbn4DApQSBYUjMhbmqb_c5NTGgNa54taFedB0ouKqY0BTTRmGECxSBDyBrG_jvmdkDecLuss0lHeYd9CR46doCpUVog3MxgpB5Y9lx0_nrerK4WtLYavQ_TB826Ga5dWeuavKTAOKAwkepI6CWahF54AlxkdHZle_uRLyzgmFfteQL8TKAToyeI_znEOGQOAhzGuOFP1xhPTBufjmYisER43hzF5VPg4Gy1uEoO8eWBOVEqgqkSmyCPOgg4eFjTyoa9ZnG26ocs0DaRTty3C721CUvaNWyR9LvMWzltY_Cmh0-b1djd2Z6DiWxyKjHWdrF1gjvfMuGrod7iC24bKCU0U9Q4OmH0gWTAz5gtTMcYIFGCt0szfwEe7vMqYx4pvVirGdXwXj87kKQqEsdN06Mr5Ul2PFBYDfUkuNyTU2DHMqqJsmnVcPiH91yoBcoV7rBs134BQkCkCKbf3rpCMByOjzwKowSxBpoBvFpTlO4qF7pr3lzxG2VLQ-cHAOPV5uR5YsK5wC0ABQmuMRgneeKUZwo5-M5sMaWUggud_bXjjAMrvHEG67nmn3saZkIAjJ85jLKoXhc4cQweejln8sXPlVAYNW931Gr-07iUPVapaSEDBvx6URjhYIRBpKp3rTsQrATNHBzDyUQgJQjjNSrzIaM5mI83h_6EBWqJnY9wxaftt5K41ctudNR1KrU6t6FbjpuRJlApgT5D_HvlIHPlcFK1khDiKI1tNtQY3EdFWqFVuwbTYRvLQp3Q-kxS47Y3iiUM1RUqAi26EMtuwFdQAHNm6O6PUcRTRzskXR8eA6CJSz9yEkRKL05Gx1VCpp2Baf55jmZ2mIUO_jTXxbB3SRnPPXgRQLZBhlUXrJGeWV-4gBfh5nrpLUHkulu8zkCLfYaNVdu_2ICRcPqKauYdobaugEAC94S3tjo0_k64_Iy06xeHdBuQOIXRcgErHq_M4haPcMzX9MqGqXjog3cAkTbTqK4XsFq7cJuqM5i9amNxC0K2AMOgreZ_A5Q_RogKDn6An6IgGDqOy8l9jBQgDxHNXqBI-EwpxClp9I/https://www.amazon.in/stores/page/07141590-DD41-4B48-8D0D-0BF789F2CB3F/?_encoding=UTF8&store_ref=SB_A07588631ID9HXISM0A9Q-A0223151120YL7KF8GOPW&pd_rd_plhdr=t&aaxitk=2663ccab4cca3338ad97b7f67e240505&hsa_cr_id=0&lp_asins=B07YGR43WZ%2CB0CD5L21CJ%2CB09X96Y2KQ&lp_query=shoes&lp_slot=desktop-hsa-3psl&aref=xl0r2BOqlj&ref_=sbx_be_s_3psl_mbd_mb2_bkgd&pd_rd_w=FHS7O&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=07CeC&pd_rd_r=78c8be34-054a-4e09-b3a0-3c29ae97be06
+                      - link "RC. ROYAL CLASS":
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JJ_xaBVDj7GrX2DCurHxbpgAAAGf-237_AoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAyvh1I/clv1c_ek-wBPHXKjbXTixTdO9dI6s9P6sZtvJW3ypCLA4BsYhc8HCQN0xS2CfYNI-8vCw3rmq3JlbBC5Jcn52Qc_SbDt9BSbdyGjsbLvytLiIbIUonkVfzywpghFDi1OJUJnxh91sfugF4-G8oa_Eo9HV-Z9jnLx6ullre0kT117fzPMZeW28vLqAtx2CiUgCxhbotie3to6tq1zfHgv1dtE3J0A6dNd87x9qS0YhXuWh-UKIaTdFXhA__vQQ5ISS5Pi8Khy0v4UmRFwk9esefTjq6-hHQ0EpkrBLaSz5600bhG8YKDtZpLMxVHrtkwaFwA-JW6yrjyV3f_6yE1h3awDU42FDBsHEjHLnqyr7-QJKmoMgRFWtzNGp6EMmFeQhIoh9d5tfEuKJ_jQLjKk428ClImtLKRJ27pkd2m-p76lxT-MKJGGaPf9i39Pv84hahgARGCGzT0H8LVGZJLh37aI8UgfqFo3u6sK4Ydxq5mLq2kdhiVtiRE3CSNmecyrCorurPkQJRJr5V_79hodufDc8kSKcvn9w9fqnIvsXG6CeNYLp1aYdTTkIhEE-hvRC8qv0fSF53UPEc_HbYgHZeCHmBswF2C2URJJA02AxreyoOVaM4D0YkvoKw07sCLdP5iohrpLgVC1YH-FqR2uiV971iUE3ItsnytWkbn4DApQSBYUjMhbmqb_c5NTGgNa54taFedB0ouKqY0BTTRmGECxSBDyBrG_jvmdkDecLuss0lHeYd9CR46doCpUVog3MxgpB5Y9lx0_nrerK4WtLYavQ_TB826Ga5dWeuavKTAOKAwkepI6CWahF54AlxkdHZle_uRLyzgmFfteQL8TKAToyeI_znEOGQOAhzGuOFP1xhPTBufjmYisER43hzF5VPg4Gy1uEoO8eWBOVEqgqkSmyCPOgg4eFjTyoa9ZnG26ocs0DaRTty3C721CUvaNWyR9LvMWzltY_Cmh0-b1djd2Z6DiWxyKjHWdrF1gjvfMuGrod7iC24bKCU0U9Q4OmH0gWTAz5gtTMcYIFGCt0szfwEe7vMqYx4pvVirGdXwXj87kKQqEsdN06Mr5Ul2PFBYDfUkuNyTU2DHMqqJsmnVcPiH91yoBcoV7rBs134BQkCkCKbf3rpCMByOjzwKowSxBpoBvFpTlO4qF7pr3lzxG2VLQ-cHAOPV5uR5YsK5wC0ABQmuMRgneeKUZwo5-M5sMaWUggud_bXjjAMrvHEG67nmn3saZkIAjJ85jLKoXhc4cQweejln8sXPlVAYNW931Gr-07iUPVapaSEDBvx6URjhYIRBpKp3rTsQrATNHBzDyUQgJQjjNSrzIaM5mI83h_6EBWqJnY9wxaftt5K41ctudNR1KrU6t6FbjpuRJlApgT5D_HvlIHPlcFK1khDiKI1tNtQY3EdFWqFVuwbTYRvLQp3Q-kxS47Y3iiUM1RUqAi26EMtuwFdQAHNm6O6PUcRTRzskXR8eA6CJSz9yEkRKL05Gx1VCpp2Baf55jmZ2mIUO_jTXxbB3SRnPPXgRQLZBhlUXrJGeWV-4gBfh5nrpLUHkulu8zkCLfYaNVdu_2ICRcPqKauYdobaugEAC94S3tjo0_k64_Iy06xeHdBuQOIXRcgErHq_M4haPcMzX9MqGqXjog3cAkTbTqK4XsFq7cJuqM5i9amNxC0K2AMOgreZ_A5Q_RogKDn6An6IgGDqOy8l9jBQgDxHNXqBI-EwpxClp9I/https://www.amazon.in/stores/page/07141590-DD41-4B48-8D0D-0BF789F2CB3F/?_encoding=UTF8&store_ref=SB_A07588631ID9HXISM0A9Q-A0223151120YL7KF8GOPW&pd_rd_plhdr=t&aaxitk=2663ccab4cca3338ad97b7f67e240505&hsa_cr_id=0&lp_asins=B07YGR43WZ%2CB0CD5L21CJ%2CB09X96Y2KQ&lp_query=shoes&lp_slot=desktop-hsa-3psl&aref=xl0r2BOqlj&ref_=sbx_be_s_3psl_mbd_mb2_logo&pd_rd_w=FHS7O&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=07CeC&pd_rd_r=78c8be34-054a-4e09-b3a0-3c29ae97be06
+                        - generic:
+                          - img "RC. ROYAL CLASS"
+                    - generic [ref=f2e6439]:
+                      - link [ref=f2e6440] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JJ_xaBVDj7GrX2DCurHxbpgAAAGf-237_AoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAyvh1I/clv1c_ek-wBPHXKjbXTixTdO9dI6s9P6sZtvJW3ypCLA4BsYhc8HCQN0xS2CfYNI-8vCw3rmq3JlbBC5Jcn52Qc_SbDt9BSbdyGjsbLvytLiIbIUonkVfzywpghFDi1OJUJnxh91sfugF4-G8oa_Eo9HV-Z9jnLx6ullre0kT117fzPMZeW28vLqAtx2CiUgCxhbotie3to6tq1zfHgv1dtE3J0A6dNd87x9qS0YhXuWh-UKIaTdFXhA__vQQ5ISS5Pi8Khy0v4UmRFwk9esefTjq6-hHQ0EpkrBLaSz5600bhG8YKDtZpLMxVHrtkwaFwA-JW6yrjyV3f_6yE1h3awDU42FDBsHEjHLnqyr7-QJKmoMgRFWtzNGp6EMmFeQhIoh9d5tfEuKJ_jQLjKk428ClImtLKRJ27pkd2m-p76lxT-MKJGGaPf9i39Pv84hahgARGCGzT0H8LVGZJLh37aI8UgfqFo3u6sK4Ydxq5mLq2kdhiVtiRE3CSNmecyrCorurPkQJRJr5V_79hodufDc8kSKcvn9w9fqnIvsXG6CeNYLp1aYdTTkIhEE-hvRC8qv0fSF53UPEc_HbYgHZeCHmBswF2C2URJJA02AxreyoOVaM4D0YkvoKw07sCLdP5iohrpLgVC1YH-FqR2uiV971iUE3ItsnytWkbn4DApQSBYUjMhbmqb_c5NTGgNa54taFedB0ouKqY0BTTRmGECxSBDyBrG_jvmdkDecLuss0lHeYd9CR46doCpUVog3MxgpB5Y9lx0_nrerK4WtLYavQ_TB826Ga5dWeuavKTAOKAwkepI6CWahF54AlxkdHZle_uRLyzgmFfteQL8TKAToyeI_znEOGQOAhzGuOFP1xhPTBufjmYisER43hzF5VPg4Gy1uEoO8eWBOVEqgqkSmyCPOgg4eFjTyoa9ZnG26ocs0DaRTty3C721CUvaNWyR9LvMWzltY_Cmh0-b1djd2Z6DiWxyKjHWdrF1gjvfMuGrod7iC24bKCU0U9Q4OmH0gWTAz5gtTMcYIFGCt0szfwEe7vMqYx4pvVirGdXwXj87kKQqEsdN06Mr5Ul2PFBYDfUkuNyTU2DHMqqJsmnVcPiH91yoBcoV7rBs134BQkCkCKbf3rpCMByOjzwKowSxBpoBvFpTlO4qF7pr3lzxG2VLQ-cHAOPV5uR5YsK5wC0ABQmuMRgneeKUZwo5-M5sMaWUggud_bXjjAMrvHEG67nmn3saZkIAjJ85jLKoXhc4cQweejln8sXPlVAYNW931Gr-07iUPVapaSEDBvx6URjhYIRBpKp3rTsQrATNHBzDyUQgJQjjNSrzIaM5mI83h_6EBWqJnY9wxaftt5K41ctudNR1KrU6t6FbjpuRJlApgT5D_HvlIHPlcFK1khDiKI1tNtQY3EdFWqFVuwbTYRvLQp3Q-kxS47Y3iiUM1RUqAi26EMtuwFdQAHNm6O6PUcRTRzskXR8eA6CJSz9yEkRKL05Gx1VCpp2Baf55jmZ2mIUO_jTXxbB3SRnPPXgRQLZBhlUXrJGeWV-4gBfh5nrpLUHkulu8zkCLfYaNVdu_2ICRcPqKauYdobaugEAC94S3tjo0_k64_Iy06xeHdBuQOIXRcgErHq_M4haPcMzX9MqGqXjog3cAkTbTqK4XsFq7cJuqM5i9amNxC0K2AMOgreZ_A5Q_RogKDn6An6IgGDqOy8l9jBQgDxHNXqBI-EwpxClp9I/https://www.amazon.in/stores/page/07141590-DD41-4B48-8D0D-0BF789F2CB3F/?_encoding=UTF8&store_ref=SB_A07588631ID9HXISM0A9Q-A0223151120YL7KF8GOPW&pd_rd_plhdr=t&aaxitk=2663ccab4cca3338ad97b7f67e240505&hsa_cr_id=0&lp_asins=B07YGR43WZ%2CB0CD5L21CJ%2CB09X96Y2KQ&lp_query=shoes&lp_slot=desktop-hsa-3psl&aref=xl0r2BOqlj&ref_=sbx_be_s_3psl_mbd_mb2_bkgd&pd_rd_w=FHS7O&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=07CeC&pd_rd_r=78c8be34-054a-4e09-b3a0-3c29ae97be06
+                      - link "Warm Thick Winter Wear Thermal Socks For Men" [ref=f2e6441] [cursor=pointer]:
+                        - /url: https://aax-eu-zaz.amazon.in/x/c/JJ_xaBVDj7GrX2DCurHxbpgAAAGf-237_AoAAAH2AQBvbm9fdHhuX2JpZDIgICBvbm9fdHhuX2ltcDIgICAyvh1I/clv1c_ek-wBPHXKjbXTixTdO9dI6s9P6sZtvJW3ypCLA4BsYhc8HCQN0xS2CfYNI-8vCw3rmq3JlbBC5Jcn52Qc_SbDt9BSbdyGjsbLvytLiIbIUonkVfzywpghFDi1OJUJnxh91sfugF4-G8oa_Eo9HV-Z9jnLx6ullre0kT117fzPMZeW28vLqAtx2CiUgCxhbotie3to6tq1zfHgv1dtE3J0A6dNd87x9qS0YhXuWh-UKIaTdFXhA__vQQ5ISS5Pi8Khy0v4UmRFwk9esefTjq6-hHQ0EpkrBLaSz5600bhG8YKDtZpLMxVHrtkwaFwA-JW6yrjyV3f_6yE1h3awDU42FDBsHEjHLnqyr7-QJKmoMgRFWtzNGp6EMmFeQhIoh9d5tfEuKJ_jQLjKk428ClImtLKRJ27pkd2m-p76lxT-MKJGGaPf9i39Pv84hahgARGCGzT0H8LVGZJLh37aI8UgfqFo3u6sK4Ydxq5mLq2kdhiVtiRE3CSNmecyrCorurPkQJRJr5V_79hodufDc8kSKcvn9w9fqnIvsXG6CeNYLp1aYdTTkIhEE-hvRC8qv0fSF53UPEc_HbYgHZeCHmBswF2C2URJJA02AxreyoOVaM4D0YkvoKw07sCLdP5iohrpLgVC1YH-FqR2uiV971iUE3ItsnytWkbn4DApQSBYUjMhbmqb_c5NTGgNa54taFedB0ouKqY0BTTRmGECxSBDyBrG_jvmdkDecLuss0lHeYd9CR46doCpUVog3MxgpB5Y9lx0_nrerK4WtLYavQ_TB826Ga5dWeuavKTAOKAwkepI6CWahF54AlxkdHZle_uRLyzgmFfteQL8TKAToyeI_znEOGQOAhzGuOFP1xhPTBufjmYisER43hzF5VPg4Gy1uEoO8eWBOVEqgqkSmyCPOgg4eFjTyoa9ZnG26ocs0DaRTty3C721CUvaNWyR9LvMWzltY_Cmh0-b1djd2Z6DiWxyKjHWdrF1gjvfMuGrod7iC24bKCU0U9Q4OmH0gWTAz5gtTMcYIFGCt0szfwEe7vMqYx4pvVirGdXwXj87kKQqEsdN06Mr5Ul2PFBYDfUkuNyTU2DHMqqJsmnVcPiH91yoBcoV7rBs134BQkCkCKbf3rpCMByOjzwKowSxBpoBvFpTlO4qF7pr3lzxG2VLQ-cHAOPV5uR5YsK5wC0ABQmuMRgneeKUZwo5-M5sMaWUggud_bXjjAMrvHEG67nmn3saZkIAjJ85jLKoXhc4cQweejln8sXPlVAYNW931Gr-07iUPVapaSEDBvx6URjhYIRBpKp3rTsQrATNHBzDyUQgJQjjNSrzIaM5mI83h_6EBWqJnY9wxaftt5K41ctudNR1KrU6t6FbjpuRJlApgT5D_HvlIHPlcFK1khDiKI1tNtQY3EdFWqFVuwbTYRvLQp3Q-kxS47Y3iiUM1RUqAi26EMtuwFdQAHNm6O6PUcRTRzskXR8eA6CJSz9yEkRKL05Gx1VCpp2Baf55jmZ2mIUO_jTXxbB3SRnPPXgRQLZBhlUXrJGeWV-4gBfh5nrpLUHkulu8zkCLfYaNVdu_2ICRcPqKauYdobaugEAC94S3tjo0_k64_Iy06xeHdBuQOIXRcgErHq_M4haPcMzX9MqGqXjog3cAkTbTqK4XsFq7cJuqM5i9amNxC0K2AMOgreZ_A5Q_RogKDn6An6IgGDqOy8l9jBQgDxHNXqBI-EwpxClp9I/https://www.amazon.in/stores/page/07141590-DD41-4B48-8D0D-0BF789F2CB3F/?_encoding=UTF8&store_ref=SB_A07588631ID9HXISM0A9Q-A0223151120YL7KF8GOPW&pd_rd_plhdr=t&aaxitk=2663ccab4cca3338ad97b7f67e240505&hsa_cr_id=0&lp_asins=B07YGR43WZ%2CB0CD5L21CJ%2CB09X96Y2KQ&lp_query=shoes&lp_slot=desktop-hsa-3psl&aref=xl0r2BOqlj&ref_=sbx_be_s_3psl_mbd_mb2_hl&pd_rd_w=FHS7O&content-id=amzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391%3Aamzn1.sym.302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_p=302b41b4-ce85-4496-a41e-0894a8c89391&pf_rd_r=QC8ZAQ6WSAZBGATYVCF5&pd_rd_wg=07CeC&pd_rd_r=78c8be34-054a-4e09-b3a0-3c29ae97be06
+      - generic [ref=f2e6450]:
+        - heading "Need help?" [level=2] [ref=f2e6453]
+        - generic [ref=f2e6454]:
+          - link "Visit the help section" [ref=f2e6455] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=201889520
+          - text: or
+          - link "contact us" [ref=f2e6456] [cursor=pointer]:
+            - /url: /gp/help/customer/contact-us
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | 
+  3  | test('amazon', async ({ page }) => {
+  4  |   await page.goto('https://www.amazon.in/')
+  5  |   await page.locator("#twotabsearchtextbox").fill("shoes")
+  6  |   await page.locator("#nav-search-submit-button").click()
+> 7  |   await page.waitfortimeout(4000);
+     |              ^ TypeError: page.waitfortimeout is not a function
+  8  | }
+  9  | )
+  10 | 
+```
