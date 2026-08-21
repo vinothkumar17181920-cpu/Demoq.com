@@ -27,14 +27,23 @@
 // console.log(str.split(","));
 // console.log(str.length);
 
+//Reverse stars
+for (let i = 5; i >=1; i--)
+{let star = '';
+for (let j = 1; j <= i; j++)
+{star +='*';}
+console.log(star);
+}
 
-
-
-
-
-
-
-
-
-
-
+//Downside pyramid
+let n=5
+for (let i = n - 1; i >= 1; i--) {
+    let row = '';
+    for (let k = 1; k <= n - i; k++) {
+        row += ' ';
+    }
+    for (let j = 1; j <= (2 * i - 1); j++) {
+        row += '*';
+    }
+    console.log(row);
+}

@@ -26,5 +26,5 @@ import {test} from'@playwright/test';
     await page.goto('https://demoqa.com/webtables');
     await page.Locator('button[id ="addNewRecordButton"]').click();
     await page.locator('input[id="firstName-label"]').fill('Vinoth');
-    await page.Locator('input'[id="firstName-label"]').fill')
+    await page.Locator('input'[id="firstName-label"]).fill
 })
