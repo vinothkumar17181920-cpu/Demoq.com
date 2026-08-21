@@ -7,4 +7,5 @@ const frame = page.frameLocator('.demo-frame');
 await frame.locator('#draggable').dragTo(frame.locator('#droppable'));
 await page.waitForTimeout(2000);
 console.log();
+await page.addInitScript()
 })
